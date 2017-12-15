@@ -1,0 +1,10 @@
+GET /AgencyPortal/api/products/optionlistids/custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0?transaction_id=worklist&field_id=operator&page_id=worklistAdvancedSearch&CSRF_TOKEN=05adea6ba164037c189e8d6dd08bdc2e947e3c9b20bc633dd255afd3e4a29e2c HTTP/1.1
+Accept: application/json
+Referer: https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView
+Accept-Language: en-US
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Host: qa-agentlink.secura.net
+Connection: Keep-Alive
+Cookie: JSESSIONID=DD073FBC1A1E27DD1E2F253A977FF6BA; NSC_JOryx5zxbcozklidtfua2hcd51ksmeq=ffffffffaf17581945525d5f4f58455e445a4a423660; NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0; AL_Session=803c5c58-d3cb-4203-8696-c355634fafa1; ASP.NET_SessionId=3qu52lranjzf4vokwryvu0qa; _ga=GA1.2.1270373945.1513236150
+

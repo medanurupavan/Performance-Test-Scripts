@@ -1,0 +1,61 @@
+
+
+
+
+
+<section id="worklist_contents_section" class="worklist-section" data-ng-controller="ap.worklist.worklistDataCtrl as dataCtrl">
+	<div class="ajax-messages alert" ng-if="dataCtrl.messages.length > 0">
+		<p ng-repeat="message in dataCtrl.messages" class="alert-warning"><strong>Fails to create this work item:</strong> {{message}}</p>
+	</div>
+	<div class="container">
+		<div id="work_list_contents">
+			<div class="row worklist-table">
+				<!--  Add new card -->
+				<!-- @param addlinks is an array of new workitem links objects
+					 @param type is a string indicating the type of worklist (worklist/account) 
+					 @name is the name of the worklist (WorkItemsView/AccountsView/AccountItemsView)
+					 @when-upload is a function that is to be called when Upload button is clicked
+					 @create-work-item is a function that is called when create workitem is clicked
+				-->
+				
+				<div ng-if="dataCtrl.isWorkItemsView() || dataCtrl.isAccountItemsView()" 
+					addnew-card
+					addlinks="dataCtrl.workListModel.metaData.newWorkItemLinks"
+					type="{{dataCtrl.workListModel.metaData.index}}"
+					name="dataCtrl.workListModel.metaData.name"
+					when-upload="dataCtrl.initiateUpload()"
+					create-work-item="dataCtrl.createWorkItem(href)">
+				</div>
+				<!-- END Add new card -->
+				
+				<!-- START Workitem cards -->
+				<div class="col-xs-12 col-sm-6 col-md-4" data-ng-repeat="workitem in dataCtrl.workListModel.workItems">
+					<!-- 
+						workitem-card is the reusable directive that engage appropriate template for cards
+						workitem-data is the variable in the directive that holds workitem object
+						type is the index type. template is for card ( <type>-card.tpl.jsp) is picked up based on this value
+						e.g. account-card.tpl.jsp and worklist-card.tpl.jsp
+					-->			  
+					<div workitem-card 
+						workitem-data="workitem" 
+						type="{{dataCtrl.workListModel.metaData.index}}" 
+						when-selected="dataCtrl.itemSelected(selectedWorkItem)"
+						when-action-clicked="dataCtrl.performAction(selectedWorkItem, action)">
+					</div>
+				</div>
+				<!-- END Workitem cards -->
+			</div>
+		</div>
+		<!-- pagination -->
+		<div ng-if="dataCtrl.workListModel.pagination.total > dataCtrl.workListModel.pagination.fetchSize">
+			<pagination total-items="dataCtrl.workListModel.pagination.total" items-per-page="dataCtrl.workListModel.pagination.fetchSize"
+				ng-model="dataCtrl.workListModel.pagination.currentPage" ng-change="dataCtrl.pageChanged()" max-size="5" class="pagination-sm" 
+				boundary-links="true" rotate="false" num-pages="numPages" 
+				first-text="First"
+				next-text="Next"
+				previous-text="Previous"
+				last-text="Last">
+			</pagination>
+		</div>
+	</div>
+</section>

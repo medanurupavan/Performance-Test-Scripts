@@ -1,0 +1,30 @@
+/*
+add any additional custom debug panels necessary for your application in this file
+
+EX: to add an additional panel to go to boston.com:
+debugConsole.addPanel('boston','http://www.boston.com', 'Go to Boston.com', 'Boston.com'); 
+*/
+
+/* Divider to clearly separate the OOB and custom debug servlet functionality */
+debugConsole.addPanel('','about:blank', '', '=====================================');
+
+/* Allows to In-Line edits to current Acord XML */
+debugConsole.addPanel('UpdateXMLStore','../UpdateXmlStore?work_item_id=' + transaction.workItemId, 'UpdateXMLStore', 'Edit ACORD XML');
+
+/* Allows to In-Line edits to current Work Item Status */
+debugConsole.addPanel('WorkitemEditUtil','../ModifyWorkitemServlet?work_item_id=' + transaction.workItemId,'Edit Workitem Utility', 'Edit Workitem Utility');
+
+/* Allows to In-Line edits to current Work Item Status */
+debugConsole.addPanel('ModifyWorkitemStatus','../ModifyWorkitemStatus?TRANSACTION_NAME=' + transaction.id + '&work_item_id=' + transaction.workItemId, 'Modify Current Workitem Status', 'Modify Workitem Status');
+
+/* Provides a system-to-system migration system for Work Items */
+debugConsole.addPanel('WorkitemMigratorServlet','../WorkitemMigratorServlet?work_item_id=' + transaction.workItemId,'Workitem Migration Utility', 'Workitem Migration Utility');
+
+/* Provides a way to re-index SOLR indices*/
+debugConsole.addPanel('SolrIndexServlet','../SolrIndexServlet?','SOLR Index Utility', 'SOLR Index Utility');
+
+/* Provides a system-to-system migration system for Work Items */
+debugConsole.addPanel('ClearICacheServlet','../ClearICacheServlet','Clear ICache Solution Data', 'Clear ICache Solution Data');
+
+/* Provides a method to clear the edit-lock for the current Work Item */
+debugConsole.addPanel('ClearRLocksServlet','../ClearRLocksServlet?work_item_id=' + transaction.workItemId, 'Clear Workitem Lock', 'Clear Workitem Lock');

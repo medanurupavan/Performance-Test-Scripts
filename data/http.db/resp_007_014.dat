@@ -1,0 +1,1059 @@
+26c
+var fieldset, field, interestLevel, newFormRow;
+fieldset = page.getFieldset("AgencyInformationSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Agency Information");
+field = fieldset.getField("SecuraCommlPolicyLOBCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("AUTOB");
+}
+field = fieldset.getField("CommlAutoLineBusinessLOBCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterest
+1d94
+Level();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("AUTOB");
+}
+field = fieldset.getField("SecuraCommlPolicyId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CommlAutoLineBusinessId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("GenInfoTransactionRequestDt");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("RqUID");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CurCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AccClearanceFieldForIPDTR");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AccClearanceMultiResultJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CreateNewAccountFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPAGCODE");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPAGNAME");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPACCOUNTNO");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPCUSTNAME");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPDBA");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPADD");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPPHONE");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPFEIN");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPDATE");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPPKG");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPAUTO");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPWC");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPUM");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("hiddenClearanceOverride");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ShowFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPClearnceInputChangeFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AgencyName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Agency Name");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("N379");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("If the producer is not shown in the list below, please select the 'Not Listed' option.  A listed producer is required to issue a policy.  To add a producer, please complete the agent appointment applicant here: <a href='https://agentlink.secura.net/agent_appointment_app.html' target='_blank'> https://agentlink.secura.net/agent_appointment_app.html</a>");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("AgencyProducer");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Producer");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyAddr1");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Address Line 1");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 40)', "This field can't exceed 40 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyAddr2");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Address Line 2");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 40)', "This field can't exceed 40 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyCity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	if (
+2000
+field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("City");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 128)', "This field can't exceed 128 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("State");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyZip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	field.initFormatmask(true,{},"#####?-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Zip Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 15)', "This field can't exceed 15 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgentCSRPhone");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	field.initFormatmask(true,{},"(###) ###-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Agency Phone");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 20)', "This field can't exceed 20 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyPhone");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	field.initFormatmask(true,{},"(###) ###-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Agent&#47;CSR Phone");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 16)', "This field can't exceed 16 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_phone(this.getValue())', "This field is not a recognized phone format", 'PhoneValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(16);
+}
+field = fieldset.getField("AgencyEmail");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("");
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Agent&#47;CSR E-mail");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 256)', "This field can't exceed 256 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_email(this.getValue())', "This field is not a recognized email format.", 'EmailValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(256);
+}
+fieldset = page.getFieldset("N388");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset = page.getFieldset("ApplicantInformationSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Applicant Information");
+field = fieldset.getField("GenInfoAddressStandardizationHelperMessage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("");
+}
+field = fieldset.getField("GenInfoMessage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("GenInfoMultiResultJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("EffectiveDate");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"##-##-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Effective Date");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_date(this.getValue(), "MM-dd-yyyy")', "This field must be a valid date entered in MM-dd-yyyy format", 'DateValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("EffectiveDateUWOR");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ExpirationDate");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"##-##-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Expiration Date");
+	field.updateHelpBubbleText("ExpirationDate_fieldHelperBalloon", "fieldHelperBalloon", "If other than annual policy term is needed, please contact your underwriter.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_date(this.getValue(), "MM-dd-yyyy")', "This field must be a valid date entered in MM-dd-yyyy format", 'DateValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Applicant Name");
+	field.updateHelpBubbleText("ApplicantName_fieldHelperBalloon", "fieldHelperBalloon", "Only one named insured should be included in this field. Please use Extended Named Insured screen for any other named insureds.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 250)', "This field can't exceed 250 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(250);
+}
+field = fieldset.getField("DoingBusinessAs");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLeve
+2000
+l(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Doing Business As");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 4000)', "This field can't exceed 4000 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(4000);
+}
+field = fieldset.getField("ExtendedNamedInsureds");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Extended Named Insureds");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingCountry");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Country");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingAddress1");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Mailing Address Line 1");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 32)', "This field can't exceed 32 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((.*P\.O\.)|(.*PO\s+B)|(BOX)|(.*P\s+O\s+B)|(.*P\.\s+O\.\s+B)|(.*P\.O\s+B)|(.*POBOX)|(.*Post\s+Office)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((C\.O\.)|(C\/O)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((Attn)|(ATTN\.)|(Attention)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(32);
+}
+field = fieldset.getField("ApplicantMailingAddress2");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Mailing Address Line 2");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((.*P\.O\.)|(.*PO\s+B)|(BOX)|(.*P\s+O\s+B)|(.*P\.\s+O\.\s+B)|(.*P\.O\s+B)|(.*POBOX)|(.*Post\s+Office)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((C\.O\.)|(C\/O)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((Attn)|(ATTN\.)|(Attention)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingCity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("City");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 128)', "This field can't exceed 128 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(128);
+}
+field = fieldset.getField("ApplicantMailingState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("State");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+newFormRow = "<div class=\"form-group \">\r\n	<label class=\"col-sm-12 col-sm-3 control-label\" for=\"ApplicantMailingZip_US\" id=\"ApplicantMailingZip_US_label\">\r\n		<span id=\"ApplicantMailingZip_US_requiredIndicator\"><span class=\"requiredField\">*</span></span>\r\n		<span id=\"ApplicantMailingZip_US_labelText\" >Zip Code</span>\r\n	</label>\r\n	<div class=\"col-xs-12 col-sm-9\">\r\n	<span >\r\n		<input type=\"text\" class=\"form-control\"  name=\"ApplicantMailingZip_US\" autocomplete=\"off\" id=\"ApplicantMailingZip_US\" size=\'10\' maxlength=\'10\' value=\"\"   />\r\n		<span id=\"ApplicantMailingZip_US_fieldHelpers\">\r\n					</span>\r\n	</span>\r\n	</div>\r\n</div>\r\n";
+field = new ap.Field(ap.page.form, "ApplicantMailingZip_US","ApplicantMailingZip_US", fieldset, 4, "text", true, false, true, newFormRow, 14);
+field.setupHotField();
+if (field != null) { 
+field.removeValidations();
+	field.setDefaultValue("");
+	field.setValue("");
+	field.initFormatmask(true,{},"#####?-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Zip Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_USZipCode(this.getValue())', "This field must be in a valid US ZIP Code format", 'USZipCodeValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("ApplicantMailingKeepAddressasEntered");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Keep Address as Entered");
+	field.updateHelpBubbleText("ApplicantMailingKeepAddressasEntered_fieldHelperBalloon", "fieldHelperBalloon", "Please uncheck the checkbox for editing the address.", "200");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingGEOPlaceCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCensusTract");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCensusBlock");
+if (field != null) { 
+field.removeValidations();
+	interestLe
+2000
+vel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCountyFIPS");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOLatitude");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOLongitude");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOResult");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCountyName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOSubdivisionCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingAddressValidationFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantPhone");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"(###) ###-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Phone");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 20)', "This field can't exceed 20 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_phone(this.getValue())', "This field is not a recognized phone format", 'PhoneValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(20);
+}
+field = fieldset.getField("DateBusinessStart");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"##-##-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Date Business Started");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_date(this.getValue(), "MM-dd-yyyy")', "This field must be a valid date entered in MM-dd-yyyy format", 'DateValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("NamedInsuredExternalId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("WebsiteAddress");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Website Address");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 256)', "This field can't exceed 256 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(256);
+}
+field = fieldset.getField("EMailAddress");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("E-mail Address");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 256)', "This field can't exceed 256 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_email(this.getValue())', "This field must be a valid email address", 'EmailValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(256);
+}
+field = fieldset.getField("ApplicantLegalEntity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Legal Entity");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("TaxIdType");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Tax ID Type");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+newFormRow = "<div class=\"form-group \">\r\n	<label class=\"col-sm-12 col-sm-3 control-label\" for=\"TaxIdFEIN\" id=\"TaxIdFEIN_label\">\r\n		<span id=\"TaxIdFEIN_requiredIndicator\"></span>\r\n		<span id=\"TaxIdFEIN_labelText\" >Tax ID</span>\r\n	</label>\r\n	<div class=\"col-xs-12 col-sm-9\">\r\n	<span >\r\n		<input type=\"text\" class=\"form-control\"  name=\"TaxIdFEIN\" autocomplete=\"off\" id=\"TaxIdFEIN\" size=\'16\' maxlength=\'11\' value=\"\"   />\r\n		<span id=\"TaxIdFEIN_fieldHelpers\">\r\n					</span>\r\n	</span>\r\n	</div>\r\n</div>\r\n";
+field = new ap.Field(ap.page.form, "TaxIdFEIN","TaxIdFEIN", fieldset, 2, "text", false, false, false, newFormRow, 33);
+if (field != null) { 
+field.removeValidations();
+	field.setDefaultValue("");
+	field.setValue("");
+	field.initFormatmask(true,{},"##-#######"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Tax ID");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 11)', "This field can't exceed 11 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_fein(this.getValue())', "This field must be a valid FEIN with a format of nn-nnnnnnn", 'FEINValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(11);
+}
+field = fieldset.getField("NonprofitOrganization");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("501(c)(3) Nonprofit Organization");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("NatureofBusinessSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Nature of Business");
+field = fieldset.getField("PMA");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("PrimaryBusDescription");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Primary Business Description");
+	field.updateHelpBubbleText("PrimaryBusDescriptio
+2000
+n_fieldHelperBalloon", "fieldHelperBalloon", "Please select the business description that most closely matches the applicant\'s primary business operations.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("HazardGrade");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("NatureofBusiness");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Additional Description of Operations");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 400)', "This field can't exceed 400 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(400);
+}
+field = fieldset.getField("MarketSegment");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Market Segment");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantSICCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("SIC Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 6)', "This field can't exceed 6 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(6);
+}
+field = fieldset.getField("ApplicantNAICSCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("NAICS Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 6)', "This field can't exceed 6 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_alphanumeric(this.getValue())', "This field must be alphanumeric", 'AlphanumericValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ControllingState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Controlling State");
+	field.beginIntraPageDTRListUpdate();
+	field.addListOption("Select One", "", true);
+	field.addListOption("Arizona", "AZ", false);
+	field.addListOption("Colorado", "CO", false);
+	field.addListOption("Illinois", "IL", false);
+	field.addListOption("Indiana", "IN", false);
+	field.addListOption("Iowa", "IA", false);
+	field.addListOption("Kansas", "KS", false);
+	field.addListOption("Kentucky", "KY", false);
+	field.addListOption("Michigan", "MI", false);
+	field.addListOption("Minnesota", "MN", false);
+	field.addListOption("Missouri", "MO", false);
+	field.addListOption("North Dakota", "ND", false);
+	field.addListOption("Pennsylvania", "PA", false);
+	field.addListOption("Wisconsin", "WI", false);
+	field.commitListOptions(true);
+	field.updateHelpBubbleText("ControllingState_fieldHelperBalloon", "fieldHelperBalloon", "Enter the applicant\'s primary state of business operations.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ProgramAssociation");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Program&#47;Association");
+	field.updateHelpBubbleText("ProgramAssociation_fieldHelperBalloon", "fieldHelperBalloon", "Please indicate if the applicant is a current member of an association shown in the list. Premium and coverages may be subject to verification of active membership in the association.", "200");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("InsuredOrPrincipalInsuredOrPrincipalInfo_InsuredOrPrincipalRoleCdInsured_InsuredOrPrincipalInfo_PrincipalInfo_CreditScoreInfo_CreditScore");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Intelliscore Plus");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("EligibilityQuestions");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Eligibility Questions");
+field = fieldset.getField("OperationOfHazardousMaterial");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Do operations involve transporting hazardous material?");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("SECURA_QS_R1_QS183");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any vehicles operated beyond 200 mile radius? ");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("CALossPast3YearsTip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("The response to the question below will impact the quote if the applicant qualifies for Experience Rating. Click on &quot;?&quot; for more information.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("LossPast3Years");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Have you had any automobile losses in the past 3 years?");
+	field.updateHelpBubbleText("LossPast3Years_fieldHelperBalloon", "fieldHelperBalloon", "The response to this question will impact rating if the applicant qualifies for Experience Rating.<br/>Select &quot;Yes, I will enter claims on Loss History screen&quot; if you would like to enter cla
+1339
+im details on the Loss History page. This will apply Experience Rating factors to the quote.<br/>Select &quot;Yes, l will attach loss runs&quot; if you would prefer to have Underwriting apply the Experience Rating factors. The quote will be referred for review and completion.<br/>Select &quot;Loss Information not available at this time&quot; if you do not have the applicant&#x27;s prior loss history. The quote will be subject to underwriter review.<br/>Select &quot;No Losses&quot; if the applicant has no claims.<br/>For all options, loss runs should be submitted within one week after binding.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("UnderwriterSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Underwriter");
+field = fieldset.getField("Underwriter");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Underwriter");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("AccountClearanceOverride");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+validationLibrary.validation_fein = function validation_fein(value) {
+	if (value.length == 0) return true;
+	if (value.length != 10) return false;
+	if (value.search(/\d{2}-\d{7}/) == -1) return false;
+	return true;
+
+}
+
+validationLibrary.verifyDate = function verifyDate(value, dateFormat){
+	if (value.length != dateFormat.length) return false;
+	var delimiter = '-';
+	if ( dateFormat.indexOf('/') > -1 ) delimiter = '/';
+	var slashPos = -1;
+	var slashPos2 = -1;
+	while ((slashPos = dateFormat.indexOf(delimiter, slashPos + 1)) > -1 ) {
+		slashPos2 = value.indexOf(delimiter, slashPos2 + 1);
+		if (slashPos2 != slashPos) return false;
+	}
+
+	var month = this.getDatePart(value, dateFormat, 'MM');
+	if (month.search(/[^0-9]/) > -1) return false;
+	var day = this.getDatePart(value, dateFormat, 'dd');
+	if (day.search(/[^0-9]/) > -1) return false;
+	var year = this.getDatePart(value, dateFormat, 'yyyy');
+	if (year.search(/[^0-9]/) > -1) return false;
+	month = month - 1;
+	var dteDate = new Date(year,month,day);
+	return ((day==dteDate.getDate()) && (month==dteDate.getMonth()) && (year==dteDate.getFullYear()))
+}
+
+validationLibrary.validation_phone = function validation_phone(value) {
+	if (value.length == 0) return true;
+	if (value.search(/\(?[2-9]\d{2}\)?-? ?\d{3}-? ?\d{4}(( |-|\.)?[ext\.]+ ?\d+)?/) > -1) return true;
+	if (value.search(/\+\S+\-\S+\-\S+(\+\S+)?/) > -1) return true;
+	return false;
+
+}
+
+validationLibrary.validation_required = function validation_required(value) {
+	return value.length > 0;
+
+}
+
+validationLibrary.validation_USZipCode = function validation_USZipCode(value) {
+	if (value.length == 0) return true;
+	if ( value.length == 5 && value.search(/\d{5}/) > -1 ) return true;
+	if ( value.length == 10 && value.search(/\d{5}-\d{4}/) > -1 ) return true;
+	return false;
+
+}
+
+validationLibrary.getDatePart = function getDatePart(value, dataFormat, part){
+	var partStart = dataFormat.indexOf(part);
+	return new String(value.substr(partStart, part.length));
+}
+
+validationLibrary.validation_alphanumeric = function validation_alphanumeric(value) {
+	if (value.length == 0) return true;
+	if (value.search(/\W/) > -1) return false;
+	return true;
+
+}
+
+validationLibrary.validation_email = function validation_email(value) {
+	if (value.length == 0) return true;
+	if (value.search(/^[_a-zA-Z0-9-]{1}[_a-zA-Z0-9-\']*(\.[_a-zA-Z0-9-]{1}[_a-zA-Z0-9-\']*)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$/) == -1) return false;
+	return true;
+
+}
+
+validationLibrary.validation_pattern = function validation_pattern(value, parm, negationOn) {
+	if (value.length == 0) return true;
+	var foundPattern = value.search(parm) > -1;
+	return (foundPattern ^ negationOn);
+
+}
+
+validationLibrary.validation_date = function validation_date(value, parm) {
+	if (value.length == 0) return true;
+	return this.verifyDate(value, parm);
+
+}
+
+validationLibrary.validation_maxLength = function validation_maxLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length <= parm;
+
+}
+
+page.paint();
+if(page.form) {page.form.setupHotFields();}
+ap.ajaxMessageMap.clear();
+ap.ajaxMessageMap.removeAlerts();
+var message;
+ap.ajaxMessageMap.render();
+
+0
+

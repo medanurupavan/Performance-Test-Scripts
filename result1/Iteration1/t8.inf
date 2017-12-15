@@ -1,0 +1,13 @@
+[t8]
+SnapshotXmlFile=snapshot_6.xml
+ContentType=DummyContentType
+StepName=Url: WorkItemsView
+Total=1
+FileName1=t8.UNK
+RequestHeaderFile=t8_RequestHeader.txt
+ResponseHeaderFile=t8_ResponseHeader.txt
+RawStepEndTime=1513346970671
+RawStepName=WorkItemsView
+RequestBodyFile=t8_RequestBody.txt
+RawStepStartTime=1513346970608
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=c73067c05b17f7db6224ebb0bb404c1d921adf2541ae409af1dab809313a5bf8&saved_search_id=-1

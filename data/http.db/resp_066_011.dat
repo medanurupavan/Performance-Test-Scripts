@@ -1,0 +1,88 @@
+
+var vin_service_conditionalIPDTR = new Vin_service_conditionalIPDTR()
+
+/**
+ * Conditional custom client-side IPDTR to only make AJAX call when needed
+ * Function wraps Javascript for safety against name clashes, etc
+ * @returns
+ */
+function Vin_service_conditionalIPDTR() {
+
+	// save any existing onInitialize function for calling from override
+	var OldPageOnInitialize = page.onInitialize; 
+	
+	// set new onInitialize to our override function
+	page.onInitialize = thisPageInit;
+	
+	
+	/**
+	 * Custom page init to hook up conditional IPDTR onChangedField events
+	 */
+	function thisPageInit() {
+		
+		//Call IPDTR when VIN number is changed.
+		var fieldId = 'vinNumber';
+		registerFieldChangeEvent(fieldId, onChangedField);
+		
+		
+		// Call any pre-existing init function originally referenced before we injected our function
+		if (typeof OldPageOnInitialize == "function") {
+			OldPageOnInitialize ();
+		}
+	}
+	
+	
+	
+	/**
+	 * Register our special conditional change event for a field
+	 */
+	function registerFieldChangeEvent(fieldId, functionRef) {   
+	    var field = page.getField(fieldId);
+	    if (field == null)
+	    	return;
+	    var elements = field.getElements();
+	    for (var ix in elements) {
+	        var element = elements[ix];
+	        if (element) {
+	        	element.addEventListener('change',functionRef,false);
+	        	
+	        }
+	    }
+	}
+	
+	/**
+	 * Special conditional onChangedField function
+	 * We can check before calling IPDTR AJAX to see if it's needed
+	 */
+	function onChangedField() {
+	    var field = page.getField(this.id);
+	    if ((field !== null) && shouldCallIPDTR(field)) {
+	    	field.makeIntraPageDTRRequest();
+	    }
+	}
+	
+	/**
+	 * Returns whether or not to call IPDTR based on the field passed in and
+	 * the state of other relevant fields 
+	 */
+	function shouldCallIPDTR(field) {
+		var vehType = page.getField('HotVehicleType');
+		var specialVehType = page.getField('HotSpecialVehicleType');
+			
+		    if ((field != null) && field.getValue() =='') {
+				return false;
+			}
+		    if(vehType!=null && vehType.getValue()=='SPEC' && specialVehType!=null && ((specialVehType.getValue()=='GOLFM')
+		    		||(specialVehType.getValue()=='GC')||(specialVehType.getValue()=='SMEN')
+		    		||(specialVehType.getValue()=='SNOWM')||(specialVehType.getValue()=='MC')||(specialVehType.getValue()=='LSV'))){
+		    	return false;
+		    }
+		
+		return true;
+	}
+	
+	
+	
+	
+	
+}

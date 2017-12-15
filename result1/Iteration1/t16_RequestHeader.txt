@@ -1,0 +1,10 @@
+GET /AgencyPortal/api/lookups/basic/TRANSACTION_TYPE?CSRF_TOKEN=fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e&listId=WorkItemsView&worklistType=workitems HTTP/1.1
+Referer: https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Accept: */*
+Connection: Keep-Alive
+Host: qa-agentlink.secura.net
+Cookie: JSESSIONID=32AE75822C249517EB50DBE8C28523BB; AL_Session=8803cb32-9de7-4b86-bac5-4b08ee80ffb6; NSC_JOryx5zxbcozklidtfua2hcd51ksmeq=ffffffffaf17581845525d5f4f58455e445a4a423660; NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0; ASP.NET_SessionId=04hrt5fihd2arxlkwkgeapwk
+

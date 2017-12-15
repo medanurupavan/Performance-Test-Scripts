@@ -1,0 +1,12 @@
+
+
+
+
+
+
+
+
+<div id="ajaxMessages" class="alert alert-info" ng-if="messages.length > 0">
+	<p ng-repeat="message in messages">{{message}}</p>
+	<a ng-if="hasSecurityError == true" href="DisplayWorkInProgress?WorkListType=WorkItemsView" class="btn btn-large btn-primary">Click here to continue</a>
+</div>

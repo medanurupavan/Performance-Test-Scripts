@@ -1,0 +1,9 @@
+GET / HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Host: qa-agentlink.secura.net
+Connection: Keep-Alive
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Cookie: _ga=GA1.2.1270373945.1513236150
+

@@ -1,0 +1,158 @@
+
+var policystatecoverage = new policystatecoverage();
+/**
+*	This class handles the structure of a lightbox.
+*/	
+function policystatecoverage(){
+	
+	var oldOnPaint = ap.page.onPaint;
+	ap.page.onPaint = thisPagePaint;
+	var executeFlag='';
+	var customFields = [];
+	var changedField='N';
+	var firstView=ap.page.isFirstView;
+	var PropertyDamageLiabilityDeductibleCheckFlag='N';
+	var count=0;
+	
+	/**
+	 * Custom page init to hook up onChangedField events
+	 */
+	function thisPagePaint() {
+		customFields = getAllFields();
+		if(changedField=='HotRateState')
+		{
+			executeFlag=null;
+		}
+		for (var fieldIndex=0; fieldIndex<customFields.length; fieldIndex++) {
+			var fieldId = customFields[fieldIndex];
+			
+			if(!ap.page.getField(fieldId).isExcluded()){
+				registerFieldChangeEvent(fieldId, onChangedField);
+			}	
+		}
+		var controllingState=ap.page.getField('HiddenControllingState').getValue();
+	    var hotRateState=ap.page.getField('HotRateState').getValue();
+		if((executeFlag=='' && firstView==true) ||  (executeFlag=='Y' && changedField=='Y') )
+		{
+			var liabilityCSLLimit=ap.page.getField('LiabilityLimitCSL').getValue();
+			if(liabilityCSLLimit==''){
+				ap.page.getField('LiabilityLimitCSL').setValue("1000000");
+			}
+			var state=ap.page.getField('HotRateState').getValue();
+			ap.page.getField('UninsuredMotorist').setValue("1");
+			if(state=='WI'||state=='AZ'||state=='CO'||state=='IA'||state=='IL'||state=='IN'||state=='MO'||state=='KS' ){
+				ap.page.getField('MedicalPaymentCheck').setValue("1");
+			}
+			if(state=='WI'||state=='AZ'||state=='IA'||state=='IL'||state=='IN'||state=='KY'||state=='MN'||state=='MO'||state=='ND'||state=='PA' ){
+				ap.page.getField('UnderinsuredMotorist').setValue("1");
+			}
+			if(state=='KY' || state=='MI' || state=='MN' || state=='ND' || state=='KS'){
+				ap.page.getField('PersonalInjuryProtectionCoverage').setValue("1");
+			}
+			if(state!='MI' && (PropertyDamageLiabilityDeductibleCheckFlag=='Y' && executeFlag=='Y' || executeFlag=='' && firstView==true))
+		    {
+		    	if(state!=controllingState){
+		    		ap.page.getField('PropertyDamageLiabilityDeductibleCheck').setValue(ap.page.getField('hiddenPropertyDamageLiabilityDeductibleCheck').getValue());
+		   		}
+		    }
+			if(state=='KY'){
+				ap.page.getField('TortLimitationSelection').setValue("c");
+			}
+			if(state=='MN'){
+				ap.page.getField('PersonalInjuryProtectionExclusionWLB').setValue("Secura_NE");
+			}
+		    executeFlag='N';
+			changedField='N';
+		}
+		
+	    if(hotRateState!='MI' && (PropertyDamageLiabilityDeductibleCheckFlag=='Y' || firstView==true) )
+	    {
+	    	if(hotRateState!=controllingState){
+	    		if(ap.page.getField('PropertyDamageLiabilityDeductibleCheck').getValue()=='1' &&  count>=4){
+	    			ap.page.getField('PropertyDamageLiablityDeductibleAmount').setValue(ap.page.getField('hiddenPropertyDamageLiablityDeductibleAmount').getValue());
+				}	
+	   		}
+	    	PropertyDamageLiabilityDeductibleCheckFlag=='N';
+	    }	
+	    count=count+1;	
+	}	
+	
+	/**
+	 * Gets all the fields on the page
+	 */
+	
+	function getAllFields() {
+		var customFields = [];
+		
+		var fields = getAllPageFields();
+		for (var i=0; i<fields.length; i++) {
+			customFields.push(fields[i].getUniqueId());
+		}
+		return customFields;
+	}
+		
+	function getAllPageFields() {
+		
+		var pageFields = [];
+		
+		var fieldsets = page.fieldsets;
+		for (var fieldsetIndex=0; fieldsetIndex<fieldsets.length; fieldsetIndex++) {
+			var fields = fieldsets[fieldsetIndex].fields;
+				pageFields.push.apply(pageFields, fields);
+		}
+		return pageFields;
+	}
+	/**
+	* Register change event for a field
+	*/
+	function registerFieldChangeEvent(fieldId, functionRef) {   
+    var field = page.getField(fieldId);
+    if (field == null)
+    	return;
+    var elements = field.getElements();
+    for (var ix in elements) {
+        var element = elements[ix];
+        if (element) {
+        	element.addEventListener('change',functionRef,false);
+        }
+    }
+}
+
+/**
+ * Special conditional onChangedField function
+ * 
+ */
+function onChangedField() {
+	var stateField=this.id
+	var field = page.getField(this.id);
+    changedField='Y';
+    if(stateField=='HotRateState'){
+    	executeFlag='Y';
+    	PropertyDamageLiabilityDeductibleCheckFlag='Y'
+    }
+    if(stateField=='LiabilityLimitCSL'){
+    	var cslLimit=ap.page.getField('LiabilityLimitCSL').getValue();
+    	ap.page.getField('UninsuredMotoristCSLLimit').setValue(cslLimit);
+    	ap.page.getField('UnderinsuredMotoristLimitCSL').setValue(cslLimit);
+   	} else if(stateField=='UninsuredMotoristCSLLimit'){
+    	var unInsuredCSLLimit=ap.page.getField('UninsuredMotoristCSLLimit').getValue();
+    	ap.page.getField('UnderinsuredMotoristLimitCSL').setValue(unInsuredCSLLimit);
+	   	} else if(stateField=='HiredAutoCollisionDeductible'){
+	   		var HiredAutoCollisionDeductibleValue=ap.page.getField('HiredAutoCollisionDeductible').getValue();
+	   		if(HiredAutoCollisionDeductibleValue=='100' || HiredAutoCollisionDeductibleValue=='250'|| HiredAutoCollisionDeductibleValue=='500'||HiredAutoCollisionDeductibleValue=='1000'){
+	   			ap.page.getField('HiredAutoComprehensiveDeductible').setValue('100');
+	   		}else if(HiredAutoCollisionDeductibleValue=='NC'){
+	   			ap.page.getField('HiredAutoComprehensiveDeductible').setValue('NC');
+	   		}
+	   	} else if(stateField=='HiredAutoIfAnyRatingBasis'){
+	   		if(ap.page.getField('HiredAutoIfAnyRatingBasis').getValue()=='NO'){
+	   			ap.page.getField('HiredAutoTotalCostOfHire').setValue('');
+	   		}
+	   	}
+	   		
+	}
+
+	
+
+	
+};

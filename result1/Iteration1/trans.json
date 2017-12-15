@@ -1,0 +1,12 @@
+[
+    {
+        "transactionName": "Login",
+        "rawStartTime": 1513346966858,
+        "rawEndTime": 1513346968502
+    },
+    {
+        "transactionName": "Navigate to Portal",
+        "rawStartTime": 1513346968504,
+        "rawEndTime": 1513346972608
+    }
+]

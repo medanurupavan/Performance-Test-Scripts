@@ -1,0 +1,12 @@
+function FindProxyForURL (url, host)
+{
+        if   ( isPlainHostName (host) 
+			|| dnsDomainIs (host, ".intranet.secura.net")
+			|| shExpMatch (host,"*172.18.*")
+			|| shExpMatch (host,"*172.16.*")
+			|| shExpMatch (host,"*127.*")
+			 )
+              return "DIRECT";
+        else
+           return "PROXY 172.18.18.194:3128";
+ }

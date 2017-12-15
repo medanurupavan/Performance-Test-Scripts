@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Date: Fri, 15 Dec 2017 12:17:48 GMT
+Cache-Control: no-store
+Set-Cookie: AL_Session=bbf8245d-180a-428d-825b-831107eee195;Max-Age=1800;path=/;domain=qa-agentlink.secura.net;httponly;secure
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+X-Powered-By: ASP.NET
+Content-Length: 5769
+Set-Cookie: NSC_JOryx5zxbcozklidtfua2hcd51ksmeq=ffffffffaf17581945525d5f4f58455e445a4a423660;expires=Fri, 15-Dec-2017 14:17:48 GMT;path=/;httponly
+Cache-Control: no-cache
+Cache-Control: no-cache
+Set-Cookie: AL_Session=bbf8245d-180a-428d-825b-831107eee195;Max-Age=1800;path=/;domain=qa-agentlink.secura.net;httponly;secure
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0;expires=Fri, 15-Dec-2017 14:17:48 GMT;path=/;secure;httponly
+

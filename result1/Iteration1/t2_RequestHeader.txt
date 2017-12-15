@@ -1,0 +1,9 @@
+GET /favicon.ico HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Accept: */*
+Connection: Keep-Alive
+Host: qa-agentlink.secura.net
+Cookie: AL_Session=3068d25d-1972-4559-b53f-c63abe0365d7; NSC_JOryx5zxbcozklidtfua2hcd51ksmeq=ffffffffaf17581845525d5f4f58455e445a4a423660; NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0
+

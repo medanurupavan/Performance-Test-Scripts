@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="{{workitemData.work_item_id}}" data-ng-dblclick="performDoubleClick()" data-ng-click="getWorkItemActions()" class="card workitem worklist-item {{workitemData.lob}} card-{{workitemData.status  | lowercase}}">
+
+	<div class="percentage-color text-center"></div>
+	<div class="card-header">
+		<span class="{{after_title | lowercase}} noaction">{{workitemData.quote_number}}: {{lookupValue('lob',workitemData.lob)}}
+			<span class="badge">{{workitemData.complete_percent}}%</span>
+			<div data-ng-show="isWorkItemSelected()">
+				<span id="eventWorkItemAction_Delete" class="delete">
+					<i class="fa"></i>
+				</span>
+			</div>
+		</span>
+	</div>
+    <div class="card-content">
+		<i class="fa"></i>					
+		<h2>
+			<span>{{workitemData.entity_name}}</span>
+			<span data-ng-hide="isLinkedToAccount()" class="no-account" title="This work item is not assigned to an account."><i class="fa"></i></span>
+		</h2>
+		<ul>
+			<li>Effective On {{workitemData.effective_date}}</li>
+ 			<li class="premium">Premium: {{workitemData.premium | currency : "$" : 0}}</li>
+			<li>{{lookupValue("STATUS",workitemData.status)}}</li>
+			<li>{{workitemData.agency_name}}</li>
+			<li>{{workitemData.agency_code}}</li>
+			<li>{{workitemData.underwriter_name}}</li>
+			<li ng-show="isWorkItemSubmitted()" >Submission ID: {{workitemData.external_id}}</li>
+		</ul>
+	</div>
+
+	<div data-ng-show="isWorkItemSelected()" id="tile-actions" class="row card-actions">
+		<div class="card-button">
+			<span onmouseover="return true;" data-ng-click="actionClicked(action)" title="{{action.localizedTitle}}"
+					data-ng-repeat="action in workitemData.actions | filter: {isPrimary: true}" 
+					class="work_list_action action-button btn btn-default" id="eventWorkItemAction_{{action.code}}"> 
+				<span>{{action.localizedTitle}}</span>
+			</span>
+			<div class="btn-group other-actions" dropdown is-open="actionsOpen" ng-if="(workitemData.actions | filter: {isPrimary: false}).length > 0">
+				<button id="work_item_actions_secondary" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+					Other Actions<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu other-actions" role="menu">
+					<li data-ng-repeat="action in workitemData.actions | filter: {isPrimary: false}" class="work_item_actions-{{action.code}}">
+						<span onmouseover="return true;" data-ng-click="actionClicked(action)" title="{{action.localizedTitle}}" class="work_list_action" id="eventWorkItemAction_{{action.code}}"> 
+							<span>{{action.localizedTitle}}</span>
+						</span>
+					</li>	
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

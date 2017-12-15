@@ -1,0 +1,13 @@
+[t2]
+SnapshotXmlFile=snapshot_2.xml
+ContentType=text/html
+StepName=Url: favicon.ico
+Total=1
+FileName1=t2.html
+RequestHeaderFile=t2_RequestHeader.txt
+ResponseHeaderFile=t2_ResponseHeader.txt
+RawStepEndTime=1513346966842
+RawStepName=favicon.ico
+RequestBodyFile=t2_RequestBody.txt
+RawStepStartTime=1513346966546
+URL1=https://qa-agentlink.secura.net/favicon.ico

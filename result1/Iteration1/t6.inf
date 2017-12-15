@@ -1,0 +1,13 @@
+[t6]
+SnapshotXmlFile=snapshot_5.xml
+ContentType=text/html
+StepName=Url: messages.tpl.jsp
+Total=1
+FileName1=t6.html
+RequestHeaderFile=t6_RequestHeader.txt
+ResponseHeaderFile=t6_ResponseHeader.txt
+RawStepEndTime=1513346970519
+RawStepName=messages.tpl.jsp
+RequestBodyFile=t6_RequestBody.txt
+RawStepStartTime=1513346970475
+URL1=https://qa-agentlink.secura.net/AgencyPortal/shared/partials/messages.tpl.jsp

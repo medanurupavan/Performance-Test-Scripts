@@ -1,0 +1,204 @@
+var fieldset, field, interestLevel, newFormRow;
+fieldset = page.getFieldset("N108");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset = page.getFieldset("questionnaire");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Applicant Questions");
+field = fieldset.getField("genrl34");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Is the applicant a subsidiary of another entity?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl35");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Does the applicant have any subsidiaries?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl47");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Is a formal safety program in operation?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl41");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any exposure to flammables, explosives, chemicals?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl22");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any other insurance with this company or being submitted?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl06");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any policy or coverage declined, cancelled or non-renewed during the prior 3 years? (Not applicable in MO)");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl07");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any past losses or claims relating to sexual abuse or molestation allegations, discrimination or negligent hiring?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl61");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("During the Last Five Years (Ten in RI), has any Applicant been Indicted for or Convicted of any degree of the crime of fraud, Bribery, Arson Or any other Arson-Related crime in Connection with this or any other property ? ( In RI, this question must be answered by any applicant for property insurance. Failure to disclose the existence of an arson conviction is a misdemeanor punishable by a sentence of up to one year of imprisonment).");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl09");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any uncorrected fire code violations?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl25");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Has applicant had a foreclosure, repossession or bankruptcy during the past five years?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl63");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Has applicant had a judgement or lien during the specified number of years?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl40");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Has business been placed in a trust?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl52");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Any foreign operations, foreign products distributed in USA, or US products sold&#47;distributed in foreign countries?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("genrl64");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Does applicant have other business ventures for which coverage is not requested?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("TransactionRequestDt");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+fieldset = page.getFieldset("N110");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Remarks");
+field = fieldset.getField("RemarkTextItemRefQuestions__IdRefCommlPolicy_id");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Please add any additional remarks :");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+page.paint();
+if(page.form) {page.form.setupHotFields();}
+ap.ajaxMessageMap.clear();
+ap.ajaxMessageMap.removeAlerts();
+var message;
+ap.ajaxMessageMap.render();

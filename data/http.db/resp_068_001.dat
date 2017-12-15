@@ -1,0 +1,230 @@
+var show_multi_result_table = new Show_multi_result_table();
+
+/**
+* Shows results from a MultiResults table helper in the multi-results lightbox
+* Overrides & extends page.onPaint to bring up lightbox if AJAX-populated JSON field has data
+*/
+function Show_multi_result_table() {
+       var oldOnPaint = ap.page.onPaint;
+       ap.page.onPaint = showTable;
+       
+       /**
+       * Show the multi-results table in the lightbox
+       */
+       function showTable() {
+              
+              // call pre-existing onPaint function if any
+              if (typeof oldOnPaint === 'function') {
+                     oldOnPaint();
+              }
+              
+              // hijack save button to validate before submitting
+              var saveButton = document.getElementById('saveButton');
+              var addButton = document.getElementById('addButton');
+              if (saveButton != null) {
+                     saveButton.onclick = validateBeforeSave;
+              }
+              if(addButton != null) {
+                     addButton.onclick = validateBeforeAdd;
+              }
+                     
+              // if we have JSON results in field, display dialog
+              
+              if($("#LocationAddressAddressValidationFlag").val()=='NOMATCH' || $("#LocationAddressAddressValidationFlag").val()=='KEEPADDRESSASENTERED'){
+                     $("[id^='LocationAddressKeepAddressasEntered']").parent().show();
+              }else{
+                     $("[id^='LocationAddressKeepAddressasEntered']").parent().hide();
+              }
+              var json = ap.page.getField('MultiResultJSON').getValue();
+              $('#AddressStandardizationHelperMessage').text('');
+              $('#AddressStandardizationHelperMessage').removeClass('alert alert-info');
+              if (json != '') {
+                     page.getField('MultiResultJSON').setValue('');
+                     var data = $.parseJSON(json);
+                     if(data.ServiceMessage=='EXACTMATCH' || data.ServiceMessage=='CORRECTED') {
+                            ap.page.getField('LocationAddressAddr1').setValue(data.LocationAddressAddr1);
+                            ap.page.getField('LocationAddressAddr2').setValue(data.LocationAddressAddr2);
+                            ap.page.getField('LocationAddressCity').setValue(data.LocationAddressCity);
+                            ap.page.getField('LocationAddressState').setValue(data.LocationAddressState);
+                            ap.page.getField('LocationAddressZip').setValue(data.LocationAddressZip);
+                           
+                           
+                            ap.page.getField('LocationGEOResult').setValue(data.LocationGEOResult);
+                            ap.page.getField('LocationGEOPlaceCd').setValue(data.LocationGEOPlaceCd);
+                            ap.page.getField('LocationGEOCensusTract').setValue(data.LocationGEOCensusTract);
+                            ap.page.getField('LocationGEOCensusBlock').setValue(data.LocationGEOCensusBlock);
+                            ap.page.getField('LocationGEOCountyFIPS').setValue(data.LocationGEOCountyFIPS);
+                            ap.page.getField('LocationGEOLatitude').setValue(data.LocationGEOLatitude);
+                           
+                            ap.page.getField('LocationGEOLongitude').setValue(data.LocationGEOLongitude);
+                            ap.page.getField('LocationGEOCountyName').setValue(data.LocationGEOCountyName);
+                            ap.page.getField('LocationGEOSubdivisionCode').setValue(data.LocationGEOSubdivisionCode);
+                           $("#LocationAddressAddressValidationFlag").val("EXACTMATCH");
+                           $("[id^='LocationAddressKeepAddressasEntered']").parent().hide();
+                           $('#AddressStandardizationHelperMessage').addClass('alert alert-info');
+                           
+                           includeExcludeILStateSections(data);
+                           
+                           if(data.ServiceMessage=='EXACTMATCH'){
+                                  $('#AddressStandardizationHelperMessage').text('Address has been standardized, please click Add/Save to continue');
+                           }else{
+                                  $('#AddressStandardizationHelperMessage').text('Address has been updated and standardized, please click Add/Save to continue');
+                           }
+                                                       
+                           
+                     }else if (data.ServiceMessage=='NOMATCH'){
+                           ap.page.getField('LocationAddressAddr1').setReadOnly(true);
+                           ap.page.getField('LocationAddressAddr2').setReadOnly(true);
+                           ap.page.getField('LocationAddressCity').setReadOnly(true);
+                           ap.page.getField('LocationAddressState').setReadOnly(true);
+                           ap.page.getField('LocationAddressZip').setReadOnly(true);
+                           $("[id^='LocationAddressKeepAddressasEntered']").parent().show();
+                           $("#LocationAddressKeepAddressasEntered").prop("checked", true );
+                           $("#LocationAddressAddressValidationFlag").val("NOMATCH");
+                           $('#AddressStandardizationHelperMessage').addClass('alert alert-info');
+                           $('#AddressStandardizationHelperMessage').text('Unable to verify the address. To edit, uncheck "Keep address as entered". Please click Add/Save to continue');
+                     }else if(data.ServiceMessage=='ERROR'){
+                           $("[id^='LocationAddressKeepAddressasEntered']").parent().hide();
+                           $("#LocationAddressAddressValidationFlag").val("ERROR");
+                           $('#AddressStandardizationHelperMessage').addClass('alert alert-info');
+                           $('#AddressStandardizationHelperMessage').text('Unable to validate the address at this time, please click Add/Save to continue');
+                     }else{
+
+                           addess_validaion_lightbox.initialize(data);
+                           addess_validaion_lightbox.showDialog();
+                     }
+                     
+                     
+              }
+       }
+}
+
+/**
+* Define lightbox exit button functionality
+*/
+function exitSearchDialog() {
+       $("#LocationAddressAddressValidationFlag").val("UPDATEADDRESS");
+
+       if($("#LocationAddressAddressValidationFlag").val()=='NOMATCH' || $("#LocationAddressAddressValidationFlag").val()=='KEEPADDRESSASENTERED'){
+              $("[id^='LocationAddressKeepAddressasEntered']").parent().show();
+       }else{
+              $("[id^='LocationAddressKeepAddressasEntered']").parent().hide();
+       }
+       addess_validaion_lightbox.hideDialog(); 
+}
+
+/**
+* Define lightbox save button functionality
+*/
+function saveSearchData(dataArray) {
+
+       // iterate over each array entry, setting the field to the value provided
+       dataArray.forEach(function (entry) {
+           console.log(entry);
+           var field = page.getField(entry.uniqueId);
+           field.setValue(entry.value)
+       });
+       
+       // close the lightbox
+       addess_validaion_lightbox.hideDialog();
+       var tempField = ap.page.getField('LocationAddressAddr1');
+       tempField.makeIntraPageDTRRequest();
+}
+
+function keepAddressEntered(){
+    ap.page.getField('LocationAddressAddr1').setReadOnly(true);
+	ap.page.getField('LocationAddressAddr2').setReadOnly(true);
+	ap.page.getField('LocationAddressCity').setReadOnly(true);
+	ap.page.getField('LocationAddressState').setReadOnly(true);
+	ap.page.getField('LocationAddressZip').setReadOnly(true);
+	$("[id^='LocationAddressKeepAddressasEntered']").parent().show();
+	$("#LocationAddressKeepAddressasEntered").prop( "checked", true );
+	$("#LocationAddressAddressValidationFlag").val("KEEPADDRESSASENTERED");
+	addess_validaion_lightbox.hideDialog();
+}
+       /**
+       * Validate that the Keep Address as Entered checkbox is checked
+       * before allowing the user to process changes with Save.
+       * If not checked, we call IPDTR first before Save.
+       */
+function validateBeforeSave(){
+              var checkboxField = ap.page.getField('LocationAddressKeepAddressasEntered');
+              var addressValidationFlag = ap.page.getField('LocationAddressAddressValidationFlag');
+              var noSpecificLocationCheckboxField = ap.page.getField('NoSpecificLocation');
+              // call address validation if checkbox not checked
+              // just use any of our custom hotfields to trigger IPDTR
+              
+              if (checkboxField.getValue() != 1 && 
+                           (addressValidationFlag.getValue()=='KEEPADDRESSASENTERED'|| addressValidationFlag.getValue()=='NOMATCH' ||  addressValidationFlag.getValue()=='UPDATEADDRESS')) {
+                     ap.consoleInfo('KeepAddressAsEntered is not selected, calling validation service...');
+                     ap.page.getField('LocationAddressAddr1').makeIntraPageDTRRequest();
+              }
+              // if latest call results in setting the checkbox, allow normal Save
+              if (checkboxField.getValue() == 1) {
+                     ap.consoleInfo('KeepAddressAsEntered is selected, processing normal Save of address...');
+                     page.submit('Save');
+              } else if(checkboxField.getValue() != 1 && (addressValidationFlag.getValue()=='EXACTMATCH' || addressValidationFlag.getValue()=='ERROR') ){
+                     ap.consoleInfo('KeepAddressAsEntered is not selected and exact match is found, processing normal Save of address...');
+                     page.submit('Save');
+              }else if (noSpecificLocationCheckboxField && (noSpecificLocationCheckboxField.getValue() == 1)){
+                     ap.consoleInfo('No Specific Location is slected and addres not validated processing normal Save of address...');
+                     page.submit('Save');
+              }else{
+                     // Display message to user that we cannot save address
+              }
+       }
+
+/**
+* Validate that the Keep Address as Entered checkbox is checked
+* before allowing the user to process changes with Save.
+* If not checked, we call IPDTR first before Save.
+*/
+function validateBeforeAdd(){
+       var checkboxField = ap.page.getField('LocationAddressKeepAddressasEntered');
+       var addressValidationFlag = ap.page.getField('LocationAddressAddressValidationFlag');
+       var noSpecificLocationCheckboxField = ap.page.getField('NoSpecificLocation');
+       // call address validation if checkbox not checked
+       // just use any of our custom hotfields to trigger IPDTR
+       
+       if (checkboxField.getValue() != 1 && 
+                     (addressValidationFlag.getValue()=='KEEPADDRESSASENTERED'|| addressValidationFlag.getValue()=='NOMATCH' ||  addressValidationFlag.getValue()=='UPDATEADDRESS')) {
+              ap.consoleInfo('KeepAddressAsEntered is not selected, calling validation service...');
+              ap.page.getField('LocationAddressAddr1').makeIntraPageDTRRequest();
+       }
+       // if latest call results in setting the checkbox, allow normal Save
+       if (checkboxField.getValue() == 1) {
+              ap.consoleInfo('KeepAddressAsEntered is selected, processing normal Save of address...');
+              page.submit('Add');
+       } else if(checkboxField.getValue() != 1 && (addressValidationFlag.getValue()=='EXACTMATCH' || addressValidationFlag.getValue()=='ERROR') ){
+              ap.consoleInfo('KeepAddressAsEntered is not selected and exact match is found, processing normal Save of address...');
+              page.submit('Add');
+       }else if (noSpecificLocationCheckboxField && (noSpecificLocationCheckboxField.getValue() == 1)){
+              ap.consoleInfo('No Specific Location is slected and addres not validated processing normal Save of address...');
+              page.submit('Add');
+       }else{
+              // Display message to user that we cannot save address
+       }
+}
+
+/**
+* this is to include or exclude IL state related section and fields as once IPDTR is complete field elements need to be updated automatically.
+* @param data
+* @returns
+*/
+function includeExcludeILStateSections(data){
+       if(ap.transaction.lob=='AUTOB'){
+              if(data.LocationAddressState=='IL'){
+                     ap.page.getField('LocationCityLimits').include(true);
+                     ap.page.getFieldset('LocationIllinoisFireTax').include(true);
+              }else{
+                     if(ap.page.getField('LocationCityLimits')!=null && !ap.page.getField('LocationCityLimits').isExcluded()){
+                           ap.page.getField('LocationCityLimits').exclude();
+                     }
+                     if(ap.page.getFieldset('LocationIllinoisFireTax')!=null && !ap.page.getFieldset('LocationIllinoisFireTax').isExcluded()){
+                           ap.page.getFieldset('LocationIllinoisFireTax').exclude();
+                     }
+              }
+              
+       }
+}
+

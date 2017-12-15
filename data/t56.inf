@@ -1,0 +1,11 @@
+[t56]
+FileName1=t56_NewWorkItemLink.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/NewWorkItemLink?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_55.xml
+RequestHeaderFile=t56_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t56_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

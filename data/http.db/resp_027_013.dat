@@ -1,0 +1,2298 @@
+1328
+var fieldset, field, interestLevel, newFormRow;
+fieldset = page.getFieldset("AgencyInformationSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Agency Information");
+field = fieldset.getField("SecuraCommlPolicyLOBCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("AUTOB");
+}
+field = fieldset.getField("CommlAutoLineBusinessLOBCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("AUTOB");
+}
+field = fieldset.getField("SecuraCommlPolicyId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CommlAutoLineBusinessId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("GenInfoTransactionRequestDt");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("RqUID");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CurCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AccClearanceFieldForIPDTR");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AccClearanceMultiResultJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CreateNewAccountFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPAGCODE");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPAGNAME");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPACCOUNTNO");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPCUSTNAME");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPDBA");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPADD");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPPHONE");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPFEIN");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPDATE");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPPKG");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPAUTO");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPWC");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPUM");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("hiddenClearanceOverride");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ShowFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("SPClearnceInputChangeFlag");
+if (field != 
+cd8
+null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AgencyName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Agency Name");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("N379");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("If the producer is not shown in the list below, please select the 'Not Listed' option.  A listed producer is required to issue a policy.  To add a producer, please complete the agent appointment applicant here: <a href='https://agentlink.secura.net/agent_appointment_app.html' target='_blank'> https://agentlink.secura.net/agent_appointment_app.html</a>");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("AgencyProducer");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Producer");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyAddr1");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Address Line 1");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 40)', "This field can't exceed 40 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyAddr2");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Address Line 2");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 40)', "This field can't exceed 40 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyCity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	fiel
+2000
+d.setLabelText("City");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 128)', "This field can't exceed 128 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("State");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyZip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"#####?-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Zip Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 15)', "This field can't exceed 15 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgentCSRPhone");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"(###) ###-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Agency Phone");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 20)', "This field can't exceed 20 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("AgencyPhone");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"(###) ###-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Agent&#47;CSR Phone");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 16)', "This field can't exceed 16 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_phone(this.getValue())', "This field is not a recognized phone format", 'PhoneValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(16);
+}
+field = fieldset.getField("AgencyEmail");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Agent&#47;CSR E-mail");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 256)', "This field can't exceed 256 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_email(this.getValue())', "This field is not a recognized email format.", 'EmailValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(256);
+}
+fieldset = page.getFieldset("N388");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset = page.getFieldset("ApplicantInformationSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Applicant Information");
+field = fieldset.getField("GenInfoAddressStandardizationHelperMessage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("");
+}
+field = fieldset.getField("GenInfoMessage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("GenInfoMultiResultJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("EffectiveDate");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"##-##-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Effective Date");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_date(this.getValue(), "MM-dd-yyyy")', "This field must be a valid date entered in MM-dd-yyyy format", 'DateValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("EffectiveDateUWOR");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("");
+	field.setValue("false");
+}
+field = fieldset.getField("ExpirationDate");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setDefaultValue("");
+	field.setValue("12-14-2018");
+	field.initFormatmask(true,{},"##-##-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Expiration Date");
+	field.updateHelpBubbleText("ExpirationDate_fieldHelperBalloon", "fieldHelperBalloon", "If you require a short-term policy, please contact your underwriter.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_date(this.getValue(), "MM-dd-yyyy")', "This field must be a valid date entered in MM-dd-yyyy format", 'DateValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Applicant Name");
+	field.updateHelpBubbleText("ApplicantName_fieldHelperBalloon", "fieldHelperBalloon", "Only one named insured should be included in this field. Please use Extended Named Insured screen for any other named insureds.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 250)', "This field can't exceed 250 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(250);
+}
+field = fieldset.getField("DoingBusinessAs");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Doing Business As");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibra
+2000
+ry.validation_maxLength(this.getValue(), 4000)', "This field can't exceed 4000 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(4000);
+}
+field = fieldset.getField("ExtendedNamedInsureds");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Extended Named Insureds");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingCountry");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Country");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingAddress1");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Mailing Address Line 1");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 32)', "This field can't exceed 32 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((.*P\.O\.)|(.*PO\s+B)|(BOX)|(.*P\s+O\s+B)|(.*P\.\s+O\.\s+B)|(.*P\.O\s+B)|(.*POBOX)|(.*Post\s+Office)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((C\.O\.)|(C\/O)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((Attn)|(ATTN\.)|(Attention)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(32);
+}
+field = fieldset.getField("ApplicantMailingAddress2");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Mailing Address Line 2");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((.*P\.O\.)|(.*PO\s+B)|(BOX)|(.*P\s+O\s+B)|(.*P\.\s+O\.\s+B)|(.*P\.O\s+B)|(.*POBOX)|(.*Post\s+Office)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((C\.O\.)|(C\/O)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((Attn)|(ATTN\.)|(Attention)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingCity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("City");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 128)', "This field can't exceed 128 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(128);
+}
+field = fieldset.getField("ApplicantMailingState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("State");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingZip_US");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.initFormatmask(true,{},"#####?-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Zip Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_USZipCode(this.getValue())', "This field must be in a valid US ZIP Code format", 'USZipCodeValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("ApplicantMailingKeepAddressasEntered");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Keep Address as Entered");
+	field.updateHelpBubbleText("ApplicantMailingKeepAddressasEntered_fieldHelperBalloon", "fieldHelperBalloon", "Please uncheck the checkbox for editing the address.", "200");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantMailingGEOPlaceCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCensusTract");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCensusBlock");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCountyFIPS");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOLatitude");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOLongitude");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOResult");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingGEOCountyName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("
+2000
+ApplicantMailingGEOSubdivisionCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantMailingAddressValidationFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("ApplicantPhone");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"(###) ###-####"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Phone");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 20)', "This field can't exceed 20 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_phone(this.getValue())', "This field is not a recognized phone format", 'PhoneValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(20);
+}
+field = fieldset.getField("DateBusinessStart");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"##-##-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Date Business Started");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_date(this.getValue(), "MM-dd-yyyy")', "This field must be a valid date entered in MM-dd-yyyy format", 'DateValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("NamedInsuredExternalId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("WebsiteAddress");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Website Address");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 256)', "This field can't exceed 256 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(256);
+}
+field = fieldset.getField("EMailAddress");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("E-mail Address");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 256)', "This field can't exceed 256 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_email(this.getValue())', "This field must be a valid email address", 'EmailValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(256);
+}
+field = fieldset.getField("ApplicantLegalEntity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Legal Entity");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("TaxIdType");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Tax ID Type");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("TaxIdFEIN");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.initFormatmask(true,{},"##-#######"); 
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Tax ID");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 11)', "This field can't exceed 11 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_fein(this.getValue())', "This field must be a valid FEIN with a format of nn-nnnnnnn", 'FEINValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(11);
+}
+field = fieldset.getField("NonprofitOrganization");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("501(c)(3) Nonprofit Organization");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("NatureofBusinessSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Nature of Business");
+field = fieldset.getField("PMA");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("PrimaryBusDescription");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Primary Business Description");
+	field.beginIntraPageDTRListUpdate();
+	field.addListOption("Select One", "", true);
+	field.addListOption("Abrasive Wheel Mfg.", "50010", false);
+	field.addListOption("Abrasives or Abrasive Products Mfg. - NOC", "50017", false);
+	field.addListOption("Abrasives or Abrasive Products Mfg. - artificial", "50015", false);
+	field.addListOption("Accounting, Auditing, and Bookkeeping", "61226", false);
+	field.addListOption("Adhesive Mfg.", "50045", false);
+	field.addListOption("Adhesive Tape Mfg.", "50047", false);
+	field.addListOption("Adult Day Care - Not-For-Profit only", "40005", false);
+	field.addListOption("Adult Day Care - Other than Not-For-Profit", "40006", false);
+	field.addListOption("Advertising Sign Companies - outdoor", "90089", false);
+	field.addListOption("Aerosol Container Mfg.", "51001", false);
+	field.addListOption("Aerosol Containers - filling or charging for others", "51005", false);
+	field.addListOption("Air Conditioning Equipment - dealers or distributors only", "10010", false);
+	field.addListOption("Air Conditioning Equipment Mfg.", "51116", false);
+	field.addListOption("Air Conditioning Systems or Equipment - dealers or distributors and installation, servicing or repair", "91111", false);
+	field.addListOption("Aircraft or Aircraft Parts Mfg.", "51201", false);
+	field.addListOption("Airport - lessees of portions of airports engaged in the sale of aircraft or accessories, servicing or repairing of aircraft or pilot instructions", "40026", false);
+	field.addListOption("Airport Control Towers - not operated exclusively by the Federal Aviation Administration", "40020", false);
+	field.addListOption("Airport Runway or Warming Apron - paving or repaving, surfacing, resurfaci
+2000
+ng or scraping", "91125", false);
+	field.addListOption("Airports - commercial", "40010", false);
+	field.addListOption("Airports - private", "40015", false);
+	field.addListOption("Alarm Mfg. - burglar", "51205", false);
+	field.addListOption("Alarm Mfg. - fire or smoke", "51206", false);
+	field.addListOption("Alarms - security systems - monitoring", "91130", false);
+	field.addListOption("Alarms and Alarm Systems - installation, servicing or repair", "91127", false);
+	field.addListOption("Alcohol Mfg. - not beverage", "51210", false);
+	field.addListOption("Ambulance Service, First Aid or Rescue Squads - Not-For-Profit only", "40032", false);
+	field.addListOption("Ambulance Service, First Aid or Rescue Squads - Other than Not-For-Profit", "40031", false);
+	field.addListOption("Ammunition Mfg.", "51211", false);
+	field.addListOption("Amusement Centers", "10015", false);
+	field.addListOption("Amusement Devices - NOC", "40040", false);
+	field.addListOption("Amusement Devices - operated in connection with carnivals or fairs - Not-For-Profit only", "40042", false);
+	field.addListOption("Amusement Devices - operated in connection with carnivals or fairs - Other Than Not-For-Profit only", "40041", false);
+	field.addListOption("Amusement Parks", "10020", false);
+	field.addListOption("Amusement Rental Units - Grade 1", "20041", false);
+	field.addListOption("Amusement Rental Units - Grade 2", "20042", false);
+	field.addListOption("Amusement Rental Units - Grade 3", "20043", false);
+	field.addListOption("Amusement Rentals - Grade 1", "20141", false);
+	field.addListOption("Amusement Rentals - Grade 2", "20142", false);
+	field.addListOption("Amusement Rentals - Grade 3", "20143", false);
+	field.addListOption("Analytical Chemists", "91135", false);
+	field.addListOption("Anhydrous Ammonia Dealers and Distributors - Agribusiness", "20047", false);
+	field.addListOption("Anhydrous Ammonia Dealers and Distributors - All Other", "10036", false);
+	field.addListOption("Animals - draft", "40045", false);
+	field.addListOption("Animals - saddle - for rent", "40046", false);
+	field.addListOption("Animals - saddle - private", "40047", false);
+	field.addListOption("Antique Stores", "10026", false);
+	field.addListOption("Apartment Buildings - Garden with Mercantile", "60011", false);
+	field.addListOption("Apartment Buildings - NOC with Mercantile", "60010", false);
+	field.addListOption("Apartment Buildings or Hotels time-sharing - 4 stories or more", "60013", false);
+	field.addListOption("Apartment Buildings or Hotels time-sharing - less than 4 stories with Mercantile", "60012", false);
+	field.addListOption("Apartment Hotels - 4 stories or more", "60016", false);
+	field.addListOption("Apartment Hotels - less than 4 stories", "60015", false);
+	field.addListOption("Appliance Distributors - household type", "10040", false);
+	field.addListOption("Appliance Stores - household type", "10042", false);
+	field.addListOption("Appliances and Accessories Mfg. - commercial - gas", "51220", false);
+	field.addListOption("Appliances and Accessories Mfg. - commercial - not gas", "51221", false);
+	field.addListOption("Appliances and Accessories Mfg. - household - gas", "51222", false);
+	field.addListOption("Appliances and Accessories Mfg. - household - not gas", "51224", false);
+	field.addListOption("Appliances and Accessories installation, servicing or repair - commercial", "91150", false);
+	field.addListOption("Appliances and Accessories installation, servicing or repair - household", "91155", false);
+	field.addListOption("Aquaculture", "20072", false);
+	field.addListOption("Archery Ranges - indoor", "10052", false);
+	field.addListOption("Archery Ranges - other than indoor - NOC", "10054", false);
+	field.addListOption("Armored Car Service Companies", "91160", false);
+	field.addListOption("Army and Navy stores", "10060", false);
+	field.addListOption("Art Galleries - Not-for-Profit only", "10066", false);
+	field.addListOption("Art Galleries - Other than Not-for-Profit only", "10065", false);
+	field.addListOption("Asbestos Goods Mfg.", "51230", false);
+	field.addListOption("Asphalt Works", "51241", false);
+	field.addListOption("Asphalt or Tar Distilling or Refining", "51240", false);
+	field.addListOption("Athletic Games Sponsored by the Insured - Not-for-Profit only", "40061", false);
+	field.addListOption("Athletic Games Sponsored by the Insured - Other than Not-for-Profit", "40059", false);
+	field.addListOption("Athletic Leagues or Tournaments - Grade 1", "20006", false);
+	field.addListOption("Athletic Leagues or Tournaments - Grade 3", "20008", false);
+	field.addListOption("Athletic Programs - amateur - Not-for-Profit only", "40067", false);
+	field.addListOption("Athletic Programs - amateur - Other than Not-for-Profit", "40066", false);
+	field.addListOption("Athletic Teams - professional or semi-professional", "40069", false);
+	field.addListOption("Athletic or Sports Contests - in buildings - lessees - Not-for-Profit only", "40064", false);
+	field.addListOption("Athletic or Sports Contests - in buildings - lessees - Other than Not-for-Profit", "40063", false);
+	field.addListOption("Auctioneers - livestock - sales conducted away from the insured's premises", "91175", false);
+	field.addListOption("Auctioneers - sales conducted away from the insured's premises", "91177", false);
+	field.addListOption("Auctions - on premises owned or rented by the insured", "91179", false);
+	field.addListOption("Auto Dealer - New", "7305", false);
+	field.addListOption("Auto Wholesale Dealers", "7358", false);
+	field.addListOption("Automobile Dismantling", "91190", false);
+	field.addListOption("Automobile Mfg. or Assembling", "51255", false);
+	field.addListOption("Automobile Parts and Supplies Distributors", "10070", false);
+	field.addListOption("Automobile Parts and Supplies Stores", "10071", false);
+	field.addListOption("Automobile Quick Lubrication Services", "10072", false);
+	field.addListOption("Automobile Renting or Leasing Companies", "60035", false);
+	field.addListOption("Automobile Repair Shops - self-service", "10075", false);
+	field.addListOption("Automobile Repair or Service Shops - NOC", "10073", false);
+	field.addListOption("Automobile, Bus and Truck Body Mfg.", "51250", false);
+	field.addListOption("Automobile, Bus or Truck Parts Mfg. - NOT operating parts", "51252", false);
+	field.addListOption("Automobile, Bus or Truck Parts Mfg. - brakes or brake linings", "51251", false);
+	field.addListOption("Automobile, Bus or Truck Parts Mfg. - operating parts", "51253", false);
+	field.addListOption("Automobile, Bus or Truck Parts Mfg. - passenger restraining devices", "51254", false);
+	field.addListOption("Baby Food Mfg.", "51305", false);
+	field.addListOption("Baby Food Mfg. - in glass containers", "51300", false);
+	field.addListOption("Bakeries", "10100", false);
+	field.addListOption("Bakery Plants", "51315", false);
+	field.addListOption("Bakery Products Distributor", "12361", false);
+	field.addListOption("Band Supplies or Musical Instruments", "15538", false);
+	field.addListOption("Barber Shops", "10113", false);
+	field.addListOption("Barber or Beauty Shop Supplies Distributors", "10111", false);
+	field.addListOption("Bars and Taverns", "16941", false);
+	field.addListOption("Baseball Leagues/Tournaments", "20007", false);
+	field.addListOption("Baseball club", "20011", false);
+	field.addListOption("Bathhouses or Bathing Pavilions", "10120", false);
+	field.addListOption("Battery Mfg. - dry cell", "51330", false);
+	field.addListOption("Battery Mfg. - wet cell or storage", "51333", false);
+	field.addListOption("Batting Cages", "20004", false);
+	field.addListOption("Bazaars - operated by the insured - Not-for-Profit only", "10132", false);
+	field.addListOption("Bazaars - operated by the insured - Other than Not-for-Profit", "10130", false);
+	field.addListOption("Beach Chairs & Umbrellas - rented to others", "10133", false);
+	field.addListOption("Beaches - bathing - commercially operated", "10135", false);
+	field.addListOption("Beaches - bathing - not commercially operated", "40072", false);
+	field.addListO
+2000
+ption("Bearing Mfg.", "51340", false);
+	field.addListOption("Beauty Parlors and Hair Styling Salons without Tanning or Massage Services", "10115", false);
+	field.addListOption("Bed and Breakfasts", "45210", false);
+	field.addListOption("Bedding & Linens - Distributor", "12509", false);
+	field.addListOption("Bedding & Linens - Retail", "12510", false);
+	field.addListOption("Beer, Ale, or Malt Liquor Mfg. - in bottles", "51350", false);
+	field.addListOption("Beer, Ale, or Malt Liquor Mfg. - in cans", "51351", false);
+	field.addListOption("Beer, Ale, or Malt Liquor Mfg. - not bottled or canned", "51352", false);
+	field.addListOption("Berry Crop Farm - Farms 500 Acres or Smaller", "20059", false);
+	field.addListOption("Berry Crop Farm - Farms Larger than 500 Acres", "20060", false);
+	field.addListOption("Beverage Bottler - soft drinks - carbonated - in cans or plastic bottles", "51355", false);
+	field.addListOption("Beverage Bottler - soft drinks - carbonated - in glass bottles", "51356", false);
+	field.addListOption("Beverage Bottler - soft drinks - in metal cylinders", "51357", false);
+	field.addListOption("Beverage Bottler - soft drinks - in paper containers", "51358", false);
+	field.addListOption("Beverage Bottler - soft drinks - not carbonated - in bottles or cans", "51359", false);
+	field.addListOption("Beverage Distributors - alcoholic other than beer", "10140", false);
+	field.addListOption("Beverage Distributors - nonalcoholic and beer", "10141", false);
+	field.addListOption("Beverage Stores - liquor and wine", "10145", false);
+	field.addListOption("Beverage Stores - soft drinks and beer", "10146", false);
+	field.addListOption("Bicycle Mfg. - not motorized", "51370", false);
+	field.addListOption("Bicycle Stores - sales and servicing", "10150", false);
+	field.addListOption("Bicycles - rented to others", "10151", false);
+	field.addListOption("Billiard or Pool Halls", "10160", false);
+	field.addListOption("Billiard or Pool Table Mfg.", "51380", false);
+	field.addListOption("Bingo Games - in public halls or theaters - commercially operated", "40075", false);
+	field.addListOption("Biofuels Distributors - Ethanol", "13206", false);
+	field.addListOption("Biofuels Distributors - Other Than Ethanol", "13207", false);
+	field.addListOption("Biofuels Manufacturing - Ethanol", "53951", false);
+	field.addListOption("Biofuels Manufacturing - Other Than Ethanol", "53952", false);
+	field.addListOption("Blacksmithing", "91200", false);
+	field.addListOption("Blasting Operations", "91210", false);
+	field.addListOption("Blood Banks - Not-for-Profit only", "40102", false);
+	field.addListOption("Blood Banks - Other than Not-for-Profit", "40101", false);
+	field.addListOption("Boarding or Rooming Houses", "61000", false);
+	field.addListOption("Boat Dealers", "10101", false);
+	field.addListOption("Boat Repair and Servicing", "91235", false);
+	field.addListOption("Boat Storage and Moorage", "10105", false);
+	field.addListOption("Boat Yards or Marinas - public", "10107", false);
+	field.addListOption("Boat or Ship Building - inboard and inboard/outboard", "51400", false);
+	field.addListOption("Boat or Ship Building - without motors", "51401", false);
+	field.addListOption("Boats - canoes or rowboats - NOT for rent - not equipped with motors", "40111", false);
+	field.addListOption("Boats - canoes or rowboats - for rent - not equipped with motors", "10110", false);
+	field.addListOption("Boats - motor or sail - not for rent", "40115", false);
+	field.addListOption("Boats - motor or sail - rented to others", "10117", false);
+	field.addListOption("Boats - nonowned over 26 feet", "40140", false);
+	field.addListOption("Boats - not for rent", "40117", false);
+	field.addListOption("Boats rented to others - NOC", "10119", false);
+	field.addListOption("Boiler Inspection, Installation, Cleaning or Repair", "91250", false);
+	field.addListOption("Bolt, Nut, Rivet, Screw or Washer Mfg.", "51500", false);
+	field.addListOption("Bookbinding - Not-for-Profit only", "51517", false);
+	field.addListOption("Bookbinding - Other than Not-For-Profit", "51516", false);
+	field.addListOption("Books and Magazines Stores - Not-For-Profit only", "10205", false);
+	field.addListOption("Books and Magazines Stores - Other than Not-For-Profit", "10204", false);
+	field.addListOption("Bottle and Jar Mfg. - glass - for use under pressure - nonreturnable", "51551", false);
+	field.addListOption("Bottle and Jar Mfg. - glass - for use under pressure - returnable", "51552", false);
+	field.addListOption("Bottle and Jar Mfg. - glass - not for use under pressure", "51550", false);
+	field.addListOption("Bottle and Jar Mfg. - plastic - nonreturnable", "51553", false);
+	field.addListOption("Bottle and Jar Mfg. - plastic - returnable", "51554", false);
+	field.addListOption("Bowling Lanes", "10220", false);
+	field.addListOption("Boxes or Containers Mfg. - corrugated or fiberboard", "51575", false);
+	field.addListOption("Boxes or Containers Mfg. - wood", "51576", false);
+	field.addListOption("Boy and Girl Scout Councils", "41001", false);
+	field.addListOption("Brick Mfg.", "51600", false);
+	field.addListOption("Bridge or Elevated Highway Construction - concrete", "91266", false);
+	field.addListOption("Bridge or Elevated Highway Construction - iron or steel", "91265", false);
+	field.addListOption("Brokered Chemical Sales", "20071", false);
+	field.addListOption("Brokered Feed/Grain Sales", "20069", false);
+	field.addListOption("Brokered Fertilizer Sales", "20070", false);
+	field.addListOption("Brush or Broom Mfg.", "51613", false);
+	field.addListOption("Building Material Dealers - other than secondhand material", "10255", false);
+	field.addListOption("Building Material Dealers - secondhand material", "10256", false);
+	field.addListOption("Building Material Distributors", "10257", false);
+	field.addListOption("Building Structure - raising or moving", "91280", false);
+	field.addListOption("Buildings or Premises - bank and other financial institutions - commercial", "61223", false);
+	field.addListOption("Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - Not-For-Profit only", "61216", false);
+	field.addListOption("Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - Other than Not-For-Profit", "61212", false);
+	field.addListOption("Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - maintained by the insured - Not-For-Profit only", "61218", false);
+	field.addListOption("Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - maintained by the insured - Other than Not-For-Profit", "61217", false);
+	field.addListOption("Buildings or Premises - office - Not-For-Profit only - NOC", "61227", false);
+	field.addListOption("Buildings or Premises - office - premises occupied by employees of the insured - Not-For-Profit only", "61225", false);
+	field.addListOption("Buildings or Premises - office - premises occupied by employees of the insured - Other than Not-For-Profit", "61224", false);
+	field.addListOption("Bus Mfg. or Assembling or Reconstruction", "51625", false);
+	field.addListOption("Bus Stations or Terminals", "41210", false);
+	field.addListOption("Buttons or Fasteners Mfg.", "51666", false);
+	field.addListOption("Cable Installation in Conduits or Subways", "91302", false);
+	field.addListOption("Cable or Subscription Television Companies", "91315", false);
+	field.addListOption("Caisson or Cofferdam Work - NOT foundations for buildings", "91325", false);
+	field.addListOption("Caisson or Cofferdam Work - foundations for buildings", "91324", false);
+	field.addListOption("Camera & Photographic Equipment Stores", "10309", false);
+	field.addListOption("Camper Bodies or Camper Trailers Mfg.", "51702", false);
+	field.addListOption("Camper Dealer - Garage", "7366", false);
+	field.addListOption("Camper or Travel Trailer Sales Agencies", "10315", false);
+	field.addListOption("Campers Mfg. - self-powered", "51703", false);
+	field.addListOption("Campgrounds - Not-For-Profit only", "10332", f
+2000
+alse);
+	field.addListOption("Campgrounds - Other than Not-For-Profit", "10331", false);
+	field.addListOption("Camps - For-Profit", "41421", false);
+	field.addListOption("Camps - Not-For-Profit", "41422", false);
+	field.addListOption("Can Mfg. - metal", "51734", false);
+	field.addListOption("Candle Mfg.", "51741", false);
+	field.addListOption("Candy or Confectionery Products Mfg.", "51752", false);
+	field.addListOption("Candy or Confectionery Stores", "10352", false);
+	field.addListOption("Car Washes - other than self-service", "10367", false);
+	field.addListOption("Car Washes - self-service", "10368", false);
+	field.addListOption("Carbon Paper or Inked Ribbon Mfg.", "51767", false);
+	field.addListOption("Carnival or Circus Companies", "10375", false);
+	field.addListOption("Carnivals - outside (sponsor's risk only) Not-For-Profit only", "10379", false);
+	field.addListOption("Carnivals - outside (sponsor's risk only) Other than Not-For-Profit", "10378", false);
+	field.addListOption("Carnivals or Circuses - in tents (sponsor's risk only) Not-For-Profit only", "10381", false);
+	field.addListOption("Carnivals or Circuses - in tents (sponsor's risk only) Other than Not-For-Profit", "10380", false);
+	field.addListOption("Carpentry - NOC", "91342", false);
+	field.addListOption("Carpentry - construction of residential property not exceeding three stories in height", "91340", false);
+	field.addListOption("Carpentry - interior", "91341", false);
+	field.addListOption("Carpentry - shop only", "91343", false);
+	field.addListOption("Carpet or Rug Mfg.", "51777", false);
+	field.addListOption("Carpet, Rug or Upholstery Cleaning - shop only", "11007", false);
+	field.addListOption("Carpet, Rug, Furniture or Upholstery Cleaning - on customers' premises", "91405", false);
+	field.addListOption("Catalog or Premium Coupon Redemption Stores", "11020", false);
+	field.addListOption("Caterers", "11039", false);
+	field.addListOption("Caulking Compounds, Putty or Similar Products Mfg.", "51790", false);
+	field.addListOption("Caves - tourist attraction", "41510", false);
+	field.addListOption("Ceiling or Wall Installation - metal", "91436", false);
+	field.addListOption("Cellophane & Cellophane Products Mfg.", "51796", false);
+	field.addListOption("Cellular phones and Accessories Sales", "18437", false);
+	field.addListOption("Cement or Plaster Mfg. - bulk", "51809", false);
+	field.addListOption("Cement, Concrete Mix or Plaster Mfg. - packaged", "51808", false);
+	field.addListOption("Cemeteries - Not-For-Profit only", "41604", false);
+	field.addListOption("Cemeteries - Other than Not-For-Profit", "41603", false);
+	field.addListOption("Chairs - rented to others", "11052", false);
+	field.addListOption("Charcoal or Coal Briquette Mfg.", "51833", false);
+	field.addListOption("Chemical Distributors", "11101", false);
+	field.addListOption("Chemical Mfg. - commercial or industrial - NOC", "51850", false);
+	field.addListOption("Chemical Mfg. - commercial or industrial - primarily flammable, explosive, or reactive", "51852", false);
+	field.addListOption("Chemical Mfg. - commercial or industrial - primarily toxic or presenting a health hazard", "51853", false);
+	field.addListOption("Chemical Mfg. - commercial or industrial - toxic AND either flammable, explosive, or reactive", "51851", false);
+	field.addListOption("Chemical Mfg. - household - NOC", "51855", false);
+	field.addListOption("Chemical Mfg. - household - primarily flammable, explosive or reactive - NOC", "51856", false);
+	field.addListOption("Chemical Mfg. - household - primarily toxic or presenting a health hazard - NOC", "51857", false);
+	field.addListOption("Chemical Mfg. - household - toxic AND either flammable, explosive or reactive - NOC", "51854", false);
+	field.addListOption("Children's Play Center - Indoor", "11120", false);
+	field.addListOption("Chimney Cleaning", "91481", false);
+	field.addListOption("China Shops", "13506", false);
+	field.addListOption("China, Porcelain or Earthware Mfg.", "51869", false);
+	field.addListOption("Chiropractic Office", "66561", false);
+	field.addListOption("Christmas Tree Lot-No Cutting", "15699", false);
+	field.addListOption("Christmas Tree Lots - Customers cut their own trees", "20038.0", false);
+	field.addListOption("Christmas Tree Lots - No customers cutting trees", "20037.0", false);
+	field.addListOption("Churches or Other Houses of Worship", "41650", false);
+	field.addListOption("Circuit Workout Facilities", "20016", false);
+	field.addListOption("Clay Products Mfg.", "51877", false);
+	field.addListOption("Clay or Shale Digging", "91507", false);
+	field.addListOption("Cleaning - outside surfaces of buildings and other exterior surfaces", "91523", false);
+	field.addListOption("Climbing Walls", "20005", false);
+	field.addListOption("Clock Mfg.", "51889", false);
+	field.addListOption("Clock Stores", "14655", false);
+	field.addListOption("Clothing Mfg.", "51896", false);
+	field.addListOption("Clothing or Wearing Apparel Distributor", "11126", false);
+	field.addListOption("Clothing or Wearing Apparel Stores - Not-For-Profit only", "11128", false);
+	field.addListOption("Clothing or Wearing Apparel Stores - Other than Not-For-Profit", "11127", false);
+	field.addListOption("Clubs - civic, service or social - NO buildings or premises owned or leased except for office purposes - Not-For-Profit only", "41670", false);
+	field.addListOption("Clubs - civic, service or social - NO buildings or premises owned or leased except for office purposes - Other than Not-For-Profit", "41669", false);
+	field.addListOption("Clubs - civic, service or social - having buildings or premises owned or leased - Not-For-Profit only", "41668", false);
+	field.addListOption("Clubs - civic, service or social - having buildings or premises owned or leased - Other than Not-For-Profit", "41667", false);
+	field.addListOption("Clubs - country or golf", "11138", false);
+	field.addListOption("Clubs - horseback riding - no commercial riding instructions", "41664", false);
+	field.addListOption("Clubs - racket sports and handball", "41665", false);
+	field.addListOption("Clubs - swimming", "41666", false);
+	field.addListOption("Coffee and Tea Shops", "18435", false);
+	field.addListOption("Coffins or Caskets Mfg.", "51900", false);
+	field.addListOption("Coke Mfg.", "51909", false);
+	field.addListOption("Collectibles and Memorabilia Stores", "11155", false);
+	field.addListOption("Color or Pigment Preparation", "51919", false);
+	field.addListOption("Commercial Trailer Dealer - Garage", "7364", false);
+	field.addListOption("Commissary Work", "91547", false);
+	field.addListOption("Communication Equipment Installation - industrial or commercial", "91551", false);
+	field.addListOption("Communication or Recording Systems or Equipment Mfg. - industrial or commercial", "51926", false);
+	field.addListOption("Communication or Recording Systems or Equipment Mfg. - other than industrial or commercial", "51927", false);
+	field.addListOption("Community Recreational Facilities - not operated by governmental agency", "41678", false);
+	field.addListOption("Composition Goods Mfg. - not floor coverings", "51934", false);
+	field.addListOption("Computer Consulting or Programming", "41675", false);
+	field.addListOption("Computer Data Processing - operations", "43151", false);
+	field.addListOption("Computer Data Processing - time sharing", "43152", false);
+	field.addListOption("Computer Mfg.", "51941", false);
+	field.addListOption("Computer Service or Repair", "91555", false);
+	field.addListOption("Computer Software Mfg. - Pre-packaged", "51942", false);
+	field.addListOption("Computer Stores", "11160", false);
+	field.addListOption("Concessionaires", "11168", false);
+	field.addListOption("Concessionaires - Checkroom, shoeshine, or toilet concessions in hotels, restaurants, railroad stations, etc.", "11167", false);
+	field.addListOption("Concrete - mixed in transit", "51956", false);
+	field.addListOption("Concrete Construction", "91560", false);
+	field.addListOption("Concrete Products Mfg. - prestressed", "51958", false);
+	field.addListOption("Concrete P
+2000
+roducts Mfg. - structural - NOC", "51959", false);
+	field.addListOption("Concrete or Cement Distributing Towers - rented to others - installation, repair or removal operations only", "91562", false);
+	field.addListOption("Concrete or Plaster Products Mfg. - not structural", "51957", false);
+	field.addListOption("Condominiums - commercial - bank or mercantile, manufacturing or office (association risk only)", "62000", false);
+	field.addListOption("Condominiums - commercial - commercial shopping centers (association risk only)", "62001", false);
+	field.addListOption("Condominiums - commercial warehouses - manufacturing or private (association risk only)", "62002", false);
+	field.addListOption("Condominiums - residential - (association risk only)", "62003", false);
+	field.addListOption("Conduit Construction for Cables or Wires", "91577", false);
+	field.addListOption("Construction Operations - Contractor (Not Railroads) - Excluding Operations On Board Ships", "16291", false);
+	field.addListOption("Construction Operations - Federal, State, or Local Housing Authorities", "91181", false);
+	field.addListOption("Construction Operations - Owner (Not Railroads) - Excluding on Board Ships", "16292", false);
+	field.addListOption("Construction Operations Performed for Other Than Railroads", "40012", false);
+	field.addListOption("Construction Operations Performed for Railroads", "40011", false);
+	field.addListOption("Construction or Project Manager", "41620", false);
+	field.addListOption("Contact Lenses Mfg.", "51960", false);
+	field.addListOption("Contractors - Executive Supervisors or Executive Superintendents", "91580", false);
+	field.addListOption("Contractors - NOC", "94444", false);
+	field.addListOption("Contractors - subcontracted work - in connection with bridge, tunnel, elevated street or highway construction, reconstruction or repair", "91588", false);
+	field.addListOption("Contractors - subcontracted work - in connection with building construction, reconstruction, repair or erection - apartment or office buildings over four stories", "91582", false);
+	field.addListOption("Contractors - subcontracted work - in connection with building construction, reconstruction, repair or erection - one or two family dwellings", "91583", false);
+	field.addListOption("Contractors - subcontracted work - in connection with construction, reconstruction, erection or repair - NOT buildings - NOC", "91581", false);
+	field.addListOption("Contractors - subcontracted work - in connection with construction, reconstruction, repair or erection of buildings - for industrial use", "91584", false);
+	field.addListOption("Contractors - subcontracted work - in connection with construction, reconstruction, repair or erection of buildings NOC", "91585", false);
+	field.addListOption("Contractors - subcontracted work - in connection with oil and gas field construction, reconstruction or repair", "91586", false);
+	field.addListOption("Contractors - subcontracted work - in connection with pipeline (other than oil or gas) or communication or powerline construction, reconstruction or repair", "91587", false);
+	field.addListOption("Contractors - subcontracted work - in connection with street or highway construction, or repair, not elevated", "91589", false);
+	field.addListOption("Contractors - subcontracted work - other than construction-related work", "91591", false);
+	field.addListOption("Contractors Equipment - cranes, derricks, power shovels and equipment incidental thereto - rented to others WITH operators", "11201", false);
+	field.addListOption("Contractors Equipment - cranes, derricks, power shovels and equipment incidental thereto - rented to others WITHOUT operators", "11202", false);
+	field.addListOption("Contractors Equipment - earth moving equipment other than cranes, derricks and power shovels - rented to others WITH operators", "11205", false);
+	field.addListOption("Contractors Equipment - earth moving equipment other than cranes, derricks and power shovels - rented to others WITHOUT operators", "11206", false);
+	field.addListOption("Contractors Equipment - excluding automobiles - rented to others WITH operators - NOC", "11207", false);
+	field.addListOption("Contractors Equipment - excluding automobiles - rented to others WITHOUT operators - NOC", "11208", false);
+	field.addListOption("Contractors Equipment - hod or material hoists and equipment thereto - rented to others WITH operators", "11209", false);
+	field.addListOption("Contractors Equipment - hod or material hoists and equipment thereto - rented to others WITHOUT operators", "11210", false);
+	field.addListOption("Contractors Equipment - ladders, scaffolds, sidewalk bridges, towers and equipment incidental thereto - rented to others", "11211", false);
+	field.addListOption("Contractors Equipment - scaffolds, sidewalk bridges, hod or material hoists towers - rented to others - installation, repair or removal operations only", "11212", false);
+	field.addListOption("Contractors Equipment - steam boilers, compressors, air pressure tanks, pneumatic tools and equipment incidental thereto - rented to others WITH operators", "11213", false);
+	field.addListOption("Contractors Equipment - steam boilers, compressors, air pressure tanks, pneumatic tools and equipment incidental thereto - rented to others WITHOUT operators", "11214", false);
+	field.addListOption("Contractors Equipment Dealers - ladders, excluding hoists, scaffolds or towers", "11203", false);
+	field.addListOption("Contractors Equipment Dealers - ladders, hoists, scaffolds or towers", "11204", false);
+	field.addListOption("Contractors Permanent Yards - maintenance or storage of equipment or material", "91590", false);
+	field.addListOption("Conventions (sponsor's risk only) - Not-For-Profit only", "41673", false);
+	field.addListOption("Conventions (sponsor's risk only) - Other than Not-For-Profit", "41672", false);
+	field.addListOption("Convents or Monasteries", "41680", false);
+	field.addListOption("Copying and Duplicating Services - retail", "11222", false);
+	field.addListOption("Cosmetic, Hair or Skin Preparation Stores", "11234", false);
+	field.addListOption("Cosmetics Mfg.", "51970", false);
+	field.addListOption("Cotton Batting, Wadding or Waste Mfg.", "51982", false);
+	field.addListOption("Cotton Compressing", "51985", false);
+	field.addListOption("Cotton Gin Operation", "51986", false);
+	field.addListOption("Cotton Gin Operations - other than those performed for a fee per bale", "41679", false);
+	field.addListOption("Cotton or Wool Merchants", "11248", false);
+	field.addListOption("Crematories - Not-For-Profit only", "41697", false);
+	field.addListOption("Crematories - Other than Not-For-Profit", "41696", false);
+	field.addListOption("Crop Spraying - by contractors", "91606", false);
+	field.addListOption("Curtains & Draperies w/installation", "96611", false);
+	field.addListOption("Custom Farming- Not incl Fertilizer or Chemicals", "20058", false);
+	field.addListOption("Cutlery (not powered) and Flatware Mfg.", "51999", false);
+	field.addListOption("Dairy Products Mfg.", "52002", false);
+	field.addListOption("Dairy Products Mfg. - Agribusiness", "20067", false);
+	field.addListOption("Dairy Products or Butter and Egg Stores - Not-For-Profit only", "11259", false);
+	field.addListOption("Dairy Products or Butter and Egg Stores - Other than Not-For-Profit", "11258", false);
+	field.addListOption("Dam or Reservoir Construction", "91618", false);
+	field.addListOption("Dam, Levee or Dike - existence hazard only", "41700", false);
+	field.addListOption("Dance Halls, Ballrooms or Discotheques - Not-For-Profit only", "11274", false);
+	field.addListOption("Dance Halls, Ballrooms or Discotheques - Other than Not-For-Profit", "11273", false);
+	field.addListOption("Day Camps - Not Sports", "20009", false);
+	field.addListOption("Day Camps - Sports", "20019", false);
+	field.addListOption("Day Care Centers - Not-For-Profit only", "41716", false);
+	field.addListOption("Day Care Centers - Other than Not-For-Profit", "41715", false);
+	field.addListOption("Debris Removal - construction site", "91629", false);
+2000
+
+	field.addListOption("Delicatessens", "11288", false);
+	field.addListOption("Dental Laboratories", "12014", false);
+	field.addListOption("Department or Discount Stores", "12356", false);
+	field.addListOption("Detective or Investigative Agencies - private", "91636", false);
+	field.addListOption("Detergent Mfg. - household", "52075", false);
+	field.addListOption("Detergent Mfg. - other than household - NOC", "52076", false);
+	field.addListOption("Dextrine Mfg.", "52109", false);
+	field.addListOption("Diagnostic Testing Laboratories", "46112", false);
+	field.addListOption("Die Casting Mfg. - NOC", "52137", false);
+	field.addListOption("Dike, Levee or Revetment Construction", "91641", false);
+	field.addListOption("Distillation or Extraction - NOC", "52150", false);
+	field.addListOption("Diving- marine", "91666", false);
+	field.addListOption("Dock Operations - coal, grain or ore", "91722", false);
+	field.addListOption("Door or Window Mfg. - other than wood - NOC", "52134", false);
+	field.addListOption("Door or Window Mfg. - wood", "52315", false);
+	field.addListOption("Door, Window or Assembled Millwork - installation - metal", "91746", false);
+	field.addListOption("Draftsmen", "91805", false);
+	field.addListOption("Drawbridges - existence hazard only", "43007", false);
+	field.addListOption("Dredging - NOC", "92055", false);
+	field.addListOption("Dredging - gold - endless bucket or ladder type", "92053", false);
+	field.addListOption("Dredging - gold - floating dragline type", "92054", false);
+	field.addListOption("Drilling - other than water - NOC", "92101", false);
+	field.addListOption("Drilling - water", "92102", false);
+	field.addListOption("Driver Training Schools - Not-For-Profit only", "67513", false);
+	field.addListOption("Driver Training Schools - Other than Not-For-Profit - NOC", "67512", false);
+	field.addListOption("Driveway, Parking Area or Sidewalk - paving or repaving", "92215", false);
+	field.addListOption("Drug Distributors", "12373", false);
+	field.addListOption("Drug Mfg. - biological products", "52341", false);
+	field.addListOption("Drug, Medicine or Pharmaceutical Preparations Mfg. - for animal use", "52342", false);
+	field.addListOption("Drug, Medicine or Pharmaceutical Preparations Mfg. NOC - other than for animal use", "52343", false);
+	field.addListOption("Drugstores - NOC", "12375", false);
+	field.addListOption("Drugstores - no table or counter service for beverage or food", "12374", false);
+	field.addListOption("Drums or Containers Mfg. - metal", "52401", false);
+	field.addListOption("Drums or Containers Mfg. - plastic", "52402", false);
+	field.addListOption("Dry Wall or Wallboard Installation", "92338", false);
+	field.addListOption("Dude Ranches", "43117", false);
+	field.addListOption("Dwellings - four-family (lessor's risk only)", "63013", false);
+	field.addListOption("Dwellings - one-family (lessor's risk only)", "63010", false);
+	field.addListOption("Dwellings - three-family (lessor's risk only)", "63012", false);
+	field.addListOption("Dwellings - two-family (lessor's risk only)", "63011", false);
+	field.addListOption("Electric Light or Power Companies", "92445", false);
+	field.addListOption("Electric Light or Power Cooperatives - Rural Utilities Service projects only", "92453", false);
+	field.addListOption("Electric Light or Power Line Construction - NOC", "92446", false);
+	field.addListOption("Electric Light or Power Line Construction - Rural Utilities Service projects only", "92447", false);
+	field.addListOption("Electrical Apparatus - installation, servicing or repair - NOC", "92451", false);
+	field.addListOption("Electrical Equipment Distributors", "12391", false);
+	field.addListOption("Electrical Equipment Mfg. - for direct and indirect application to the body", "52433", false);
+	field.addListOption("Electrical Equipment Mfg. - other than for direct and indirect application to the body", "52432", false);
+	field.addListOption("Electrical Generating Machinery Mfg.", "52435", false);
+	field.addListOption("Electrical Parts, Components or Accessories Mfg.", "52438", false);
+	field.addListOption("Electrical Power Distribution or Transmission Equipment Mfg.", "52440", false);
+	field.addListOption("Electrical Wire or Cable Mfg.", "52467", false);
+	field.addListOption("Electrical Wiring within Buildings", "92478", false);
+	field.addListOption("Electronic Components Mfg.", "52469", false);
+	field.addListOption("Electronic Games Mfg.", "52505", false);
+	field.addListOption("Electronics Store", "12393", false);
+	field.addListOption("Electroplating", "52547", false);
+	field.addListOption("Elevator Mfg.", "52581", false);
+	field.addListOption("Elevator or Escalator Inspecting, Installation, Servicing or Repair", "92593", false);
+	field.addListOption("Embroidery Shop", "18507", false);
+	field.addListOption("Employment Agencies", "43200", false);
+	field.addListOption("Engine or Turbine Mfg. - not aircraft - NOC", "52619", false);
+	field.addListOption("Engineers or Architects - consulting - not engaged in actual construction", "92663", false);
+	field.addListOption("Engraving", "52660", false);
+	field.addListOption("Entertainment Performed on Others' Premises", "43215", false);
+	field.addListOption("Equipment, Fixtures or Supplies - for bars, hotels, offices, restaurants or stores - distributors", "12467", false);
+	field.addListOption("Escalator or Moving Sidewalk Mfg.", "52744", false);
+	field.addListOption("Event, Party or Wedding Planners", "44280", false);
+	field.addListOption("Excavation - NOC", "94007", false);
+	field.addListOption("Exercise or Playground Equipment Mfg.", "52767", false);
+	field.addListOption("Exhibition or Convention Buildings - Not-For-Profit only", "63216", false);
+	field.addListOption("Exhibition or Convention Buildings - Other than Not-For-Profit", "63215", false);
+	field.addListOption("Exhibitions - in buildings - Not-For-Profit only", "63218", false);
+	field.addListOption("Exhibitions - in buildings - Other than Not-For-Profit", "63217", false);
+	field.addListOption("Exhibitions - in buildings - no admission charged - Not-For-Profit only", "63220", false);
+	field.addListOption("Exhibitions - in buildings - no admission charged - Other than Not-For-Profit", "63219", false);
+	field.addListOption("Exhibitions - outside - in stadiums or on premises having grandstands or bleachers not erected by or for the insured - ushers or other attendants in stands NOT provided by the insured", "43421", false);
+	field.addListOption("Exhibitions - outside - in stadiums or on premises having grandstands or bleachers not erected by or for the insured - ushers or other attendants in stands provided by the insured", "43422", false);
+	field.addListOption("Exhibitions - outside - no stadiums or grandstands", "43424", false);
+	field.addListOption("Explosive or Firework Mfg.", "52876", false);
+	field.addListOption("Express Companies", "94099", false);
+	field.addListOption("Extracts Mfg.", "52911", false);
+	field.addListOption("Eye Glass Lens Mfg.", "52967", false);
+	field.addListOption("Fair Grounds - non-operating season", "43517", false);
+	field.addListOption("Fairs - outside (operator's risk only)", "43518", false);
+	field.addListOption("Farm Machinery Operations - by contractors", "94225", false);
+	field.addListOption("Feed Mfg. - NOC", "53001", false);
+	field.addListOption("Feed, Grain or Hay Dealers", "12583", false);
+	field.addListOption("Fence Dealers", "12651", false);
+	field.addListOption("Fence Erection Contractors", "94276", false);
+	field.addListOption("Fertilizer Dealers and Distributors", "12683", false);
+	field.addListOption("Fertilizer Dealers and Distributors - Agribusiness", "20055", false);
+	field.addListOption("Fertilizer Mfg.", "53077", false);
+	field.addListOption("Fertilizer Mfg.- Agribusiness", "20056", false);
+	field.addListOption("Fiber Mfg. - other than synthetic - NOC", "53095", false);
+	field.addListOption("Fiber Mfg. - synthetic", "53096", false);
+	field.addListOption("Fiberglass Mfg.", "53121", false);
+	field.addListOption("Financial/Investment Consultant", "41677", false);
+	field.addListOpt
+2000
+ion("Fire Departments - other  than volunteer", "43550", false);
+	field.addListOption("Fire Departments - volunteer", "43551", false);
+	field.addListOption("Fire Extinguishers - servicing, refilling or testing", "94304", false);
+	field.addListOption("Fire Extinguishers Mfg.", "53147", false);
+	field.addListOption("Fire Protection Equipment Dealers and Distributors", "12707", false);
+	field.addListOption("Fire Suppression Systems - installation, servicing or repair", "94381", false);
+	field.addListOption("Fire Suppression Systems Mfg.", "53229", false);
+	field.addListOption("Firearms Mfg.", "53271", false);
+	field.addListOption("Fireproofing - structures", "94404", false);
+	field.addListOption("Fireworks Exhibition - sponsor's risk only - Not-For-Profit only", "43629", false);
+	field.addListOption("Fireworks Exhibition - sponsor's risk only - Other than Not-For-Profit", "43628", false);
+	field.addListOption("Fireworks Exhibitions - contractor's risk only", "43626", false);
+	field.addListOption("Fishing Piers", "43754", false);
+	field.addListOption("Fishing Ponds or Lakes - commercially operated", "43760", false);
+	field.addListOption("Fishing and Hunting Guides", "44222", false);
+	field.addListOption("Floor Covering Distributors", "12797", false);
+	field.addListOption("Floor Covering Installation - not ceramic tile or stone", "94569", false);
+	field.addListOption("Floor Covering Mfg. - not carpet, rugs, ceramic or stone tiles", "53333", false);
+	field.addListOption("Floor Covering Stores", "12805", false);
+	field.addListOption("Floor Waxing", "94590", false);
+	field.addListOption("Florists", "12841", false);
+	field.addListOption("Florists Wholesale - no Greenhouses", "12362", false);
+	field.addListOption("Food Products Mfg. - dry", "53374", false);
+	field.addListOption("Food Products Mfg. - frozen", "53375", false);
+	field.addListOption("Food Products Mfg. - not dry - in glass containers", "53376", false);
+	field.addListOption("Food Products Mfg. - not dry - in other than glass containers", "53377", false);
+	field.addListOption("Food Trucks", "16902", false);
+	field.addListOption("Forestry Service", "43822", false);
+	field.addListOption("Forging Work - iron or steel - NOC", "53403", false);
+	field.addListOption("Formal Wear or Costumes - rented to others", "12927", false);
+	field.addListOption("Foundries - NOC", "53425", false);
+	field.addListOption("Freight Forwarders or Handlers - other than packing, handling or shipping explosives or ammunition under contract - NOC", "94617", false);
+	field.addListOption("Freight Forwarders or Handlers - packing, handling or shipping explosives or ammunition under contract", "94638", false);
+	field.addListOption("Frozen Food - distributors", "13049", false);
+	field.addListOption("Fruit or Vegetable - harvesting contractors", "43840", false);
+	field.addListOption("Fruit or Vegetable Dealers", "13111", false);
+	field.addListOption("Fruit or Vegetable Distributors", "13112", false);
+	field.addListOption("Fruit or Vegetable Juice Mfg. - no bottling of carbonated beverages", "53565", false);
+	field.addListOption("Fuel Dealers or Distributors - coal or wood", "13201", false);
+	field.addListOption("Fuel Oil or Kerosene Dealer - incl Fail to Supply - Agribusiness", "20061", false);
+	field.addListOption("Fuel Oil or Kerosene Dealers", "13204", false);
+	field.addListOption("Fuel Oil or Kerosene Dealers - Not including Fail to Supply - Agribusiness", "20048", false);
+	field.addListOption("Fuel Oil or Kerosene Distributors", "13205", false);
+	field.addListOption("Fuel Oil or Kerosene Distributors - Not including Fail to Supply - Agribusiness", "20049", false);
+	field.addListOption("Fuel Oil or Kerosene Distributors - incl Fail to Supply - Agribusiness", "20062", false);
+	field.addListOption("Fumigating", "43860", false);
+	field.addListOption("Funeral Homes or Chapels", "43889", false);
+	field.addListOption("Fur - garments and pelts - distributors", "13314", false);
+	field.addListOption("Fur Garment Mfg.", "53631", false);
+	field.addListOption("Fur or Pelt Processing", "53632", false);
+	field.addListOption("Furniture Mfg. or Assembling - infants", "53731", false);
+	field.addListOption("Furniture Mfg. or Assembling - other than wood", "53732", false);
+	field.addListOption("Furniture Mfg. or Assembling - wood", "53733", false);
+	field.addListOption("Furniture Stores - Not-For-Profit only", "13352", false);
+	field.addListOption("Furniture Stores - Other than Not-For-Profit", "13351", false);
+	field.addListOption("Furniture or Fixtures - installation in offices or stores - portable - metal or wood", "95124", false);
+	field.addListOption("Furniture or Woodwork Stripping, Refinishing or Repairing - shop only", "53734", false);
+	field.addListOption("Galvanizing or Tinning", "53803", false);
+	field.addListOption("Gambling - casinos", "43990", false);
+	field.addListOption("Gambling - incidental to other operations", "43991", false);
+	field.addListOption("Garbage Works - separation for recycling, reduction or incineration", "43946", false);
+	field.addListOption("Garbage or Refuse Dumps", "43945", false);
+	field.addListOption("Garbage, Ash or Refuse Collecting", "95233", false);
+	field.addListOption("Gas Companies - NOC", "95305", false);
+	field.addListOption("Gas Companies - natural gas - local distribution", "95306", false);
+	field.addListOption("Gas Dealers - LPG", "13410", false);
+	field.addListOption("Gas Dealers - LPG - Not inlcuding Fail to Supply -Agribusiness", "20050", false);
+	field.addListOption("Gas Dealers - LPG - incl Fail to Supply - Agribusiness", "20063", false);
+	field.addListOption("Gas Dealers or Distributors - NOC", "13411", false);
+	field.addListOption("Gas Distributors - LPG", "13412", false);
+	field.addListOption("Gas Distributors - LPG - Not including Fail to Supply - Agribusiness", "20051", false);
+	field.addListOption("Gas Distributors - LPG - incl Fail to Supply - Agribusiness", "20064", false);
+	field.addListOption("Gas Main or Connections Construction", "95310", false);
+	field.addListOption("Gas Manufacturing - inert", "53902", false);
+	field.addListOption("Gas Manufacturing - other - NOC", "53903", false);
+	field.addListOption("Gas Manufacturing - primarily flammable, explosive or reactive", "53904", false);
+	field.addListOption("Gas Manufacturing - primarily toxic or presenting a health hazard", "53905", false);
+	field.addListOption("Gas Manufacturing - toxic and either flammable, explosive or reactive", "53901", false);
+	field.addListOption("Gasoline Distributors", "53907", false);
+	field.addListOption("Gasoline Distributors - Agribusiness", "20052", false);
+	field.addListOption("Gasoline Recovery - from casing head or natural gas", "44010", false);
+	field.addListOption("Gasoline Station - full service", "13453", false);
+	field.addListOption("Gasoline Stations - Full Service - Agribusiness", "20053", false);
+	field.addListOption("Gasoline Stations - Self Service - Agribusiness", "20054", false);
+	field.addListOption("Gasoline Stations - self and full service combined", "13455", false);
+	field.addListOption("Gasoline Stations - self-service", "13454", false);
+	field.addListOption("Gasoline or Oil Supply Stations - retail - (lessor's risk only)", "44009", false);
+	field.addListOption("Gemstone Cutting or Polishing", "54012", false);
+	field.addListOption("Geophysical Exploration - other - NOC", "95357", false);
+	field.addListOption("Geophysical Exploration - seismic method", "95358", false);
+	field.addListOption("Gift Shops - Not-For-Profit only", "13507", false);
+	field.addListOption("Glass Dealers and Glaziers", "13590", false);
+	field.addListOption("Glass or Glassware Mfg.", "54077", false);
+	field.addListOption("Golf Courses - miniature", "44069", false);
+	field.addListOption("Golf Courses - municipal or public - not golf or country clubs", "44070", false);
+	field.addListOption("Golf Driving Ranges", "44071", false);
+	field.addListOption("Golfmobiles - loaned or rented to others", "44072", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Counties or Parishes Popula
+2000
+tion 10,000 and under", "44108", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Counties or Parishes Population 10,001 - 25,000", "44109", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Counties or Parishes Population 100,001 - 250,000", "44112", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Counties or Parishes Population 25,001 - 50,000", "44110", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Counties or Parishes Population 50,001 - 100,000", "44111", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Counties or Parishes Population over 250,000", "44113", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population 10,001 - 25,000", "44102", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population 100,001 - 250,000", "44105", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population 2,500 and under", "44100", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population 2,501 - 10,000", "44101", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population 25,001 - 50,000", "44103", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population 50,001 - 100,000", "44104", false);
+	field.addListOption("Governmental Subdivision - not state or federal - Municipalities Population over 250,000", "44106", false);
+	field.addListOption("Grading of Land", "95410", false);
+	field.addListOption("Grain Elevator Operations", "95455", false);
+	field.addListOption("Grain Elevator Operations - Agribusiness", "20057", false);
+	field.addListOption("Grain Milling", "13621", false);
+	field.addListOption("Grandstands or Bleachers - Not-For-Profit only", "44194", false);
+	field.addListOption("Grandstands or Bleachers - Other than Not-For-Profit", "44193", false);
+	field.addListOption("Greenhouse Erection", "95487", false);
+	field.addListOption("Grocery Distributors", "13670", false);
+	field.addListOption("Grocery Stores - NOC", "13673", false);
+	field.addListOption("Guniting or Shot-crete", "95505", false);
+	field.addListOption("Gunsmiths", "95620", false);
+	field.addListOption("Halls - Not-For-Profit only", "44277", false);
+	field.addListOption("Halls - Other than Not-For-Profit", "44276", false);
+	field.addListOption("Handyperson", "95625", false);
+	field.addListOption("Hardware Stores", "13716", false);
+	field.addListOption("Hardware and Tool Distributors", "13715", false);
+	field.addListOption("Haunted House", "20039", false);
+	field.addListOption("Haunted House, with or without corn maze", "20039.0", false);
+	field.addListOption("Hayrides/Sleigh Rides", "20040.0", false);
+	field.addListOption("Hazardous Materials Contractors", "95630", false);
+	field.addListOption("Health Care Facilities - alcohol and drug - Not-For-Profit only", "44428", false);
+	field.addListOption("Health Care Facilities - alcohol and drug - Other than Not-For-Profit", "44427", false);
+	field.addListOption("Health Care Facilities - clinics, dispensaries or infirmaries treating outpatient only - no regular bed and board facilities - Not-For-Profit only", "44440", false);
+	field.addListOption("Health Care Facilities - clinics, dispensaries or infirmaries treating outpatient only - no regular bed and board facilities - Other than Not-For-Profit", "44439", false);
+	field.addListOption("Health Care Facilities - convalescent or nursing homes - not mental - psychopathic institutions - Not-For-Profit only", "44430", false);
+	field.addListOption("Health Care Facilities - convalescent or nursing homes - not mental - psychopathic institutions - Other than Not-For-Profit", "44429", false);
+	field.addListOption("Health Care Facilities - homes for the aged - Not-For-Profit only", "44432", false);
+	field.addListOption("Health Care Facilities - homes for the aged - Other than Not-For-Profit", "44431", false);
+	field.addListOption("Health Care Facilities - homes for the physically handicapped or orphaned - Not-For-Profit only", "44434", false);
+	field.addListOption("Health Care Facilities - homes for the physically handicapped or orphaned - Other than Not-For-Profit", "44433", false);
+	field.addListOption("Health Care Facilities - hospitals Not-For-Profit only", "44436", false);
+	field.addListOption("Health Care Facilities - hospitals Other than Not-For-Profit", "44435", false);
+	field.addListOption("Health Care Facilities - mental - psychopathic institutions - Not-For-Profit only", "44438", false);
+	field.addListOption("Health Care Facilities - mental - psychopathic institutions - Other than Not-For-Profit", "44437", false);
+	field.addListOption("Health or Exercise Clubs", "44311", false);
+	field.addListOption("Health or Exercise Facilities - commercially operated", "44315", false);
+	field.addListOption("Health or Natural Food Stores", "13720", false);
+	field.addListOption("Hearing Aid Stores", "13759", false);
+	field.addListOption("Heating Equipment Mfg. - coal or wood", "55010", false);
+	field.addListOption("Heating Equipment Mfg. - electric", "55011", false);
+	field.addListOption("Heating Equipment Mfg. - fuel oil or kerosene", "55012", false);
+	field.addListOption("Heating Equipment Mfg. - gas or liquefied petroleum gas", "55013", false);
+	field.addListOption("Heating or Combined Heating and Air Conditioning Equipment - dealers or distributors and installation, servicing or repair - NOC", "95648", false);
+	field.addListOption("Heating or Combined Heating and Air Conditioning Equipment - dealers or distributors only", "13930", false);
+	field.addListOption("Heating or Combined Heating and Air Conditioning Systems and Equipment - dealers or distributors and installation, servicing or repair - no liquefied petroleum gas (LPG) equipment sales or work", "95647", false);
+	field.addListOption("Hide Dealers and Distributors - raw", "14068", false);
+	field.addListOption("Hobby, Craft or Artists' Supply Stores", "14101", false);
+	field.addListOption("Hoists - Hydraulic or Mechanical", "77015", false);
+	field.addListOption("Home Health Care Services - Not-For-Profit only", "44500", false);
+	field.addListOption("Home Health Care Services - Other than Not-For-Profit", "44501", false);
+	field.addListOption("Home Improvement Stores", "14279", false);
+	field.addListOption("Hone, Oilstone or Whetstone Mfg.", "55214", false);
+	field.addListOption("Honey Extracting", "55371", false);
+	field.addListOption("Hotels and Motels - (lessor's risk only) - four stories or more", "64075", false);
+	field.addListOption("Hotels and Motels - (lessor's risk only) - less than four stories", "64074", false);
+	field.addListOption("Hotels and Motels - with pools or beaches - four stories or more", "45191", false);
+	field.addListOption("Hotels and Motels - with pools or beaches - less than four stories", "45190", false);
+	field.addListOption("Hotels and Motels - without pools or beaches - four stories or more", "45193", false);
+	field.addListOption("Hotels and Motels - without pools or beaches - less than four stories", "45192", false);
+	field.addListOption("House Furnishings Installation - NOC", "96053", false);
+	field.addListOption("Housing Projects - federal, state, local", "64500", false);
+	field.addListOption("Human Services Premises NOC - High", "20003", false);
+	field.addListOption("Human Services Premises NOC - Low", "20001", false);
+	field.addListOption("Human Services Premises NOC - Medium", "20002", false);
+	field.addListOption("Hunting Preserves - Not-for-Profit", "45225", false);
+	field.addListOption("Hunting Preserves - Other than Not-For-Profit", "45224", false);
+	field.addListOption("Hunting Stands", "20015", false);
+	field.addListOption("Ice Cream Stores", "14401", false);
+	field.addListOption("Ice Dealers and Distributors", "14405", false);
+	field.addListOption("Importers", "55410", false);
+	field.addList
+2000
+Option("Ink Mfg.", "55426", false);
+	field.addListOption("Inner Tubes Mfg.", "55597", false);
+	field.addListOption("Inspection and Appraisal Companies - inspecting for insurance or valuation purposes", "96317", false);
+	field.addListOption("Instrument Mfg. - NOC", "55649", false);
+	field.addListOption("Instrument Mfg. - analytical, calibrating, measuring, testing or recording", "55647", false);
+	field.addListOption("Instrument Mfg. - control", "55648", false);
+	field.addListOption("Insulating Material Mfg. - mineral", "55715", false);
+	field.addListOption("Insulating Material Mfg. - organic", "55716", false);
+	field.addListOption("Insulating Material Mfg. - plastic - NOC", "55718", false);
+	field.addListOption("Insulating Material Mfg. - plastic - for application in a solid state", "55717", false);
+	field.addListOption("Insulation Work - mineral", "96410", false);
+	field.addListOption("Insulation Work - organic or plastic in solid state", "96409", false);
+	field.addListOption("Insulation Work - plastic - NOC", "96408", false);
+	field.addListOption("Insurance Agents", "45334", false);
+	field.addListOption("Internet Access Providers", "47600", false);
+	field.addListOption("Internet Auctions", "16751", false);
+	field.addListOption("Internet Retailers", "16750", false);
+	field.addListOption("Internet Service Providers", "47610", false);
+	field.addListOption("Irrigation Works Operation", "96703", false);
+	field.addListOption("Irrigation or Drainage System Construction", "96702", false);
+	field.addListOption("Janitorial Services", "96816", false);
+	field.addListOption("Janitorial Supplies - dealers or distributors", "14527", false);
+	field.addListOption("Jetty or Breakwater Construction", "96872", false);
+	field.addListOption("Jewelry Mfg.", "55802", false);
+	field.addListOption("Junk Dealer", "45380", false);
+	field.addListOption("Kennels - breeding, boarding or sales", "45450", false);
+	field.addListOption("Labor Union Offices", "65007", false);
+	field.addListOption("Laboratories - research, development or testing - Not-For-Profit only", "97003", false);
+	field.addListOption("Laboratories - research, development or testing - Other than Not-For-Profit", "97002", false);
+	field.addListOption("Ladder Mfg. - other than wood - NOC", "55918", false);
+	field.addListOption("Ladder Mfg. - wood", "55919", false);
+	field.addListOption("Lakes or Reservoirs - existence hazard only - Not-For-Profit only", "45524", false);
+	field.addListOption("Lakes or Reservoirs - existence hazard only - Other than Not-For-Profit", "45523", false);
+	field.addListOption("Lamp Shade Mfg.", "56040", false);
+	field.addListOption("Lamps or Lanterns Mfg. - electric", "56041", false);
+	field.addListOption("Lamps or Lanterns Mfg. - other than electric - NOC", "56042", false);
+	field.addListOption("Land - occupied by persons other than the insured for business purposes - (lessor's risk only)", "45539", false);
+	field.addListOption("Landscape Gardening", "97047", false);
+	field.addListOption("Laundry Rental Service", "14734", false);
+	field.addListOption("Laundry and Dry Cleaners - self-service", "14731", false);
+	field.addListOption("Laundry and Dry Cleaning Plants", "45678", false);
+	field.addListOption("Laundry and Dry Cleaning Stores", "14733", false);
+	field.addListOption("Laundry and Dry Cleaning or Dyeing Receiving Stations", "14732", false);
+	field.addListOption("Lawn Care Services", "97050", false);
+	field.addListOption("Lawn sprinkler installation", "98483", false);
+	field.addListOption("Lawyers Offices - Not-For-Profit only", "66123", false);
+	field.addListOption("Lawyers Offices - Other than Not-For-Profit", "66122", false);
+	field.addListOption("Lead Mfg. - red or white", "56170", false);
+	field.addListOption("Lead Works - sheet, pipe or shot", "56171", false);
+	field.addListOption("Leather Goods Mfg. - NOC", "56202", false);
+	field.addListOption("Libraries", "66309", false);
+	field.addListOption("Light Bulb or Tubes Mfg.", "56390", false);
+	field.addListOption("Lighting Fixtures Mfg. - NOC", "56391", false);
+	field.addListOption("Lime Mfg.", "56427", false);
+	field.addListOption("Liquor Mfg.", "56488", false);
+	field.addListOption("Livestock Dealer or Commission Merchant", "14855", false);
+	field.addListOption("Livestock Sales Co.", "45771", false);
+	field.addListOption("Locksmiths", "14913", false);
+	field.addListOption("Locomotive Works", "58559", false);
+	field.addListOption("Logging or Lumbering", "97111", false);
+	field.addListOption("Lubricants Mfg. - grease", "56567", false);
+	field.addListOption("Lumberyards", "45819", false);
+	field.addListOption("Machine Shops - NOC", "97220", false);
+	field.addListOption("Machinery or Equipment - farm - installation, servicing, repair or erection", "97221", false);
+	field.addListOption("Machinery or Equipment - industrial - installation, servicing or repair", "97222", false);
+	field.addListOption("Machinery or Equipment - installation, servicing or repair - NOC", "97223", false);
+	field.addListOption("Machinery or Equipment Dealers - NOC", "15062", false);
+	field.addListOption("Machinery or Equipment Dealers - construction or industrial - mobile type", "15060", false);
+	field.addListOption("Machinery or Equipment Dealers - farm type", "15061", false);
+	field.addListOption("Machinery or Equipment Dealers - yard or garden type", "15063", false);
+	field.addListOption("Machinery or Machinery Parts Mfg.", "56654", false);
+	field.addListOption("Machinery or Machinery Parts Mfg. - construction, mining or materials handling type", "56650", false);
+	field.addListOption("Machinery or Machinery Parts Mfg. - farm type", "56651", false);
+	field.addListOption("Machinery or Machinery Parts Mfg. - industrial type", "56652", false);
+	field.addListOption("Machinery or Machinery Parts Mfg. - metalworking", "56653", false);
+	field.addListOption("Mail Box or Packaging Stores", "15070", false);
+	field.addListOption("Mail Order Houses", "45901", false);
+	field.addListOption("Mail Order or Online Drugstores", "45900", false);
+	field.addListOption("Mailing or Addressing Companies", "45937", false);
+	field.addListOption("Manufacturers - NOC", "54444", false);
+	field.addListOption("Manufacturers' Representatives", "45993", false);
+	field.addListOption("Marine Appraisers or Surveyor", "97308", false);
+	field.addListOption("Markets - not open air (lessor's risk only) Not-For-Profit only", "15120", false);
+	field.addListOption("Markets - not open air (lessor's risk only) Other than Not-For-Profit", "15119", false);
+	field.addListOption("Markets - open air (lessor's risk only) Not-For-Profit only", "15124", false);
+	field.addListOption("Markets - open air (lessor's risk only) Other than Not-For-Profit", "15123", false);
+	field.addListOption("Martial Arts School or Studio", "20012", false);
+	field.addListOption("Masonry", "97447", false);
+	field.addListOption("Massage Therapist - Full Time", "20013", false);
+	field.addListOption("Massage Therapist - Part Time", "20014", false);
+	field.addListOption("Match Mfg.", "56690", false);
+	field.addListOption("Mattress or Box Spring Mfg.", "56699", false);
+	field.addListOption("Mausoleums - Not-For-Profit only", "46005", false);
+	field.addListOption("Mausoleums - Other than Not-For Profit", "46004", false);
+	field.addListOption("Meat, Fish, Poultry or Seafood - curing", "56758", false);
+	field.addListOption("Meat, Fish, Poultry or Seafood - distributors", "15223", false);
+	field.addListOption("Meat, Fish, Poultry or Seafood Processing - NOT in airtight containers", "56760", false);
+	field.addListOption("Meat, Fish, Poultry or Seafood Processing - in airtight containers", "56759", false);
+	field.addListOption("Meat, Fish, Poultry or Seafood Stores", "15224", false);
+	field.addListOption("Media Mfg. - blank", "57800", false);
+	field.addListOption("Media Mfg. - pre-recorded", "58627", false);
+	field.addListOption("Medical, Dental or Surgical Diagnostic or Treatment Machines or Devices Mfg.", "56808", false);
+	field.addListOption("Medical, Dental, Hospital or Surgical Equipment or Supplies Mfg. - NONexpendable", "568
+2000
+06", false);
+	field.addListOption("Medical, Dental, Hospital or Surgical Equipment or Supplies Mfg. - expendable", "56805", false);
+	field.addListOption("Medical, Dental, Hospital or Surgical Instruments Mfg.", "56807", false);
+	field.addListOption("Medical, Hospital and Surgical Equipment and Supplies - rented to others", "15300", false);
+	field.addListOption("Medical, Hospital and Surgical Supply Stores", "15314", false);
+	field.addListOption("Metal Dealers or Distributors - nonstructural", "15404", false);
+	field.addListOption("Metal Dealers or Distributors - structural", "15405", false);
+	field.addListOption("Metal Erection - decorative or artistic", "97650", false);
+	field.addListOption("Metal Erection - frame structures iron work on outside of buildings", "97651", false);
+	field.addListOption("Metal Erection - in the construction of dwellings not exceeding 2 stories in height", "97652", false);
+	field.addListOption("Metal Erection - nonstructural - NOC", "97653", false);
+	field.addListOption("Metal Erection - steel lock gates, gasholders, standpipes, water towers, smokestacks, tanks, silos, prison cells, fire or burglarproof vaults", "97654", false);
+	field.addListOption("Metal Erection - structural", "97655", false);
+	field.addListOption("Metal Foil Mfg.", "56910", false);
+	field.addListOption("Metal Goods Mfg. - NOC", "56911", false);
+	field.addListOption("Metal Goods Mfg. - stamping - not signs", "56912", false);
+	field.addListOption("Metal Heat Processing", "56913", false);
+	field.addListOption("Metal Scrap Dealers", "15406", false);
+	field.addListOption("Metal Works - shop - structural - NOT load bearing", "56916", false);
+	field.addListOption("Metal Works - shop - structural - load bearing", "56915", false);
+	field.addListOption("Metal Works - shops - decorative or artistic", "59914", false);
+	field.addListOption("Metals - extraction or refining - NOC", "56900", false);
+	field.addListOption("Metals - extraction or refining - chemical processes", "56917", false);
+	field.addListOption("Metals - extraction or refining - electrometallurgical processes", "56918", false);
+	field.addListOption("Metals - extraction or refining of Nonferrous metals - blast furnace or other pyrometallurgical processes", "56920", false);
+	field.addListOption("Metals - extraction or refining of ferrous metals - blast furnace or other pyrometallurgical processes", "56919", false);
+	field.addListOption("Mica Goods Mfg.", "56980", false);
+	field.addListOption("Milk Depots or Dealers", "57001", false);
+	field.addListOption("Milk Processing", "57002", false);
+	field.addListOption("Milk Processing - Agribusiness", "20068", false);
+	field.addListOption("Mining - NOC", "98002", false);
+	field.addListOption("Mining - surface", "98003", false);
+	field.addListOption("Mobile Home Mfg.", "57090", false);
+	field.addListOption("Mobile Home Parks or Courts", "46202", false);
+	field.addListOption("Mobile Home Sales Agencies", "15488", false);
+	field.addListOption("Model Homes", "46362", false);
+	field.addListOption("Modular Units Mfg.", "57146", false);
+	field.addListOption("Motion Pictures - development of negatives, printing and all subsequent operations", "98090", false);
+	field.addListOption("Motion Pictures - film distribution or exchanges - not located at motion picture studios", "98091", false);
+	field.addListOption("Motion Pictures - production - studios or outside - all operations prior to the development of negatives", "98092", false);
+	field.addListOption("Motorcycle Dealer - Garage", "7325", false);
+	field.addListOption("Motorcycle, Moped or Motor Scooter Mfg.", "57202", false);
+	field.addListOption("Museums - Not-For-Profit only", "46427", false);
+	field.addListOption("Museums - Other than Not-For-Profit", "46426", false);
+	field.addListOption("Music Stores - pre-recorded", "16676", false);
+	field.addListOption("Musical Instrument Mfg.", "57257", false);
+	field.addListOption("Nail Salons", "15600", false);
+	field.addListOption("Nail or Spike Mfg.", "57401", false);
+	field.addListOption("Nanomaterial Distributors", "13208", false);
+	field.addListOption("Nanomaterial Manufacturing", "53953", false);
+	field.addListOption("Needles, Pins, or Tacks Mfg.", "57403", false);
+	field.addListOption("Net Mfg. - other than safety nets - NOC", "57410", false);
+	field.addListOption("Net Mfg. - safety nets", "57411", false);
+	field.addListOption("Newspaper or Magazine Distributors", "15607", false);
+	field.addListOption("Newsstands", "15608", false);
+	field.addListOption("Nightclubs, Cabarets and Comedy Clubs", "15656", false);
+	field.addListOption("No Work within 50ft of Tracks Trains run or No Exposure to Railroad Train Hazards", "40014", false);
+	field.addListOption("Office Machines Mfg.", "57572", false);
+	field.addListOption("Office Machines or Appliances - installation, inspection, adjustment or repair", "98111", false);
+	field.addListOption("Oil Refineries", "15733", false);
+	field.addListOption("Oil Rig or Derrick Erecting or Dismantling - wood or metal", "98163", false);
+	field.addListOption("Oil Still Erection or Repair", "98164", false);
+	field.addListOption("Oil or Gas Lease Operations - natural gas - within the limits of any town or city on the right-of-way of any railroad, or in any ocean, gulf or bay", "98151", false);
+	field.addListOption("Oil or Gas Lease Work by Contractors - not lease operation", "98152", false);
+	field.addListOption("Oil or Gas Well Supplies or Equipment Dealers - secondhand", "15188", false);
+	field.addListOption("Oil or Gas Wells - acidizing", "98153", false);
+	field.addListOption("Oil or Gas Wells - cementing", "98154", false);
+	field.addListOption("Oil or Gas Wells - cleaning or swabbing by contractors", "98155", false);
+	field.addListOption("Oil or Gas Wells - cleaning or swabbing by contractors - within the limits of any town or city, on the right-of-way of any railroad, or in any ocean, gulf or bay", "98156", false);
+	field.addListOption("Oil or Gas Wells - drilling or redrilling, installation or recovery of casing", "98157", false);
+	field.addListOption("Oil or Gas Wells - drilling or redrilling, installation or recovery of casing - within the limits of any town or city, on the right-of-way of any railroad, or in any ocean, gulf or bay", "98158", false);
+	field.addListOption("Oil or Gas Wells - instrument logging or survey work in wells", "98159", false);
+	field.addListOption("Oil or Gas Wells - non-operating working interest", "46510", false);
+	field.addListOption("Oil or Gas Wells - perforating of casing", "98160", false);
+	field.addListOption("Oil or Gas Wells - servicing - by contractors", "98161", false);
+	field.addListOption("Oil or Gas Wells - shooting", "98162", false);
+	field.addListOption("Oil or Natural Gas Lease Operations", "98150", false);
+	field.addListOption("Operations", "17982", false);
+	field.addListOption("Optical Goods Mfg.", "57600", false);
+	field.addListOption("Optical Goods Stores", "15839", false);
+	field.addListOption("Orchards and Vineyards - operation by contractors", "98257", false);
+	field.addListOption("Ore Milling or Processing", "57611", false);
+	field.addListOption("Orthopedic, Ambulation or Prosthetic Devices Mfg.", "57625", false);
+	field.addListOption("Overnight Camps - Not Sports", "20010", false);
+	field.addListOption("Overnight Camps - Sports", "20020", false);
+	field.addListOption("Packing Houses", "57651", false);
+	field.addListOption("Paint, Varnish, Shellac or Lacquer Mfg.", "57690", false);
+	field.addListOption("Paint, Wallpaper or Wallcovering Stores", "15991", false);
+	field.addListOption("Painting - exterior - buildings or structures - exceeding three stories in height - NOC", "98303", false);
+	field.addListOption("Painting - exterior - buildings or structures - three stories or less in height - NOC", "98304", false);
+	field.addListOption("Painting - interior - buildings or structures", "98305", false);
+	field.addListOption("Painting - oil or gasoline tanks", "98306", false);
+	field.addListOption("Painting - ship hulls", "98307", false);
+	field.addListOption("Painting - shop only", "98308",
+2000
+ false);
+	field.addListOption("Painting - steel structures or bridges", "98309", false);
+	field.addListOption("Painting, Picture or Frame Stores", "15993", false);
+	field.addListOption("Paper Coating", "57716", false);
+	field.addListOption("Paper Goods Mfg. - NOC", "57725", false);
+	field.addListOption("Paper Mfg.", "57726", false);
+	field.addListOption("Paper Products Distributors", "16005", false);
+	field.addListOption("Paper, Rag or Rubber Stock Dealers and Distributors - secondhand", "16009", false);
+	field.addListOption("Paperhanging", "98344", false);
+	field.addListOption("Parachute Mfg.", "57798", false);
+	field.addListOption("Parades", "46590", false);
+	field.addListOption("Parking - private", "46622", false);
+	field.addListOption("Parking - public - not open air", "46603", false);
+	field.addListOption("Parking - public - open air", "46604", false);
+	field.addListOption("Parking - public - shopping centers - maintained by the insured (lessor's risk only)", "46607", false);
+	field.addListOption("Parking - public - shopping centers - maintained by the lessee (lessor's risk only)", "46606", false);
+	field.addListOption("Parks or Playgrounds", "46671", false);
+	field.addListOption("Pattern Mfg. - metal", "57808", false);
+	field.addListOption("Pattern Mfg. - other - NOC", "57809", false);
+	field.addListOption("Pattern Mfg. - paper", "57810", false);
+	field.addListOption("Penal Institutions", "46700", false);
+	field.addListOption("Pencil, Pen, Crayon or Chalk Mfg.", "57871", false);
+	field.addListOption("Permits - Building Demolition Operations - Municipalities", "93161", false);
+	field.addListOption("Permits - Construction Operations - Municipalities", "93163", false);
+	field.addListOption("Pest Control Services", "43470", false);
+	field.addListOption("Pet Food Mfg.", "57913", false);
+	field.addListOption("Pet Grooming", "16402", false);
+	field.addListOption("Pet Stores", "16403", false);
+	field.addListOption("Pet Training", "16404", false);
+	field.addListOption("Petting Zoos - Not-For-Profit only", "49903", false);
+	field.addListOption("Petting Zoos - Other than Not-For-Profit only", "49902", false);
+	field.addListOption("Photo Finishing Laboratories", "57997", false);
+	field.addListOption("Photographers", "16471", false);
+	field.addListOption("Photographic Equipment Mfg.", "57998", false);
+	field.addListOption("Photographic Supplies Mfg.", "57999", false);
+	field.addListOption("Piano Tuning", "98405", false);
+	field.addListOption("Picnic Grounds - commercially operated", "46773", false);
+	field.addListOption("Pile Driving - building foundation only", "98413", false);
+	field.addListOption("Pile Driving - other - NOC", "98414", false);
+	field.addListOption("Pile Driving - sonic method", "98415", false);
+	field.addListOption("Pipeline Construction - gas", "98423", false);
+	field.addListOption("Pipeline Construction - oil", "98425", false);
+	field.addListOption("Pipeline Construction - other - NOC", "98424", false);
+	field.addListOption("Pipeline Construction - slurry - nonflammable mixtures", "98426", false);
+	field.addListOption("Pipelines - operation - gas", "98427", false);
+	field.addListOption("Pipelines - operation - oil", "98429", false);
+	field.addListOption("Pipelines - operation - slurry - nonflammable mixtures", "98430", false);
+	field.addListOption("Pipelines NOC - operation - other - NOC", "98428", false);
+	field.addListOption("Pipes Mfg. - tobacco", "58020", false);
+	field.addListOption("Pipes or Tube Mfg. - metal", "58009", false);
+	field.addListOption("Pipes or Tube Mfg. - plastic", "58010", false);
+	field.addListOption("Plastering or Stucco Work", "98449", false);
+	field.addListOption("Plastic Mfg. - raw material", "58056", false);
+	field.addListOption("Plastic or Rubber Goods Mfg. - household - NOC", "58057", false);
+	field.addListOption("Plastic or Rubber Goods Mfg. - other than household - NOC", "58058", false);
+	field.addListOption("Plastic or Rubber Supply Goods Distributors", "16501", false);
+	field.addListOption("Plumbing - commercial and industrial", "98482", false);
+	field.addListOption("Plumbing Fixtures Mfg.", "58095", false);
+	field.addListOption("Plumbing Supplies Mfg. - NOC", "58096", false);
+	field.addListOption("Plumbing Supplies and Fixtures Dealers and Distributors", "16527", false);
+	field.addListOption("Plywood, Veneer or Veneer Products Mfg. - other - NOC", "58301", false);
+	field.addListOption("Plywood, Veneer or Veneer Products Mfg. - without log processing", "58302", false);
+	field.addListOption("Political Campaign Headquarters or Offices", "46822", false);
+	field.addListOption("Portable Toilet Rentals", "19061", false);
+	field.addListOption("Poultry Hatcheries", "48636", false);
+	field.addListOption("Prefabricated Building Erection", "98502", false);
+	field.addListOption("Prefabricated Building Mfg. - metal", "58397", false);
+	field.addListOption("Printers or Electrotypers Supplies - distributors", "16588", false);
+	field.addListOption("Printing - Not-For-Profit only", "58409", false);
+	field.addListOption("Printing - Other than Not-For-Profit", "58408", false);
+	field.addListOption("Produce Handling or Packing", "16604", false);
+	field.addListOption("Professional and Trade Associations - no buildings or premises owned or leased except as offices - Not-For-Profit only", "46882", false);
+	field.addListOption("Professional and Trade Associations - no buildings or premises owned or leased except as offices - Other than Not-For-Profit", "46881", false);
+	field.addListOption("Publishers - books or magazines - Not-For-Profit only", "58457", false);
+	field.addListOption("Publishers - books or magazines - Other than Not-For-Profit", "58456", false);
+	field.addListOption("Publishers - newspapers - Not-For-Profit only", "58459", false);
+	field.addListOption("Publishers - newspapers - Other than Not-For-Profit", "58458", false);
+	field.addListOption("Pulp Mfg.", "58503", false);
+	field.addListOption("Pumps or Compressors Mfg.", "58532", false);
+	field.addListOption("Quarries", "98555", false);
+	field.addListOption("Race Tracks - motorized vehicles - lessor's risk only", "46913", false);
+	field.addListOption("Race Tracks - motorized vehicles - operators", "46911", false);
+	field.addListOption("Race Tracks - motorized vehicles - sponsor's risk only", "46915", false);
+	field.addListOption("Race Tracks - operators - NOC", "46912", false);
+	field.addListOption("Racing - lessor's risk only", "46914", false);
+	field.addListOption("Racing - sponsor's risk only - NOC", "46916", false);
+	field.addListOption("Racquet Sports and Handball Facilities - commercially operated", "16670", false);
+	field.addListOption("Radio or TV Broadcasting Stations - Not-For-Profit only", "98598", false);
+	field.addListOption("Radio or TV Broadcasting Stations - Other than Not-For-Profit", "98597", false);
+	field.addListOption("Railroad Construction", "98601", false);
+	field.addListOption("Railroad or Other Public Conveyance Cars Mfg.", "58560", false);
+	field.addListOption("Railroad or Other Public Conveyance Cars Parts Mfg.", "58561", false);
+	field.addListOption("Railroads - operation and maintenance - with BI passenger hazard", "98622", false);
+	field.addListOption("Railroads - operation and maintenance - without BI passenger hazard", "98623", false);
+	field.addListOption("Railroads - shop operation and maintenance", "98624", false);
+	field.addListOption("Razor or Razor Blades Mfg.", "58575", false);
+	field.addListOption("Real Estate Agents", "47050", false);
+	field.addListOption("Real Estate Development Property", "47051", false);
+	field.addListOption("Real Estate Property Managed", "47052", false);
+	field.addListOption("Recording Studios", "47103", false);
+	field.addListOption("Recreational Vehicle Dealer - Garage", "7335", false);
+	field.addListOption("Recreational Vehicle Dealers", "16694", false);
+	field.addListOption("Recycling Collection Centers - Not-For-Profit only", "47147", false);
+	field.addListOption("Recycling Collection Centers - Other than Not-For-Profit", "47146", false);
+	field.addListOption("Refrigeration Equipm
+2000
+ent - Dealers and Distributors only - commercial", "16705", false);
+	field.addListOption("Refrigeration Equipment Mfg.", "58663", false);
+	field.addListOption("Refrigeration Systems or Equipment - dealers and distributors and installation, servicing or repair - commercial", "98636", false);
+	field.addListOption("Rendering Works", "58682", false);
+	field.addListOption("Renovating - outside surfaces of buildings", "98640", false);
+	field.addListOption("Rental Concessions", "20046", false);
+	field.addListOption("Rental Stores - NOC", "16722", false);
+	field.addListOption("Rental Stores - machinery or equipment - rented to others on a long-term basis", "16723", false);
+	field.addListOption("Restaurants - Fine Dining - with sale of alcoholic beverages 30% up to 50%, WITH dance floor", "16915", false);
+	field.addListOption("Restaurants - Fine Dining - with sale of alcoholic beverages 30% up to 50%, WITHOUT dance floor", "16916", false);
+	field.addListOption("Restaurants - Limited Cooking - With no sale of alcoholic beverage, including but not limited to Cafes, Pizza no delivery, Salad Bar, Snack Bar", "16900", false);
+	field.addListOption("Restaurants - operated by concessionaires - Not-For-Profit only", "16820", false);
+	field.addListOption("Restaurants - operated by concessionaires - Other than Not-For-Profit", "16819", false);
+	field.addListOption("Restaurants - with no sale of alcoholic beverages - WITHOUT table service", "16901", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are 75% or more of the total receipts of the restaurant - with tables - with dance floor: NO table service", "16921", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are 75% or more of the total receipts of the restaurant - with tables - with dance floor: table service", "16920", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are 75% or more of total annual receipts of the restaurant - bar service only (no tables): WITH dance floor", "16940", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are 75% or more of total receipts of the restaurant - with tables - without dance floor: NO table service", "16931", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are 75% or more of total receipts of the restaurant - with tables - without dance floor: table service", "16930", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are less than 30% of the annual receipt of the restaurants - WITH table service", "16910", false);
+	field.addListOption("Restaurants - with sale of alcoholic beverages that are less than 30% of the annual receipt of the restaurants - WITHOUT table service", "16911", false);
+	field.addListOption("Riding Academies", "47221", false);
+	field.addListOption("Rifle or Pistol Ranges", "47254", false);
+	field.addListOption("Rifle or Pistol Ranges - indoor", "47253", false);
+	field.addListOption("Rigging - not ship or boat", "98658", false);
+	field.addListOption("Rigging - ship or boat", "98659", false);
+	field.addListOption("Rodeos", "47318", false);
+	field.addListOption("Rolling Mills - cold or hot process", "58713", false);
+	field.addListOption("Roofing - residential - three stories and under", "98678", false);
+	field.addListOption("Roofing - residential over three stories and/or commercial", "98677", false);
+	field.addListOption("Rope Mfg.", "58737", false);
+	field.addListOption("Rubber Mfg.", "58756", false);
+	field.addListOption("Rubber Reclaiming", "58757", false);
+	field.addListOption("Rubber Stamp Mfg. or Assembling", "58759", false);
+	field.addListOption("Saddles, Harnesses or Horses Furnishings Mfg.", "58802", false);
+	field.addListOption("Safes or Safe Vaults Mfg.", "58813", false);
+	field.addListOption("Sail Making", "58822", false);
+	field.addListOption("Sales or Service Organizations", "47367", false);
+	field.addListOption("Salt Mfg.", "58840", false);
+	field.addListOption("Salt, Borax, Potash or Phosphate - producing or refining - NOC", "58837", false);
+	field.addListOption("Salvage Operations - NOC", "98698", false);
+	field.addListOption("Salvage Operations - removing, sorting, reconditioning and distributing of merchandise in damaged buildings and incidental operations away from such buildings", "98699", false);
+	field.addListOption("Sand or Gravel Digging", "98710", false);
+	field.addListOption("Sandblasting", "98705", false);
+	field.addListOption("Saunas and Baths - public", "47420", false);
+	field.addListOption("Saw Mills or Planing Mills", "58873", false);
+	field.addListOption("School - public - elementary, kindergarten or junior high", "47471", false);
+	field.addListOption("Schools - colleges, universities, junior colleges or college preparatory Not-For-Profit only", "67509", false);
+	field.addListOption("Schools - colleges, universities, junior colleges or college preparatory Other than Not-For-Profit", "67508", false);
+	field.addListOption("Schools - correspondence", "47468", false);
+	field.addListOption("Schools - dormitory facilities - Not-For-Profit only", "67511", false);
+	field.addListOption("Schools - dormitory facilities - Other than Not-For-Profit", "67510", false);
+	field.addListOption("Schools - faculty liability for corporal punishment of students", "47469", false);
+	field.addListOption("Schools - private - elementary, kindergarten or junior high - Not-For-Profit only", "47476", false);
+	field.addListOption("Schools - private - elementary, kindergarten or junior high - Other than Not-For-Profit", "47475", false);
+	field.addListOption("Schools - private - high - Not-For-Profit only", "47478", false);
+	field.addListOption("Schools - private - high - Other than Not-For-Profit", "47477", false);
+	field.addListOption("Schools - public - high", "47473", false);
+	field.addListOption("Secondhand or Salvage Dealers and Distributors", "16881", false);
+	field.addListOption("Security and Patrol Agencies", "98751", false);
+	field.addListOption("Seed Merch -excl Germ, Misdelivery, Mix Err - Agribusiness", "20066", false);
+	field.addListOption("Seed Merchants - erroneous delivery, and error in mixture (excluding germination failure)", "16892", false);
+	field.addListOption("Seed Merchants - erroneous delivery, error in mixture and resulting germination failure", "16891", false);
+	field.addListOption("Seed Merchants - excl Failure to Germinate - Agribusiness", "20065", false);
+	field.addListOption("Seed Merchants - excluding erroneous delivery, error in mixture and germination failure", "16890", false);
+	field.addListOption("Septic Tank Systems - cleaning", "98805", false);
+	field.addListOption("Septic Tank Systems - installation, servicing or repair", "98806", false);
+	field.addListOption("Sewage Disposal - Plant operations", "98810", false);
+	field.addListOption("Sewer Cleaning", "98813", false);
+	field.addListOption("Sewer Mains or Connections Construction", "98820", false);
+	field.addListOption("Sewers", "48039", false);
+	field.addListOption("Sewing Machine Mfg. - commercial", "58903", false);
+	field.addListOption("Sewing Machine Mfg. - household", "58904", false);
+	field.addListOption("Shaft Sinking", "98871", false);
+	field.addListOption("Sheet Metal Work - outside", "98884", false);
+	field.addListOption("Sheet Metal Work - shop only", "58922", false);
+	field.addListOption("Shelters, Mission, Settlement or Halfway House - Not Church or Office Building", "67017", false);
+	field.addListOption("Ship Ceiling or Scaling", "98914", false);
+	field.addListOption("Ship Chandler Stores", "18078", false);
+	field.addListOption("Ship Repair or Conversion", "98949", false);
+	field.addListOption("Shoe Repair Shops", "18109", false);
+	field.addListOption("Shoe Stores", "18110", false);
+	field.addListOption("Shoe, Boot or Slipper Mfg.", "59005", false);
+	field.addListOption("Shopping Centers - buildings, or premises not occupied by the insured (lessor's risk only)", "67635", false);
+	field.addListOption("Shopping Centers - indoor malls - buildings, or premises not occupied by t
+2000
+he insured (lessor's risk only)", "67634", false);
+	field.addListOption("Siding Installation", "98967", false);
+	field.addListOption("Sign Erection, Installation and Repair", "98993", false);
+	field.addListOption("Sign Mfg. - electrical", "59057", false);
+	field.addListOption("Sign Mfg. - other than electrical - NOC", "59058", false);
+	field.addListOption("Sign Painting or Lettering - inside of building", "99003", false);
+	field.addListOption("Sign Painting or Lettering - on buildings or structures", "99004", false);
+	field.addListOption("Skating Rinks - ice", "48177", false);
+	field.addListOption("Skating Rinks - roller", "48178", false);
+	field.addListOption("Skeet Shooting or Trap Shooting Ranges", "48206", false);
+	field.addListOption("Ski Lifts, Tows or Runs", "48252", false);
+	field.addListOption("Slate Milling", "59188", false);
+	field.addListOption("Slate Splitting or Slate Roofing Mfg.", "59189", false);
+	field.addListOption("Snow and Ice Removal - Contractor", "99310", false);
+	field.addListOption("Soap Box Derbies", "48441", false);
+	field.addListOption("Soap Mfg.", "59223", false);
+	field.addListOption("Social Gatherings and Meetings - on premises not owned by the insured - Not-For-Profit only", "48558", false);
+	field.addListOption("Social Gatherings and Meetings - on premises not owned or operated by the insured - Other than Not-For-Profit", "48557", false);
+	field.addListOption("Social Services - Consulting Services only - operated by the Private Sector", "48600", false);
+	field.addListOption("Solar Energy Contractors", "99080", false);
+	field.addListOption("Solar Energy Equipment Dealers or Distributors only", "13461", false);
+	field.addListOption("Solar Energy Equipment Manufacturing", "55014", false);
+	field.addListOption("Solar Energy Farms", "99081", false);
+	field.addListOption("Solar Energy Systems - Existence Hazard Only (Lessor's risk only)", "97502", false);
+	field.addListOption("Solar Energy Systems - Existence Hazard Only (Owner-Operated)", "97501", false);
+	field.addListOption("Spas or Personal Enhancement Facilities", "18200", false);
+	field.addListOption("Sponge Processing", "59257", false);
+	field.addListOption("Sporting Goods or Athletic Equipment Distributors", "18205", false);
+	field.addListOption("Sporting Goods or Athletic Equipment Mfg.", "59306", false);
+	field.addListOption("Sporting Goods or Athletic Equipment Stores", "18206", false);
+	field.addListOption("Sports or Outdoor Activities - commercially operated", "48610", false);
+	field.addListOption("Stables - boarding, livery or racing", "99111", false);
+	field.addListOption("Stadiums - operated by insured - Not-For-Profit only", "48638", false);
+	field.addListOption("Stadiums - operated by insured - Other than Not-For-Profit", "48637", false);
+	field.addListOption("State or Federal Highway Projects", "40013", false);
+	field.addListOption("Stationery or Paper Products Stores", "18335", false);
+	field.addListOption("Steam Heating or Steam Power Companies", "99160", false);
+	field.addListOption("Steam Mains or Connections Construction", "99163", false);
+	field.addListOption("Steam Pipe or Boiler Insulation", "99165", false);
+	field.addListOption("Steel Wool or Wire Wool Mfg.", "59378", false);
+	field.addListOption("Stevedoring - NOC", "99222", false);
+	field.addListOption("Stevedoring - by hand or by means of hand trucks exclusively - no hoisting of cargo", "99220", false);
+	field.addListOption("Stevedoring - handling explosives or ammunition - under contract", "99221", false);
+	field.addListOption("Stevedoring - tallyers or checking clerks engaged in connection with stevedoring work", "99223", false);
+	field.addListOption("Stone Crushing", "59481", false);
+	field.addListOption("Stone Cutting or Polishing", "59482", false);
+	field.addListOption("Stores - food or drink - Not-For-Profit only - NOC", "18436", false);
+	field.addListOption("Stores - no food or drink - Not for Profit", "18438", false);
+	field.addListOption("Street Cleaning", "99303", false);
+	field.addListOption("Street or Road Construction or Reconstruction", "99315", false);
+	field.addListOption("Street or Road Paving or Repaving, Surfacing or Resurfacing or Scraping", "99321", false);
+	field.addListOption("Streets, Roads, Highways or Bridges - existence and maintenance hazard only", "48727", false);
+	field.addListOption("Subway Construction", "99445", false);
+	field.addListOption("Sugar Refining", "59537", false);
+	field.addListOption("Sun Tanning Salons", "48808", false);
+	field.addListOption("Supermarkets", "18501", false);
+	field.addListOption("Surveyors - land - not engaged in actual construction", "99471", false);
+	field.addListOption("Swimming Pool Servicing", "99505", false);
+	field.addListOption("Swimming Pools - NOC", "48925", false);
+	field.addListOption("Swimming Pools - commercially operated", "48924", false);
+	field.addListOption("Swimming Pools - installation, servicing or repair - above ground", "99506", false);
+	field.addListOption("Swimming Pools - installation, servicing or repair - below ground", "99507", false);
+	field.addListOption("Swimming Pools or Accessories Mfg.", "59601", false);
+	field.addListOption("Syrup or Molasses - refining, blending or mfg.", "59647", false);
+	field.addListOption("Tailor Merchants - men or boys", "18506", false);
+	field.addListOption("Tank Building or Mfg. - metal - not pressurized", "59660", false);
+	field.addListOption("Tank Building or Mfg. - metal - pressurized", "59661", false);
+	field.addListOption("Tank Construction, Installation, Erection or Repair - metal - not pressurized - NOC", "99570", false);
+	field.addListOption("Tank Construction, Installation, Erection or Repair - metal - not pressurized - within buildings exclusively", "99572", false);
+	field.addListOption("Tank Construction, Installation, Erection or Repair - metal - pressurized - NOC", "99571", false);
+	field.addListOption("Tank Construction, Installation, Erection or Repair - metal - pressurized - within buildings exclusively", "99573", false);
+	field.addListOption("Tanning - animal hides", "59693", false);
+	field.addListOption("Tanning Beds (1-5)", "28818", false);
+	field.addListOption("Tanning Beds (11 or more)", "28838", false);
+	field.addListOption("Tanning Beds (6-10)", "28828", false);
+	field.addListOption("Tattoo Parlors", "18570", false);
+	field.addListOption("Taxicab Companies", "68001", false);
+	field.addListOption("Taxidermists", "49005", false);
+	field.addListOption("Telecommunication Equipment Mfg.", "59695", false);
+	field.addListOption("Telecommunication Equipment Providers", "18575", false);
+	field.addListOption("Telecommunication Service Providers", "99600", false);
+	field.addListOption("Telegraph Companies", "99614", false);
+	field.addListOption("Telephone, Telegraph or Cable Television Line Construction", "99613", false);
+	field.addListOption("Teleproduction Studios", "99620", false);
+	field.addListOption("Television Picture Tube Mfg.", "59701", false);
+	field.addListOption("Television or Radio Receiving Set Installation or Repair", "99650", false);
+	field.addListOption("Tent or Canopies - loaned or rented to others", "49111", false);
+	field.addListOption("Tent or Canopy Mfg.", "59713", false);
+	field.addListOption("Tent or Canvas Goods - erection, removal or repair - away from shop", "99709", false);
+	field.addListOption("Textile Bleaching, Dyeing, Mercerizing, Printing, Finishing or Silk Screening - new goods", "59722", false);
+	field.addListOption("Textile Coating or Impregnating", "59723", false);
+	field.addListOption("Textile Mfg. - impregnated or coated", "59724", false);
+	field.addListOption("Textile Products Mfg. - fabricated", "59725", false);
+	field.addListOption("Textile Spinning, Weaving or Knitting Mills", "59726", false);
+	field.addListOption("Theaters - Not-For-Profit only - NOC", "49185", false);
+	field.addListOption("Theaters - Other than Not-For-Profit only - NOC", "49184", false);
+	field.addListOption("Theaters - drive-in", "49181", false);
+	field.addListOption("Theaters - motion pictures", "49183", false);
+	field.addListOption("Th
+2000
+eatrical Companies - traveling", "99718", false);
+	field.addListOption("Ticket Agencies", "68439", false);
+	field.addListOption("Tie, Post or Pole Yard", "59738", false);
+	field.addListOption("Tile, Stone, Marble, Mosaic or Terrazzo Work - interior construction", "99746", false);
+	field.addListOption("Tire - retreading or recapping", "49239", false);
+	field.addListOption("Tire Dealers - No Retreading", "18616", false);
+	field.addListOption("Tire Mfg. - NOT auto, bus or truck", "59751", false);
+	field.addListOption("Tire Mfg. - auto, bus or truck", "59750", false);
+	field.addListOption("Tobacco Products Distributors", "18707", false);
+	field.addListOption("Tobacco Products Mfg. - cigar or cigarettes", "59773", false);
+	field.addListOption("Tobacco Products Mfg. - other - NOC", "59774", false);
+	field.addListOption("Tobacco Products Mfg. - plug or snuff", "59775", false);
+	field.addListOption("Tobacco Products Stores", "18708", false);
+	field.addListOption("Tobacco Rehandling or Warehousing", "99760", false);
+	field.addListOption("Toll Bridges", "49292", false);
+	field.addListOption("Tool Mfg. - accessories - NOC", "59781", false);
+	field.addListOption("Tool Mfg. - hand type - not powered", "59782", false);
+	field.addListOption("Tool Mfg. - hand type - powered", "59783", false);
+	field.addListOption("Tool Mfg. - power equipment - household type - outdoor or workshop", "59784", false);
+	field.addListOption("Towers - telecommunication - existence hazard only (lessor's risk only)", "49305", false);
+	field.addListOption("Townhouse Associations (association risk only)", "68500", false);
+	field.addListOption("Toy Distributors", "18833", false);
+	field.addListOption("Toy Mfg - Cloth Stuffed Animals or Toys", "59790", false);
+	field.addListOption("Toy Stores", "18834", false);
+	field.addListOption("Trailer Dealers", "19795", false);
+	field.addListOption("Trailer Mfg.", "59798", false);
+	field.addListOption("Trailer Rental Agencies", "19796", false);
+	field.addListOption("Travel Agency Tours", "49333", false);
+	field.addListOption("Tree Pruning, Dusting, Spraying, Repairing, Trimming or Fumigating (Tree Services)", "99777", false);
+	field.addListOption("Truck Mfg. or Assembling", "59806", false);
+	field.addListOption("Truck or Semi-Tractor Dealer - Garage", "7315", false);
+	field.addListOption("Truckers - Agricultural Products", "99793", false);
+	field.addListOption("Tunneling", "99798", false);
+	field.addListOption("Turpentine or Resin Mfg.", "59867", false);
+	field.addListOption("Tutoring", "47474", false);
+	field.addListOption("Twine or Cordage Mfg.", "59886", false);
+	field.addListOption("Umbrella or Cane Mfg.", "59889", false);
+	field.addListOption("Underpinning Buildings or Structures", "99803", false);
+	field.addListOption("Upholstering - NOC", "99826", false);
+	field.addListOption("Upholstering - shop only", "99827", false);
+	field.addListOption("Vacant Buildings - factories", "68604", false);
+	field.addListOption("Vacant Buildings - not factories - Not-For-Profit only", "68607", false);
+	field.addListOption("Vacant Buildings - not factories - Other than Not-For-Profit", "68606", false);
+	field.addListOption("Vacant Land - Not-For-Profit only", "49452", false);
+	field.addListOption("Vacant Land - Other than Not-For-Profit only", "49451", false);
+	field.addListOption("Valve Mfg.", "59892", false);
+	field.addListOption("Variety Stores - Not-For-Profit only", "18912", false);
+	field.addListOption("Variety Stores - Other than Not-For-Profit", "18911", false);
+	field.addListOption("Vegetable Oil Mfg. - NOC", "59905", false);
+	field.addListOption("Vegetable Oil Mfg. - by solvent extraction", "59904", false);
+	field.addListOption("Vending Machine Operations - NOC", "49619", false);
+	field.addListOption("Vending Machine Operations - confection, food, beverage or ice", "49617", false);
+	field.addListOption("Vending Machine Operations - tobacco products", "49618", false);
+	field.addListOption("Vending Machines Mfg.", "59915", false);
+	field.addListOption("Venetian Blinds Mfg. or Assembling", "59917", false);
+	field.addListOption("Veterinarian or Veterinary Hospitals", "99851", false);
+	field.addListOption("Video Stores", "18920", false);
+	field.addListOption("Wagon or Sleigh Ride", "20040", false);
+	field.addListOption("Warehouse - cold individual storage lockers", "49763", false);
+	field.addListOption("Warehouse - cold storage - public", "99917", false);
+	field.addListOption("Warehouses - NOC", "99938", false);
+	field.addListOption("Warehouses - mini-warehouses", "18991", false);
+	field.addListOption("Warehouses - occupied by multiple interests (lessor's risk only)", "68702", false);
+	field.addListOption("Warehouses - occupied by single interest (lessor's risk only)", "68703", false);
+	field.addListOption("Warehouses - private - Not-For-Profit only", "68707", false);
+	field.addListOption("Warehouses - private - Other than Not-For-Profit", "68706", false);
+	field.addListOption("Washing Machines, Dryers or Ironers - coin meter type", "19007", false);
+	field.addListOption("Watch or Watch Case Mfg.", "59923", false);
+	field.addListOption("Water Bottling - in siphons", "59925", false);
+	field.addListOption("Water Bottling - spring or well - NOT sparkling or carbonated", "59926", false);
+	field.addListOption("Water Bottling - spring or well - sparkling or carbonated", "59927", false);
+	field.addListOption("Water Companies", "99943", false);
+	field.addListOption("Water Mains or Connections Construction", "99946", false);
+	field.addListOption("Water Softening Equipment - installation, servicing or repair", "99948", false);
+	field.addListOption("Water Softening Equipment - rented to others", "19051", false);
+	field.addListOption("Waterproofing - NOC", "99955", false);
+	field.addListOption("Waterproofing - by pressure apparatus", "99952", false);
+	field.addListOption("Waterproofing - by trowel - exterior", "99953", false);
+	field.addListOption("Waterproofing - by trowel - interior or insulation work", "99954", false);
+	field.addListOption("Wax or Wax Products Mfg. - NOC", "59931", false);
+	field.addListOption("Wax, Wax Products or Polish Mfg. - floor", "59932", false);
+	field.addListOption("Web Site Designers", "96930", false);
+	field.addListOption("Weighers, Samplers or Inspectors of Merchandise - on vessels or docks or at railway stations or warehouses", "99963", false);
+	field.addListOption("Welding or Cutting", "99969", false);
+	field.addListOption("Wharf and Waterfront Property - ferry docks or terminals", "49800", false);
+	field.addListOption("Wharf and Waterfront Property - not occupied by the insured (lessor's risk only)", "49802", false);
+	field.addListOption("Wharf and Waterfront Property - occupied by the insured for both freight and passenger purposes", "49801", false);
+	field.addListOption("Wharf and Waterfront Property - occupied by the insured for freight purposes exclusively", "49803", false);
+	field.addListOption("Wheel Mfg.", "59941", false);
+	field.addListOption("Wicker, Rattan, Willow or Twisted Fiber Products Mfg.", "59947", false);
+	field.addListOption("Wigs or Hair Pieces Mfg.", "59955", false);
+	field.addListOption("Wind Farms - Off Shore", "99083", false);
+	field.addListOption("Wind Farms - On Shore", "99082", false);
+	field.addListOption("Wind Turbine Contractors, Service or Repair off Shore", "99085", false);
+	field.addListOption("Wind Turbine Contractors, Service or Repair on Shore", "99084", false);
+	field.addListOption("Wind Turbines - Existence Hazard Only (Lessors Risk only)", "97504", false);
+	field.addListOption("Wind Turbines - Existence Hazard Only (owner-operated)", "97503", false);
+	field.addListOption("Window Cleaning", "99975", false);
+	field.addListOption("Window Decorating", "49840", false);
+	field.addListOption("Wine Mfg. - sparkling", "59963", false);
+	field.addListOption("Wine Mfg. - still", "59964", false);
+	field.addListOption("Wire Cloth Mfg.", "59970", false);
+	field.addListOption("Wire Drawing", "59973", false);
+	field.addListOption("Wire Goods Mfg. - NOC", "59975", false);
+	field.addListOption("Wire Rope o
+2000
+r Cable Mfg. - metal", "59977", false);
+	field.addListOption("Wood Preserving", "59984", false);
+	field.addListOption("Wood Products Mfg. - NOC", "59985", false);
+	field.addListOption("Wood Turned Products Mfg. - NOC", "59986", false);
+	field.addListOption("Wool Combing, Scouring or Separating from Cotton", "59988", false);
+	field.addListOption("Wool Pulling", "59989", false);
+	field.addListOption("Wrecking - buildings or structures", "99986", false);
+	field.addListOption("Wrecking - dismantling of prefabricated dwellings not exceeding three stories for reerection", "99987", false);
+	field.addListOption("Wrecking - marine", "99988", false);
+	field.addListOption("YMCA, YWCA or Similar Institutions", "49870", false);
+	field.addListOption("Youth Recreation Programs - Not-For-Profit", "49891", false);
+	field.addListOption("Youth Recreation Programs - Other than Not-For-Profit", "49890", false);
+	field.commitListOptions(true);
+	field.updateHelpBubbleText("PrimaryBusDescription_fieldHelperBalloon", "fieldHelperBalloon", "Please select the business description that most closely matches the applicant\'s primary business operations.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("HazardGrade");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("NatureofBusiness");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Additional Description of Operations");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 400)', "This field can't exceed 400 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(400);
+}
+field = fieldset.getField("MarketSegment");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Market Segment");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ApplicantSICCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("SIC Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 6)', "This field can't exceed 6 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(6);
+}
+field = fieldset.getField("ApplicantNAICSCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("NAICS Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 6)', "This field can't exceed 6 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_alphanumeric(this.getValue())', "This field must be alphanumeric", 'AlphanumericValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ControllingState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Controlling State");
+	field.updateHelpBubbleText("ControllingState_fieldHelperBalloon", "fieldHelperBalloon", "Enter the applicant\'s primary state of business operations.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("ProgramAssociation");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Program&#47;Association");
+	field.updateHelpBubbleText("ProgramAssociation_fieldHelperBalloon", "fieldHelperBalloon", "Please indicate if the applicant is a current member of an association shown in the list. Premium and coverages may be subject to verification of active membership in the association.", "200");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("InsuredOrPrincipalInsuredOrPrincipalInfo_InsuredOrPrincipalRoleCdInsured_InsuredOrPrincipalInfo_PrincipalInfo_CreditScoreInfo_CreditScore");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Intelliscore Plus");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("EligibilityQuestions");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Eligibility Questions");
+field = fieldset.getField("OperationOfHazardousMaterial");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Do operations involve transporting hazardous material?");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("CALossPast3YearsTip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("The response to the question below will impact the quote if the applicant qualifies for Experience Rating. Click on &quot;?&quot; for more information.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("LossPast3Years");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Have you had any automobile losses in the past 3 years?");
+	field.updateHelpBubbleText("LossPast3Years_fieldHelperBalloon", "fieldHelperBalloon", "The response to this question will impact rating if the applicant qualifies for Experience Rating.<br/>Select &quot;Yes, I will enter claims on Loss History screen&quot; if you would like to enter claim details on the Loss History page. This will apply Experience Rating factors to the quote.<br/>Select &quot;Yes, l will attach loss runs&quot; if you would prefer to have Underwriting apply the Experience Rating factors. The quote will be referred for review and completion.<br/>Select
+121a
+ &quot;Loss Information not available at this time&quot; if you do not have the applicant&#x27;s prior loss history. The quote will be subject to underwriter review.<br/>Select &quot;No Losses&quot; if the applicant has no claims.<br/>For all options, loss runs should be submitted within one week after binding.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("UnderwriterSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Underwriter");
+field = fieldset.getField("Underwriter");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Underwriter");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("AccountClearanceOverride");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+validationLibrary.validation_fein = function validation_fein(value) {
+	if (value.length == 0) return true;
+	if (value.length != 10) return false;
+	if (value.search(/\d{2}-\d{7}/) == -1) return false;
+	return true;
+
+}
+
+validationLibrary.verifyDate = function verifyDate(value, dateFormat){
+	if (value.length != dateFormat.length) return false;
+	var delimiter = '-';
+	if ( dateFormat.indexOf('/') > -1 ) delimiter = '/';
+	var slashPos = -1;
+	var slashPos2 = -1;
+	while ((slashPos = dateFormat.indexOf(delimiter, slashPos + 1)) > -1 ) {
+		slashPos2 = value.indexOf(delimiter, slashPos2 + 1);
+		if (slashPos2 != slashPos) return false;
+	}
+
+	var month = this.getDatePart(value, dateFormat, 'MM');
+	if (month.search(/[^0-9]/) > -1) return false;
+	var day = this.getDatePart(value, dateFormat, 'dd');
+	if (day.search(/[^0-9]/) > -1) return false;
+	var year = this.getDatePart(value, dateFormat, 'yyyy');
+	if (year.search(/[^0-9]/) > -1) return false;
+	month = month - 1;
+	var dteDate = new Date(year,month,day);
+	return ((day==dteDate.getDate()) && (month==dteDate.getMonth()) && (year==dteDate.getFullYear()))
+}
+
+validationLibrary.validation_phone = function validation_phone(value) {
+	if (value.length == 0) return true;
+	if (value.search(/\(?[2-9]\d{2}\)?-? ?\d{3}-? ?\d{4}(( |-|\.)?[ext\.]+ ?\d+)?/) > -1) return true;
+	if (value.search(/\+\S+\-\S+\-\S+(\+\S+)?/) > -1) return true;
+	return false;
+
+}
+
+validationLibrary.validation_required = function validation_required(value) {
+	return value.length > 0;
+
+}
+
+validationLibrary.validation_USZipCode = function validation_USZipCode(value) {
+	if (value.length == 0) return true;
+	if ( value.length == 5 && value.search(/\d{5}/) > -1 ) return true;
+	if ( value.length == 10 && value.search(/\d{5}-\d{4}/) > -1 ) return true;
+	return false;
+
+}
+
+validationLibrary.getDatePart = function getDatePart(value, dataFormat, part){
+	var partStart = dataFormat.indexOf(part);
+	return new String(value.substr(partStart, part.length));
+}
+
+validationLibrary.validation_alphanumeric = function validation_alphanumeric(value) {
+	if (value.length == 0) return true;
+	if (value.search(/\W/) > -1) return false;
+	return true;
+
+}
+
+validationLibrary.validation_email = function validation_email(value) {
+	if (value.length == 0) return true;
+	if (value.search(/^[_a-zA-Z0-9-]{1}[_a-zA-Z0-9-\']*(\.[_a-zA-Z0-9-]{1}[_a-zA-Z0-9-\']*)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$/) == -1) return false;
+	return true;
+
+}
+
+validationLibrary.validation_pattern = function validation_pattern(value, parm, negationOn) {
+	if (value.length == 0) return true;
+	var foundPattern = value.search(parm) > -1;
+	return (foundPattern ^ negationOn);
+
+}
+
+validationLibrary.validation_date = function validation_date(value, parm) {
+	if (value.length == 0) return true;
+	return this.verifyDate(value, parm);
+
+}
+
+validationLibrary.validation_maxLength = function validation_maxLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length <= parm;
+
+}
+
+page.paint();
+if(page.form) {page.form.setupHotFields();}
+ap.ajaxMessageMap.clear();
+ap.ajaxMessageMap.removeAlerts();
+var message;
+ap.ajaxMessageMap.render();
+
+0
+

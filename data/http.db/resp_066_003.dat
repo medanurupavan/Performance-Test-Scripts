@@ -1,0 +1,280 @@
+26c
+var fieldset, field, interestLevel, newFormRow;
+fieldset = page.getFieldset("SubmissionTips");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("LocationsTips");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset = page.getFieldset("LocationInfo");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(4);
+fieldset.setLegend("Garaging Information");
+field = fieldset.getField("AddressStandardizationHelperMessage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = fiel
+1d94
+d.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("");
+}
+field = fieldset.getField("LocationId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationSystemId");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("hiddenAccountClearanceStatus");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("MultiResultJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationNumber");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Location #");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_minValue(this.getValue(), 1)', "This field must be a number greater than or equal to 1", 'MinValueValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("LocationDescription");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Location Description");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 100)', "This field can't exceed 100 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(100);
+}
+field = fieldset.getField("LocationAddressAddr1");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Street Address Line 1");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 64)', "This field can't exceed 64 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((.*P\.O\.)|(.*PO\s+B)|(BOX)|(.*P\s+O\s+B)|(.*P\.\s+O\.\s+B)|(.*P\.O\s+B)|(.*POBOX)|(.*Post\s+Office)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((C\.O\.)|(C\/O)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((Attn)|(ATTN\.)|(Attention)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(64);
+}
+field = fieldset.getField("LocationAddressAddr2");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Street Address Line 2");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 64)', "This field can't exceed 64 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((.*P\.O\.)|(.*PO\s+B)|(BOX)|(.*P\s+O\s+B)|(.*P\.\s+O\.\s+B)|(.*P\.O\s+B)|(.*POBOX)|(.*Post\s+Office)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((C\.O\.)|(C\/O)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^((Attn)|(ATTN\.)|(Attention)).*$/+', true)', "Please enter the physical location only.", 'PatternValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(64);
+}
+field = fieldset.getField("LocationAddressCity");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("City");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 128)', "This field can't exceed 128 characters in length", 'MaxLengthValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(128);
+}
+field = fieldset.getField("LocationAddressState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("State");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("LocationAddressZip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.initFormatmask(true,{},"#####?-####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Zip Code");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 10)', "This field can't exceed 10 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_USZipCode(this.getValue())', "This field must be in a valid US ZIP Code format", 'USZipCodeValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(10);
+}
+field = fieldset.getField("LocationAddressKeepAddressasEntered");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Keep Address as Entered");
+	field.updateHelpBubbleText("LocationAddressKeepAddress
+da8
+asEntered_fieldHelperBalloon", "fieldHelperBalloon", "Please uncheck the checkbox for editing the address.", "200");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("LocationGEOResult");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOPlaceCd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOCensusTract");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOCensusBlock");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOCountyFIPS");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOLatitude");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOLongitude");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOCountyName");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationGEOSubdivisionCode");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("LocationAddressAddressValidationFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+fieldset = page.getFieldset("LocationIllinoisFireTax");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+validationLibrary.validation_required = function validation_required(value) {
+	return value.length > 0;
+
+}
+
+validationLibrary.validation_USZipCode = function validation_USZipCode(value) {
+	if (value.length == 0) return true;
+	if ( value.length == 5 && value.search(/\d{5}/) > -1 ) return true;
+	if ( value.length == 10 && value.search(/\d{5}-\d{4}/) > -1 ) return true;
+	return false;
+
+}
+
+validationLibrary.validation_minValue = function validation_minValue(value, parm) {
+	if (value.length == 0) return true;
+	if (value.indexOf(' ') > -1) return false;
+	if (value.search(/\d/) == -1) return false;
+	var testNumber = new Number(value);
+	if (isNaN(testNumber)) return false;
+	return value >= parm;
+
+}
+
+validationLibrary.validation_pattern = function validation_pattern(value, parm, negationOn) {
+	if (value.length == 0) return true;
+	var foundPattern = value.search(parm) > -1;
+	return (foundPattern ^ negationOn);
+
+}
+
+validationLibrary.validation_maxLength = function validation_maxLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length <= parm;
+
+}
+
+page.paint();
+if(page.form) {page.form.setupHotFields();}
+ap.ajaxMessageMap.clear();
+ap.ajaxMessageMap.removeAlerts();
+var message;
+ap.ajaxMessageMap.render();
+
+0
+

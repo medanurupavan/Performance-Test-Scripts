@@ -1,0 +1,230 @@
+1328
+var fieldset, field, interestLevel, newFormRow;
+fieldset = page.getFieldset("coverageInformationSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Coverage Information");
+field = fieldset.getField("CommlAutoLineBusiness_CommlRateState_id");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AutoWrapCovInd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Include SECURA Auto WRAP Coverage");
+	field.updateHelpBubbleText("AutoWrapCovInd_fieldHelperBalloon", "fieldHelperBalloon", "Highlights of this coverage include:<br> •Employees as Insureds <br> •Limited Fellow Employee <br> •Employee Hired Autos <br> •Hired Auto Physical Damage <br> •Auto Loan Lease Gap <br> •Rental Reimbursement <br>", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("HotRateState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("State");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("liabilityCoveragesSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Liability Coverage");
+field = fieldset.getField("MarketSegmentValue");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("HiddenControllingState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("OtherMarketSegmentNote");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("Note: $1,000,000 minimum liability limit is required if adding umbrella policy.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("PropertyDamageLiabilityDeductibleMessage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("Note:  To add a Property Damage Liability Deductible for all vehicles, please make this selection for the Controlling State.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("LiabilityLimitCSL");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Combined Single Limit");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("hiddenPropertyDamageLiabilityDeductibleCheck");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+}
+field = fieldset.getField("hiddenPropertyDamageLiablityDeductibleAmount");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+}
+field = fieldset.getField("PropertyDamageLiabilityDeductibleCheck");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.removeRequiredIndicator();
+	field.setReadOnly(true);
+	field.setLabelText("Property Damage Liability Deductible");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("MedicalPaymentCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("UninsuredMotoristCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Uninsured Motorist Coverage");
+field = fieldset.getField("UninsuredMotorist");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestL
+cd8
+evel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Uninsured Motorist");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+newFormRow = "<div class=\"form-group \">\r\n	<label class=\"col-xs-12 col-sm-3 control-label\" for=\"UninsuredMotoristCSLLimit\" id=\"UninsuredMotoristCSLLimit_label\">\r\n		<span id=\"UninsuredMotoristCSLLimit_requiredIndicator\"><span class=\"requiredField\">*</span></span>\r\n		<span id=\"UninsuredMotoristCSLLimit_labelText\" >Uninsured Motorist Limit</span>\r\n	</label>\r\n	<div class=\"col-xs-12 col-sm-9\">\r\n	<span >\r\n		<div class=\"selectListContainer\">\r\n			<select class=\"form-control\" name=\"UninsuredMotoristCSLLimit\" id=\"UninsuredMotoristCSLLimit\">\r\n			<option value=\"\">Select One</option>\r\n<option value=\"300000\">$300,000</option>\r\n<option value=\"500000\">$500,000</option>\r\n<option value=\"750000\">$750,000</option>\r\n<option value=\"1000000\" selected >$1,000,000</option>\r\n			</select>\r\n			<span id=\"UninsuredMotoristCSLLimit_fieldHelpers\">\r\n							</span>\r\n		</div>\r\n	</span>\r\n	</div>\r\n</div>\r\n";
+field = new ap.Field(ap.page.form, "UninsuredMotoristCSLLimit","UninsuredMotoristCSLLimit", fieldset, 2, "selectlist", false, false, false, newFormRow, 1);
+if (field != null) { 
+field.removeValidations();
+	field.setDefaultValue("1000000");
+	field.setValue("1000000");
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Uninsured Motorist Limit");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("UnderinsuredMotoristCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("FullGlassCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("TortLimitationCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("PersonalInjuryProtectionCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("BroadenedPersonalInjuryProtectionCoveragSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("AdditionalPersonalInjuryProtectionCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("BasicFirstPartyBenefitCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("hiredAutoSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Hired Auto");
+field = fieldset.getField("HiredAutoCoverage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Hired Auto Coverage");
+	
+6a8
+		field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("nonOwnedAutoSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Non-Owned Auto");
+field = fieldset.getField("NonOwnedAutoCoverage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Non-Owned Auto Coverage");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("N15");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset = page.getFieldset("driveOtherCarCoverageSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Drive Other Car - DOC");
+field = fieldset.getField("DOCCoverageTip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("DOC coverages&#47;limits for Liability, UM&#47;UIM and Med Pay (as applicable) are the same as those selected for this state above.");
+	field.setStyleClass('alert alert-info');
+}
+fieldset = page.getFieldset("symbolsSection");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+validationLibrary.validation_required = function validation_required(value) {
+	return value.length > 0;
+
+}
+
+page.paint();
+if(page.form) {page.form.setupHotFields();}
+ap.ajaxMessageMap.clear();
+ap.ajaxMessageMap.removeAlerts();
+var message;
+ap.ajaxMessageMap.render();
+
+0
+

@@ -1,0 +1,13 @@
+POST / HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Referer: https://qa-agentlink.secura.net/
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Host: qa-agentlink.secura.net
+Content-Length: 74
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: NSC_JOryx5zxbcozklidtfua2hcd51ksmeq=ffffffffaf17581945525d5f4f58455e445a4a423660; NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0; AL_Session=f9f65b10-b75c-45b6-a7dc-157259785403; _ga=GA1.2.1270373945.1513236150
+

@@ -1,0 +1,11 @@
+[t45]
+FileName1=t45.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=ee31a32440d45ae6ba0eb1c65a8f8ce377bd2591b6cfe8f0dd8ab2c4f9463d5f&saved_search_id=
+Total=1
+RequestHeaderFile=t45_RequestHeader.txt
+RequestBodyFile=t45_RequestBody.txt
+ResponseHeaderFile=t45_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_44.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

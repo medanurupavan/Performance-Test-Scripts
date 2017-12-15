@@ -1,0 +1,322 @@
+Virtual User Script started at: 12/15/2017 7:39:24 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.55.0 (Jul 24 2017 19:46:00)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko  	[MsgId: MMSG-26988]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(6): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(6): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(9): web_url("qa-agentlink.secura.net") started  	[MsgId: MMSG-26355]
+Action.c(9): Found resource "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/css?v=UChQHgrcNv3c_wuTPbaOMDgGCRXEEy7F_zBGBL5ZW001" in HTML "https://qa-agentlink.secura.net/"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/public/SA-1601-AgentLink-login-banner.svg" in HTML "https://qa-agentlink.secura.net/"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/jquery?v=NzISlWu3OBD0gcV-PDZOmFsrbCpemFvXNsDQl4-fP141" in HTML "https://qa-agentlink.secura.net/"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/jqueryval?v=DARwcSHqXxypP3ZYTsiAh5vYjKF48z7EpBEmBOqXCzc1" in HTML "https://qa-agentlink.secura.net/"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/bootstrap?v=CRaFrw66bpgAsXBhrB4BXT-koL-mpyzdqLtgC8lz-r81" in HTML "https://qa-agentlink.secura.net/"  	[MsgId: MMSG-26659]
+Action.c(9): Downloading resource "https://qa-agentlink.secura.net/AgentLink/fonts/Gotham/Gotham-Black.otf" (specified by argument number 10)  	[MsgId: MMSG-26577]
+Action.c(9): Downloading resource "https://qa-agentlink.secura.net/AgentLink/fonts/fontawesome-webfont.eot?" (specified by argument number 12)  	[MsgId: MMSG-26577]
+Action.c(9): Downloading resource "https://qa-agentlink.secura.net/AgentLink/fonts/glyphicons-halflings-regular.eot?" (specified by argument number 14)  	[MsgId: MMSG-26577]
+Action.c(9): Registered web_reg_find successful for "Text=AgentLink" (count=22)  	[MsgId: MMSG-26364]
+Action.c(9): web_url("qa-agentlink.secura.net") was successful, 1694056 body bytes, 9344 header bytes  	[MsgId: MMSG-26386]
+Action.c(23): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(23): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(26): web_url("favicon.ico") started  	[MsgId: MMSG-26355]
+Action.c(26): Found resource "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/css?v=UChQHgrcNv3c_wuTPbaOMDgGCRXEEy7F_zBGBL5ZW001" in HTML "https://qa-agentlink.secura.net/favicon.ico"  	[MsgId: MMSG-26659]
+Action.c(26): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/public/SA-1601-AgentLink-login-banner.svg" in HTML "https://qa-agentlink.secura.net/favicon.ico"  	[MsgId: MMSG-26659]
+Action.c(26): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/jquery?v=NzISlWu3OBD0gcV-PDZOmFsrbCpemFvXNsDQl4-fP141" in HTML "https://qa-agentlink.secura.net/favicon.ico"  	[MsgId: MMSG-26659]
+Action.c(26): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/jqueryval?v=DARwcSHqXxypP3ZYTsiAh5vYjKF48z7EpBEmBOqXCzc1" in HTML "https://qa-agentlink.secura.net/favicon.ico"  	[MsgId: MMSG-26659]
+Action.c(26): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/bootstrap?v=CRaFrw66bpgAsXBhrB4BXT-koL-mpyzdqLtgC8lz-r81" in HTML "https://qa-agentlink.secura.net/favicon.ico"  	[MsgId: MMSG-26659]
+Action.c(26): Registered web_reg_find successful for "Text=AgentLink" (count=22)  	[MsgId: MMSG-26364]
+Action.c(26): web_url("favicon.ico") was successful, 1516130 body bytes, 6362 header bytes  	[MsgId: MMSG-26386]
+Action.c(36): Notify: Transaction "Login" started.
+Action.c(38): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(38): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(41): web_submit_data("qa-agentlink.secura.net_2") started  	[MsgId: MMSG-26355]
+Action.c(41): Detected non-resource "https://qa-agentlink.secura.net/AgentLink" in "https://qa-agentlink.secura.net/"  	[MsgId: MMSG-26574]
+Action.c(41): Downloading resource "https://qa-agentlink.secura.net/favicon.ico" (specified by argument number 17)  	[MsgId: MMSG-26577]
+Action.c(41): Downloading resource "https://qa-agentlink.secura.net/AgentLink/fonts/Gotham/Gotham-Black.otf" (specified by argument number 20)  	[MsgId: MMSG-26577]
+Action.c(41): Downloading resource "https://qa-agentlink.secura.net/AgentLink/fonts/glyphicons-halflings-regular.eot?" (specified by argument number 23)  	[MsgId: MMSG-26577]
+Action.c(41): Downloading resource "https://qa-agentlink.secura.net/AgentLink/fonts/fontawesome-webfont.eot?" (specified by argument number 26)  	[MsgId: MMSG-26577]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/datatablescss?v=hvHCiFEPOg0NuhuGdbndpZd43lAqO_tjJ0eRuo8Yzz81" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/css?v=UChQHgrcNv3c_wuTPbaOMDgGCRXEEy7F_zBGBL5ZW001" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/Public/SA-1601-AgentLink-login-banner.svg" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-15.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-12.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-18.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-17.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-5.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-8.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-7.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-9.png" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/jquery?v=NzISlWu3OBD0gcV-PDZOmFsrbCpemFvXNsDQl4-fP141" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/jqueryval?v=DARwcSHqXxypP3ZYTsiAh5vYjKF48z7EpBEmBOqXCzc1" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/public/bootstrap?v=CRaFrw66bpgAsXBhrB4BXT-koL-mpyzdqLtgC8lz-r81" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/private/noty?v=3DqIP-A25-mvnqLmMcFZKsonsv2SneONuFbakkvgy6A1" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Found resource "https://qa-agentlink.secura.net/AgentLink/bundles/private/datatables?v=GXkYl-sRNgD497WKFcOj8YOSQlMV09Nv4bClwNg0npY1" in HTML "https://qa-agentlink.secura.net/AgentLink"  	[MsgId: MMSG-26659]
+Action.c(41): Registered web_reg_find successful for "Text=Redirect" (count=1)  	[MsgId: MMSG-26364]
+Action.c(41): web_submit_data("qa-agentlink.secura.net_2") was successful, 4805686 body bytes, 22856 header bytes  	[MsgId: MMSG-26386]
+Action.c(59): Notify: Transaction "Login" ended with a "Pass" status (Duration: 1.6433 Wasted Time: 0.2655).
+Action.c(61): Notify: Transaction "Navigate to Portal" started.
+Action.c(63): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(63): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(67): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(67): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(76): web_url("Agency Portal") started  	[MsgId: MMSG-26355]
+Action.c(76): Redirecting "https://qa-agentlink.secura.net/AgencyPortal/" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(76): To location "https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView"  	[MsgId: MMSG-26693]
+Action.c(76): Found resource "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/agencyportal/agencyportal.css" in HTML "https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView"  	[MsgId: MMSG-26659]
+Action.c(76): Found resource "https://qa-agentlink.secura.net/AgencyPortal/assets/js/agencyportal.js" in HTML "https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView"  	[MsgId: MMSG-26659]
+Action.c(76): Downloading resource "https://qa-agentlink.secura.net/AgencyPortal/assets/fonts/proxima-nova/ProximaNova-Reg-webfont.eot" (specified by argument number 10)  	[MsgId: MMSG-26577]
+Action.c(76): Downloading resource "https://qa-agentlink.secura.net/AgencyPortal/assets/fonts/font-awesome/fontawesome-webfont.eot" (specified by argument number 13)  	[MsgId: MMSG-26577]
+Action.c(76): Found resource "https://qa-agentlink.secura.net/AgencyPortal/assets/js/agencyportal-body.js" in HTML "https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView"  	[MsgId: MMSG-26659]
+Action.c(76): Notify: Saving Parameter "CSRF_TOKEN = c73067c05b17f7db6224ebb0bb404c1d921adf2541ae409af1dab809313a5bf8".
+Action.c(76): Registered web_reg_find successful for "Text=agencyportal" (count=92)  	[MsgId: MMSG-26364]
+Action.c(76): web_url("Agency Portal") was successful, 2291900 body bytes, 10040 header bytes, 104 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(89): web_url("messages.tpl.jsp") started  	[MsgId: MMSG-26355]
+Action.c(89): web_url("messages.tpl.jsp") was successful, 308 body bytes, 1342 header bytes  	[MsgId: MMSG-26386]
+Action.c(100): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(100): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(108): web_url("WorkItemsView") started  	[MsgId: MMSG-26355]
+Action.c(108): Notify: Parameter Substitution: parameter "CSRF_TOKEN" =  "c73067c05b17f7db6224ebb0bb404c1d921adf2541ae409af1dab809313a5bf8"
+Action.c(108): Notify: Saving Parameter "CSRF_TOKEN_1 = fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e".
+Action.c(108): web_url("WorkItemsView") was successful, 9830 body bytes, 1402 header bytes, 27 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(118): web_url("cardView.jsp") started  	[MsgId: MMSG-26355]
+Action.c(118): web_url("cardView.jsp") was successful, 2768 body bytes, 1343 header bytes  	[MsgId: MMSG-26386]
+Action.c(128): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+Action.c(128): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+Action.c(131): web_submit_data("FileUploadServlet") started  	[MsgId: MMSG-26355]
+Action.c(131): web_submit_data("FileUploadServlet") was successful, 75 body bytes, 1297 header bytes  	[MsgId: MMSG-26386]
+Action.c(141): web_url("STATUS") started  	[MsgId: MMSG-26355]
+Action.c(141): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(141): web_url("STATUS") was successful, 1140 body bytes, 1396 header bytes  	[MsgId: MMSG-26386]
+Action.c(154): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(154): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(169): web_url("worklistAdvancedSearch") started  	[MsgId: MMSG-26355]
+Action.c(169): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(169): Notify: Saving Parameter "CSRF_TOKEN_2_1 = e87a4d320088db2a5c44cde070d05356e86145cab77255a232bd39cb817344b5".
+Action.c(169): Notify: Saving Parameter "CSRF_TOKEN_2_count = 1".
+Action.c(169): web_url("worklistAdvancedSearch") was successful, 1920 body bytes, 1396 header bytes  	[MsgId: MMSG-26386]
+Action.c(179): web_url("NewWorkItemLink") started  	[MsgId: MMSG-26355]
+Action.c(179): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(179): web_url("NewWorkItemLink") was successful, 907 body bytes, 1395 header bytes  	[MsgId: MMSG-26386]
+Action.c(189): web_url("ACCOUNT_TYPE") started  	[MsgId: MMSG-26355]
+Action.c(189): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(189): web_url("ACCOUNT_TYPE") was successful, 311 body bytes, 1395 header bytes  	[MsgId: MMSG-26386]
+Action.c(199): web_url("TRANSACTION_TYPE") started  	[MsgId: MMSG-26355]
+Action.c(199): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(199): web_url("TRANSACTION_TYPE") was successful, 393 body bytes, 1395 header bytes  	[MsgId: MMSG-26386]
+Action.c(209): web_url("LOB") started  	[MsgId: MMSG-26355]
+Action.c(209): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(209): web_url("LOB") was successful, 316 body bytes, 1395 header bytes  	[MsgId: MMSG-26386]
+Action.c(219): web_url("NewWorkItemLink_2") started  	[MsgId: MMSG-26355]
+Action.c(219): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(219): web_url("NewWorkItemLink_2") was successful, 907 body bytes, 1395 header bytes  	[MsgId: MMSG-26386]
+Action.c(229): web_custom_request("WorkItemsView_2") started  	[MsgId: MMSG-26355]
+Action.c(229): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(229): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(229): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(229): Warning: The string '"rel":"self","href":"/api/worklists/workitems/views/WorkItemsView","parameters":["saved_search_id"]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"self","href":"/api/worklists/workitems/filter_infos/lob?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Commercial Auto","value":"AUTOB","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Commercial Package","value":"CPKGE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Workers' Comp","value":"WORK","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"self","href":"/api/worklists/workitems/filter_infos/status?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Closed","value":"CLOSED","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"In-Progress","value":"INPROGRESS","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Ineligible / Clearance Approved","value":"APPROVEINELIGIBLECLEARANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Ineligible / Clearance Declined","value":"REJECTINELIGIBLECLEARANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Ineligible / Clearance Referred","value":"REFERINELIGIBLECLEARANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Issued","value":"ISSUED","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Referred to UW","value":"REFER","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"SECURA In-Progress","value":"SECURAINPROGRESS","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"SECURA Pending","value":"SECURAPENDING","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"Submitted for Issuance","value":"SUBMITTEDFORISSUANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"UW Approved","value":"APPROVE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"title":"UW Declined","value":"DECLINE","selected":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"self","href":"/api/worklists/workitems/sort_info?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"entity_name","title":"Name","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"quote_number","title":"Quote Number","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"lob","title":"LOB","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"effective_date","title":"Effective","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"status","title":"Status","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"premium","title":"Premium","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"agency_code","title":"Agency Code","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"agency_name","title":"Agency Name","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"underwriter_name","title":"Underwriter","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"last_update_time","title":"Updated","ascending":false,"selected":true,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"quote_number","title":"Quote Number","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"quoteNumber","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"effective_date","title":"Effective","selected":false,"opCode":null,"operands":[],"dataType":"DATE","interactive":true,"pageFieldId":"effectiveDate","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"agency_code","title":"Agency Code","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"agencyCode","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"agency_name","title":"Agency Name","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"agencyName","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"relatedFieldId":"underwriter_name","title":"Underwriter","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"underwriterName","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"needsTwoOperands":false,"value":"CONTAINS"' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"needsTwoOperands":false,"value":"CONTAINS"' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"needsTwoOperands":false,"value":"CONTAINS"' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"needsTwoOperands":false,"value":"NOT_EQUAL"' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"needsTwoOperands":false,"value":"EQUALS"' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"self","href":"/api/worklists/workitems/query_info?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"operators","href":"/api/worklists/workitems/operator_infos","parameters":[]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"dialog-resource","href":"/api/products/transactions/worklist/pages/worklistAdvancedSearch","parameters":[]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"ID","id":"work_item_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"Account Id","id":"account_id","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Name","id":"entity_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Quote Number","id":"quote_number","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"LOB","styleClass":null,"format":null,"title":"LOB","id":"lob","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"DATE","styleClass":null,"format":null,"title":"Effective","id":"effective_date","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STATUS","styleClass":null,"format":null,"title":"Status","id":"status","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"DECIMAL","styleClass":null,"format":"currency: ' '","title":"Premium","id":"premium","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Code","id":"agency_code","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Name","id":"agency_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter ID","id":"underwriter_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter","id":"underwriter_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"TIME","styleClass":null,"format":null,"title":"Updated","id":"last_update_time","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Transaction Type","id":"transaction_type","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"INTEGER","styleClass":null,"format":"percentage","title":"Complete %","id":"complete_percent","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"ID","id":"work_item_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"Account Id","id":"account_id","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Name","id":"entity_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Quote Number","id":"quote_number","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"LOB","styleClass":null,"format":null,"title":"LOB","id":"lob","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"DATE","styleClass":null,"format":null,"title":"Effective","id":"effective_date","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STATUS","styleClass":null,"format":null,"title":"Status","id":"status","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"DECIMAL","styleClass":null,"format":"currency: ' '","title":"Premium","id":"premium","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Code","id":"agency_code","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Name","id":"agency_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter ID","id":"underwriter_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter","id":"underwriter_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"TIME","styleClass":null,"format":null,"title":"Updated","id":"last_update_time","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Transaction Type","id":"transaction_type","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"type":"INTEGER","styleClass":null,"format":"percentage","title":"Complete %","id":"complete_percent","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"self","href":"/api/worklists/workitems/saved_searches?view_name=WorkItemsView","parameters":["saved_search_id","view_name"]' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"id":-1,"name":null,"isActive":true' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"lookups.basic.STATUS","href":"/api/lookups/basic/STATUS","parameters":null' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"lookups.basic.ACCOUNT_TYPE","href":"/api/lookups/basic/ACCOUNT_TYPE","parameters":null' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"lookups.basic.TRANSACTION_TYPE","href":"/api/lookups/basic/TRANSACTION_TYPE","parameters":null' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"lookups.basic.LOB","href":"/api/lookups/basic/LOB","parameters":null' with parameter delimiters is not a parameter.
+Action.c(229): Warning: The string '"rel":"lookups.basic.NewWorkItemLink","href":"/api/lookups/basic/NewWorkItemLink","parameters":["worklistType"]' with parameter delimiters is not a parameter.
+Action.c(229): Continuing after Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e&saved_search_id=-1", Snapshot Info [MSH 1 19]  	[MsgId: MERR-26612]
+Action.c(229): web_custom_request("WorkItemsView_2") highest severity level was "continue on error", 5066 body bytes, 1324 header bytes  	[MsgId: MMSG-26388]
+Action.c(229): Continuing after error in Vuser script.
+Action.c(252): web_url("worklist-addnewcard.tpl.jsp") started  	[MsgId: MMSG-26355]
+Action.c(252): web_url("worklist-addnewcard.tpl.jsp") was successful, 1222 body bytes, 1343 header bytes  	[MsgId: MMSG-26386]
+Action.c(262): web_url("custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0") started  	[MsgId: MMSG-26355]
+Action.c(262): Warning: The string 'CSRF_TOKEN_2' with parameter delimiters is not a parameter.
+Action.c(262): Continuing after Error -26631: HTTP Status-Code=400 (Bad Request) for "https://qa-agentlink.secura.net/AgencyPortal/api/products/optionlistids/custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0?transaction_id=worklist&field_id=operator&page_id=worklistAdvancedSearch&CSRF_TOKEN={CSRF_TOKEN_2}", Snapshot Info [MSH 1 21]  	[MsgId: MERR-26631]
+Action.c(262): web_url("custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0") highest severity level was "continue on error", 0 body bytes, 691 header bytes  	[MsgId: MMSG-26388]
+Action.c(262): Continuing after error in Vuser script.
+Action.c(272): web_custom_request("WorkItemsView_3") started  	[MsgId: MMSG-26355]
+Action.c(272): Notify: Parameter Substitution: parameter "CSRF_TOKEN_1" =  "fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e"
+Action.c(272): Warning: The string '"rel":"self","href":"/api/worklists/workitems/views/WorkItemsView","parameters":["saved_search_id"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"self","href":"/api/worklists/workitems/filter_infos/lob?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Commercial Auto","value":"AUTOB","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Commercial Package","value":"CPKGE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Workers' Comp","value":"WORK","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"isopen":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"self","href":"/api/worklists/workitems/filter_infos/status?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Closed","value":"CLOSED","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"In-Progress","value":"INPROGRESS","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Ineligible / Clearance Approved","value":"APPROVEINELIGIBLECLEARANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Ineligible / Clearance Declined","value":"REJECTINELIGIBLECLEARANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Ineligible / Clearance Referred","value":"REFERINELIGIBLECLEARANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Issued","value":"ISSUED","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Referred to UW","value":"REFER","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"SECURA In-Progress","value":"SECURAINPROGRESS","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"SECURA Pending","value":"SECURAPENDING","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Submitted for Issuance","value":"SUBMITTEDFORISSUANCE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"UW Approved","value":"APPROVE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"UW Declined","value":"DECLINE","selected":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"isopen":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"self","href":"/api/worklists/workitems/sort_info?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"entity_name","title":"Name","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"quote_number","title":"Quote Number","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"lob","title":"LOB","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"effective_date","title":"Effective","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"status","title":"Status","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"premium","title":"Premium","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"agency_code","title":"Agency Code","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"agency_name","title":"Agency Name","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"underwriter_name","title":"Underwriter","ascending":false,"selected":false,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"last_update_time","title":"Updated","ascending":false,"selected":true,"isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"quote_number","title":"Quote Number","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"quoteNumber","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"effective_date","title":"Effective","selected":false,"opCode":null,"operands":[],"dataType":"DATE","interactive":true,"pageFieldId":"effectiveDate","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"agency_code","title":"Agency Code","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"agencyCode","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"agency_name","title":"Agency Name","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"agencyName","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"relatedFieldId":"underwriter_name","title":"Underwriter","selected":false,"opCode":null,"operands":[],"dataType":"STRING","interactive":true,"pageFieldId":"underwriterName","isSaveable":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"needsTwoOperands":false,"value":"CONTAINS"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"needsTwoOperands":false,"value":"CONTAINS"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"needsTwoOperands":false,"value":"CONTAINS"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"needsTwoOperands":false,"value":"NOT_EQUAL"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"needsTwoOperands":false,"value":"EQUALS"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"self","href":"/api/worklists/workitems/query_info?view_name=WorkItemsView","parameters":["view_name"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"operators","href":"/api/worklists/workitems/operator_infos","parameters":[]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"dialog-resource","href":"/api/products/transactions/worklist/pages/worklistAdvancedSearch","parameters":[]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"name":"quoteNumber","type":"text","styleClass":"","interestLevel":2,"isHot":false,"label":"Quote Number","readOnly":false,"required":false,"defaultValue":"","length":-1,"maxLength":9,"minLength":-1,"size":9' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"self","href":"/api/products/optionlistids/custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0?transaction_id=worklist&field_id=operator&page_id=worklistAdvancedSearch","parameters":["work_item_id"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"name":"effectiveDate","type":"date","styleClass":"","interestLevel":2,"isHot":false,"label":"Effective","readOnly":false,"required":false,"defaultValue":"","length":-1,"maxLength":10,"minLength":-1,"size":10,"selectedOperator":"LESS_THAN"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"name":"agencyCode","type":"text","styleClass":"","interestLevel":2,"isHot":false,"label":"Agency Code","readOnly":false,"required":false,"defaultValue":"","length":-1,"maxLength":15,"minLength":-1,"size":15' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"name":"agencyName","type":"text","styleClass":"","interestLevel":2,"isHot":false,"label":"Agency Name","readOnly":false,"required":false,"defaultValue":"","length":-1,"maxLength":40,"minLength":-1,"size":15' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"name":"underwriterName","type":"text","styleClass":"","interestLevel":2,"isHot":false,"label":"Underwriter","readOnly":false,"required":false,"defaultValue":"","length":-1,"maxLength":128,"minLength":-1,"size":15' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"ID","id":"work_item_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"Account Id","id":"account_id","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Name","id":"entity_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Quote Number","id":"quote_number","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"LOB","styleClass":null,"format":null,"title":"LOB","id":"lob","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"DATE","styleClass":null,"format":null,"title":"Effective","id":"effective_date","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STATUS","styleClass":null,"format":null,"title":"Status","id":"status","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"DECIMAL","styleClass":null,"format":"currency: ' '","title":"Premium","id":"premium","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Code","id":"agency_code","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Name","id":"agency_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter ID","id":"underwriter_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter","id":"underwriter_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"TIME","styleClass":null,"format":null,"title":"Updated","id":"last_update_time","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Transaction Type","id":"transaction_type","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"INTEGER","styleClass":null,"format":"percentage","title":"Complete %","id":"complete_percent","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"ID","id":"work_item_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"INTEGER","styleClass":null,"format":null,"title":"Account Id","id":"account_id","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Name","id":"entity_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Quote Number","id":"quote_number","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"LOB","styleClass":null,"format":null,"title":"LOB","id":"lob","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"DATE","styleClass":null,"format":null,"title":"Effective","id":"effective_date","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STATUS","styleClass":null,"format":null,"title":"Status","id":"status","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"DECIMAL","styleClass":null,"format":"currency: ' '","title":"Premium","id":"premium","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Code","id":"agency_code","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Agency Name","id":"agency_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter ID","id":"underwriter_id","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Underwriter","id":"underwriter_name","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"TIME","styleClass":null,"format":null,"title":"Updated","id":"last_update_time","isDisplayed":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"STRING","styleClass":null,"format":null,"title":"Transaction Type","id":"transaction_type","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"type":"INTEGER","styleClass":null,"format":"percentage","title":"Complete %","id":"complete_percent","isDisplayed":false' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"self","href":"/api/worklists/workitems/saved_searches?view_name=WorkItemsView","parameters":["saved_search_id","view_name"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"id":-1,"name":null,"isActive":true' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"lookups.basic.STATUS","href":"/api/lookups/basic/STATUS","parameters":null' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"lookups.basic.ACCOUNT_TYPE","href":"/api/lookups/basic/ACCOUNT_TYPE","parameters":null' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"lookups.basic.TRANSACTION_TYPE","href":"/api/lookups/basic/TRANSACTION_TYPE","parameters":null' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"lookups.basic.LOB","href":"/api/lookups/basic/LOB","parameters":null' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"rel":"lookups.basic.NewWorkItemLink","href":"/api/lookups/basic/NewWorkItemLink","parameters":["worklistType"]' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Commercial Package","value":"FrontServlet?PAGE_NAME=generalInfoCPP&TRANSACTION_NAME=cpp&FIRST_TIME=true&METHOD=Display&rnd=0.7122266973270003&CSRF_TOKEN=7111f0bf5aa924730285441349327de12e998e51fbebea5674d5e6aef6724a5d"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Commercial Auto","value":"FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=autob&FIRST_TIME=true&METHOD=Display&rnd=0.4603144693536275&CSRF_TOKEN=7111f0bf5aa924730285441349327de12e998e51fbebea5674d5e6aef6724a5d"' with parameter delimiters is not a parameter.
+Action.c(272): Warning: The string '"title":"Workers Comp","value":"FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=workersComp&FIRST_TIME=true&METHOD=Display&rnd=0.8753946619651611&CSRF_TOKEN=7111f0bf5aa924730285441349327de12e998e51fbebea5674d5e6aef6724a5d"' with parameter delimiters is not a parameter.
+Action.c(272): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");, Snapshot Info [MSH 1 22]  	[MsgId: MERR-26547]
+Action.c(272): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=138327dc33d33668ac4460cb2048a531e92abf7f56357c3fe4b21021cde5ecf8&saved_search_id=", Snapshot Info [MSH 1 22]  	[MsgId: MERR-26630]
+Action.c(272): web_custom_request("WorkItemsView_3") highest severity level was "continue on error", 58 body bytes, 1334 header bytes  	[MsgId: MMSG-26388]
+Action.c(272): Continuing after error in Vuser script.
+Action.c(299): web_url("worklist-card.tpl.jsp") started  	[MsgId: MMSG-26355]
+Action.c(299): Downloading resource "https://qa-agentlink.secura.net/AgencyPortal/assets/ico/favicon.ico" (specified by argument number 10)  	[MsgId: MMSG-26577]
+Action.c(299): web_url("worklist-card.tpl.jsp") was successful, 6754 body bytes, 2856 header bytes  	[MsgId: MMSG-26386]
+Action.c(311): Notify: Transaction "Navigate to Portal" ended with a "Fail" status (Duration: 4.1042 Wasted Time: 0.5367).
+Action.c(311): Notify: Transaction "Navigate to Portal" has 4 error message(s).
+Action.c(311): Notify: The 1st error message associated with transaction "Navigate to Portal" is "Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e&saved_search_id=-1""
+Action.c(311): Notify: The 2nd error message associated with transaction "Navigate to Portal" is "Error -26631: HTTP Status-Code=400 (Bad Request) for "https://qa-agentlink.secura.net/AgencyPortal/api/products/optionlistids/custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0?transaction_id=worklist&field_id=operator&page_id=worklistAdvancedSearch&CSRF_TOKEN={CSRF_TOKEN_2}""
+Action.c(311): Notify: The 3rd error message associated with transaction "Navigate to Portal" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Action.c(311): Notify: The 4th error message associated with transaction "Navigate to Portal" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=138327dc33d33668ac4460cb2048a531e92abf7f56357c3fe4b21021cde5ecf8&saved_search_id=""
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

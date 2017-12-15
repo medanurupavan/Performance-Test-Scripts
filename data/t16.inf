@@ -1,0 +1,11 @@
+[t16]
+FileName1=t16_LOB.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/LOB?CSRF_TOKEN=f3fda176f4fe457d760da7145ed108a64bb350e8531d61b06ce650ec690fb1d1&listId=WorkItemsView&worklistType=workitems
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_15.xml
+RequestHeaderFile=t16_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t16_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

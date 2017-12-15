@@ -1,0 +1,11 @@
+[t10]
+FileName1=t10_WorkItemsView.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=d95446fa12e7f8679904ba7f95f1d5f3326481b5170ff4e1737b628c726e37fa&saved_search_id=-1
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_9.xml
+RequestHeaderFile=t10_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t10_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

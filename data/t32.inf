@@ -1,0 +1,11 @@
+[t32]
+FileName1=t32.htm
+URL1=https://qa-agentlink.secura.net/AgencyPortal/shared/partials/messages.tpl.jsp
+Total=1
+RequestHeaderFile=t32_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t32_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_31.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

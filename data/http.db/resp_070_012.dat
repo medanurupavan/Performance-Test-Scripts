@@ -1,0 +1,3938 @@
+997
+<!DOCTYPE html>
+<!-- site/site_shell.jsp-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>agencyportal</title>
+		<meta name="description" content="Agencyport Web Application V10.0">
+		<meta name="author" content="Agencyport">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+		<!--[if !IE]><!-->
+			<link href="/AgencyPortal/assets/themes/agencyportal/agencyportal.css" rel="stylesheet">
+		<!--<![endif]-->
+		<!--[if IE]>
+			<link href="/AgencyPortal/assets/themes/agencyportal/agencyportal-ie9.css" rel="stylesheet">
+			<link href="/AgencyPortal/assets/themes/agencyportal/agencyportal-ie9-blessed1.css" rel="stylesheet">
+		<![endif]-->
+              	  
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/AgencyPortal/assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/AgencyPortal/assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/AgencyPortal/assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="/AgencyPortal/assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="/AgencyPortal/assets/ico/favicon.ico">	
+	    
+		<script src="/AgencyPortal/assets/js/agencyportal.js" type="text/javascript"></script>
+		
+		<!-- i18n support -->
+		
+		
+		<script>
+	// inject inlined constants
+		var ap_locale = 'en';
+		var statuses = [];
+		
+				statuses.push(-101);
+		
+				statuses.push(-102);
+		
+				statuses.push(-103);
+		
+		angular.module('ap.common.constants', [])
+		.constant('csrf',{
+			'CSRF_TOKEN': '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5' 
+		})
+		.constant('contextPath', '/AgencyPortal')
+		.constant('dateFormat', 'MM-dd-yyyy')
+		.constant('csrfObject', {'tokenobj' : {
+			'CSRF_TOKEN': '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5' 
+		},
+		'csrftokenName': 'CSRF_TOKEN',
+		'csrftokenValue': '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5'
+		})
+		.constant('securityErrorCodes', statuses)
+	</script>	
+	</head>
+	<body >
+	 
+		<div class="agencyportal-5">
+			<!--  Navigation Bar -->
+			
+e53
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top main-menu" id="main-menu" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle Navigation</span> 
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a href="DisplayWorkInProgress?WorkListType=WorkItemsView" class="navbar-brand">agencyportal</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			 				
+				<ul class="nav navbar-nav navbar-right current-user">
+					<li class="dropdown">
+						<a id="menu-entry-current-user" title="Current User: LIZETH  GASTELUM" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa"></i><span>LIZETH  GASTELUM <b class="caret"></b></span></a>
+						<ul class="dropdown-menu">
+							<li><a id="menu-entry-logout" href="ProcessLogoff">Log Out</a></li>
+						</ul>
+					</li>					
+				</ul>
+												
+				<ul class="nav navbar-nav navbar-right get-started">
+					<li class="dropdown">
+						<a id="menu-entry-get-started" title="Get Started" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa"></i><span>Get Started<b class="caret"></b></span></a>
+						<ul class="dropdown-menu">
+							 							
+								<li><a id="menu-entry-get-started-upload" href="javascript:ap.turnstileWidget.launchUploadWidget();">Prefill from an ACORD Form<span id="upload-status-count" class="badge"></span></a></li>							
+							
+						
+							
+						
+							<li class="divider" role="presentation"></li>
+							<li class="dropdown-header" role="presentation"><span>Policy Application</span></li>	
+							
+								<li><a href="FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=autob&FIRST_TIME=true&METHOD=Display&rnd=0.2366011942020919&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5">Commercial Auto</a></li>
+							
+								<li><a href="FrontServlet?PAGE_NAME=generalInfoCPP&TRANSACTION_NAME=cpp&FIRST_TIME=true&METHOD=Display&rnd=0.7182702101965737&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5">Commercial Package</a></li>
+							
+								<li><a href="FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=workersComp&FIRST_TIME=true&METHOD=Display&rnd=0.39692538459331594&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5">Workers Comp</a></li>
+							
+						</ul>
+					</li>					
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+		<li class="home">
+		<a id="home" href="DisplayHomePage" title="Home"><i class="fa"></i><span>Home</span></a>
+	</li>
+	<li class="my-work">
+		<a id="my-work" href="DisplayWorkInProgress?WorkListType=WorkItemsView" title="My Work"><i class="fa"></i><span>My Work</span></a>
+	</li>
+	<li class="my-accounts">
+		<a id="my-accounts" href="DisplayWorkInProgress?WorkListType=AccountsView" title="My Accounts"><i class="fa"></i><span>My Accounts</span></a>
+	</li>
+</ul>
+	
+															
+			
+		</div>
+	<!-- /.navbar-collapse -->
+		<div class="navbar-colorbar">&nbsp;</div>
+	</div>
+</div>
+<script type="text/javascript" language="javascript">
+	var url = window.location.href
+	$(".navbar-nav").find(".active").removeClass("active");
+	 $(".navbar-nav a").each(function(index){
+		 if(url.indexOf($(this).attr('href'))>0){
+			 $(this).parent().addClass("active");
+		 }
+	});
+ </script>
+ 
+ 
+ 			<!-- Global turnstile widget. -->
+		
+1f53
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="modal fade" data-backdrop="static" data-keyboard="false" id="turnstile-upload-widget" 
+				tabindex="-1" role="dialog" aria-labelledby="Turnstile Files Selector" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Close this window">&times;</button>
+						<h2 class="modal-title">Upload Forms</h2>
+					</div>
+					<div class="modal-body">
+						<ul class="nav nav-tabs" id="upload-tabs">
+							<li class="active"><a href="#turnstile-files-selector" data-toggle="tab">New</a></li>
+							<li><a href="#turnstile-file-upload-status" data-toggle="tab">In Progress</a></li>
+						</ul>
+						<div class="tab-content" >
+							<div class="turnstile-files-selector tab-pane fade in active" id="turnstile-files-selector">
+								<p>Please select the ACORD forms you would like to upload. File types supported are .pdf, .tif, .tiff and .zip.</p>
+								<div id="file-uploader-widget" class="file-uploader-widget">
+	<div class="upload-file-queue">
+		<div uploader="uploader" class="file-drop-zone" id="turnstile-files-selector">
+			<div class="file-drop-instructions">			
+				<p>Drag file here</p>
+				<i class="fa"></i>
+			</div>
+		</div>
+	</div>
+	
+	<div class="turnstile-file-upload-list">
+		<table class="table table-striped">
+			<tbody id="fileupload-file-listing">
+	
+			</tbody>
+		</table>
+	</div>
+	<span class="btn btn-default fileinput-button add-files">
+		<span>Add Files</span> 
+		<input type="file" name="files[]" multiple id="fileupload_blueimp"/>
+	</span>
+	
+	<button type="submit" class="btn btn-primary start">
+		<span>Start Upload</span>
+	</button>
+</div>
+							</div>
+							<div class="tab-pane fade turnstile-file-upload-status" id="turnstile-file-upload-status">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>File</th>
+											<th>Date&#47;Time</th>
+											<th>Status</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody id="turnstile-report-table">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+
+
+
+
+
+
+
+
+<div class="modal" data-backdrop="static" data-keyboard="false" id="turnstile-lob-selector" 
+	tabindex="-1" role="dialog" aria-labelledby="Turnstile LOB Selector" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Upload Forms</h2>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger" id="lob-validation-message" style="display: none;">
+				</div>
+				<p>What lines of business do you want to quote?</p>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="list-group" id="forms-list"></div>
+						<div class="list-group" id="error-forms-list"></div>
+						<div class="list-group" id="unknown-forms-list"></div>
+					</div>
+					<div class="col-xs-6">
+						<div class="list-group" id="turnstile-transaction-list">
+							<div class="list-group-item">
+								<h4 class="list-group-item-heading">Lines of Business</h4>
+							</div>
+							
+								<div class="list-group-item">
+									<div class="checkbox">
+										<label> <input type="checkbox" name="transactions"
+											value="AUTOB"> Commercial Auto
+										</label>
+									</div>
+								</div>
+							
+								<div class="list-group-item">
+									<div class="checkbox">
+										<label> <input type="checkbox" name="transactions"
+											value="CPKGE"> Commercial Package
+										</label>
+									</div>
+								</div>
+							
+								<div class="list-group-item">
+									<div class="checkbox">
+										<label> <input type="checkbox" name="transactions"
+											value="WORK"> Workers Comp
+										</label>
+									</div>
+								</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="button-row">
+					<button type="button" class="btn btn-primary continue">Continue</button> 
+					<button type="button" class="btn btn-default cancel" data-dismiss="modal">Back</button>
+					<input type="hidden" id="turnstile-stage-guid" value="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			
+<div class="modal " id="turnstile-workitem-selector" tabindex="-1" role="dialog" aria-labelledby="Turnstile LOB Selector" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Upload Forms</h2>
+			</div>
+			<div class="modal-body" id="turnstile-processed-workitems">
+				<p id="turnstile-processed-message"> 
+					We have created the following work items from your forms.
+				</p>
+ 				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>LOB</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="turnstile-processed-lob-listing">
+			
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>			
+		
+
+
+
+<div class="modal" data-backdrop="static" data-keyboard="false" id="turnstile-account-selector" 
+	tabindex="-1" role="dialog" aria-labelledby="Turnstile LOB Selector" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Upload Forms</h2>
+			</div>
+			<div class="modal-body">
+				<p>What account is this for?</p> 			
+				<div class="form-group">
+					<button type="button" class="btn btn-primary no-account"  onclick="javascript:ap.turnstileWidget.continueWithoutAccount();"><span class="pull-left">No Account</span></button>
+					<button type="button" class="btn btn-primary new-account"  onclick="javascript:ap.turnstileWidget.createWorkItemsAndAccount();" data-dismiss="modal"><span class="pull-left">New Account</span></button>
+					<button type="button" class="btn btn-primary account-search-button"  data-toggle="button" autocomplete="off"><span  class="pull-left">Search for an Account</span> </button>
+				</div>
+				
+				<div id="turnstile-account-search" class="turnstile-account-search accounts-search-modal-results hidden">
+					<h4>Search for an Account</h4>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder='Search for an account by name (3 character minimum)' name="autocomplete_parameter" id="turnstile-account-search-input" >
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" id="turnstile-account-search-button" ><span><i class="fa fa-search"></i></span></button>
+								</span>
+							</div><!-- /input-group -->
+						</div><!-- /.col-lg-8 -->
+					</div><!-- /.row -->						
+
+					<div class="row">
+						<div class="col-lg-12 " id="turnstile-account-search-results-listing"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<!-- Modal -->
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="turnstile-error-modal" 
+	tabindex="-1" role="dialog" aria-labelledby="turnstile-error-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Error Occurred</h2>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+
+<script type="text/javascript">
+	var ap = ap || {};
+	ap.environment = ap.environment || {}; // Global environment variable store.
+	
+	ap.environment.isAccountManagementFeatureOn = true; 
+	ap.environment.isTurnstileEnabled = true; 
+	
+</script>
+ 
+ 		
+ 
+		
+			<!-- Page Body (Editable Content) -->
+			
+4c
+<!--BEGIN STANDARD FRAMEWORK -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28
+<!--BEGIN framework_ui.JSP -->
+
+
+
+		
+58e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="work_item_menu" class="padded-box work-item-menu">
+
+	<div class="container">
+		<div class="row">
+			<div id="wi-reference"
+				class="col-xs-12 col-sm-6 text-left wi-reference">
+
+				
+				<div class="progress" style="width: 20%">
+					<div class="progress-bar progress-bar-"
+						role="progressbar" style="width: 21%">
+						<span>21%</span>
+					</div>
+				</div>
+
+				
+
+				<div id="lob-title" class="lob-title AUTOB">
+					Commercial Auto (ID:  - Duglus)
+				</div>
+			</div>
+
+			<div id="wi-options" class="hidden-xs col-sm-6 text-right wi-options">
+
+				<div class="row">
+				
+								
+
+					
+					<span> <a id="account_link" class="account-link"
+						data-content='This work item is not assigned to an account.'
+						href="#lb_account_link" data-toggle="modal"
+						onclick="javascript:ap.MoveManager.showMove();"><i class="fa"></i>
+							Link to an Account</a>
+					</span> <span class="separator"> | </span>
+					
+
+					
+					<span> <a id="timeline_link" class="timeline-link"
+						href="#lb_timeline" data-toggle="modal"
+						onclick="javascript:ap.timeline.displayTimeline('autob', 'vehicle', '6319', '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5');"><i
+							class="fa"></i> History</a>
+					</span> <span class="separator"> | </span>
+					
+					<span id="ap_autosave_
+aba
+list" class="auto-save"  style="display: none" >
+						Auto Saved:
+						<span id="ap_autosave" class="timestamp">null</span>
+					</span>
+					
+					
+				
+				</div>
+				
+				<div class="row">
+				
+				
+					
+
+					
+				
+					
+					<span class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
+							<span class="supports-defaults"><i class="fa"></i> My Defaults</span> 
+							<span class="arrow-down"><i class="fa fa-caret-down"></i></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							
+							<li><a href="#lb_apply_default" data-toggle="modal" >Apply to this Submission</a></li>
+							<li><a href="#lb_manage_default" data-toggle="modal">Manage</a></li>
+							
+							<li><a href="#lb_which_default" data-toggle="modal">Available Fields</a></li>
+							<li><a href="#lb_help_default" data-toggle="modal">Help</a></li>
+						</ul>
+					</span>
+					
+									
+				</div>
+
+				
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- progress bar -->
+
+<div id="pleaseWait">
+	<div class="progress progress-striped please-wait active invisible"
+		data-spy="affix" data-offset-top="60">
+		<div class="progress-bar" role="progressbar" style="width: 100%">
+			<span>Please Wait...</span>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade timeline-dialog" id="timeline_dialog"
+	tabindex="-1" data-backdrop="static" data-keyboard="false"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" id="modal-timeline-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title in-progress" id="myModalLabel">Work Item History</h2>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div id="event-list" class="col-md-3 timeline-event-list"></div>
+					<div class="col-md-9">
+						<ul class="nav nav-tabs" id="timeline-tabs">
+							<li class="active" id="tab_timeline_event_summary"><a
+								href="#timeline_event_summary" data-toggle="tab"
+								id="href_timeline_event_summary">Event Summary</a></li>
+							<li id="tab_timeline_change_summary"><a
+								href="#timeline_change_summary" data-toggle="tab"
+								id="href_timeline_change_summary">What Changed</a></li>
+							<li id="tab_timeline_work_item_data" style="display: none;"><a
+								href="#timeline_work_item_data" data-toggle="tab"
+								id="href_timeline_work_item_data">Snapshot</a></li>
+						</ul>
+						<div id="timeline_event_detail" class="timeline-event-detail"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+2000
+
+
+
+
+
+
+
+
+
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script format -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var worklist={"action.Filter":"Filter","action.WorkItem.canAssign":"Assign","worklist.label.search":"Search","header.Title.AssignThisWorkItem":"Assign This Work Item","operator.WorkList.Before":"before","title.datatype.TIME.opCode.NOT_EQUAL":"not on","action.WorkItem.canCopy":"Copy","action.filter.delete":"Are you sure you want to delete this saved filter?","title.filter.delete":"Delete Saved Filter","worklist.label.filter.sortby":"Sort By:","account.management.header.workitems.unassigned":"Unassigned Workitems","label.Assignee":"Assignee Login Id","date.WorkList.save.accordion.title":"Saved Filters","message.WorkList.approve":"Are you sure you want to approve this work item?","worklist.label.filter.effective.date.to":"To","header.Title.DeleteThisWorkItem":"Delete Work Item","action.WorkList.delete":"Delete","action.Delete":"Delete","worklist.label.filter.clear":"Clear All","action.WorkList.selectOperator":"Please select operator","title.datatype.INTEGER.opCode.GREATER_THAN":"greater than","header.Title.SelectLOB":"Select Line Of Business","date.WorkList.save.dialog":"Save filter as:","title.datatype.DATE.opCode.GREATER_THAN":"after","message.Assignee.IsNull":"Assignee Was Null","title.datatype.TIME.opCode.LESS_THAN":"before","toggle.Filter.TransactionType":"Transaction Type","worklist.label.effectiveDate":"Effective Date","title.datatype.LOB.opCode.NOT_EQUAL":"not equal","modal.confirmation.button.yes":"Yes","label.WorkItems":"Work Item(s)","action.WorkList.select":"Select","worklist.label.save":"Save","title.datatype.TIME.opCode.BETWEEN":"between","actions.link.workitem.hover":"This work item is not assigned to an account.","title.datatype.INTEGER.opCode.LESS_THAN":"less than","modal.confirmation.button.no":"No","action.AddNewWorkItem":"Add New Work Item","worklist.label.searchResults.ShowingAllWorkItems":"Showing All Work Items","action.Next":"Next","label.WorkList.Premium":"Premium:","action.WorkList.clear":"Clear","toggle.Filter.Status":"Status","title.datatype.DATE.opCode.EQUALS":"on","title.datatype.INTEGER.opCode.BETWEEN":"between","operator.WorkList.Equals":"equals","date.WorkList.save.error":"Please enter a filter name before saving.","action.Transaction":"Transaction","title.datatype.DECIMAL.opCode.NOT_EQUAL":"not equal","action.WorkItem.canConfirm":"Are you sure you want to delete this work item?","action.Open":"Open","title.datatype.STATUS.opCode.NOT_EQUAL":"not equal","operator.WorkList.Between":"between","title.datatype.DECIMAL.opCode.LESS_THAN":"less than","date.WorkList.filter.prefix":"Now Viewing:","action.UploadForm":"Upload Form","message.WorkList.delete":"Are you sure you want to delete this work item?","toggle.WorkList.tiles":"Modern View","title.datatype.DATE.opCode.LESS_THAN":"before","worklist.label.filter.effective.date.between":"From","title.datatype.STRING.opCode.NOT_EQUAL":"not equal","title.datatype.STATUS.opCode.EQUALS":"equals","worklist.label.searchPlaceHolder":"Search for a customer by name (3 character minimum)","action.StartNewItem":"Start a New Item","label.WorkList.EffectiveOn":"Effective On","header.Title.AddWorkItemForLOB":"Get Started With","operator.WorkList.After":"after","account.management.pendingupload.locked":"This pending upload is currently locked by another user. Please try again later.","title.datatype.DECIMAL.opCode.GREATER_THAN":"greater than","title.datatype.TIME.opCode.GREATER_THAN":"after","operator.WorkList.Is":"is","title.datatype.STRING.opCode.CONTAINS":"contains","operator.WorkList.GreaterThan":"is greater than","title.datatype.INTEGER.opCode.NOT_EQUAL":"not equal","title.datatype.DECIMAL.opCode.BETWEEN":"between","action.WorkItem.canViewAccount":"View","action.WorkList.go":"Go","title.datatype.TIME.opCode.EQUALS":"on","header.Title.approveThisWorkItem":"Approve This Work Item","action.WorkItem.canDelete":"Delete","action.WorkItems.3":"3 Work Items","title.datatype.STRING.opCode.EQUALS":"equals","date.WorkList.row.range":"${0}-${1} of ${2}","title.datatype.DECIMAL.opCode.EQUALS":"equals","action.WorkList.search":"Search","action.PrefillAcordForm":"Prefill from an ACORD Form","worklist.label.filter.effective.date.on":"On","message.workitem_creation_error":"Fails to create this work item:","worklist.label.filter.saveas":"Save Filter As:","action.WorkItem.canApprove":"Approve","action.WorkList.close":"Close","action.lob":"LOB","message.Workitem_noaccount":"Link to an Account","action.WorkItem.canOpen":"Open","header.Title.EndorseThisWorkItem":"Endorse This Work Item","toggle.WorkList.table":"Classic View","account.management.pendingupload":"Get Started","worklist.label.filter.name.message":"Please enter a name.","operator.WorkList.On":"on","action.WorkList.save":"Save","action.WorkItem.canRenew":"Renew","action.StartNewWorkItem":"Start a New Work Item","operator.WorkList.Contains":"contains","action.Status":"Status","action.WorkItem.canEndorse":"Endorse","header.WorkItem.deleteThis":"Delete This Work Item","operator.WorkList.LessThan":"is less than","header.WorkItem.moveThis":"Move This Work Item","worklist.label.workItemId":"Work Item ID","worklist.label.filter.effective.date.after":"After","date.WorkList.filter.list":"Select a saved filter to execute:","title.datatype.DATE.opCode.BETWEEN":"between","worklist.label.filter.effective.date.before":"Before","title.datatype.LOB.opCode.EQUALS":"equals","title.datatype.DATE.opCode.NOT_EQUAL":"not on","title.datatype.INTEGER.opCode.EQUALS":"equals","message.WorkList.ApproveStatusError":"Fails to approve this work item","message.Assignee.Invalid":"Assignee is not a valid user in the system","action.WorkItem.canClaim":"Claim","toggle.Filter.LOB":"Line of Business"}
+ap.worklist=worklist;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script format -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var account_management={"account.management.entry.update.error":"This item cannot be updated at this time. Please contact customer service for assistance.","account.management.lossSummary":"LOSS HISTORY","account.management.accounttype.company":"Commercial","account.management.address":"ADDRESS","account.management.FEIN":"FEIN","account.actions.move.workitem":"Move Work Item","account.management.label.select":"Select","account.management.working":"Working...","account.management.label.findAccount":"Search for an account by name (3 character minimum)","account.management.contact":"PEOPLE","account.management.newaccount.greeting":"Congratulations!","label.Account.Accounts":"Accounts","account.management.label.company":"Commercial","label.SearchResults.MoreOptions":"More Options","account.management.sort.lastUpdated":"Last Updated","account.management.sort.companyA-Z":"Company Name: A-Z","account.management.label.accountType":"Account Type","account.management.homePhone":"Home Phone Number","account.actions.link.workitem":"Link Account","label.Account.Commercial":"Commercial","action.Back":"Back","label.Account.ShowingAllAccounts":"Showing All Accounts","label.Account.SortBy":"Sort By","account.management.edit":"Edit","header.Title.AccountInformation":"Account Information","account.management.sort.lastNameA-Z":"Last Name: A-Z","label.account.management.other":"other","account.management.label.city":"City","account.actions.delete.warn":"Are you sure you want to delete this account? All work items belonging to this account will also be deleted.","toolTip.Account.ProvideThreeCharacters":"Please provide at least 3 characters.","account.management.createdby":"${0} by  ${1}","account.management.startNewItem":"Start a new item for ","account.management.menu.search":"Search","account.management.label.streetAddress":"Street Address","account.actions.merge.account.searchbox":"Search for a source account by name (3 character minimum)","action.Delete":"Delete","header.Title.LastUpda
+1ff2
+ted":"Last Updated","account.actions.move.workitem.tip":"Search for an existing account to move the work item into.","label.account.management.hashtag":"#","account.actions.delete":"Delete Account","account.management.location":"LOCATIONS","account.management.label.zip":"Zip Code","account.management.label.accountNumber":"Account Number","account.management.label.companies":"Companies","account.actions.move.workitem.autoselectaccount":"You have selected the account below as your source account","account.management.location.add":"Add location","action.account.management.addcontact":"Add Someone","account.management.otherName":"Other Account Name","account.management.accounttype.person":"Personal","label.Transaction.UploadForms":"Upload Forms","label.SearchResults.EffectiveDate":"Effective Date","account.actions.move.workitem.confirm":"Are you sure you want to link to this account?","label.Account.Search":"Search for an Account","account.management.lastupdatedby":"${0} by  ${1}","account.management.search.found":"Account(s) Found","message.Turnstile.button.searchForAnAccount":"Search for an Account","label.SearchResults.AdvancedSearch":"Advanced Search","action.Continue":"Continue","message.Turnstile.button.newAccount":"New Account","account.management.contact.role.validation":"Please select at least one role.","account.actions.merge.account.tip":"Search for a source account by name (3 character minimum)","account.management.label.any":"Any","modal.confirmation.button.yes":"Yes","label.Transaction.WhatLOB":"What lines of business do you want to quote?","account.import.header":"Choose the items you would like to add:","header.Title.ConfirmAccountDeletion":"Delete Account","header.Title.Created":"Created","prompt.Account.ExistingORNew":"Do you want to associate this work item with an existing account or create a new account?","account.actions.merge.account.success.header":"Account Merge Success!","account.location":"Account Locations","account.actions.merge.account.success":"Your account has been successfully merged.","account.management.SSN":"SSN","modal.confirmation.button.no":"No","action.AddNewAccount":"Add New Account","account.actions.move.workitem.helptip":"TBD","account.management.new.workitem":"New Work Item","account.management.entry.delete.error":"You cannot delete this item. Please contact customer service for assistance.","account.management.more":"More...","message.Turnstile.button.noAccount":"No Account","account.management.mobilePhone":"Mobile Phone Number","account.actions.merge.account.selectaccount":"Select a source account","label.SearchResults.DateModified":"Date Modified","account.actions.move.workitem.success.header":"Work Item Move Success!","account.actions.link.workitem.hover":"This work item is not assigned to an account.","account.management.editAccount":"Edit Account","account.management.none":"(none)","account.management.entry.add.error":"This item cannot be added at this time. Please contact customer service for assistance.","header.Title.LOB":"Lines of Business","account.location.copy":"Copy account holder address","account.management.lossSummary.label.emptyRosterMessage":"There are no loss history summary to display for this account.","action.account.management.addlocation":"Add Location","account.actions.merge.account.searchAcctMoveTip1":"Search for an account to merge with  ","account.actions.merge.account.searchAcctMoveTip2":"Note that you can only merge together accounts that are the same type (personal/commercial).","action.Open":"Open","account.management.search.validation":"Please provide at least 3 characters","account.actions.move.workitem.noworkitem":"The account you have selected currently has ${0} work items.","account.actions.move.workitem.success":"Your work item has successfully been moved to the account ${0} #${1}.","header.Title.ConfirmWorkItemDeletion":"Confirm Work Item Deletion","label.AutoSearch.FindAnAccount":"Search for an account by name (3 character minimum)","account.management.newaccount.msg":"Your account has been created. Now you can start submitting business for it.","account.management.label.companyName":"Company Name","message.Transaction.CreatedItems":"We have created the following work items from your forms.","header.Title.WorkItemDelete":"Work Item Delete","account.management.accounttype.commercial":"Commercial Account","account.actions.merge.helptip.fullsearch":"Select a source account. All Work, Locations, and People from the source account will be added to <b>${0}<\/b>. The source account will be deleted.","account.actions.merge.account":"Merge Accounts","account.management.menu.newaaccount":"New Account","account.actions.move.workitem.selectaccount":"Select a source account","account.management.contact.customerservice":"Please contact customer service for assistance.","account.management.dba":"DBA","header.Title.ContactInformation":"Contact Information","account.actions.merge.account.searchAcctMergeTip":"Please search for a source account to merge into","account.management.label.account":"Account","label.SearchResults.Type":"Type","account.actions.move":"Move","account.actions.error":"We are unable to complete your request at this time. Please try again later.","account.management.label.person":"Personal","account.management.duplicateAccountMsg":"The account you're trying to create may already exist.","account.management.pendingupload.none":"No pending uploads at this time.","account.management.label.accountAddr":"Address","header.Title.AssciateWorkItem":"Associate Work Item","account.management.label.state":"State","account.actions.link.workitem.success1":"Your work item has successfully been linked to the account","account.management.menu.advanced":"Advanced","label.Account.Personal":"Personal\t","label.SearchResults.DateCreated":"Date Created","account.actions.move.workitem.searchbox":"Search for an account by name (3 character minimum)","account.management.recent.accounts":"Recent Accounts","label.Transaction.LOB":"LOB","account.actions.merge.account.autoselectaccount":"You have selected the account below as your source account","account.actions.merge.account.restriction":"Note that you can only merge together accounts that are the same type (person or company).","account.management.existingItems":"Existing items for","account.actions.link.workitem.success":"Your work item has successfully been linked to the account ${0} #${1}.","account.management.search.invalidInput":"Invalid search input: ","account.management.readonly":"This screen is read-only and cannot be updated. It is locked by another user.","account.management.label.lastName":"Last Name","account.management.label.searchresults":"Search Results","label.account.management.others":"others","account.management.label.accountHashTag":"Account #","account.management.email":"Primary Email Address","account.management.workPhone":"Work Phone Number","account.actions.move.workitem.selectworkitem":"Check off the work items you want to move","account.management.label.accountName":"Account Name","account.management.label.accounts":"Accounts","account.management.pendingupload":"Pending Uploads","label.Transaction.Status":"Status","account.actions.error.header":"Error","account.actions":"Manage Account","account.management.sort.companyZ-A":"Company Name: Z-A","account.actions.merge":"Merge","account.management.accounttype.personal":"Personal Account","label.Account.SavedFilter":"My Filters","account.management.noMatchingAccountMsg":"We can't find any accounts that match your search.","label.Transaction.Number":"#","account.management.contactName":"Account Name","account.management.label.people":"People","account.management.sort.lastNameZ-A":"Last Name: Z-A","label.account.management.more":"~more","account.actions.merge.account.confirm":"Are you sure you want to merge the account <b>${0} #${1}<\/b> into the account <b>${2}<\/b>?","account.management.label.type":"Type","account.management.label.firstName":"First Name","label.Accounts":"Account(s)","label.SearchResults.SortBy":"Sort By","account.management.sort.recentCreated":"Recently Created","toolTip.Account.RequiredField":"This field is required.","label.A
+e
+ccountDetails.
+154a
+BackToSearchResults":"BACK TO SEARCH RESULTS","account.management.businessPhone":"Business Phone Number","account.management.workitem":"WORK","account.management.label.action":"Action","devaccount.management.id":"Account ID#","account.actions.merge.helptip.autosearch":"You have selected the account below as your source account. All Work, Locations, and People from the source account will be added to <b>{0}<\/b>. The source account will be deleted."}
+ap.account_management=account_management;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+
+<div class="modal" data-backdrop="static" data-keyboard="false" id="move-workitem-account-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Link Account</h2>
+			</div>
+			<div class="modal-body">
+				<p>What account is this for?</p> 			
+				<div class="form-group">
+					<button type="button" class="btn btn-primary new-account" data-dismiss="modal"><span class="pull-left">New Account</span></button>
+					<button type="button" class="btn btn-primary account-search-button"  data-toggle="button" autocomplete="off"><span  class="pull-left">Search for an Account</span> </button>
+				</div>
+				
+				<div id="move-account-search" class="move-account-container accounts-search-modal-results hidden">
+					<h4>Search for an Account</h4>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder='Search for an account by name (3 character minimum)' name="autocomplete_parameter" id="move-account-search-input" >
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" id="move-account-search-button" ><span><i class="fa fa-search"></i></span></button>
+								</span>
+							</div><!-- /input-group -->
+						</div><!-- /.col-lg-8 -->
+					</div><!-- /.row -->						
+
+					<div class="row">
+						<div class="col-lg-12 " id="move-account-search-results-listing"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade in" id="workitem_move_modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+    		<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Close this window">&times;</button>
+				<h2 class="modal-title"> Move Work Item</h2>
+			</div>
+			<div class="modal-body">
+				<div id="move-account_container" class="move-account-container">
+ 					<p>Search for an existing account to move the work item into.</p>
+					
+					<div class="row">
+					  <div class="col-lg-12">
+					    <div class="input-group">
+					      <input type="text" class="form-control" placeholder="Search for an account by name (3 character minimum)" name="autocomplete_parameter" id="move-workitem-search-input" >
+					      <span class="input-group-btn">
+					        <button class="btn btn-default search" type="button" id="move-workitem-search-button" ><span><i class="fa"></i></span></button>
+					      </span>
+					    </div><!-- /input-group -->
+					  </div><!-- /.col-lg-8 -->
+					</div><!-- /.row -->						
+					
+					<div class="row">
+						<div class="col-lg-12 " id="move-workitem-search-results-listing"></div>
+					</div>
+
+				</div>					
+			</div>
+    	</div>
+  	</div>
+</div>
+
+<div id="move-account-confirm" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Close this window">&times;</button>
+				<h2 class="modal-title"> Move Work Item </h2>
+			</div>
+			<div class="modal-body">
+				<p id="move-account-confirm-message">
+					 Are you sure you want to link to this account?
+				</p>
+				<div class="button-row">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Yes  </button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">No  </button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div id="move-account-success" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Close this window">&times;</button>
+				<h2 class="modal-title"> Link Account </h2>
+			</div>
+			<div class="modal-body">
+				<p id="move-account-success-message">
+					 Your work item has successfully been moved to the account ${0} #${1}.
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div id="link-account-success" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Close this window">&times;</button>
+				<h2 class="modal-title"> Link Account </h2>
+			</div>
+			<div class="modal-body">
+				<p id="move-account-success-message1">
+					 Your work item has successfully been linked to the account
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<script src="/AgencyPortal/javascript/worklist/move-workitem-search-filter.js"></script>
+
+	
+	
+4
+
+
+
+58f
+<div class="modal fade" id="address_validation_multi_result_lb">
+  	<div class="modal-dialog mr_modal">
+    	<div class="modal-content">
+	      	<div class="modal-header">
+	        	<button id="av_close" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        	<h4 class="modal-title" id="av_title"></h4>
+	      	</div>
+	      	
+      		
+			<div class="modal-body">
+				<div id="av_messageTitle" style="background-color: #dfdfdf">
+	      			<h5>The following error(s) were found: </h5>
+	      		</div>
+				<div id="av_messageDataList" style="color:red"></div>
+				
+				
+					<div id="av_originalAddressTitle" style="background-color: #dfdfdf">
+		      			<h5>Original Address Entered: </h5>
+		      		</div>
+					<div id="av_originalAddress"></div>
+				
+				
+					<div id="av_message" class="address_validation_message"></div>
+			
+			
+					<div id="av_suggestedAddressTitle" style="background-color: #dfdfdf">
+		      			<h5 >Suggested Addresses: </h5>
+		      		</div>
+		      		<div id="av_suggested_address_inner" class="av_suggested_address_inner"></div>
+			      	
+			      	<div id="av_suggestedAddressTitle" style="background-color: #dfdfdf">
+		      			<h5 >If the suggested addresses above do not match the applicant address please consider entering an address within the ranges shown below. If no suggested addresses or ranges are applicable pl
+145
+ease select "Keep Address as Entered":</h5>
+		      		</div>
+					<div id="av_inner"></div>
+				
+				<span id="av_save_message" class="address_validation_save_message">Please make a selection</span>
+				<div id="av_buttons" class="address_validation_buttons"></div>
+			</div>
+			
+			
+    	</div>
+	</div>
+</div>
+
+
+267
+<!-- MULTIPLE RESULT LIGHTBOX -->
+<div class="modal fade" id="multi_result_lb">
+  	<div class="modal-dialog mr_modal">
+    	<div class="modal-content">
+	      	<div class="modal-header">
+	        	<button id="mr_close" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        	<h4 class="modal-title" id="mr_title"></h4>
+	      	</div>
+			<div class="modal-body">
+				<div id="mr_message"></div>
+				<div id="mr_inner"></div>
+				<span id="mr_save_message">Please make a selection</span>
+				<div id="mr_buttons"></div>
+			</div>
+    	</div>
+	</div>
+</div>
+
+
+
+58f
+<div class="modal fade" id="account_clearance_multi_result_lb">
+  	<div class="modal-dialog mr_modal">
+    	<div class="modal-content">
+	      	<div class="modal-header">
+	        	<button id="ac_close" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        	<h4 class="modal-title" id="ac_title"></h4>
+	      	</div>
+	      	
+      		
+			<div class="modal-body">
+				<div id="ac_messageTitle" style="background-color: #dfdfdf">
+	      			
+	      		</div>
+				<div id="ac_messageDataList" style="color:red"></div>
+					<div id="ac_originalAddress"></div>
+				
+				
+					<div id="ac_message" class="address_validation_message"></div>
+					
+		      		<div id="ac_suggestedTitle" style="background-color: #dfdfdf">
+		      			<h5 >The customer accounts below were identified as potential matches.  Please select a corresponding account from the list below or create a new customer account, if applicable.</h5>
+		      		</div>
+		      			<div id="ac_information_entered_header">
+		      			<table style="border-collapse: collapse;border: 1px solid black; width:100%; background-color:#CCCCCC;">
+						  	<tr>
+						      <th><b>Information Entered</b></th>
+						    </tr>
+					  </table>
+		      		</div>
+		      		<div id="ac_information_entered">
+		      			
+		      		</div>
+			      	<div id="ac_potential_matches">
+						<table style="border-collap
+2e7
+se: collapse;border: 1px solid black; width:100%; background-color:#CCCCCC;" >
+						  	<tr>
+						      <th><b>Potential Matches - Inside Agency</b></th>
+						    </tr>
+					  </table>					
+					</div>
+					
+					<div id="ac_potential_matches_OutsideAgency">
+						<table style="border-collapse: collapse;border: 1px solid black; width:100%; background-color:#CCCCCC;" >
+						  	<tr>
+						      <th><b>Potential Matches - Outside Agency</b></th>
+						    </tr>
+					  </table>					
+					</div>
+				
+				<span id="ac_save_message" class="address_validation_save_message">Please make a selection</span>
+				<div id="ac_buttons" class="address_validation_buttons"></div>
+			</div>
+			
+			
+    	</div>
+	</div>
+</div>
+
+
+42c
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="lb_confirm_exit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+	<script type="text/javascript">
+		function lb_handleYes() {	
+			$("#lb_confirm_exit").modal("toggle");
+			if(page.action == 'left_nav_menu')  {
+				page.checkSaveStatus=false;
+				page.navigatingToPage.executeClickEvents();
+			}
+		}
+	</script>
+
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title" id="myModalLabel">Leave Anyway?</h2>
+			</div>
+			<div class="modal-body">
+				<p>There are unsaved changes on this page.</p>
+				<div class="button-row">
+					<input name="yesButton" type="button" class="btn btn-primary" value="Yes" accesskey="o" onclick="lb_handleYes()" /> 
+					<input name="noButton" type="button" class="btn btn-default" value="No" data-dismiss="modal"  />
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+e
+
+
+
+
+
+
+
+
+16d
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="lb_please_wait" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p>Please Wait......</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+58e
+
+
+
+
+
+
+
+	
+
+	<!-- Modal -->
+<div class="modal fade" id="lb_help_default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ 	<div class="modal-dialog">
+		<div class="modal-content">
+    
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title" id="myModalLabel">Help with Defaults</h2>
+			</div>
+      
+			<div class="modal-body">
+				<p>If you frequently write similar types of policies, using defaults can save you considerable data entry time. Once you have got the submission where you want it (i.e. you&#39;ve added some coverages, answered underwriting questions, etc) use the &quot;save to defaults&quot; action in the drop down at the bottom of the page to save a copy (and some keystrokes!) for later.  </p>
+				<p>Once you&#39;ve created a set of defaults, next time you start a new submission from scratch, choose &quot;Apply to this Submission&quot; from the &quot;My Defaults&quot; menu at the top of the screen. Blank fields in the new submission will be filled in with your chosen defaults.</p>
+				<p>When applying default values to submissions in which fields have already been filled out, not all fields will be replaced. </p>	
+				<p>The defaults you setup belong only to you, other users can not see or change them.</p>      
+			</div>
+      
+		</div>
+1650
+
+	</div>
+</div>
+	<!-- Modal -->
+<div class="modal fade" id="lb_save_to_default" tabindex="-1" role="dialog"
+	aria-labelledby="save_to_default" aria-hidden="true">
+
+	<script type="text/javascript">
+		function lb_validate_save_to_default(parentform) {
+			if (parentform.DefaultsItemName.value == "") {
+				alert("Please give your defaults a name");
+				return false;
+			}
+			ap.pleaseWaitLB(true);	
+			return true;
+		}
+	</script>
+	
+	<div class="modal-dialog">
+		<form method="post" action="FrontServlet" id="lb_save_to_default_form" onsubmit="return lb_validate_save_to_default(this);">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h2 class="modal-title" id="myModalLabel">Please give your defaults a name</h2>
+				</div>
+
+				<div class="modal-body">
+						
+					<p>
+						<span style="font-weight: bold">Saving these values as defaults</span> lets you apply them to new submissions, saving you time entering policies with common coverages, locations, etc.
+					</p>
+					<p>
+						You can create as many sets of defaults as you wish. If you save defaults to an existing defaults name it will overwrite the existing values.
+					</p>
+					<p>
+						<label for="DefaultsItemName">
+							Please give these defaults a name:
+						</label>
+						<input type="text" id="DefaultsItemName" class="form-control input-sm" name="DefaultsItemName" size="20" maxlength="60" value="" />
+					</p>
+					<p>
+						
+						<input type="hidden" name="NEXT" value="SaveToDefaults" />
+						<input type="hidden" name="WORKITEMID" value="6319" />
+						<input type="hidden" name="FROMLIGHTBOX" value="lb_save_to_default" />
+						<input type="hidden" name="METHOD" value="Process" />
+						<input type="hidden" name="PAGE_NAME" value="vehicle" />
+						<input type="hidden" name="TRANSACTION_NAME" value="autob" />
+						<!-- tags\page\csrf.tag-->
+
+
+
+
+
+
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5" />
+	<script type="text/javascript">
+		if(typeof(ap) == 'undefined') {
+		    ap ={};
+		}
+		ap.csrfToken = {
+			name: 'CSRF_TOKEN',
+			value: '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5'
+		}
+	</script>
+	
+
+<!-- End tags\page\csrf.tag-->	
+
+					</p>
+					<div class="button-row">
+						<input name="defaultsOkButton" type="submit" value="Save"	id="defaultsOkButton" class="btn btn-primary" />
+						<input name="defaultsCancelButton" type="button" value="Cancel"  data-dismiss="modal"  accesskey="o" id="defaultsCancelButton" class="btn btn-default" />
+					</div>
+				</div>
+	
+			</div>
+		</form>
+	</div>
+</div>
+	<!-- Modal -->
+<div class="modal fade" id="lb_which_default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h2 class="modal-title" id="myModalLabel">Fields for which Default Values Can Be Set</h2>
+      </div>
+      
+      <div class="modal-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Page</th>
+					<th>Field</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+								<tr>
+									<td>General Information</td>
+									<td>State</td>
+								</tr>
+								
+								<tr>
+									<td>General Information</td>
+									<td>Tax ID Type</td>
+								</tr>
+								
+								<tr>
+									<td>General Information</td>
+									<td>Controlling State</td>
+								</tr>
+								
+								<tr>
+									<td>Locations</td>
+									<td>State</td>
+								</tr>
+								
+								<tr>
+									<td>Vehicles &amp; Coverages</td>
+									<td>Garaging Location</td>
+								</tr>
+								
+								<tr>
+									<td>Vehicles &amp; Coverages</td>
+									<td>Vehicle Type</td>
+								</tr>
+								
+								<tr>
+									<td>Vehicles &amp; Coverages</td>
+									<td>Registered State</td>
+								</tr>
+								
+								<tr>
+									<td>Vehicles &amp; Coverages</td>
+									<td>Property Damage Liability Deductible</td>
+								</tr>
+								
+								<tr>
+									<td>Vehicles &amp; Coverages</td>
+									<td>Comprehensive Coverage</td>
+								</tr>
+								
+								<tr>
+									<td>Vehicles &amp; Coverages</td>
+									<td>Collision Deductible</td>
+								</tr>
+								
+								<tr>
+									<td>Drivers</td>
+									<td>License State</td>
+								</tr>
+								
+								<tr>
+									<td>Drivers</td>
+									<td>Gender</td>
+								</tr>
+								
+								<tr>
+									<td>Drivers</td>
+									<td>Marital Status</td>
+								</tr>
+								
+								<tr>
+									<td>Covered Auto Symbols</td>
+									<td>Coverage</td>
+								</tr>
+								
+								<tr>
+									<td>Additional Interests</td>
+									<td>Interest Type</td>
+								</tr>
+								
+								<tr>
+									<td>Additional Interests</td>
+									<td>State</td>
+								</tr>
+								
+								<tr>
+									<td>Loss History</td>
+									<td>Claim Status Indicator</td>
+								</tr>
+								
+			</tbody>
+		</table>
+      </div>
+      
+    </div>
+  </div>
+</div>
+	
+	
+		<!-- Modal -->
+<div class="modal fade" id="lb_apply_default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+	<script type="text/javascript">
+		function lb_validate_apply_defaults(parentform) {
+			
+			if (parentform.DefaultsItemId.options[parentform.Default
+422
+sItemId.selectedIndex].value == "") {
+				alert("Please Choose Which Default Values To Apply.");
+				return false;
+			}
+			ap.pleaseWaitLB(true);
+			return true;
+		}
+	</script>
+
+	<div class="modal-dialog">
+		<form method="post" action="FrontServlet" id="lb_apply_default_form" onsubmit="return lb_validate_apply_defaults(this);">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    	    	<h2 class="modal-title" id="myModalLabel">Applying Defaults</h2>
+	      		</div>
+	      		
+				<div class="modal-body">
+					<p>
+						<span style="font-weight: bold">Applying Defaults</span>
+						will fill in the blank fields in this submission with the previously saved values.
+						<a href="#lb_help_default" data-toggle="modal" data-dismiss="modal" title="Learn more about how to use defaults">Learn More about Defaults</a>
+					</p>
+
+					<select name="DefaultsItemId" class="form-control">
+						<option selected=
+10ae
+"" value="">Apply Default Values From...</option>
+						
+						<option value="6203">loc</option>
+						
+						<option value="3974">Test</option>
+						
+					</select> 
+
+					<p>
+						<input type="hidden" name="NEXT" value="ApplyDefaults" /> 
+						<input type="hidden" name="WORKITEMID"  value="6319" /> 
+						<input type="hidden" name="FROMLIGHTBOX" value="lb_apply_default" /> 
+						<input type="hidden" name="METHOD" value="Process" /> 
+						<input type="hidden" name="PAGE_NAME" value="vehicle" />
+						<input type="hidden" name="TRANSACTION_NAME" value="autob" />
+						<!-- tags\page\csrf.tag-->
+
+
+
+
+
+
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5" />
+	<script type="text/javascript">
+		if(typeof(ap) == 'undefined') {
+		    ap ={};
+		}
+		ap.csrfToken = {
+			name: 'CSRF_TOKEN',
+			value: '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5'
+		}
+	</script>
+	
+
+<!-- End tags\page\csrf.tag-->	
+
+					</p>
+					
+					<div class="button-row">
+						<input name="defaultsOkButton" type="submit" value="Apply"id="defaultsOkButton" class="btn btn-primary" /> 
+						<input name="defaultsCancelButton" type="button" value="Cancel" data-dismiss="modal" id="defaultsCancelButton" class="btn btn-default" /> 
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</div>
+		 <!-- Modal -->
+<div class="modal fade" id="lb_confirm_default_delete" tabindex="-1" role="dialog"  aria-labelledby="deletemodal" aria-hidden="true">
+
+	<div class="modal-dialog">
+		<div class="modal-content">
+		
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h2 class="modal-title" id="myModalLabel">Are you sure you want to do this?</h2>
+	      </div>		
+		
+			<div class="modal-body">
+				<p>The defaults &quot;
+					<span id="lb_confirm_delete_default_title" style="font-weight: bold"></span>&quot; will be permanently removed.
+				</p>
+				<div class="button-row">
+					<input name="defaultsOkButton" type="button" value="Yes" onclick="$('#lb_manage_default_form').submit();ap.pleaseWaitLB(true);" data-dismiss="modal" class="btn btn-primary" /> 
+					<input name="defaultsCancelButton" type="button" value="No" data-dismiss="modal"  class="btn btn-default"  />
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="lb_confirm_default_save" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+	<script type="text/javascript">
+		function lb_saveDefaultHandleYes() {	
+			$("#lb_confirm_default_save").modal("toggle");
+			if(page.action == 'left_nav_menu')  {
+				page.checkSaveStatus=false;
+				page.navigatingToPage.executeClickEvents();
+			}
+			$('#lb_save_to_default').modal();
+		}
+	</script>
+
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title" id="myModalLabel">Leave Anyway?</h2>
+			</div>
+			<div class="modal-body">
+				<p>There are unsaved changes on this page.</p>
+				<div class="button-row">
+					<input name="yesButton" type="button" class="btn btn-primary" value="Yes" accesskey="o" onclick="lb_saveDefaultHandleYes()" /> 
+					<input name="noButton" type="button" class="btn btn-default" value="No" data-dismiss="modal"  />
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+		
+<!-- Modal -->
+<div class="modal fade" id="lb_manage_default" tabindex="-1" role="dialog"	aria-labelledby="myModalLabel" aria-hidden="true">
+
+	<script type="text/javascript">
+		ap.DefaultLightboxManager = function() {
+			this.list = new Array();
+			
+			this.addListing = function(listing) {
+				this.list.push(listing);
+			};
+			
+			this.getListing = function(id) {
+				for (var i=0; i< this.list.length; i++)
+					if (this.list[i].id == id) 
+						return this.list[i];
+			};
+			
+			this.deleteDefault = function(id) {	
+				var listing = this.getListing(id);
+				$('#lb_manage_default_form [name="DefaultsItemId"]').val(listing.id);
+				$('#lb_confirm_delete_default_title').html(li
+f52
+sting.name);
+				return true;
+			};
+			this.rename = function(id) {
+				var listing = this.getListing(id);
+				$('#lb_rename_default_form [name="DefaultsItemId"]').val(listing.id);
+				$('#lb_rename_default_title').innerHTML = listing.name;
+			};
+		};
+		ap.defaultLightboxManager = new ap.DefaultLightboxManager();
+		
+	</script>
+ 
+
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="post" action="FrontServlet" id="lb_manage_default_form">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        			<h2 class="modal-title" id="myModalLabel">Saved Defaults:</h2>
+				</div>
+	
+				<div class="modal-body">
+				
+					<table class="table table-striped" id="lb_manage_defaults_table">
+						
+							<script type="text/javascript">
+								ap.defaultLightboxManager.addListing({name:'loc',id:6203});
+							</script>
+							<tr>
+								<td>
+									<span style="font-weight: bold">loc</span></td>
+								<td>
+									<a
+										href="#lb_rename_default" data-toggle="modal" data-dismiss="modal"
+										onclick="ap.defaultLightboxManager.rename(6203)" 
+										title="Rename this set of defaults"><span>Rename</span>
+									</a>
+								</td>
+								<td>
+									<a
+										href="#lb_confirm_default_delete" data-toggle="modal" data-dismiss="modal" 
+										onclick="ap.defaultLightboxManager.deleteDefault(6203)"
+										title="Delete this set of defaults"><span>Delete</span>
+									</a>
+								</td>
+							</tr>
+							
+							<script type="text/javascript">
+								ap.defaultLightboxManager.addListing({name:'Test',id:3974});
+							</script>
+							<tr>
+								<td>
+									<span style="font-weight: bold">Test</span></td>
+								<td>
+									<a
+										href="#lb_rename_default" data-toggle="modal" data-dismiss="modal"
+										onclick="ap.defaultLightboxManager.rename(3974)" 
+										title="Rename this set of defaults"><span>Rename</span>
+									</a>
+								</td>
+								<td>
+									<a
+										href="#lb_confirm_default_delete" data-toggle="modal" data-dismiss="modal" 
+										onclick="ap.defaultLightboxManager.deleteDefault(3974)"
+										title="Delete this set of defaults"><span>Delete</span>
+									</a>
+								</td>
+							</tr>
+							
+					</table>
+					<div class="button-row">
+						<input name="defaultsCancelButton" type="button" value="Cancel" data-dismiss="modal" id="defaultsCancelButton" class="btn btn-default" />
+					</div>
+					
+					<input type="hidden" name="NEXT" value="DeleteDefaults" />
+					<input type="hidden" name="DefaultsItemId" value="" />
+					<input type="hidden" name="WORKITEMID" value="6319" />
+					<input type="hidden" name="FROMLIGHTBOX" value="lb_manage_default" />
+					<input type="hidden" name="METHOD" value="Process" />
+					<input type="hidden" name="PAGE_NAME" value="vehicle" />
+					<input type="hidden" name="TRANSACTION_NAME" value="autob" />
+					<!-- tags\page\csrf.tag-->
+
+
+
+
+
+
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5" />
+	<script type="text/javascript">
+		if(typeof(ap) == 'undefined') {
+		    ap ={};
+		}
+		ap.csrfToken = {
+			name: 'CSRF_TOKEN',
+			value: '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5'
+		}
+	</script>
+	
+
+<!-- End tags\page\csrf.tag-->	
+
+					
+				</div>
+	
+			</form>
+		</div>
+	</div>
+</div>
+		 
+
+<!-- Modal -->
+<div class="modal fade" id="lb_rename_default" tabindex="-1" role="dialog" 	aria-labelledby="renameModal" aria-hidden="true">
+ 	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h2 class="modal-title" id="
+671
+myModalLabel">Rename</h2>
+			</div>
+			<form method="post" action="FrontServlet" id="lb_rename_default_form">
+				<div class="modal-body">
+					<p>
+						<label for="DefaultsItemName">Please give these defaults a new name:</label>
+						<input type="text" id="DefaultsItemName" name="DefaultsItemName" class="form-control input-sm" size="30" maxlength="60" value="" />
+					</p>
+					<p>
+						<input type="hidden" name="NEXT" value="RenameDefaults" />
+						<input type="hidden" name="DefaultsItemId" value="" />
+						<input type="hidden" name="WORKITEMID" value="6319" />
+						<input type="hidden" name="FROMLIGHTBOX" value="lb_rename_default" />
+						<input type="hidden" name="METHOD" value="Process" />
+						<input type="hidden" name="PAGE_NAME" value="vehicle" />
+						<input type="hidden" name="TRANSACTION_NAME" value="autob" />
+						<!-- tags\page\csrf.tag-->
+
+
+
+
+
+
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5" />
+	<script type="text/javascript">
+		if(typeof(ap) == 'undefined') {
+		    ap ={};
+		}
+		ap.csrfToken = {
+			name: 'CSRF_TOKEN',
+			value: '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5'
+		}
+	</script>
+	
+
+<!-- End tags\page\csrf.tag-->	
+
+												
+					</p>
+					<div class="button-row">				
+						<input name="defaultsOkButton" type="submit" value="Save" class="btn btn-primary" />
+						<input name="defaultsCancelButton" type="button" value="Cancel" data-dismiss="modal" class="btn btn-default" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+		
+	
+
+
+58e
+
+
+
+
+
+
+
+
+
+
+	
+
+	<!-- Modal -->
+<div class="modal fade upload-help" id="lb_upload_help" tabindex="-1" role="dialog" aria-labelledby="lb_upload_help" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title" id="myModalLabel">Help with Upload</h2>
+			</div>
+			<div class="modal-body">
+			
+					
+				
+		
+				<h3>As you are working, look out for:</h3>
+		
+				
+					<p><span class="problem-field">Labels in Bold&#47;Red Text</span> - These require your attention. These fields might be required, but not present in the upload or may just need to be adjusted or reviewed before they can be submitted.</p>
+				
+				
+				<div class="legend">
+					<p class="not-available"><i class="fa fa-2"></i>&nbsp;There are multiple scenarios for which this icon may appear.</p>
+					<p>Upload Not Available - It is possible for values to be uploaded (e.g., limits) that we do not offer. Click on the icon to see the value that was originally uploaded. It is up to you to make another selection with one of the available fields.</p>
+					<p>Changed&#47;Invalid Values - The system changed a value that did not conform to the field format (e.g., max length exceeded) or the value was uploaded as is, but did not conform to the field for
+d38
+mat and requires correction. You can click on this icon to see the value that was originally uploaded.</p>
+					
+					<p class="system-auto-correct"><i class="fa fa-2"></i> Automatic Correction Applied - The system was able to make a determination as to what value best matches the uploaded value or the system applied formatting to a value that remained otherwise unchanged.</p>	
+					<p class="change"><i class="fa fa-2"></i> Change-Undo Arrows - As you change the value of an uploaded field on the screen, this icon will appear. Click on it to see the value that was originally uploaded. If you&#39;d like, you can use the undo arrow to restore the original value by clicking on the Revert button.</p>
+				</div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal upload-help --> 
+	
+
+
+
+
+
+
+<div class="modal fade" id="lb_upload_welcome" tabindex="-1" role="dialog" aria-labelledby="lb_upload_welcome" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title" class="modal-title"> Upload was a success!</h2>
+			</div>
+			<div class="modal-body">
+				<p>
+					
+				
+					<p>Your submission has been transferred over, but there are some   
+<a href="#lb_upload_tvr"  data-toggle="modal" data-dismiss="modal" title="See a report of problems with the submission">things that need to be fixed </a> before proceeding. Items requiring attention have been highlighted in red.
+</p>
+					<h4>Where would you like to begin?
+</h4>
+					<p>
+						
+						<a class="default_jump jumper" href="#lb_apply_default" data-toggle="modal" title="Try to fix problems by applying user defaults">
+	<span>Apply your defaults</span>
+</a>. 
+
+						
+					</p>
+			
+					
+	
+					
+			
+				<div class="button-row">
+				
+					<a class="problem_fix_jump jumper btn btn-primary"
+	href="javascript:page.submit('FastForward');ap.pleaseWaitLB(true);$('#lb_upload_welcome').modal('hide');void(0);"
+	title="jump directly to the first screen that has errors">
+	<div>
+		Jump to the first problem
+	</div>
+</a>
+				
+					<a class="double_check_jump jumper btn-default btn"
+	href="javascript:page.focusOnFirstField();void(0);" data-dismiss="modal">
+	Double-check from the beginning
+</a>
+				
+				</div>
+			
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+	<!-- Modal -->		
+<div class="modal fade" id="lb_upload_info" tabindex="-1" role="dialog" aria-labelledby="lb_upload_info" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title" id="myModalLabel">About this Upload</h2>
+			</div>
+			<div class="modal-body">
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<td>System</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Version</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Vendor</td>
+							<td></td>
+						</tr>			
+					</tbody>
+				</table>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	
+
+
+
+11c
+
+
+
+
+
+
+	
+
+
+
+
+
+<!--END FRAMEWORK UI JSP -->	
+	
+<div id="transaction" class="container transaction">
+
+	<!--div id="backtotop" class="back-to-top"><img src="assets/img/up-arrow.png" /><h4>Top</h4></div-->
+	
+	<div class="row">
+	
+		<div class="col-md-3" id="lower">
+			
+58e
+<!-- site\submission_navigation_manu.jsp-->
+
+
+
+<script type="text/javascript">
+	var menu = new Menu('Commercial Auto');
+	ap.menu = menu;
+	
+		menu.addEntry(1,
+			0,
+			'generalInfo',
+			'General Information',
+			'FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.9763443876336235&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'1',
+			'available', 
+			false,
+			true,
+			false,
+			false);
+		
+		menu.addEntry(2,
+			0,
+			'Locations',
+			'Locations',
+			'FrontServlet?PAGE_NAME=Locations&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.6297728625178826&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'1',
+			'available', 
+			false,
+			true,
+			false,
+			false);
+		
+		menu.addEntry(3,
+			0,
+			'policyCoverages',
+			'Policy Coverages',
+			'FrontServlet?PAGE_NAME=policyCoverages&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.667825805698835&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'1',
+			'available', 
+			false,
+			true,
+			false,
+			false);
+		
+		menu.addEntry(4,
+			0,
+			'vehicle',
+			'Vehicles &amp; Coverages',
+			'FrontServlet?PAGE_NAME=vehicle&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.37166350342510834&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb7372
+ec1
+2f43a5',
+			'9',
+			'active', 
+			false,
+			true,
+			true,
+			false);
+		
+		menu.addEntry(5,
+			0,
+			'AdditionalCoveragePage',
+			'Additional Coverage',
+			'FrontServlet?PAGE_NAME=AdditionalCoveragePage&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.3737061041042502&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(6,
+			0,
+			'drivers',
+			'Drivers',
+			'FrontServlet?PAGE_NAME=drivers&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.035716688751875836&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(7,
+			0,
+			'questionnaire',
+			'Applicant Questions',
+			'FrontServlet?PAGE_NAME=questionnaire&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.15801761413296656&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(8,
+			0,
+			'CoveredAutoSymbolsPage',
+			'Covered Auto Symbols',
+			'FrontServlet?PAGE_NAME=CoveredAutoSymbolsPage&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.7857704845791151&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(9,
+			0,
+			'AUTOBquestionnaire',
+			'Underwriting Questions',
+			'FrontServlet?PAGE_NAME=AUTOBquestionnaire&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.21848761582293585&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(10,
+			0,
+			'additionalInterests',
+			'Additional Interests',
+			'FrontServlet?PAGE_NAME=additionalInterests&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.9063008439691966&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(11,
+			0,
+			'PriorCarrier',
+			'Prior Carriers',
+			'FrontServlet?PAGE_NAME=PriorCarrier&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.16939320628437537&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(12,
+			0,
+			'lossHistory',
+			'Loss History',
+			'FrontServlet?PAGE_NAME=lossHistory&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.9446569504863483&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(13,
+			0,
+			'billingContactInfo',
+			'Other Info',
+			'FrontServlet?PAGE_NAME=billingContactInfo&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.16662425299462646&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+		menu.addEntry(14,
+			0,
+			'policySummary',
+			'Summary',
+			'FrontServlet?PAGE_NAME=policySummary&TRANSACTION_NAME=autob&WORKITEMID=6319&METHOD=Display&rnd=0.18148006044682463&CSRF_TOKEN=147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5',
+			'0',
+			'disabled', 
+			false,
+			false,
+			false,
+			false);
+		
+	jQuery('#lower').append(menu.getMarkup());
+</script>
+
+
+
+		</div>
+
+				
+		<div class="col-md-7 agencyportal-transaction">
+			
+			<div id="pageBody" class="null" style="display: none;">
+		
+				
+58e
+<!-- \shared\messageTemplate.jsp-->
+
+
+                
+<div id="initialDisplayMessages" class="initial-display-messages">
+
+
+</div>             
+
+<div id="ajaxMessages" class="ajax-messages" ></div>
+
+<script type="text/javascript">
+	var message;
+	
+</script>
+		
+				<div id="dynamic_page_inner">
+					<span id="transaction_content" class="dynamic_page_column left">
+						<form action="FrontServlet" class="form-horizontal dataentry agencyportal-form animated fadeIn " id="vehicle" name="vehicle" method="post" >
+							
+
+
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script format -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var core_prompts={"action.Revert.UploadTitle.1":"Upload Not Available","menu.Name.My_Work":"My Work","action.MaxNumberOfItemsReached":"The maximum number of items has been reached. ${0}","action.MaxNumberOfItemsReached.2":"You must delete at least one entry before making a copy of this item.","action.MaxNumberOfItemsReached.1":"You must delete at least one entry before this item can be restored.","menu.get.started.policyapp":"Policy Application","menu.wi.Description.MyDefaults.Help":"Learn more about how to use defaults","header.Title.404.header":"Page Not Found","action.Go":"Get started today","helpText.roster.HelpWithThisList.Key":"Key:","message.Turnstile
+1a72
+.Account.Others":"Others","action.UploadMessage.CorrectedFormatMask.tooltip":"There Was a Problem Uploading this Field.","action.UploadMessage.Corrected.icon":"fa-check-circle-o","action.Error":"Error","header.Title.Success":"Upload was a success!","message.Turnstile.Account.Other":"Other","header.WorkList.LastUpdatedDate":"Last Updated Date","label.Quotes":"Quotes","action.ClickHereToContinue":"Click here to continue","label.Footer.SleeperStreet":"51 Sleeper Street","action.Back":"Back","menu.wi.Name.Upload.Help":"Help","menu.wi.Name.Upload":"Upload","label.or":"or","action.Close":"Close","label.Queue.Name":"Name","label.Footer.AgencyAppointments":"Agency appointments","menu.wi.Name.MyDefaults.Manage":"Manage","label.FileSelector.StartUpload":"Start Upload","label.FileDetails.Status":"Status","action.UploadMessage.RevertMessage.icon":"fa-undo","header.WorkList.LOB":"LOB","action.Delete":"Delete","message.Override.System.Value":"This value has been overridden. The original ${0} was ${1}.","label.Footer.ContactUs":"Contact Us","action.ClickHereToAddTitle":"Click Here to add ${0}","action.ClickHereToAddAccountLocation":"Choose locations from account","action.UploadMessage.AttentionRequired.tooltip":"There Was a Problem Uploading this Field.","action.UploadMessage.RevertMessage":"The value of this field has changed since it was uploaded. The original value was: ${0}","menu.get.started.quickquote":"Quick Quote","action.Revert.Description":"Click Here to Undo Changes.","menu.Name.ToggleNavigation":"Toggle Navigation","label.Footer.Telephone":"(123) 456-7890","action.ClickToRecoverThisItemTitle":"Click to un-delete this item","timepicker.hour":"Hour","prompt.Template.FixErrors":"Please fix errors before uploading.","action.MoreActions":"More Actions...","action.Continue":"Continue","label.Queue.Effective":"Effective","message.batch.success":"Update was successful","header.WorkList.ID":"ID","message.Turnstile.FileType":"Please select the ACORD forms you would like to upload. File types supported are .pdf, .tif, .tiff and .zip.","menu.wi.Name.MyDefaults":"My Defaults","label.WaitingforUnderwriter":"Waiting for Underwriter","head.Title.Agencyportal":"agencyportal","label.Footer.AboutOurCompany":"About Our Company","label.Footer.PrivacyPolicy":"Privacy Policy","menu.wi.title.AccountReferenceNum.Short":"Account # ${0}","header.Title.PagesNotRecognized":"Pages Not Recognized","action.Next":"Next","action.UploadMessage.Corrected.tooltip":"There Was a Problem Uploading this Field.","label.Queue.Days":"days","timepicker.minute":"Minute","menu.wi.Description.Upload.Help":"Help with Upload","message.WorkItemLockedByOtherUser":"It is locked by another user.","menu.wi.title.timeline.ReferenceNum.Long":"About Reference # ${0} for ${1}","menu.wi.Description.Corrections.Help":"Help with Corrections","header.Title.FormsNotProcessed":"Forms Not Processed","action.FinishedMakingChanges":"Finished Making Changes","message.Turnstile.message.submittedUnSuccesfulNoAccount":"All LOB uploads have failed. Please try again later. ","label.Footer.TermsAndConditions":"Terms and Conditions","header.Title.WhatAreYouLookingFor":"Oops! What are you looking for?","label.GetStarted":"Get Started","action.Clear":"Clear","action.UploadMessage.MismatchSelectListOptional.tooltip":"There Was a Problem Uploading this Field.","action.Open":"Open","action.Logout":"Log Out","label.Footer.PressRelease":"Press Release","action.UploadMessage.OriginalValueDropped":"Original Value was dropped. The original value was ${0}. ","action.Add":"Add","menu.wi.Name.UploadNow":"Upload Now","action.Actions":"Actions","header.Title.UploadForms":"Upload Forms","label.Underwriter":"Underwriter","menu.wi.Name.Corrections.ReviewAutomaticCorrections":"Review Automatic Corrections","header.Legend.TurnstilePolicyUpload":"Turnstile Policy Upload","helpText.roster.HelpWithThisList.NeedsVisiting":"Items displayed in this style require your attention. Click the 'edit' link beside them.","menu.wi.title.ReferenceNum.Long":"${0} - ${1}","action.UploadMessage.InvalidDataUploaded":"Invalid data uploaded. The original value was ${0}. ","label.TurnstileError.ErrorOccured":"Error Occurred","label.FileDetails.Actions":"Actions","label.Footer.DocumentLibrary":"Document Library","alert.heading.info":"Informational","head.Title.AgencyPortal":"AgencyPortal","label.ListItem.InProgress":"In Progress","action.ConvertToMonolines":"Split All","message.Turnstile.message.submittedUnSuccesfulToAccount":"All LOB uploads have failed. Please try again later. Account:","action.UploadMessage.AttentionRequired":"${0}","action.ConvertToAutop":"Convert To Autop","menu.get.started.upload":"Prefill from an ACORD Form","menu.wi.title.timeline.ReferenceNum.Short":"About Reference # ${0}","label.Footer.SubmitAClaim":"Submit A Claim","message.Turnstile.Account.Select":"Select","header.WorkList.Name":"Name","action.ClickHereToAddTitle.AccessKey.Default":"[alt-a]","action.UploadMessage.tooltipsEnabled":"false","label.Footer.Agencyport":"Agencyport","action.ClickToViewThisItemTitle":"Click to view this item","message.roster.CannotRecover":"Items in this list cannot be recovered once they have been deleted.","message.session.header":"Are you still there?","label.FileSelector.AddFile":"Add File","action.Convert.Confirm.QQWillBeConvertedConfirm":"Convert to Full Application","label.Template.NoUploadForms":"There are no uploaded forms at this time.","alert.heading.warning":"Warning","action.ClickToEditThisItemTitle":"Click to edit this item","prompt.Transaction.WhatLOB":"What lines of business do you want to quote?","header.WorkList.Premium":"Premium","menu.wi.Description.Corrections.ReviewAutomaticCorrections":"Review changes made automatically to this submission","header.Footer.AboutUs":"About Us","message.batch.error":"Update failed - ","action.SaveAndReturnToAccount":"Save and Return","action.UploadMessage.OriginalValueDropped.icon":"fa-ban","action.ClickHereToAddTitle.AccessKey.WebKit.Mac":"[ctrl-alt-a]","action.UploadMessage.AttentionRequired.icon":"fa-ban","menu.wi.Description.MyDefaults.Manage":"Manage your preset defaults","header.Title.UploadFrom":"Upload from ","title.autosave":"Auto Saved","action.ClickHereToAddTitle.AccessKey.Gecko":"[shift-alt-a]","action.Last":"Last","action.UploadMessage.OriginalValueDropped.tooltip":"There Was a Problem Uploading this Field.","menu.wi.Description.Upload.SourceSystemInfo":"About this Upload","label.FileDetails.DateTime":"Date/Time","helpText.roster.HelpWithThisList.WasAdded":"Items displayed in this style have been added.","label.Agent":"Agent","action.View":"View","message.Turnstile.message.submittedSuccesfulToAccount":"Your forms have been submitted successfully to the account","action.Previous":"Previous","h
+1ff2
+elpText.roster.HelpWithThisList.HasChanged":"Items displayed in this style have been changed.","label.Footer.TermsOfUse":"Terms of Use","action.UploadMessage.Default.tooltip":"There Was a Problem Uploading this Field.","label.FileSelector.AddFiles":"Add Files","upload.blank.orginal.value":"blank","action.UploadMessage.SubcategoriesEnabled":"true","message.PleaseWait":"Please Wait...","label.Transaction.Number":"#","action.First":"First","prompt.AccountSelector.WhatAccount":"What account is this for?","action.UploadMessage.MismatchSelectListRequired.icon":"fa-ban","label.Footer.ContactUnderwriter":"Contact your Underwriter","label.Footer.CareerCenter":"Career Center","menu.Name.Settings":"Settings","action.ClickToDeleteThisItemTitle":"Click to delete this item","action.UploadMessage.CorrectedFormatMask":"The value of this field has been changed since it was uploaded as it does not conform to the field format. The original value was ${0}.","action.Recover":"Recover","menu.get.started":"Get Started","menu.Description.Users":"Users","menu.wi.Name.Upload.SourceSystemInfo":"Source System Info","message.WIA.FileRequired":"File is required.","action.ConvertToPackage":"Convert To Package","prompt.Template.SelectAFile":"Please select at least one file.","alt.FileAttachments.ViewPrint":"View/Print ${0}","menu.wi.Description.MyDefaults.ApplyToThisSubmission":"Apply your preset default values to this work item","label.Footer.Boston":"Boston MA 02212","message.WIA.DocTypeRequired":"Document type is required.","action.SaveAndExit":"Save and Exit","menu.Description.Home":"Home","timepicker.am":"AM","message.DenotesRequiredField":"Denotes Required Fields","helpText.roster.HelpWithThisList":"Help with this List","menu.wi.name.move":"Move","label.Footer.MeetOurTeam":"Meet our Team","header.WorkList.EffectiveDate":"Effective Date","action.SaveToDefaults":"Save To Defaults","action.UploadMessage.OriginalValueTooLong.icon":"fa-ban","action.UploadMessage.Default":"${0}","message.session.expire":"Your session will expire in","label.MostRecent":"Most Recent","message.Template.UploadHandlerElementNotDefined":"Upload Handler Element not defined.","message.404":"This file may have been moved, renamed or deleted. To find what you're looking for: go back to the referring page, jump to our home page, or try our Search.","helpText.roster.HelpWithThisList.Header":"This list shows the ${0} that have been entered for this application. Click the link below the list, or press the ${1}alt${2} and ${3}a${4} keys to add a new item.","action.DeleteConfirmQuestion":"Are you sure you want to delete this item?","message.Turnstile.message.submittedSuccesfulToAccountWithError":"Your forms have been submitted. Some LOBs have failed please review below. Account:","menu.Name.Users":"Users","action.UploadMessage.AttentionNotRequired.tooltip":"There Was a Problem Uploading this Field.","action.Yes":"Yes","menu.wi.Description.MyDefaults.AvailableFields":"List the fields for which default values can be saved","head.Title.404":"404","label.Transaction.UploadForms":"Upload Forms","action.No":"No","message.session.expire1":"Click Continue to return to your quote now.","action.ConvertToHome":"Convert To Home","label.Template.ViewAccount":"View Account.","header.Title.FormsProcesses":"Forms Processed","label.ListItem.New":"New","modal.confirmation.button.yes":"Yes","menu.wi.name.timeline":"History","action.UploadMessage.AttentionNotRequired":"${0}","menu.wi.Name.MyDefaults.AvailableFields":"Available Fields","helpText.roster.HelpWithThisList.Normal":"Items are normally displayed in the list without special formatting.","message.roster.TooMany":"The configured maximum of ${0} item(s) has been exceeded. You will need to delete ${1} item(s) before continuing.","menu.Name.Agencyportal":"agencyportal","menu.Description.Settings":"Settings","action.FileAttachments.View":"View ${0}   -   ${1}","modal.confirmation.button.no":"No","action.UploadMessage.MismatchSelectListRequired":"There was not a perfect match between what was uploaded from your agency  management system (${0}) and the options in the list. Please make another selection.","header.ProblemWithRequest":"Oops! There Was a Problem Processing Your Request...","action.Ok":"Ok","action.UploadMessage.Default.icon":"fa-ban","action.AddNew":"Add New","label.Account.ShowingAllWorkItems":"Showing All Work Items","message.GoHome":"Go Home","label.Footer.UnderwritingGuidelines":"Underwriting guidelines","message.ReadOnly":"This screen is read-only and cannot be updated.","action.ClickToMakeCopyTitle":"Click to make a copy of this item","action.UploadMessage.InvalidDataUploaded.icon":"fa-ban","timepicker.pm":"PM","label.Footer.ExploreOurPortfolio":"Explore Our Portfolio","action.UploadMessage.FormatMaskInvalid.tooltip":"There Was a Problem Uploading this Field.","message.Turnstile.message.submittedSuccesfulNoAccount":"Your forms have been submitted successfully","legend.FileAttachments.Attachments":"Attachments","label.Footer.RightsReserved":"SECURA Insurance, All rights reserved","label.Footer.GetInTouch":"Get in touch with us","label.Footer.AgencyAgreements":"Agency Agreements","action.Edit":"Edit","action.ConvertToApplication":"Convert to Application","action.UploadMessage.MismatchSelectListRequired.tooltip":"There Was a Problem Uploading this Field.","menu.Description.Toolkit":"Toolkit","header.Title.SearchForAccount":"Search for an Account","action.Help":"Help","action.UploadMessage.OriginalValueTooLong":"The value of this field does not conform to the field format and requires correction. The original value was ${0}.","message.Transaction.CreatedItems":"We have created the following work items from your forms","action.Cancel":"Cancel","header.Footer.Service":"Service","action.AddFromAccount":"Add From Account","menu.wi.title.ReferenceNum.Short":"${0}","prompt.Template.SelectLOB":"Please select at least one Line of Business.","label.Footer.Email":"email@agencyport.com","action.Confirm.ExitTitle":"There are unsaved changes on this page.","action.Assign":"Assign","message.Turnstile.message.submittedSuccesfulNoAccountWithError":"Your forms have been submitted. Some LOBs have failed please review below.","message.Template.ErrorOccuredDuringUpload":"An error has occurred during upload. Please try again later.","menu.wi.Name.MyDefaults.Help":"Help","action.UploadMessage.CorrectedFormatMask.icon":"fa-check-circle-o","label.PolicyUpload.FileName":"File Name","action.ToggleExtendedError":"Toggle Extended Technical Error Information","header.Footer.Contact":"Contact","action.ClickHereToAddAccountEntity":"Choose Entities from account","header.Footer.Important":"Important","alert.heading.error":"Error","message.ApplicationNavigationError":"Application navigation error - use the brower's back button to return.","action.UploadMessage.AttentionNotRequired.icon":"fa-ban","header.WorkList.Status":"Status","action.UploadMessage.MismatchSelectListOptional.icon":"fa-ban","label.Footer.OurServices":"Our Services","label.Queue.Status":"Status","label.Transaction.LOB":"LOB","action.UploadMessage.FormatMaskInvalid.icon":"fa-ban","message.roster.ForceView":"There are items in the list that must be edited before continuing.","action.ClickHereToAddTitle.AccessKey.Gecko.Mac":"[ctrl-a]","action.Open.Account":"Open Account","label.Footer.Resources":"Resources","header.WorkList.TransactionType":"Transaction Type","menu.wi.Name.Corrections.Help":"Help","label.GetStartedWithUpload":"Get started with a new upload:","action.ClickHereToAddTitle.AccessKey.Opera":"[shift-esc a]","action.Copy":"Copy","label.Queue":"Queue","message.roster.TooFew":"At least ${0} item(s) are required before continuing.","action.UploadMessage.MismatchSelectListOptional":"There was not a perfect match between what was uploaded from your agency  management system (${0}) and the options in the list. Please make another selection.","menu.wi.Name.Corrections":"Corrections","message.ApplicationNavigationErrorHeader":"Oops!","menu.Name.Toolkit":"Toolkit","action.UploadMessage.RevertMessage.tooltip":"There Was a Problem Uploading this Field.","action.Confirm.ExitQuestion":"Leave Anyway?","menu.wi.N
+e
+ame.MyDefaults
+57e
+.ApplyToThisSubmission":"Apply to this Submission","action.UploadMessage.Corrected":"The value of this field has been automatically corrected since it was uploaded. The original value was ${0}. ","action.OtherActions":"Other Actions","action.UploadMessage.InvalidDataUploaded.tooltip":"There Was a Problem Uploading this Field.","action.Save":"Save","helpText.roster.HelpWithThisList.WasDeleted":"Items that have been deleted appear in this format. ${0}Click the 'recover' link beside them to put them back.${1}","header.WorkList.Complete":"Complete","menu.Description.My_Work":"My Work","menu.Name.Home":"Home","label.FileDetails.File":"File","action.CorrectError":"Click edit to correct the error with this item.","action.UploadMessage.FormatMaskInvalid":"The value of this field does not conform to the field format and requires correction. The original value was ${0}.","message.Convert.JustConverted.QQWasConverted.1":"Convert to Full Application","action.Convert.Confirm.QQWillBeConvertedTitle":"Are you sure you want to convert this quick quote?.","message.Convert.JustConverted.QQWasConverted.2":"The conversion was successful. Additional fields required to complete the application have been added to the screens."}
+ap.core_prompts=core_prompts;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script form
+1a82
+at -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var format_info={"default_display.date_format_mask":"##-##-####","default_display.datepicker.date_format":"mm-dd-yyyy","default_display.datetime_format_noseconds":"MM-dd-yyyy h:mm a","default_display.date_format":"MM-dd-yyyy","default_display.postalCode_format_mask":"#######","default_display.integer_format_mask":"###,###","default_display.phone_format_mask":"(###) ###-####","default_display.time_format_mask":"##:##","default_display.decimal_format_mask":"###,###.##","default_display.time_format":"HH:mm","default_display.datetime_format":"MM-dd-yyyy HH:mm:ss","default_display.currency_format_mask":"$###,###.##"}
+ap.format_info=format_info;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+
+<p id="denotesRequired">
+	<span class="requiredField">*</span>&nbsp;Denotes Required Fields
+</p>
+
+<!-- tags\page\control_data.tag-->
+
+
+
+
+
+
+
+
+
+
+ 
+	<input type="hidden" name="HASH" id="HASH" value="893487156"/>
+ 
+	<input type="hidden" name="WORKITEMID" id="WORKITEMID" value="6319"/>
+
+	<input type="hidden" name="TRANSACTION_NAME" id="TRANSACTION_NAME" value="autob" />
+	<input type="hidden" name="PAGE_NAME" id="PAGE_NAME" value="vehicle" />
+	<input name="force_view_on_upload" id="FORCE_VIEW_ON_UPLOAD" value="false" type="hidden"/>
+ 
+ 
+ 
+ 
+	<!-- tags\page\csrf.tag-->
+
+
+
+
+
+
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5" />
+	<script type="text/javascript">
+		if(typeof(ap) == 'undefined') {
+		    ap ={};
+		}
+		ap.csrfToken = {
+			name: 'CSRF_TOKEN',
+			value: '147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5'
+		}
+	</script>
+	
+
+<!-- End tags\page\csrf.tag-->	
+
+	
+<!-- End tags\page\control_data.tag-->	
+
+<input type="hidden" name="METHOD" value="Process" /> 
+<input type="hidden" id="NEXT" name="NEXT" value="" /> 
+<input type="hidden" id="DATA_CHANGED" name="DATA_CHANGED" value="" />
+		
+<!-- tags/page/ap_javascript_objects.tag-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var user = new ap.User();
+	ap.user = user;
+
+	var primaryUserGroup = '';
+	
+		primaryUserGroup = new ap.UserGroup('20115',
+									'ACCURATE INS AGCY LLC');
+		user.setUserGroup(primaryUserGroup);
+		
+		var roles = new Array();
+		var permissions = null;
+		
+				permissions = new Array();
+				
+					permissions.push(new ap.Permission('930',
+										'accessCanViewAccount'));
+	
+					
+					permissions.push(new ap.Permission('931',
+										'accessCanMove'));
+	
+					
+					permissions.push(new ap.Permission('900',
+										'accessMenu_Home'));
+	
+					
+					permissions.push(new ap.Permission('932',
+										'accessCanMerge'));
+	
+					
+					permissions.push(new ap.Permission('901',
+										'accessMenu_My Work'));
+	
+					
+					permissions.push(new ap.Permission('933',
+										'accessCanOpen'));
+	
+					
+					permissions.push(new ap.Permission('902',
+										'accessMenu_My Accounts'));
+	
+					
+					permissions.push(new ap.Permission('934',
+										'accessCanApprove'));
+	
+					
+					permissions.push(new ap.Permission('935',
+										'accessCanLink'));
+	
+					
+					permissions.push(new ap.Permission('906',
+										'canViewAgentWorkItemsView'));
+	
+					
+					permissions.push(new ap.Permission('970',
+										'canViewAgentAccountItemsView'));
+	
+					
+					permissions.push(new ap.Permission('300',
+										'accessAUTOB'));
+	
+					
+					permissions.push(new ap.Permission('1100',
+										'canAccessActivityTracker'));
+	
+					
+					permissions.push(new ap.Permission('302',
+										'accessCPKGE'));
+	
+					
+					permissions.push(new ap.Permission('306',
+										'accessWORK'));
+	
+					
+					permissions.push(new ap.Permission('980',
+										'canViewAgentAccountsView'));
+	
+					
+					permissions.push(new ap.Permission('150',
+										'canBind'));
+	
+					
+					permissions.push(new ap.Permission('310',
+										'accessCLACCOUNT'));
+	
+					
+					permissions.push(new ap.Permission('1110',
+										'canDeleteWorkItemAssistantAttachedFile'));
+	
+					
+					permissions.push(new ap.Permission('919',
+										'canAccessTimeline'));
+	
+					
+					permissions.push(new ap.Permission('312',
+										'accessACCOUNT'));
+	
+					
+					permissions.push(new ap.Permission('921',
+										'canViewAgentPendingItemsView'));
+	
+					
+					permissions.push(new ap.Permission('316',
+										'accessGARAG'));
+	
+					
+				var role = new ap.Role('100',
+										'agent', permissions);
+				roles.push(role);
+				
+		user.setRoles(roles);
+	
+	
+			user.setFirstName('LIZETH');
+		
+			user.setMiddleName('');
+		
+			user.setLastName('GASTELUM');
+		
+
+	var transaction = new ap.Transaction();
+	ap.transaction = transaction;
+
+	transaction.setId('autob');
+	transaction.setTitle('Commercial Auto');
+	transaction.setTarget('CommlAutoPolicyQuoteInqRq'); //root target node per the TDF
+	transaction.setLob('AUTOB'); //LOB Code per the TDF
+	transaction.setType('NEW_BUSINESS'); //transaction type per the TDF;
+	transaction.setFirstTime(false); // set first time flag
+
+	
+		transaction.setSummaryPageId('policySummary'); //id of summary page per the TDF
+	
+
+	var page = new ap.Page();
+	ap.page = page;
+	
+	page.setCSRFToken('147c186dc442747433213ebb3faa1e20501c5d8ef959cad9de96cb73722f43a5');
+	page.setId('vehicle');
+	page.setTitle('Vehicles &amp; Coverages');
+	page.setType('roster');
+	page.setSupportOriginalValues(false);
+	page.setPreValidatationEnabled(true);
+	page.setReadOnly(false);
+	page.setRecordLockStatus('LOCKED_BY_THIS_USER');
+	page.setSupportsFieldHelperTabbing(false);
+	page.setAutoSaveInterval(60);
+	page.setAutoSaveOnSave(false);
+	page.setWorkItemAssistantEnabled(true);
+	page.setClientUpdateInterval(15);
+	page.setClientUpdateMaxTimeOut(3600);
+	page.setWorkItemLockSupported(true);
+	page.setRequireAccountSetup(true);
+	page.setShowUploadedMessage(true);
+	
+	
+			page.setMaxEntries(999);
+			page.setMinEntries(0);
+			page.setEnableRecover(false);
+			page.setSuppressAddAction(false);
+		
+	transaction.setEntityName('Duglus'); // entity name for this work item
+	transaction.setWorkItemId(6319);
+	transaction.setUploadSourceOrg('');
+	transaction.setUploadSourceName('');
+	transaction.setUploadSourceVersion('');
+	transaction.setUploadSourceSystem('');
+	transaction.setFirstTime(false);
+	page.setIsUploaded(false);
+	page.setIsFirstView(true);
+	page.setIsTransactionStartPoint(false);
+	page.setFastForwardPage('');
+	page.setForceView(false);
+	page.setDataAccessType(5);
+	
+			page.setMessageCount(0);
+			page.setMessageSeverity('informational
+2000
+')
+			
+</script>
+
+
+		
+
+
+
+
+
+
+
+
+
+	
+<script type="text/javascript" src="debug/ap_debug.js?5.4.0-0"></script>
+<script type="text/javascript">
+	var debugConsole = new AgencyPortalDebugConsole();
+	var thisAppName = 'AgencyPortal';
+	ap.debugConsole = debugConsole;
+	
+	debugConsole.addPanel('_js', 'ap_debug_javascript.jsp', 'Framework JavaScript Variables on this page', 'JavaScript');
+	debugConsole.addPanel('_acord', '../DebugProvider?work_item_id=' + transaction.workItemId + '&transaction_id=' + transaction.id, 'View the current XML store for this work item', 'Current AP simplified ACORD XML');
+	 	
+		debugConsole.addPanel('_standardAcord', '../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_CURRENT_ACORD_STANDARD_DOCUMENT&transaction_id='+ transaction.id, 'View the current standard ACORD XML store for this work item', 'Current standard ACORD XML');
+	 	
+	debugConsole.addPanel('_simplifiedAcord', '../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_CURRENT_DOCUMENT&transaction_id='+ transaction.id, 'View the current transformed simplified XML store for this work item', 'Current AP transformed simplified ACORD XML');
+			
+	debugConsole.addPanel('_xsdvalidation_acord', '../DebugProvider?work_item_id=' + transaction.workItemId + '&transaction_id=' + transaction.id + "&validate=true", 'View the XML validation report (current document) for this work item', 'XML Validation on current AP Simplified ACORD XML');
+	
+		debugConsole.addPanel('_xsdvalidation_standardAcord', '../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_CURRENT_ACORD_STANDARD_DOCUMENT&transaction_id=' + transaction.id + "&validate=true", 'View the XML validation report (current standard document) for this work item', 'XML Validation on current standard ACORD XML');
+	
+	debugConsole.addPanel('_tdf','../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_TDF&transaction_id='+ transaction.id + '&page_id=' + page.id, 'View the in memory TDF for this work item', 'TDF'); 
+	debugConsole.addPanel('_preconditions','../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_PRECONDITIONS&transaction_id='+ transaction.id + '&page_id=' + page.id, 'View the in memory preconditions for this work item', 'Preconditions'); 	
+	debugConsole.addPanel('_menu','../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_MENU&transaction_id='+ transaction.id, 'View the XML menu file for this work item', 'Navigation Menu');
+	debugConsole.addPanel('_properties','../DebugProvider?work_item_id=' + transaction.workItemId + '&view_type=VIEW_PROPERTIES&transaction_id='+ transaction.id, 'View the Application Properties that are configured.', 'Application Properties');
+
+	debugConsole.addPanel('_about', 'ap_debug_about.jsp', 'Version Information for this ' + thisAppName, 'About ' + thisAppName);
+	debugConsole.setDefaultPanel('_js');
+</script>
+<script type="text/javascript" src="debug/custom_debug.js"></script>
+<!--end debug\ap_debug.jsp -->
+	
+<!-- END tags\page\ap_javascript_objects.jsp--> 
+
+<div class="rosterContainer table-responsive ">
+<h3>Vehicles</h3>
+<table class="roster table table-hover" summary="Vehicles">
+	<thead>
+		<tr>
+			<th class="">VIN</th>
+<th class="">Year</th>
+<th class="">Make</th>
+<th class="">Model</th>
+<th class="">VIN Validated</th>
+			<th class="actions"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr  class="emptyRosterRow" ><td colspan="6" class="emptyRosterRow">No Vehicles found for this work item</td></tr>
+	</tbody>
+</table>
+</div>
+<div class="form-actions buttons">
+	<div class="">
+		<div class="btn-group">
+	<input class="btn btn-primary" name="continueButton" type="button" value="Continue" accesskey="c" id="continueButton" onclick="page.submit('Continue');" />
+</div>
+<select id="secondaryActions" class="secondary-actions form-control" onchange="if(this.value)page.submit(this.value);">
+	<option id="action-more-actions" selected="" value="">More Actions...</option>
+	<option id="action-save" value="Save">Save</option>
+	<option id="action-save-and-exit" value="Save and Exit">Save and Exit</option>
+	<option id="action-save-to-defaults" value="SaveToDefaults">Save To Defaults</option>
+</select>
+	</div>
+</div>
+<div class="rosterAddNew" id="rosterAddNew">
+<div class="hidden" >
+	</div>
+<fieldset class="" id="vehicleInformation">
+	<legend>Vehicle Detail</legend>
+	 <input type="hidden" name="CommlAutoLineBusiness.CommlRateState.@id" id="CommlAutoLineBusiness_CommlRateState_id" value="GUID()" />
+<input type="hidden" name="CommlAutoLineBusiness.CommlRateState.CommlVeh.@id" id="CommlAutoLineBusiness_CommlRateState_CommlVeh_id" value="GUID()" />
+<input type="hidden" name="VinMultiResultJSON" id="VinMultiResultJSON" value="" />
+<input type="hidden" name="NewVinServiceCallInd" id="NewVinServiceCallInd" value="" />
+<input type="hidden" name="vinValidated" id="vinValidated" value="N&#47;A" />
+<input type="hidden" name="VinValidatedMessageFlag" id="VinValidatedMessageFlag" value="" />
+<div class="form-group ">
+	<label class="col-xs-12 col-sm-3 control-label" for="CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef" id="CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef_label">
+		<span id="CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef_labelText" >Garaging Location</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<div class="selectListContainer">
+			<select class="form-control" name="CommlAutoLineBusiness.CommlRateState.CommlVeh.HotGaragedLocationRef" id="CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef">
+			<option value="" selected >Select One</option>
+<option value="N79"> - 2401 S Memorial Dr Appleton, WI 54915-1429</option>
+			</select>
+			<span id="CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef_fieldHelpers">
+							</span>
+		</div>
+	</span>
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-xs-12 col-sm-3 control-label" for="HotVehicleType" id="HotVehicleType_label">
+		<span id="HotVehicleType_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="HotVehicleType_labelText" >Vehicle Type</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<div class="selectListContainer">
+			<select class="form-control" name="HotVehicleType" id="HotVehicleType">
+			<option value="" selected >Select One</option>
+<option value="PP">Private Passenger</option>
+<option value="SPEC">Special Type</option>
+<option value="COML">Trucks, Tractors and Trailers</option>
+			</select>
+			<span id="HotVehicleType_fieldHelpers">
+				<span id="HotVehicleType_fieldHelperBalloon" class="tooltip-balloon " data-placement="right" data-toggle="popover" data-html="true" data-content="Select Special Type for the following: Funeral Director Hearse, Mobile or Farm Equipment, Antique Autos, Motorhomes or Campers, Golf Carts, Snowmobiles or Motorcycles."><i class="fa fa-2 balloon"></i></span>
+			</span>
+		</div>
+	</span>
+	</div>
+</div>
+<p id="N16" class="alert alert-info">Please enter a VIN if available to prefill vehicle information.</p>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="vinNumber" id="vinNumber_label">
+		<span id="vinNumber_requiredIndicator"></span>
+		<span id="vinNumber_labelText" >VIN</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<input type="text" class="form-control"  name="vinNumber" autocomplete="off" id="vinNumber" size='17' maxlength='17' value=""   />
+		<span id="vinNumber_fieldHelpers">
+					</span>
+	</span>
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="VehicleLookup" id="VehicleLookup_label">
+		<span id="VehicleLookup_requiredIndicator"></span>
+		<span id="VehicleLookup_labelText" >Vehicle Lookup</span>
+	</label>
+	<div class="col-xs-12 col-sm-9 checkbox">
+		<span >
+			<input type="chec
+1fda
+kbox" name="VehicleLookup" id="VehicleLookup" value="1"  />
+			<span id="VehicleLookup_fieldHelpers">
+							</span>		
+		</span>		
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="year" id="year_label">
+		<span id="year_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="year_labelText" >Year</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<input type="text" class="form-control"  name="year" autocomplete="off" id="year" size='10' maxlength='4' value=""   />
+		<span id="year_fieldHelpers">
+					</span>
+	</span>
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="make" id="make_label">
+		<span id="make_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="make_labelText" >Make</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<input type="text" class="form-control"  name="make" autocomplete="off" id="make"   value=""   />
+		<span id="make_fieldHelpers">
+					</span>
+	</span>
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="model" id="model_label">
+		<span id="model_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="model_labelText" >Model</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<input type="text" class="form-control"  name="model" autocomplete="off" id="model"   value=""   />
+		<span id="model_fieldHelpers">
+					</span>
+	</span>
+	</div>
+</div>
+<input type="hidden" name="MultiResultVINJSON" id="MultiResultVINJSON" value="" />
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="grossVehicleCombinedWeight" id="grossVehicleCombinedWeight_label">
+		<span id="grossVehicleCombinedWeight_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="grossVehicleCombinedWeight_labelText" >Gross Vehicle&#47;Combined Weight</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<input type="text" class="form-control"  name="grossVehicleCombinedWeight" autocomplete="off" id="grossVehicleCombinedWeight"   value=""   />
+		<span id="grossVehicleCombinedWeight_fieldHelpers">
+					</span>
+	</span>
+	</div>
+</div>
+<input type="hidden" name="GrossVehicleCombinedWeightOverRideValue" id="GrossVehicleCombinedWeightOverRideValue" value="" />
+<p id="N34" class="alert alert-info">Please indicate below if this vehicle is registered in a state other than the garaging location.</p>
+<div class="form-group ">
+	<label class="col-xs-12 col-sm-3 control-label" for="HotRegisteredState" id="HotRegisteredState_label">
+		<span id="HotRegisteredState_requiredIndicator"></span>
+		<span id="HotRegisteredState_labelText" >Registered State</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<div class="selectListContainer">
+			<select class="form-control" name="HotRegisteredState" id="HotRegisteredState">
+			<option value="" selected ></option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District Of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+			</select>
+			<span id="HotRegisteredState_fieldHelpers">
+							</span>
+		</div>
+	</span>
+	</div>
+</div>
+<input type="hidden" name="vehicleModelNum" id="vehicleModelNum" value="" />
+<input type="hidden" name="vehicleDescription" id="vehicleDescription" value="" />
+<input type="hidden" name="engineType" id="engineType" value="" />
+ 
+</fieldset>
+<fieldset class="" id="privatePassengerInformation">
+	<legend>Private Passenger Information</legend>
+	  
+</fieldset>
+<fieldset class="" id="truckTractorTrailerInformation">
+	<legend>Truck, Tractor or Trailer Information</legend>
+	  
+</fieldset>
+<fieldset class="" id="publicVehicleInformation">
+	<legend>Public Vehicle Information</legend>
+	  
+</fieldset>
+<fieldset class="" id="specVehicleInformation">
+	<legend>Special Vehicle Information</legend>
+	  
+</fieldset>
+<fieldset class="" id="vehicleUsageInformation">
+	<legend>Vehicle Usage Information</legend>
+	 <div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="SnowPlowing" id="SnowPlowing_label">
+		<span id="SnowPlowing_requiredIndicator"></span>
+		<span id="SnowPlowing_labelText" >Used in Snowplowing</span>
+	</label>
+	<div class="col-xs-12 col-sm-9 checkbox">
+		<span >
+			<input type="checkbox" name="SnowPlowing" id="SnowPlowing" value="1"  />
+			<span id="SnowPlowing_fieldHelpers">
+							</span>		
+		</span>		
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="VehicleHiredAuto" id="VehicleHiredAuto_label">
+		<span id="VehicleHiredAuto_requiredIndicator"></span>
+		<span id="VehicleHiredAuto_labelText" >Is this vehicle Hired Auto ?</span>
+	</label>
+	<div class="col-xs-12 col-sm-9 checkbox">
+		<span >
+			<input type="checkbox" name="VehicleHiredAuto" id="VehicleHiredAuto" value="1"  />
+			<span id="VehicleHiredAuto_fieldHelpers">
+							</span>		
+		</span>		
+	</div>
+</div>
+ 
+</fieldset>
+<fieldset class="" id="coverages">
+	<legend>Coverages</legend>
+	 <div class="form-group ">
+	<label class="col-xs-12 col-sm-3 control-label" for="VehPropertyDamageLiablityDeductible" id="VehPropertyDamageLiablityDeductible_label">
+		<span id="VehPropertyDamageLiablityDeductible_requiredIndicator"></span>
+		<span id="VehPropertyDamageLiablityDeductible_labelText" >Property Damage Liability Deductible</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<div class="selectListContainer">
+			<select class="form-control" name="VehPropertyDamageLiablityDeductible" id="VehPropertyDamageLiablityDeductible">
+			<option value="ND">No Deductible</option>
+<option value="500">$500</option>
+<option value="1000">$1,000</option>
+<option value="2500">$2,500</option>
+			</select>
+			<span id="VehPropertyDamageLiablityDeductible_fieldHelpers">
+				<span id="VehPropertyDamageLiablityDeductible_fieldHelperBalloon" class="tooltip-balloon " data-placement="right" data-toggle="popover" data-html="true" data-content="A Property Damage Liability deductible may be applied specifically to this vehicle."><i class="fa fa-2 balloon"></i></span>
+			</span>
+		</div>
+	</span>
+	</div>
+</div>
+<input type="
+26
+hidden" name="VehPDLiablityDedDefaultF
+1fd2
+lag" id="VehPDLiablityDedDefaultFlag" value="Yes" />
+<div class="form-group ">
+	<label class="col-xs-12 col-sm-3 control-label" for="ComprehensiveDeductible" id="ComprehensiveDeductible_label">
+		<span id="ComprehensiveDeductible_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="ComprehensiveDeductible_labelText" >Comprehensive Coverage</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<div class="selectListContainer">
+			<select class="form-control" name="ComprehensiveDeductible" id="ComprehensiveDeductible">
+			<option value="NC">No Coverage</option>
+<option value="250">$250 Deductible</option>
+<option value="500">$500 Deductible</option>
+<option value="1000">$1,000 Deductible</option>
+<option value="2000">$2,000 Deductible</option>
+<option value="3000">$3,000 Deductible</option>
+<option value="5000">$5,000 Deductible</option>
+			</select>
+			<span id="ComprehensiveDeductible_fieldHelpers">
+				<span id="ComprehensiveDeductible_fieldHelperBalloon" class="tooltip-balloon " data-placement="right" data-toggle="popover" data-html="true" data-content="This coverage is for damage to the specified vehicle from incidents other than collision including: fire, theft, windstorm, vandalism, flood, falling objects or hitting and animal"><i class="fa fa-2 balloon"></i></span>
+			</span>
+		</div>
+	</span>
+	</div>
+</div>
+<input type="hidden" name="CompType" id="CompType" value="Comprehensive" />
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="FullGlassCoverage" id="FullGlassCoverage_label">
+		<span id="FullGlassCoverage_requiredIndicator"></span>
+		<span id="FullGlassCoverage_labelText" >Full Glass Coverage</span>
+	</label>
+	<div class="col-xs-12 col-sm-9 checkbox">
+		<span >
+			<input type="checkbox" name="FullGlassCoverage" id="FullGlassCoverage" value="1"  />
+			<span id="FullGlassCoverage_fieldHelpers">
+				<span id="FullGlassCoverage_fieldHelperBalloon" class="tooltip-balloon " data-placement="right" data-toggle="popover" data-html="true" data-content="Full glass coverage pays the amount of a covered glass loss without a deductible."><i class="fa fa-2 balloon"></i></span>
+			</span>		
+		</span>		
+	</div>
+</div>
+<input type="hidden" name="FullGlassCoverageDefaultFlag" id="FullGlassCoverageDefaultFlag" value="Yes" />
+<div class="form-group ">
+	<label class="col-xs-12 col-sm-3 control-label" for="CollisionDeductible" id="CollisionDeductible_label">
+		<span id="CollisionDeductible_requiredIndicator"><span class="requiredField">*</span></span>
+		<span id="CollisionDeductible_labelText" >Collision Deductible</span>
+	</label>
+	<div class="col-xs-12 col-sm-9">
+	<span >
+		<div class="selectListContainer">
+			<select class="form-control" name="CollisionDeductible" id="CollisionDeductible">
+			<option value="NC">No Coverage</option>
+<option value="500">$500 Deductible</option>
+<option value="1000">$1,000 Deductible</option>
+<option value="2000">$2,000 Deductible</option>
+<option value="3000">$3,000 Deductible</option>
+<option value="5000">$5,000 Deductible</option>
+			</select>
+			<span id="CollisionDeductible_fieldHelpers">
+							</span>
+		</div>
+	</span>
+	</div>
+</div>
+<input type="hidden" name="pdCostNewOverride" id="pdCostNewOverride" value="" />
+<p id="AutoWrapTip" class="alert alert-info">If the Business Auto WRAP endorsement is selected: <br > <br > Auto Loan or Lease Gap coverage is included for covered private passenger autos and pickups/vans up to 10,000 lbs gross vehicle weight with physical damage coverage.   Please select Auto Loan or Lease Gap below to add the coverage without the Business Auto WRAP or for vehicles types not included in the Business Auto WRAP. <br><br >Rental Reimbursement of $50 per day (up to 30 days) is provided for covered autos with physical damage coverage.  Please select Rental Reimbursement below if additional limits are needed or to add coverage without the Business Auto WRAP.</p>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="AutoLoanLeaseGapCoverage" id="AutoLoanLeaseGapCoverage_label">
+		<span id="AutoLoanLeaseGapCoverage_requiredIndicator"></span>
+		<span id="AutoLoanLeaseGapCoverage_labelText" >Auto Loan Lease Gap Coverage</span>
+	</label>
+	<div class="col-xs-12 col-sm-9 checkbox">
+		<span >
+			<input type="checkbox" name="AutoLoanLeaseGapCoverage" id="AutoLoanLeaseGapCoverage" value="1"  />
+			<span id="AutoLoanLeaseGapCoverage_fieldHelpers">
+				<span id="AutoLoanLeaseGapCoverage_fieldHelperBalloon" class="tooltip-balloon " data-placement="right" data-toggle="popover" data-html="true" data-content="Auto Loan/Lease Gap provides coverages in the event of a total loss where the balance due on the loan or lease is greater than the claims settlement.<br>"><i class="fa fa-2 balloon"></i></span>
+			</span>		
+		</span>		
+	</div>
+</div>
+<div class="form-group ">
+	<label class="col-sm-12 col-sm-3 control-label" for="rentalReimbursement" id="rentalReimbursement_label">
+		<span id="rentalReimbursement_requiredIndicator"></span>
+		<span id="rentalReimbursement_labelText" >Rental Reimbursement</span>
+	</label>
+	<div class="col-xs-12 col-sm-9 checkbox">
+		<span >
+			<input type="checkbox" name="rentalReimbursement" id="rentalReimbursement" value="1"  />
+			<span id="rentalReimbursement_fieldHelpers">
+							</span>		
+		</span>		
+	</div>
+</div>
+ 
+</fieldset>
+<script type="text/javascript" src="javascript/show_vin_result.js"></script>
+<script type="text/javascript" src="javascript/vin_service_conditionalIPDTR.js"></script>
+<script type="text/javascript" src="javascript/show_vehicle_details.js"></script>
+<div class="form-actions buttons">
+	<div class="">
+		<div class="btn-group">
+	<input class="btn btn-primary" name="addButton" type="button" value="Add" id="addButton" onclick="page.submit('Add');" />
+</div>
+	</div>
+</div>
+</div>
+
+
+<!-- tags\page\ap_form.tag-->
+
+
+
+
+
+
+<script type="text/javascript">	
+	ap.apFormInit = function() {
+		var currentField = null;	
+		var fieldset = null;
+		page.initializeForm(document.forms["vehicle"]);
+		page.setHasHotFields(true);
+		page.setCompoundKey("autob/vehicle"); 
+		page.setHasDataAvailable(false);
+		page.setIsRedisplayWithErrors(false);
+		page.setSupportsIPDTRDynamicContent(true);
+		page.setDownFillPageId("null");
+		page.setDownfillValidation(true);
+		
+			var validationRoutine = '';
+			var errorMessage = '';
+		
+				fieldset = new ap.Fieldset(page, "vehicleInformation", 2);
+			
+				currentField = new ap.Field(page.form, "CommlAutoLineBusiness_CommlRateState_id","CommlAutoLineBusiness.CommlRateState.@id", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("GUID()");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "CommlAutoLineBusiness_CommlRateState_CommlVeh_id","CommlAutoLineBusiness.CommlRateState.CommlVeh.@id", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("GUID()");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "VinMultiResultJSON","VinMultiResultJSON", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set t
+2e
+he current value after all values are set othe
+55e
+rwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "NewVinServiceCallInd","NewVinServiceCallInd", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "vinValidated","vinValidated", fieldset, 2, 
+						"hidden", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("N&#47;A");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "VinValidatedMes
+1aa2
+sageFlag","VinValidatedMessageFlag", fieldset, 2, 
+						"hidden", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef","CommlAutoLineBusiness.CommlRateState.CommlVeh.HotGaragedLocationRef", fieldset, 2, 
+						"selectlist", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "HotVehicleType","HotVehicleType", fieldset, 2, 
+						"selectlist", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "N16","N16", fieldset, 2, 
+						"message", false, false, false, null, -1);
+						
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "vinNumber","vinNumber", fieldset, 2, 
+						"text", true, false, true, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_maxLength(this.getValue(), 17)', "This field can't exceed 17 characters in length", 'MaxLengthValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_alphanumeric(this.getValue())', "This field must be alphanumeric", 'AlphanumericValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "VehicleLookup","VehicleLookup", fieldset, 2, 
+						"checkbox", true, true, false, null, -1);
+						
+				
+					currentField.setUncheckedValue("0");
+					currentField.setUncheckedDisplayValue("unselected");
+					currentField.setCheckedDisplayValue("selected");
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "year","year", fieldset, 4, 
+						"text", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+					currentField.initFormatmask(false,{MaximumFractionDigits:0,GroupingSize:0,PositivePrefix:'',DecimalSeparator:'.',GroupingSeparator:','},"####");
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_maxLength(this.getValue(), 4)', "This field can't exceed 4 characters in length", 'MaxLengthValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_numeric(this.getValue())', "This field must be numeric", 'NumericValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_minLength(this.getValue(), 4)', "This field must be at least 4 characters in length", 'MinLengthValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_minValue(this.getValue(), 1900)', "This field must be a number greater than or equal to 1900", 'MinValueValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "make","make", fieldset, 4, 
+						"text", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "model","model", fieldset, 4, 
+						"text", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOver
+1fc2
+ride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "MultiResultVINJSON","MultiResultVINJSON", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "grossVehicleCombinedWeight","grossVehicleCombinedWeight", fieldset, 2, 
+						"text", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_pattern(this.getValue(), '+/^[0-9]*$/+', false)', "This field must be numeric", 'PatternValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_numeric(this.getValue())', "This field must be numeric", 'NumericValidator'));
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.verifyGrossVehicleWeight(this.getValue())', "GVW/GCW cannot be less than the manufacturer's minimum specified weight of ", 'VehicleWeightValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "GrossVehicleCombinedWeightOverRideValue","GrossVehicleCombinedWeightOverRideValue", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "N34","N34", fieldset, 2, 
+						"message", false, false, false, null, -1);
+						
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "HotRegisteredState","HotRegisteredState", fieldset, 2, 
+						"selectlist", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "vehicleModelNum","vehicleModelNum", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "vehicleDescription","vehicleDescription", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "engineType","engineType", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				fieldset = new ap.Fieldset(page, "privatePassengerInformation", 1);
+			
+				fieldset = new ap.Fieldset(page, "truckTractorTrailerInformation", 1);
+			
+				fieldset = new ap.Fieldset(page, "publicVehicleInformation", 1);
+			
+				fieldset = new ap.Fieldset(page, "specVehicleInformation", 1);
+			
+				fieldset = new ap.Fieldset(page, "vehicleUsageInformation", 2);
+			
+				currentField = new ap.Field(page.form, "SnowPlowing","SnowPlowing", fieldset, 2, 
+						"checkbox", true, true, false, null, -1);
+						
+				
+					currentField.setUncheckedValue("0");
+					currentField.setUncheckedDisplayValue("unselected");
+					currentField.setCheckedDisplayValue("selected");
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "VehicleHiredAuto","VehicleHiredAuto", fieldset, 2, 
+						"checkbox", false, false, false, null, -1);
+						
+				
+					currentField.setUncheckedValue("0");
+					currentField.setUncheckedDisplayValue("unselected");
+					currentField.setCheckedDisplayValue("selected");
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				fieldset = new ap.Fieldset(page, "coverages", 2);
+			
+				currentField = new ap.Field(page.form, "VehPropertyDamageLiablityDeductible","VehPropertyDamageLiablityDeductible", fieldset, 2, 
+						"selectlist", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			current
+3e
+Field.addValidation(new ap.Validation(currentField, 'validatio
+2000
+nLibrary.verifyPDCoverageDeductible(this.getValue())', "Vehicle Property Damage Coverage cannot be less than Policy Property Damage Coverage  ", 'VehPDDeductibleValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "VehPDLiablityDedDefaultFlag","VehPDLiablityDedDefaultFlag", fieldset, 2, 
+						"hidden", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("Yes");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "ComprehensiveDeductible","ComprehensiveDeductible", fieldset, 2, 
+						"selectlist", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "CompType","CompType", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("Comprehensive");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "FullGlassCoverage","FullGlassCoverage", fieldset, 2, 
+						"checkbox", true, true, false, null, -1);
+						
+				
+					currentField.setUncheckedValue("0");
+					currentField.setUncheckedDisplayValue("unselected");
+					currentField.setCheckedDisplayValue("selected");
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "FullGlassCoverageDefaultFlag","FullGlassCoverageDefaultFlag", fieldset, 2, 
+						"hidden", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("Yes");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "CollisionDeductible","CollisionDeductible", fieldset, 2, 
+						"selectlist", true, true, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.addValidation(new ap.Validation(currentField, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "pdCostNewOverride","pdCostNewOverride", fieldset, 2, 
+						"hidden", false, false, false, null, -1);
+						
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "AutoWrapTip","AutoWrapTip", fieldset, 2, 
+						"message", false, false, false, null, -1);
+						
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "AutoLoanLeaseGapCoverage","AutoLoanLeaseGapCoverage", fieldset, 2, 
+						"checkbox", false, false, false, null, -1);
+						
+				
+					currentField.setUncheckedValue("0");
+					currentField.setUncheckedDisplayValue("unselected");
+					currentField.setCheckedDisplayValue("Included");
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+				currentField = new ap.Field(page.form, "rentalReimbursement","rentalReimbursement", fieldset, 2, 
+						"checkbox", true, true, false, null, -1);
+						
+				
+					currentField.setUncheckedValue("0");
+					currentField.setUncheckedDisplayValue("unselected");
+					currentField.setCheckedDisplayValue("selected");
+				
+					currentField.setDefaultValue("");
+					
+				
+				currentField.setReadOnly(false);
+				currentField.setSupportsOverride(false);
+				
+
+				//need to set the current value after all values are set otherwise initial value is incorrect
+				//currentField.initalValue = currentField.getValue();
+				
+							currentField.removeValidations();
+			currentField.resetValidationState();
+
+				
+	}
+	ap.apFormInit();
+	function ValidationLibrary(){};
+var validationLibrary = new ValidationLibrary();
+validationLibrary.validation_required = function validation_required(value) {
+	return value.length > 0;
+
+}
+
+validationLibrary.validation_alphanumeric = function validation_alphanumeric(value) {
+	if (value.length == 0) return true;
+	if (value.search(/\W/) > -1) return false;
+	return true;
+
+}
+
+validationLibrary.validation_minLength = function validation_minLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length >= parm;
+
+}
+
+validationLibrary.validation_minValue = function validation_minValue(value, parm) {
+	if (value.length == 0) return true;
+	if (value.indexOf(' ') > -1) return false;
+	if (value.search(/\d/) == -1) return false;
+	var testNumber = new Number(value);
+	if (isNaN(testNumber)) return false;
+	return value >= parm;
+
+}
+
+validationLibrary.validation_pattern = function validation_pattern(value, parm, negationOn) {
+	if (value.length == 0) return true;
+	var foundPattern = value.search(parm) > -1;
+	return (foundPattern ^ negationOn);
+
+}
+
+validationLibrary.verifyPDCoverageDeductible = function verifyPDCoverageDeductible(value) {
+	if (value.length == 0) return true;
+	return true;
+
+}
+
+validationLibrary.validation_numeric = function validation_numeric(value) {
+	if (value.length == 0) return true;
+	if (value.indexOf(' ') > -1) return false;
+	if (value.search(/\d/) == -1) return false;
+	var testNumber 
+239
+= new Number(value);
+	if (isNaN(testNumber)) return false;
+	return true;
+
+}
+
+validationLibrary.validation_maxLength = function validation_maxLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length <= parm;
+
+}
+
+validationLibrary.verifyGrossVehicleWeight = function verifyGrossVehicleWeight(value) {
+	if (value.length == 0) return true;
+	return true;
+
+}
+
+
+	try {
+		ap.ValidationLibrary = ValidationLibrary;
+		ap.validationLibrary = validationLibrary;
+	}catch (e) {}
+</script>
+<!-- END tags\page\ap_form.tag-->
+ 
+
+							
+19d
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- locations from the account which the work item is associated with. Duplicated locations are not included--> 
+<!-- location_value_list and location_display_list are built in commands CMDBaseDisplayRoster and CMDBaseProcessRoster-->
+
+
+
+
+
+
+						</form>
+					</span>
+				</div>
+			</div>
+
+		</div>
+		
+			
+		<div class="col-md-2 animated fadeIn" id="right-sidebar">
+			
+58e
+
+<div id="work_item_assistant_group" ng-app="workitemAssistantApp" ng-controller="workitemAssistantCtrl" class="panel-group work-item-assistant" ng-show="showWorkitemAssistant">	
+	<!--  COMMENTS -->
+<!--  COMMENTS: iterate through comment entryies for every section -->
+
+
+
+
+
+
+
+<div class="panel panel-default" ng-repeat="section in comments track by section.id">
+	
+	<div class="panel-heading collapsed" data-toggle="collapse" href="#workItemAssistant_comments_section_{{section.id}}" aria-expanded="true" aria-controls="workItemAssistant_comments_section_{{section.id}}" style="cursor:pointer">
+		
+		<h4 class="panel-title">
+			<span class="has-comments"><i class="fa"></i></span> {{section.label}}
+		</h4>
+	</div>
+	<div class="panel-body wia-comments collapse" id="workItemAssistant_comments_section_{{section.id}}" >
+		<div id="workItemAssistant_comments_container{{section.id}}" class="wia-container panel-fixed-height">
+			<div id="workItemAssistant_comments_{{section.id}}" class="workitem-comment wia-content" ng-repeat="entry in section.entries track by entry.id">
+				<dl>
+					<dd class="comment">
+						<a href="#" ng-click="deleteEntry(entry, section)">
+							<span class="comment-delete"><i class="fa"></i></span>
+						</a>				 					
+						{{entry.comment}}
+					</dd>
+					<dd class="author">{{entry.enteredByName}}</dd>
+					<dd class="meta-data">{{entry.timestamp}}</dd>
+			
+1a72
+	</dl>
+			</div>
+		</div>
+		<div class="workItemAssistant_comments_new_comment new-comment">
+			<textarea class="form-control  comment-textarea" id="comments_text{{section.id}}" ng-model="commentInputs[section.id]"></textarea>
+			<div class="wip-button">
+				<span class="actions_group secondary">
+					<input type="button" class="btn btn-info comments_button" id="comments_button{{section.id}}" class="comment" value="Comment" ng-disabled="commentsEmpty(section)" ng-click="addComment(section)" />
+				</span>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<!-- FILE ATTACHMENT -->
+<!-- FILE ATTACHMENTS: paint all file attachments on the section -->
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-default">
+	<div ng-repeat="section in fileattachments track by section.id">
+	
+		<div class="panel-heading collapsed" data-toggle="collapse" href="#workItemAssistant_fileattachments_section" aria-expanded="true" aria-controls="workItemAssistant_fileattachments_section" style="cursor:pointer">
+	
+			<h4 class="panel-title">
+				<span class="has-files"><i class="fa"></i></span> {{section.label}}
+			</h4>
+		</div>
+		<div class="panel-body wia-file-attachments collapse" id="workItemAssistant_fileattachments_section">
+			<div id="workItemAssistant_fileattachments_container" class="panel-fixed-height">
+				<div id="workItemAssistant_fileattachments" class="workitem-file-attachment wia-content" ng-repeat="entry in section.entries track by entry.id">
+					<div class="file_attachment_icon"></div>
+					
+					<dl>
+						<dd class="file_attachment_name"> 
+							<a href="#" ng-click="editEntry(entry, section)">
+								<span class="upload-file-edit"><i class="fa"></i></span>
+							</a>
+							
+								<a href="#" ng-click="deleteEntry(entry, section)">
+									<span class="upload-file-delete"><i class="fa"></i></span>
+								</a>
+							
+							<a href="{{entry.fileDisplayURL}}">{{entry.fileName}}</a> 
+						</dd>
+						<dd class="meta-data">{{entry.fileTypeDisplay}}, <span class="no-wrap">{{entry.fileSize}} kb</span></dd>
+						<dd class="meta-data">{{entry.enteredByName}}</dd>
+						<dd class="meta-data">{{entry.timestamp}}</dd>
+					</dl>
+				</div>
+
+				<!-- upload -->
+				<!-- FILE UPLOAD: paint all file attachments on the section -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="workitemAssistantUpload" class="file-uploader" ng-controller="workitemAssistantUploadCtrl" nv-file-drop="" uploader="uploader" filters="queueLimit" ng-show="fileattachments.length > 0">
+	<h4>Upload a File</h4>
+	<div id="wia_error_msg" class="alert alert-danger" style="display:none">
+		Please add a file and select document type.
+	</div>
+	<div id="wia_filesize_error_msg" class="alert alert-danger" style="display:none">
+		The attached file exceeds the allowed maximum size 10 MB.
+	</div>
+	<div id="wia_filevalidation_error_msg" class="alert alert-danger" style="display: none">
+		Your file could not be uploaded. The file format is not supported.
+	</div>
+	<div class="wip-button">
+		<span class="btn btn-primary fileinput-button">
+			<span>Add File</span> 
+			<input type="file" name="files[]" nv-file-select="" uploader="uploader" class="section_fileuploader" id="wia_upload_file"/>
+		</span>
+	</div>
+		
+	<div ng-show="uploader.showQueue()" class="upload-file-queue">
+		<div class="file-drop-zone" nv-file-over="" uploader="uploader">
+		
+			<div class="file-drop-instructions">			
+				<p>Drag file here</p>
+				<i class="fa"></i>
+			</div>
+		
+			<div class="file-drop-indicator" ng-repeat="item in uploader.queue">
+				<p class="file-name">{{ item.file.name }}</p>
+				<div class="file-progress" ng-show="uploader.isHTML5">
+					 <div class="progress">
+						  <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<p>
+		<span class="requiredField">*</span>
+		Document Type
+	</p>
+	<select class="form-control" ng-model="fileTypeCode" id="fileTypeCode">
+		<option ng-repeat="entry in filetypes" value="{{entry.value}}">{{entry.displayText}}</option>
+	</select>
+	<div class="wip-button">
+		<button type="button" class="btn btn-primary" ng-click="uploader.sendAll()">Upload</button>
+		<button type="button" class="btn btn-default" ng-click="uploader.clearAll()">Cancel</button>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--  ACTIVE USERS -->
+<!--  ACTIVE USERS -->
+
+
+
+<div class="panel panel-default wia-users">
+	
+	<div class="panel-heading collapsed" data-toggle="collapse" href="#workItemAssistant_activeUsers_section" aria-expanded="true" aria-controls="workItemAssistant_activeUsers_section" style="cursor:pointer">
+	
+		<h4 class="panel-title">
+			<span class="has-users"><i class="fa"></i></span>
+			{{activeusers.label}}
+		</h4>
+	</div>
+	<div class="panel-body wia-comments collapse" id="workItemAssistant_activeUsers_section">
+		<div id="workItemAssistant_activeUsers_container" class="wia-container panel-fixed-height">
+			<dl>
+				<dd id="workItemAssistant_activeUsers" ng-repeat="entry in activeusers.entries">
+					{{entry.userName}}
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+
+<!--  MODALS -->
+<!-- work item assistant resources -->
+
+
+
+
+
+
+<!-- document: enter/change file name -->
+<script type="text/ng-template" id="fileNameModal.html">
+	<div class="modal fade" id="file-name-document">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h2 class="modal-title">File Name</h2>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="newfilename">Enter file name</label>
+						<input type="text" class="form-control" id="newfilename" auto-focus="true" ng-model="filename" placeholder="Enter file name" />
+					</div> 
+					
+					<div class="button-row">
+						<button type="button" ng-click="close('save')"  ng-keypress="enter($event, 'save')" class="btn btn-primary" data-dismiss="modal" ng-disabled="filenNameEmpty()">Save</button>
+						<button type="button" ng-click="close()" ng-keypress="enter($event)" class="btn btn-default" data-dismiss="modal">Cancel</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- document: confirm deletion  -->
+<script type="text/ng-template" id="deleteFileConfirmModal.html">
+	<div class="modal fade" id="confirm-delete-document">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h2 class
+633
+="modal-title">Delete File</h2>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to delete this file?</p>
+					<div class="button-row">
+						<button type="button" ng-click="close('delete')" auto-focus="true" ng-keypress="enter($event, 'delete')" class="btn btn-primary" data-dismiss="modal">Yes</button>
+						<button type="button" ng-click="close()" ng-keypress="enter($event)" class="btn btn-default" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- document: confirm deletion  -->
+<script type="text/ng-template" id="deleteCommentConfirmModal.html">
+	<div class="modal fade" id="confirm-delete-document">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h2 class="modal-title">Delete Comment</h2>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to delete this comment?</p>
+					<div class="button-row">
+						<button type="button" ng-click="close('delete')"  auto-focus="true"  ng-keypress="enter($event, 'delete')" class="btn btn-primary" data-dismiss="modal">Yes</button>
+						<button type="button" ng-click="close()" ng-keypress="enter($event)" class="btn btn-default" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+</div>
+
+
+
+
+		</div>
+		
+		
+		
+		<!-- snippet container -->
+		
+		<!-- snippet container -->
+		
+	</div>
+</div>
+
+
+656
+
+
+
+
+
+
+
+
+
+
+<footer>
+	<div class="container">	
+		<div class="footer-main row">
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-about">
+				<a href=https://www.secura.net/terms-conditions.html target="_blank">
+				Terms of Use</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-important">
+				<a href=https://www.secura.net/privacy-policy.html target="_blank">
+				Privacy Policy</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-service">
+				<a href=https://agentlink.secura.net/AgenctLink/Home/ContactUs target="_blank">
+				Contact Us</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-contact">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a id="menu-entry-resources" title="Resources" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa"></i><span>Resources <b class="caret"></b></span></a>
+						<ul class="dropdown-menu">
+							<li><a id="menu-entry-online-store" href=https://securainsurance.four51ordercloud.com/Store/catalog target="_blank">Online Store</a></li>
+							<li><a id="menu-entry-comml-resources" href=https://agentlink.secura.net/clum/index.html target="_blank">Commercial Lines Resources</a></li>
+						</ul>
+					</li>					
+				</ul>
+			</div>
+		</div> <!-- /footer-main row -->
+		
+		<div class="footer-credit">
+			<p>
+				&copy; SECURA Insurance, All rights reserved
+			</p>
+		</div> <!-- /footer-credit -->	
+
+	</div> <!-- /footer container -->
+</footer>
+
+<script type="text/javascript">
+
+	
+	
+
+	page.initialize();
+</script>
+
+	
+		</div>
+		<!-- Idle Timer -->
+		
+			
+4b0
+
+
+
+
+
+
+
+
+<div class="modal fade" id="lb_idle_message" data-backdrop="static" role="dialog"  data-keyboard="false" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title">Are you still there?</h2></div>
+			<div class="modal-body">
+				<p>Your session will expire in <span id="timer">60</span>&nbsp;seconds.&nbsp;
+				Click Continue to return to your quote now.</p>
+				<div lass="button-row">
+				   <input name="continueButton" class="btn btn-primary continue" type="button" value="Continue"
+							onclick="ap.timer.continueWork();" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+		var ap = ap || {};
+
+		var idleTimeout =60;
+		var idleCountdownStart =1;
+		var timeout = (idleTimeout - idleCountdownStart) * 60 * 1000;
+
+		ap.timer = new ap.Timer({
+			id : 'timer',
+			countDownStart : idleCountdownStart
+		});
+
+		$.idleTimer(timeout);
+
+		$(document).bind("idle.idleTimer", function() {
+			ap.timer.start();
+		});
+	
+</script>
+
+		
+
+		
+		<script src="/AgencyPortal/assets/js/agencyportal-body.js" type="text/javascript"></script>
+	</body>
+</html>
+0
+

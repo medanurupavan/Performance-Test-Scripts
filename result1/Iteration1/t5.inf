@@ -1,0 +1,13 @@
+[t5]
+SnapshotXmlFile=snapshot_4.xml
+ContentType=text/html
+StepName=Url: Agency Portal
+Total=1
+FileName1=t5.html
+RequestHeaderFile=t5_RequestHeader.txt
+ResponseHeaderFile=t5_ResponseHeader.txt
+RawStepEndTime=1513346970451
+RawStepName=Agency Portal
+RequestBodyFile=t5_RequestBody.txt
+RawStepStartTime=1513346968518
+URL1=https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView

@@ -1,0 +1,11 @@
+[t63]
+FileName1=t63_custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/products/optionlistids/custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0?transaction_id=worklist&field_id=operator&page_id=worklistAdvancedSearch&CSRF_TOKEN=d61a9a2e55e5d556dfb1d8e507f289cf1390cb9b6cbb84d25b5c51f342f8bb3d
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_62.xml
+RequestHeaderFile=t63_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t63_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

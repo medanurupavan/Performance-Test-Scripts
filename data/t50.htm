@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<!-- site/site_shell.jsp-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>agencyportal</title>
+		<meta name="description" content="Agencyport Web Application V10.0">
+		<meta name="author" content="Agencyport">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+		<!--[if !IE]><!-->
+			<link href="/AgencyPortal/assets/themes/agencyportal/agencyportal.css" rel="stylesheet">
+		<!--<![endif]-->
+		<!--[if IE]>
+			<link href="/AgencyPortal/assets/themes/agencyportal/agencyportal-ie9.css" rel="stylesheet">
+			<link href="/AgencyPortal/assets/themes/agencyportal/agencyportal-ie9-blessed1.css" rel="stylesheet">
+		<![endif]-->
+              	  
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/AgencyPortal/assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/AgencyPortal/assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/AgencyPortal/assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="/AgencyPortal/assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="/AgencyPortal/assets/ico/favicon.ico">	
+	    
+		<script src="/AgencyPortal/assets/js/agencyportal.js" type="text/javascript"></script>
+		
+		<!-- i18n support -->
+		
+		
+		<script>
+	// inject inlined constants
+		var ap_locale = 'en';
+		var statuses = [];
+		
+				statuses.push(-101);
+		
+				statuses.push(-102);
+		
+				statuses.push(-103);
+		
+		angular.module('ap.common.constants', [])
+		.constant('csrf',{
+			'CSRF_TOKEN': '0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f' 
+		})
+		.constant('contextPath', '/AgencyPortal')
+		.constant('dateFormat', 'MM-dd-yyyy')
+		.constant('csrfObject', {'tokenobj' : {
+			'CSRF_TOKEN': '0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f' 
+		},
+		'csrftokenName': 'CSRF_TOKEN',
+		'csrftokenValue': '0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f'
+		})
+		.constant('securityErrorCodes', statuses)
+	</script>	
+	</head>
+	<body >
+	 
+		<div class="agencyportal-5">
+			<!--  Navigation Bar -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top main-menu" id="main-menu" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle Navigation</span> 
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a href="DisplayWorkInProgress?WorkListType=WorkItemsView" class="navbar-brand">agencyportal</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			 				
+				<ul class="nav navbar-nav navbar-right current-user">
+					<li class="dropdown">
+						<a id="menu-entry-current-user" title="Current User: LIZETH  GASTELUM" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa"></i><span>LIZETH  GASTELUM <b class="caret"></b></span></a>
+						<ul class="dropdown-menu">
+							<li><a id="menu-entry-logout" href="ProcessLogoff">Log Out</a></li>
+						</ul>
+					</li>					
+				</ul>
+												
+				<ul class="nav navbar-nav navbar-right get-started">
+					<li class="dropdown">
+						<a id="menu-entry-get-started" title="Get Started" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa"></i><span>Get Started<b class="caret"></b></span></a>
+						<ul class="dropdown-menu">
+							 							
+								<li><a id="menu-entry-get-started-upload" href="javascript:ap.turnstileWidget.launchUploadWidget();">Prefill from an ACORD Form<span id="upload-status-count" class="badge"></span></a></li>							
+							
+						
+							
+						
+							<li class="divider" role="presentation"></li>
+							<li class="dropdown-header" role="presentation"><span>Policy Application</span></li>	
+							
+								<li><a href="FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=autob&FIRST_TIME=true&METHOD=Display&rnd=0.5647988056547506&CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f">Commercial Auto</a></li>
+							
+								<li><a href="FrontServlet?PAGE_NAME=generalInfoCPP&TRANSACTION_NAME=cpp&FIRST_TIME=true&METHOD=Display&rnd=0.14490357658227782&CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f">Commercial Package</a></li>
+							
+								<li><a href="FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=workersComp&FIRST_TIME=true&METHOD=Display&rnd=0.08439428210624511&CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f">Workers Comp</a></li>
+							
+						</ul>
+					</li>					
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+		<li class="home">
+		<a id="home" href="DisplayHomePage" title="Home"><i class="fa"></i><span>Home</span></a>
+	</li>
+	<li class="my-work">
+		<a id="my-work" href="DisplayWorkInProgress?WorkListType=WorkItemsView" title="My Work"><i class="fa"></i><span>My Work</span></a>
+	</li>
+	<li class="my-accounts">
+		<a id="my-accounts" href="DisplayWorkInProgress?WorkListType=AccountsView" title="My Accounts"><i class="fa"></i><span>My Accounts</span></a>
+	</li>
+</ul>
+	
+															
+			
+		</div>
+	<!-- /.navbar-collapse -->
+		<div class="navbar-colorbar">&nbsp;</div>
+	</div>
+</div>
+<script type="text/javascript" language="javascript">
+	var url = window.location.href
+	$(".navbar-nav").find(".active").removeClass("active");
+	 $(".navbar-nav a").each(function(index){
+		 if(url.indexOf($(this).attr('href'))>0){
+			 $(this).parent().addClass("active");
+		 }
+	});
+ </script>
+ 
+ 
+ 			<!-- Global turnstile widget. -->
+		
+
+
+
+
+
+
+
+
+
+
+
+		<div class="modal fade" data-backdrop="static" data-keyboard="false" id="turnstile-upload-widget" 
+				tabindex="-1" role="dialog" aria-labelledby="Turnstile Files Selector" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Close this window">&times;</button>
+						<h2 class="modal-title">Upload Forms</h2>
+					</div>
+					<div class="modal-body">
+						<ul class="nav nav-tabs" id="upload-tabs">
+							<li class="active"><a href="#turnstile-files-selector" data-toggle="tab">New</a></li>
+							<li><a href="#turnstile-file-upload-status" data-toggle="tab">In Progress</a></li>
+						</ul>
+						<div class="tab-content" >
+							<div class="turnstile-files-selector tab-pane fade in active" id="turnstile-files-selector">
+								<p>Please select the ACORD forms you would like to upload. File types supported are .pdf, .tif, .tiff and .zip.</p>
+								<div id="file-uploader-widget" class="file-uploader-widget">
+	<div class="upload-file-queue">
+		<div uploader="uploader" class="file-drop-zone" id="turnstile-files-selector">
+			<div class="file-drop-instructions">			
+				<p>Drag file here</p>
+				<i class="fa"></i>
+			</div>
+		</div>
+	</div>
+	
+	<div class="turnstile-file-upload-list">
+		<table class="table table-striped">
+			<tbody id="fileupload-file-listing">
+	
+			</tbody>
+		</table>
+	</div>
+	<span class="btn btn-default fileinput-button add-files">
+		<span>Add Files</span> 
+		<input type="file" name="files[]" multiple id="fileupload_blueimp"/>
+	</span>
+	
+	<button type="submit" class="btn btn-primary start">
+		<span>Start Upload</span>
+	</button>
+</div>
+							</div>
+							<div class="tab-pane fade turnstile-file-upload-status" id="turnstile-file-upload-status">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>File</th>
+											<th>Date&#47;Time</th>
+											<th>Status</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody id="turnstile-report-table">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+
+
+
+
+
+
+
+
+<div class="modal" data-backdrop="static" data-keyboard="false" id="turnstile-lob-selector" 
+	tabindex="-1" role="dialog" aria-labelledby="Turnstile LOB Selector" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Upload Forms</h2>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger" id="lob-validation-message" style="display: none;">
+				</div>
+				<p>What lines of business do you want to quote?</p>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="list-group" id="forms-list"></div>
+						<div class="list-group" id="error-forms-list"></div>
+						<div class="list-group" id="unknown-forms-list"></div>
+					</div>
+					<div class="col-xs-6">
+						<div class="list-group" id="turnstile-transaction-list">
+							<div class="list-group-item">
+								<h4 class="list-group-item-heading">Lines of Business</h4>
+							</div>
+							
+								<div class="list-group-item">
+									<div class="checkbox">
+										<label> <input type="checkbox" name="transactions"
+											value="AUTOB"> Commercial Auto
+										</label>
+									</div>
+								</div>
+							
+								<div class="list-group-item">
+									<div class="checkbox">
+										<label> <input type="checkbox" name="transactions"
+											value="CPKGE"> Commercial Package
+										</label>
+									</div>
+								</div>
+							
+								<div class="list-group-item">
+									<div class="checkbox">
+										<label> <input type="checkbox" name="transactions"
+											value="WORK"> Workers Comp
+										</label>
+									</div>
+								</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="button-row">
+					<button type="button" class="btn btn-primary continue">Continue</button> 
+					<button type="button" class="btn btn-default cancel" data-dismiss="modal">Back</button>
+					<input type="hidden" id="turnstile-stage-guid" value="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			
+<div class="modal " id="turnstile-workitem-selector" tabindex="-1" role="dialog" aria-labelledby="Turnstile LOB Selector" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Upload Forms</h2>
+			</div>
+			<div class="modal-body" id="turnstile-processed-workitems">
+				<p id="turnstile-processed-message"> 
+					We have created the following work items from your forms.
+				</p>
+ 				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>LOB</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="turnstile-processed-lob-listing">
+			
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>			
+		
+
+
+
+<div class="modal" data-backdrop="static" data-keyboard="false" id="turnstile-account-selector" 
+	tabindex="-1" role="dialog" aria-labelledby="Turnstile LOB Selector" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Upload Forms</h2>
+			</div>
+			<div class="modal-body">
+				<p>What account is this for?</p> 			
+				<div class="form-group">
+					<button type="button" class="btn btn-primary no-account"  onclick="javascript:ap.turnstileWidget.continueWithoutAccount();"><span class="pull-left">No Account</span></button>
+					<button type="button" class="btn btn-primary new-account"  onclick="javascript:ap.turnstileWidget.createWorkItemsAndAccount();" data-dismiss="modal"><span class="pull-left">New Account</span></button>
+					<button type="button" class="btn btn-primary account-search-button"  data-toggle="button" autocomplete="off"><span  class="pull-left">Search for an Account</span> </button>
+				</div>
+				
+				<div id="turnstile-account-search" class="turnstile-account-search accounts-search-modal-results hidden">
+					<h4>Search for an Account</h4>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder='Search for an account by name (3 character minimum)' name="autocomplete_parameter" id="turnstile-account-search-input" >
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" id="turnstile-account-search-button" ><span><i class="fa fa-search"></i></span></button>
+								</span>
+							</div><!-- /input-group -->
+						</div><!-- /.col-lg-8 -->
+					</div><!-- /.row -->						
+
+					<div class="row">
+						<div class="col-lg-12 " id="turnstile-account-search-results-listing"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<!-- Modal -->
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="turnstile-error-modal" 
+	tabindex="-1" role="dialog" aria-labelledby="turnstile-error-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Error Occurred</h2>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+
+<script type="text/javascript">
+	var ap = ap || {};
+	ap.environment = ap.environment || {}; // Global environment variable store.
+	
+	ap.environment.isAccountManagementFeatureOn = true; 
+	ap.environment.isTurnstileEnabled = true; 
+	
+</script>
+ 
+ 		
+ 
+		
+			<!-- Page Body (Editable Content) -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Adding core_prompts resource bundles for JavaScript use -->
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script format -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var core_prompts={"action.Revert.UploadTitle.1":"Upload Not Available","menu.Name.My_Work":"My Work","action.MaxNumberOfItemsReached":"The maximum number of items has been reached. ${0}","action.MaxNumberOfItemsReached.2":"You must delete at least one entry before making a copy of this item.","action.MaxNumberOfItemsReached.1":"You must delete at least one entry before this item can be restored.","menu.get.started.policyapp":"Policy Application","menu.wi.Description.MyDefaults.Help":"Learn more about how to use defaults","header.Title.404.header":"Page Not Found","action.Go":"Get started today","helpText.roster.HelpWithThisList.Key":"Key:","message.Turnstile.Account.Others":"Others","action.UploadMessage.CorrectedFormatMask.tooltip":"There Was a Problem Uploading this Field.","action.UploadMessage.Corrected.icon":"fa-check-circle-o","action.Error":"Error","header.Title.Success":"Upload was a success!","message.Turnstile.Account.Other":"Other","header.WorkList.LastUpdatedDate":"Last Updated Date","label.Quotes":"Quotes","action.ClickHereToContinue":"Click here to continue","label.Footer.SleeperStreet":"51 Sleeper Street","action.Back":"Back","menu.wi.Name.Upload.Help":"Help","menu.wi.Name.Upload":"Upload","label.or":"or","action.Close":"Close","label.Queue.Name":"Name","label.Footer.AgencyAppointments":"Agency appointments","menu.wi.Name.MyDefaults.Manage":"Manage","label.FileSelector.StartUpload":"Start Upload","label.FileDetails.Status":"Status","action.UploadMessage.RevertMessage.icon":"fa-undo","header.WorkList.LOB":"LOB","action.Delete":"Delete","message.Override.System.Value":"This value has been overridden. The original ${0} was ${1}.","label.Footer.ContactUs":"Contact Us","action.ClickHereToAddTitle":"Click Here to add ${0}","action.ClickHereToAddAccountLocation":"Choose locations from account","action.UploadMessage.AttentionRequired.tooltip":"There Was a Problem Uploading this Field.","action.UploadMessage.RevertMessage":"The value of this field has changed since it was uploaded. The original value was: ${0}","menu.get.started.quickquote":"Quick Quote","action.Revert.Description":"Click Here to Undo Changes.","menu.Name.ToggleNavigation":"Toggle Navigation","label.Footer.Telephone":"(123) 456-7890","action.ClickToRecoverThisItemTitle":"Click to un-delete this item","timepicker.hour":"Hour","prompt.Template.FixErrors":"Please fix errors before uploading.","action.MoreActions":"More Actions...","action.Continue":"Continue","label.Queue.Effective":"Effective","message.batch.success":"Update was successful","header.WorkList.ID":"ID","message.Turnstile.FileType":"Please select the ACORD forms you would like to upload. File types supported are .pdf, .tif, .tiff and .zip.","menu.wi.Name.MyDefaults":"My Defaults","label.WaitingforUnderwriter":"Waiting for Underwriter","head.Title.Agencyportal":"agencyportal","label.Footer.AboutOurCompany":"About Our Company","label.Footer.PrivacyPolicy":"Privacy Policy","menu.wi.title.AccountReferenceNum.Short":"Account # ${0}","header.Title.PagesNotRecognized":"Pages Not Recognized","action.Next":"Next","action.UploadMessage.Corrected.tooltip":"There Was a Problem Uploading this Field.","label.Queue.Days":"days","timepicker.minute":"Minute","menu.wi.Description.Upload.Help":"Help with Upload","message.WorkItemLockedByOtherUser":"It is locked by another user.","menu.wi.title.timeline.ReferenceNum.Long":"About Reference # ${0} for ${1}","menu.wi.Description.Corrections.Help":"Help with Corrections","header.Title.FormsNotProcessed":"Forms Not Processed","action.FinishedMakingChanges":"Finished Making Changes","message.Turnstile.message.submittedUnSuccesfulNoAccount":"All LOB uploads have failed. Please try again later. ","label.Footer.TermsAndConditions":"Terms and Conditions","header.Title.WhatAreYouLookingFor":"Oops! What are you looking for?","label.GetStarted":"Get Started","action.Clear":"Clear","action.UploadMessage.MismatchSelectListOptional.tooltip":"There Was a Problem Uploading this Field.","action.Open":"Open","action.Logout":"Log Out","label.Footer.PressRelease":"Press Release","action.UploadMessage.OriginalValueDropped":"Original Value was dropped. The original value was ${0}. ","action.Add":"Add","menu.wi.Name.UploadNow":"Upload Now","action.Actions":"Actions","header.Title.UploadForms":"Upload Forms","label.Underwriter":"Underwriter","menu.wi.Name.Corrections.ReviewAutomaticCorrections":"Review Automatic Corrections","header.Legend.TurnstilePolicyUpload":"Turnstile Policy Upload","helpText.roster.HelpWithThisList.NeedsVisiting":"Items displayed in this style require your attention. Click the 'edit' link beside them.","menu.wi.title.ReferenceNum.Long":"${0} - ${1}","action.UploadMessage.InvalidDataUploaded":"Invalid data uploaded. The original value was ${0}. ","label.TurnstileError.ErrorOccured":"Error Occurred","label.FileDetails.Actions":"Actions","label.Footer.DocumentLibrary":"Document Library","alert.heading.info":"Informational","head.Title.AgencyPortal":"AgencyPortal","label.ListItem.InProgress":"In Progress","action.ConvertToMonolines":"Split All","message.Turnstile.message.submittedUnSuccesfulToAccount":"All LOB uploads have failed. Please try again later. Account:","action.UploadMessage.AttentionRequired":"${0}","action.ConvertToAutop":"Convert To Autop","menu.get.started.upload":"Prefill from an ACORD Form","menu.wi.title.timeline.ReferenceNum.Short":"About Reference # ${0}","label.Footer.SubmitAClaim":"Submit A Claim","message.Turnstile.Account.Select":"Select","header.WorkList.Name":"Name","action.ClickHereToAddTitle.AccessKey.Default":"[alt-a]","action.UploadMessage.tooltipsEnabled":"false","label.Footer.Agencyport":"Agencyport","action.ClickToViewThisItemTitle":"Click to view this item","message.roster.CannotRecover":"Items in this list cannot be recovered once they have been deleted.","message.session.header":"Are you still there?","label.FileSelector.AddFile":"Add File","action.Convert.Confirm.QQWillBeConvertedConfirm":"Convert to Full Application","label.Template.NoUploadForms":"There are no uploaded forms at this time.","alert.heading.warning":"Warning","action.ClickToEditThisItemTitle":"Click to edit this item","prompt.Transaction.WhatLOB":"What lines of business do you want to quote?","header.WorkList.Premium":"Premium","menu.wi.Description.Corrections.ReviewAutomaticCorrections":"Review changes made automatically to this submission","header.Footer.AboutUs":"About Us","message.batch.error":"Update failed - ","action.SaveAndReturnToAccount":"Save and Return","action.UploadMessage.OriginalValueDropped.icon":"fa-ban","action.ClickHereToAddTitle.AccessKey.WebKit.Mac":"[ctrl-alt-a]","action.UploadMessage.AttentionRequired.icon":"fa-ban","menu.wi.Description.MyDefaults.Manage":"Manage your preset defaults","header.Title.UploadFrom":"Upload from ","title.autosave":"Auto Saved","action.ClickHereToAddTitle.AccessKey.Gecko":"[shift-alt-a]","action.Last":"Last","action.UploadMessage.OriginalValueDropped.tooltip":"There Was a Problem Uploading this Field.","menu.wi.Description.Upload.SourceSystemInfo":"About this Upload","label.FileDetails.DateTime":"Date/Time","helpText.roster.HelpWithThisList.WasAdded":"Items displayed in this style have been added.","label.Agent":"Agent","action.View":"View","message.Turnstile.message.submittedSuccesfulToAccount":"Your forms have been submitted successfully to the account","action.Previous":"Previous","helpText.roster.HelpWithThisList.HasChanged":"Items displayed in this style have been changed.","label.Footer.TermsOfUse":"Terms of Use","action.UploadMessage.Default.tooltip":"There Was a Problem Uploading this Field.","label.FileSelector.AddFiles":"Add Files","upload.blank.orginal.value":"blank","action.UploadMessage.SubcategoriesEnabled":"true","message.PleaseWait":"Please Wait...","label.Transaction.Number":"#","action.First":"First","prompt.AccountSelector.WhatAccount":"What account is this for?","action.UploadMessage.MismatchSelectListRequired.icon":"fa-ban","label.Footer.ContactUnderwriter":"Contact your Underwriter","label.Footer.CareerCenter":"Career Center","menu.Name.Settings":"Settings","action.ClickToDeleteThisItemTitle":"Click to delete this item","action.UploadMessage.CorrectedFormatMask":"The value of this field has been changed since it was uploaded as it does not conform to the field format. The original value was ${0}.","action.Recover":"Recover","menu.get.started":"Get Started","menu.Description.Users":"Users","menu.wi.Name.Upload.SourceSystemInfo":"Source System Info","message.WIA.FileRequired":"File is required.","action.ConvertToPackage":"Convert To Package","prompt.Template.SelectAFile":"Please select at least one file.","alt.FileAttachments.ViewPrint":"View/Print ${0}","menu.wi.Description.MyDefaults.ApplyToThisSubmission":"Apply your preset default values to this work item","label.Footer.Boston":"Boston MA 02212","message.WIA.DocTypeRequired":"Document type is required.","action.SaveAndExit":"Save and Exit","menu.Description.Home":"Home","timepicker.am":"AM","message.DenotesRequiredField":"Denotes Required Fields","helpText.roster.HelpWithThisList":"Help with this List","menu.wi.name.move":"Move","label.Footer.MeetOurTeam":"Meet our Team","header.WorkList.EffectiveDate":"Effective Date","action.SaveToDefaults":"Save To Defaults","action.UploadMessage.OriginalValueTooLong.icon":"fa-ban","action.UploadMessage.Default":"${0}","message.session.expire":"Your session will expire in","label.MostRecent":"Most Recent","message.Template.UploadHandlerElementNotDefined":"Upload Handler Element not defined.","message.404":"This file may have been moved, renamed or deleted. To find what you're looking for: go back to the referring page, jump to our home page, or try our Search.","helpText.roster.HelpWithThisList.Header":"This list shows the ${0} that have been entered for this application. Click the link below the list, or press the ${1}alt${2} and ${3}a${4} keys to add a new item.","action.DeleteConfirmQuestion":"Are you sure you want to delete this item?","message.Turnstile.message.submittedSuccesfulToAccountWithError":"Your forms have been submitted. Some LOBs have failed please review below. Account:","menu.Name.Users":"Users","action.UploadMessage.AttentionNotRequired.tooltip":"There Was a Problem Uploading this Field.","action.Yes":"Yes","menu.wi.Description.MyDefaults.AvailableFields":"List the fields for which default values can be saved","head.Title.404":"404","label.Transaction.UploadForms":"Upload Forms","action.No":"No","message.session.expire1":"Click Continue to return to your quote now.","action.ConvertToHome":"Convert To Home","label.Template.ViewAccount":"View Account.","header.Title.FormsProcesses":"Forms Processed","label.ListItem.New":"New","modal.confirmation.button.yes":"Yes","menu.wi.name.timeline":"History","action.UploadMessage.AttentionNotRequired":"${0}","menu.wi.Name.MyDefaults.AvailableFields":"Available Fields","helpText.roster.HelpWithThisList.Normal":"Items are normally displayed in the list without special formatting.","message.roster.TooMany":"The configured maximum of ${0} item(s) has been exceeded. You will need to delete ${1} item(s) before continuing.","menu.Name.Agencyportal":"agencyportal","menu.Description.Settings":"Settings","action.FileAttachments.View":"View ${0}   -   ${1}","modal.confirmation.button.no":"No","action.UploadMessage.MismatchSelectListRequired":"There was not a perfect match between what was uploaded from your agency  management system (${0}) and the options in the list. Please make another selection.","header.ProblemWithRequest":"Oops! There Was a Problem Processing Your Request...","action.Ok":"Ok","action.UploadMessage.Default.icon":"fa-ban","action.AddNew":"Add New","label.Account.ShowingAllWorkItems":"Showing All Work Items","message.GoHome":"Go Home","label.Footer.UnderwritingGuidelines":"Underwriting guidelines","message.ReadOnly":"This screen is read-only and cannot be updated.","action.ClickToMakeCopyTitle":"Click to make a copy of this item","action.UploadMessage.InvalidDataUploaded.icon":"fa-ban","timepicker.pm":"PM","label.Footer.ExploreOurPortfolio":"Explore Our Portfolio","action.UploadMessage.FormatMaskInvalid.tooltip":"There Was a Problem Uploading this Field.","message.Turnstile.message.submittedSuccesfulNoAccount":"Your forms have been submitted successfully","legend.FileAttachments.Attachments":"Attachments","label.Footer.RightsReserved":"SECURA Insurance, All rights reserved","label.Footer.GetInTouch":"Get in touch with us","label.Footer.AgencyAgreements":"Agency Agreements","action.Edit":"Edit","action.ConvertToApplication":"Convert to Application","action.UploadMessage.MismatchSelectListRequired.tooltip":"There Was a Problem Uploading this Field.","menu.Description.Toolkit":"Toolkit","header.Title.SearchForAccount":"Search for an Account","action.Help":"Help","action.UploadMessage.OriginalValueTooLong":"The value of this field does not conform to the field format and requires correction. The original value was ${0}.","message.Transaction.CreatedItems":"We have created the following work items from your forms","action.Cancel":"Cancel","header.Footer.Service":"Service","action.AddFromAccount":"Add From Account","menu.wi.title.ReferenceNum.Short":"${0}","prompt.Template.SelectLOB":"Please select at least one Line of Business.","label.Footer.Email":"email@agencyport.com","action.Confirm.ExitTitle":"There are unsaved changes on this page.","action.Assign":"Assign","message.Turnstile.message.submittedSuccesfulNoAccountWithError":"Your forms have been submitted. Some LOBs have failed please review below.","message.Template.ErrorOccuredDuringUpload":"An error has occurred during upload. Please try again later.","menu.wi.Name.MyDefaults.Help":"Help","action.UploadMessage.CorrectedFormatMask.icon":"fa-check-circle-o","label.PolicyUpload.FileName":"File Name","action.ToggleExtendedError":"Toggle Extended Technical Error Information","header.Footer.Contact":"Contact","action.ClickHereToAddAccountEntity":"Choose Entities from account","header.Footer.Important":"Important","alert.heading.error":"Error","message.ApplicationNavigationError":"Application navigation error - use the brower's back button to return.","action.UploadMessage.AttentionNotRequired.icon":"fa-ban","header.WorkList.Status":"Status","action.UploadMessage.MismatchSelectListOptional.icon":"fa-ban","label.Footer.OurServices":"Our Services","label.Queue.Status":"Status","label.Transaction.LOB":"LOB","action.UploadMessage.FormatMaskInvalid.icon":"fa-ban","message.roster.ForceView":"There are items in the list that must be edited before continuing.","action.ClickHereToAddTitle.AccessKey.Gecko.Mac":"[ctrl-a]","action.Open.Account":"Open Account","label.Footer.Resources":"Resources","header.WorkList.TransactionType":"Transaction Type","menu.wi.Name.Corrections.Help":"Help","label.GetStartedWithUpload":"Get started with a new upload:","action.ClickHereToAddTitle.AccessKey.Opera":"[shift-esc a]","action.Copy":"Copy","label.Queue":"Queue","message.roster.TooFew":"At least ${0} item(s) are required before continuing.","action.UploadMessage.MismatchSelectListOptional":"There was not a perfect match between what was uploaded from your agency  management system (${0}) and the options in the list. Please make another selection.","menu.wi.Name.Corrections":"Corrections","message.ApplicationNavigationErrorHeader":"Oops!","menu.Name.Toolkit":"Toolkit","action.UploadMessage.RevertMessage.tooltip":"There Was a Problem Uploading this Field.","action.Confirm.ExitQuestion":"Leave Anyway?","menu.wi.Name.MyDefaults.ApplyToThisSubmission":"Apply to this Submission","action.UploadMessage.Corrected":"The value of this field has been automatically corrected since it was uploaded. The original value was ${0}. ","action.OtherActions":"Other Actions","action.UploadMessage.InvalidDataUploaded.tooltip":"There Was a Problem Uploading this Field.","action.Save":"Save","helpText.roster.HelpWithThisList.WasDeleted":"Items that have been deleted appear in this format. ${0}Click the 'recover' link beside them to put them back.${1}","header.WorkList.Complete":"Complete","menu.Description.My_Work":"My Work","menu.Name.Home":"Home","label.FileDetails.File":"File","action.CorrectError":"Click edit to correct the error with this item.","action.UploadMessage.FormatMaskInvalid":"The value of this field does not conform to the field format and requires correction. The original value was ${0}.","message.Convert.JustConverted.QQWasConverted.1":"Convert to Full Application","action.Convert.Confirm.QQWillBeConvertedTitle":"Are you sure you want to convert this quick quote?.","message.Convert.JustConverted.QQWasConverted.2":"The conversion was successful. Additional fields required to complete the application have been added to the screens."}
+ap.core_prompts=core_prompts;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script format -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var worklist={"action.Filter":"Filter","action.WorkItem.canAssign":"Assign","worklist.label.search":"Search","header.Title.AssignThisWorkItem":"Assign This Work Item","operator.WorkList.Before":"before","title.datatype.TIME.opCode.NOT_EQUAL":"not on","action.WorkItem.canCopy":"Copy","action.filter.delete":"Are you sure you want to delete this saved filter?","title.filter.delete":"Delete Saved Filter","worklist.label.filter.sortby":"Sort By:","account.management.header.workitems.unassigned":"Unassigned Workitems","label.Assignee":"Assignee Login Id","date.WorkList.save.accordion.title":"Saved Filters","message.WorkList.approve":"Are you sure you want to approve this work item?","worklist.label.filter.effective.date.to":"To","header.Title.DeleteThisWorkItem":"Delete Work Item","action.WorkList.delete":"Delete","action.Delete":"Delete","worklist.label.filter.clear":"Clear All","action.WorkList.selectOperator":"Please select operator","title.datatype.INTEGER.opCode.GREATER_THAN":"greater than","header.Title.SelectLOB":"Select Line Of Business","date.WorkList.save.dialog":"Save filter as:","title.datatype.DATE.opCode.GREATER_THAN":"after","message.Assignee.IsNull":"Assignee Was Null","title.datatype.TIME.opCode.LESS_THAN":"before","toggle.Filter.TransactionType":"Transaction Type","worklist.label.effectiveDate":"Effective Date","title.datatype.LOB.opCode.NOT_EQUAL":"not equal","modal.confirmation.button.yes":"Yes","label.WorkItems":"Work Item(s)","action.WorkList.select":"Select","worklist.label.save":"Save","title.datatype.TIME.opCode.BETWEEN":"between","actions.link.workitem.hover":"This work item is not assigned to an account.","title.datatype.INTEGER.opCode.LESS_THAN":"less than","modal.confirmation.button.no":"No","action.AddNewWorkItem":"Add New Work Item","worklist.label.searchResults.ShowingAllWorkItems":"Showing All Work Items","action.Next":"Next","label.WorkList.Premium":"Premium:","action.WorkList.clear":"Clear","toggle.Filter.Status":"Status","title.datatype.DATE.opCode.EQUALS":"on","title.datatype.INTEGER.opCode.BETWEEN":"between","operator.WorkList.Equals":"equals","date.WorkList.save.error":"Please enter a filter name before saving.","action.Transaction":"Transaction","title.datatype.DECIMAL.opCode.NOT_EQUAL":"not equal","action.WorkItem.canConfirm":"Are you sure you want to delete this work item?","action.Open":"Open","title.datatype.STATUS.opCode.NOT_EQUAL":"not equal","operator.WorkList.Between":"between","title.datatype.DECIMAL.opCode.LESS_THAN":"less than","date.WorkList.filter.prefix":"Now Viewing:","action.UploadForm":"Upload Form","message.WorkList.delete":"Are you sure you want to delete this work item?","toggle.WorkList.tiles":"Modern View","title.datatype.DATE.opCode.LESS_THAN":"before","worklist.label.filter.effective.date.between":"From","title.datatype.STRING.opCode.NOT_EQUAL":"not equal","title.datatype.STATUS.opCode.EQUALS":"equals","worklist.label.searchPlaceHolder":"Search for a customer by name (3 character minimum)","action.StartNewItem":"Start a New Item","label.WorkList.EffectiveOn":"Effective On","header.Title.AddWorkItemForLOB":"Get Started With","operator.WorkList.After":"after","account.management.pendingupload.locked":"This pending upload is currently locked by another user. Please try again later.","title.datatype.DECIMAL.opCode.GREATER_THAN":"greater than","title.datatype.TIME.opCode.GREATER_THAN":"after","operator.WorkList.Is":"is","title.datatype.STRING.opCode.CONTAINS":"contains","operator.WorkList.GreaterThan":"is greater than","title.datatype.INTEGER.opCode.NOT_EQUAL":"not equal","title.datatype.DECIMAL.opCode.BETWEEN":"between","action.WorkItem.canViewAccount":"View","action.WorkList.go":"Go","title.datatype.TIME.opCode.EQUALS":"on","header.Title.approveThisWorkItem":"Approve This Work Item","action.WorkItem.canDelete":"Delete","action.WorkItems.3":"3 Work Items","title.datatype.STRING.opCode.EQUALS":"equals","date.WorkList.row.range":"${0}-${1} of ${2}","title.datatype.DECIMAL.opCode.EQUALS":"equals","action.WorkList.search":"Search","action.PrefillAcordForm":"Prefill from an ACORD Form","worklist.label.filter.effective.date.on":"On","message.workitem_creation_error":"Fails to create this work item:","worklist.label.filter.saveas":"Save Filter As:","action.WorkItem.canApprove":"Approve","action.WorkList.close":"Close","action.lob":"LOB","message.Workitem_noaccount":"Link to an Account","action.WorkItem.canOpen":"Open","header.Title.EndorseThisWorkItem":"Endorse This Work Item","toggle.WorkList.table":"Classic View","account.management.pendingupload":"Get Started","worklist.label.filter.name.message":"Please enter a name.","operator.WorkList.On":"on","action.WorkList.save":"Save","action.WorkItem.canRenew":"Renew","action.StartNewWorkItem":"Start a New Work Item","operator.WorkList.Contains":"contains","action.Status":"Status","action.WorkItem.canEndorse":"Endorse","header.WorkItem.deleteThis":"Delete This Work Item","operator.WorkList.LessThan":"is less than","header.WorkItem.moveThis":"Move This Work Item","worklist.label.workItemId":"Work Item ID","worklist.label.filter.effective.date.after":"After","date.WorkList.filter.list":"Select a saved filter to execute:","title.datatype.DATE.opCode.BETWEEN":"between","worklist.label.filter.effective.date.before":"Before","title.datatype.LOB.opCode.EQUALS":"equals","title.datatype.DATE.opCode.NOT_EQUAL":"not on","title.datatype.INTEGER.opCode.EQUALS":"equals","message.WorkList.ApproveStatusError":"Fails to approve this work item","message.Assignee.Invalid":"Assignee is not a valid user in the system","action.WorkItem.canClaim":"Claim","toggle.Filter.LOB":"Line of Business"}
+ap.worklist=worklist;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+
+<!-- home/wip.jsp-->
+<!--@@apwebapp_specification_version@@-->
+
+
+
+
+
+	<!-- home/homeButtons.jsp-->
+<!--@@apwebapp_specification_version@@-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Adding core_prompts resource bundles for JavaScript use -->
+<!-- tags/page/ap_rb_loader.tag-->
+<!-- Loads resource bundle information into Java script format -->
+
+
+
+
+
+
+ 
+
+
+
+<script type="text/javascript">
+if(typeof(ap) == 'undefined') {
+    var ap ={};
+}
+
+var core_prompts={"action.Revert.UploadTitle.1":"Upload Not Available","menu.Name.My_Work":"My Work","action.MaxNumberOfItemsReached":"The maximum number of items has been reached. ${0}","action.MaxNumberOfItemsReached.2":"You must delete at least one entry before making a copy of this item.","action.MaxNumberOfItemsReached.1":"You must delete at least one entry before this item can be restored.","menu.get.started.policyapp":"Policy Application","menu.wi.Description.MyDefaults.Help":"Learn more about how to use defaults","header.Title.404.header":"Page Not Found","action.Go":"Get started today","helpText.roster.HelpWithThisList.Key":"Key:","message.Turnstile.Account.Others":"Others","action.UploadMessage.CorrectedFormatMask.tooltip":"There Was a Problem Uploading this Field.","action.UploadMessage.Corrected.icon":"fa-check-circle-o","action.Error":"Error","header.Title.Success":"Upload was a success!","message.Turnstile.Account.Other":"Other","header.WorkList.LastUpdatedDate":"Last Updated Date","label.Quotes":"Quotes","action.ClickHereToContinue":"Click here to continue","label.Footer.SleeperStreet":"51 Sleeper Street","action.Back":"Back","menu.wi.Name.Upload.Help":"Help","menu.wi.Name.Upload":"Upload","label.or":"or","action.Close":"Close","label.Queue.Name":"Name","label.Footer.AgencyAppointments":"Agency appointments","menu.wi.Name.MyDefaults.Manage":"Manage","label.FileSelector.StartUpload":"Start Upload","label.FileDetails.Status":"Status","action.UploadMessage.RevertMessage.icon":"fa-undo","header.WorkList.LOB":"LOB","action.Delete":"Delete","message.Override.System.Value":"This value has been overridden. The original ${0} was ${1}.","label.Footer.ContactUs":"Contact Us","action.ClickHereToAddTitle":"Click Here to add ${0}","action.ClickHereToAddAccountLocation":"Choose locations from account","action.UploadMessage.AttentionRequired.tooltip":"There Was a Problem Uploading this Field.","action.UploadMessage.RevertMessage":"The value of this field has changed since it was uploaded. The original value was: ${0}","menu.get.started.quickquote":"Quick Quote","action.Revert.Description":"Click Here to Undo Changes.","menu.Name.ToggleNavigation":"Toggle Navigation","label.Footer.Telephone":"(123) 456-7890","action.ClickToRecoverThisItemTitle":"Click to un-delete this item","timepicker.hour":"Hour","prompt.Template.FixErrors":"Please fix errors before uploading.","action.MoreActions":"More Actions...","action.Continue":"Continue","label.Queue.Effective":"Effective","message.batch.success":"Update was successful","header.WorkList.ID":"ID","message.Turnstile.FileType":"Please select the ACORD forms you would like to upload. File types supported are .pdf, .tif, .tiff and .zip.","menu.wi.Name.MyDefaults":"My Defaults","label.WaitingforUnderwriter":"Waiting for Underwriter","head.Title.Agencyportal":"agencyportal","label.Footer.AboutOurCompany":"About Our Company","label.Footer.PrivacyPolicy":"Privacy Policy","menu.wi.title.AccountReferenceNum.Short":"Account # ${0}","header.Title.PagesNotRecognized":"Pages Not Recognized","action.Next":"Next","action.UploadMessage.Corrected.tooltip":"There Was a Problem Uploading this Field.","label.Queue.Days":"days","timepicker.minute":"Minute","menu.wi.Description.Upload.Help":"Help with Upload","message.WorkItemLockedByOtherUser":"It is locked by another user.","menu.wi.title.timeline.ReferenceNum.Long":"About Reference # ${0} for ${1}","menu.wi.Description.Corrections.Help":"Help with Corrections","header.Title.FormsNotProcessed":"Forms Not Processed","action.FinishedMakingChanges":"Finished Making Changes","message.Turnstile.message.submittedUnSuccesfulNoAccount":"All LOB uploads have failed. Please try again later. ","label.Footer.TermsAndConditions":"Terms and Conditions","header.Title.WhatAreYouLookingFor":"Oops! What are you looking for?","label.GetStarted":"Get Started","action.Clear":"Clear","action.UploadMessage.MismatchSelectListOptional.tooltip":"There Was a Problem Uploading this Field.","action.Open":"Open","action.Logout":"Log Out","label.Footer.PressRelease":"Press Release","action.UploadMessage.OriginalValueDropped":"Original Value was dropped. The original value was ${0}. ","action.Add":"Add","menu.wi.Name.UploadNow":"Upload Now","action.Actions":"Actions","header.Title.UploadForms":"Upload Forms","label.Underwriter":"Underwriter","menu.wi.Name.Corrections.ReviewAutomaticCorrections":"Review Automatic Corrections","header.Legend.TurnstilePolicyUpload":"Turnstile Policy Upload","helpText.roster.HelpWithThisList.NeedsVisiting":"Items displayed in this style require your attention. Click the 'edit' link beside them.","menu.wi.title.ReferenceNum.Long":"${0} - ${1}","action.UploadMessage.InvalidDataUploaded":"Invalid data uploaded. The original value was ${0}. ","label.TurnstileError.ErrorOccured":"Error Occurred","label.FileDetails.Actions":"Actions","label.Footer.DocumentLibrary":"Document Library","alert.heading.info":"Informational","head.Title.AgencyPortal":"AgencyPortal","label.ListItem.InProgress":"In Progress","action.ConvertToMonolines":"Split All","message.Turnstile.message.submittedUnSuccesfulToAccount":"All LOB uploads have failed. Please try again later. Account:","action.UploadMessage.AttentionRequired":"${0}","action.ConvertToAutop":"Convert To Autop","menu.get.started.upload":"Prefill from an ACORD Form","menu.wi.title.timeline.ReferenceNum.Short":"About Reference # ${0}","label.Footer.SubmitAClaim":"Submit A Claim","message.Turnstile.Account.Select":"Select","header.WorkList.Name":"Name","action.ClickHereToAddTitle.AccessKey.Default":"[alt-a]","action.UploadMessage.tooltipsEnabled":"false","label.Footer.Agencyport":"Agencyport","action.ClickToViewThisItemTitle":"Click to view this item","message.roster.CannotRecover":"Items in this list cannot be recovered once they have been deleted.","message.session.header":"Are you still there?","label.FileSelector.AddFile":"Add File","action.Convert.Confirm.QQWillBeConvertedConfirm":"Convert to Full Application","label.Template.NoUploadForms":"There are no uploaded forms at this time.","alert.heading.warning":"Warning","action.ClickToEditThisItemTitle":"Click to edit this item","prompt.Transaction.WhatLOB":"What lines of business do you want to quote?","header.WorkList.Premium":"Premium","menu.wi.Description.Corrections.ReviewAutomaticCorrections":"Review changes made automatically to this submission","header.Footer.AboutUs":"About Us","message.batch.error":"Update failed - ","action.SaveAndReturnToAccount":"Save and Return","action.UploadMessage.OriginalValueDropped.icon":"fa-ban","action.ClickHereToAddTitle.AccessKey.WebKit.Mac":"[ctrl-alt-a]","action.UploadMessage.AttentionRequired.icon":"fa-ban","menu.wi.Description.MyDefaults.Manage":"Manage your preset defaults","header.Title.UploadFrom":"Upload from ","title.autosave":"Auto Saved","action.ClickHereToAddTitle.AccessKey.Gecko":"[shift-alt-a]","action.Last":"Last","action.UploadMessage.OriginalValueDropped.tooltip":"There Was a Problem Uploading this Field.","menu.wi.Description.Upload.SourceSystemInfo":"About this Upload","label.FileDetails.DateTime":"Date/Time","helpText.roster.HelpWithThisList.WasAdded":"Items displayed in this style have been added.","label.Agent":"Agent","action.View":"View","message.Turnstile.message.submittedSuccesfulToAccount":"Your forms have been submitted successfully to the account","action.Previous":"Previous","helpText.roster.HelpWithThisList.HasChanged":"Items displayed in this style have been changed.","label.Footer.TermsOfUse":"Terms of Use","action.UploadMessage.Default.tooltip":"There Was a Problem Uploading this Field.","label.FileSelector.AddFiles":"Add Files","upload.blank.orginal.value":"blank","action.UploadMessage.SubcategoriesEnabled":"true","message.PleaseWait":"Please Wait...","label.Transaction.Number":"#","action.First":"First","prompt.AccountSelector.WhatAccount":"What account is this for?","action.UploadMessage.MismatchSelectListRequired.icon":"fa-ban","label.Footer.ContactUnderwriter":"Contact your Underwriter","label.Footer.CareerCenter":"Career Center","menu.Name.Settings":"Settings","action.ClickToDeleteThisItemTitle":"Click to delete this item","action.UploadMessage.CorrectedFormatMask":"The value of this field has been changed since it was uploaded as it does not conform to the field format. The original value was ${0}.","action.Recover":"Recover","menu.get.started":"Get Started","menu.Description.Users":"Users","menu.wi.Name.Upload.SourceSystemInfo":"Source System Info","message.WIA.FileRequired":"File is required.","action.ConvertToPackage":"Convert To Package","prompt.Template.SelectAFile":"Please select at least one file.","alt.FileAttachments.ViewPrint":"View/Print ${0}","menu.wi.Description.MyDefaults.ApplyToThisSubmission":"Apply your preset default values to this work item","label.Footer.Boston":"Boston MA 02212","message.WIA.DocTypeRequired":"Document type is required.","action.SaveAndExit":"Save and Exit","menu.Description.Home":"Home","timepicker.am":"AM","message.DenotesRequiredField":"Denotes Required Fields","helpText.roster.HelpWithThisList":"Help with this List","menu.wi.name.move":"Move","label.Footer.MeetOurTeam":"Meet our Team","header.WorkList.EffectiveDate":"Effective Date","action.SaveToDefaults":"Save To Defaults","action.UploadMessage.OriginalValueTooLong.icon":"fa-ban","action.UploadMessage.Default":"${0}","message.session.expire":"Your session will expire in","label.MostRecent":"Most Recent","message.Template.UploadHandlerElementNotDefined":"Upload Handler Element not defined.","message.404":"This file may have been moved, renamed or deleted. To find what you're looking for: go back to the referring page, jump to our home page, or try our Search.","helpText.roster.HelpWithThisList.Header":"This list shows the ${0} that have been entered for this application. Click the link below the list, or press the ${1}alt${2} and ${3}a${4} keys to add a new item.","action.DeleteConfirmQuestion":"Are you sure you want to delete this item?","message.Turnstile.message.submittedSuccesfulToAccountWithError":"Your forms have been submitted. Some LOBs have failed please review below. Account:","menu.Name.Users":"Users","action.UploadMessage.AttentionNotRequired.tooltip":"There Was a Problem Uploading this Field.","action.Yes":"Yes","menu.wi.Description.MyDefaults.AvailableFields":"List the fields for which default values can be saved","head.Title.404":"404","label.Transaction.UploadForms":"Upload Forms","action.No":"No","message.session.expire1":"Click Continue to return to your quote now.","action.ConvertToHome":"Convert To Home","label.Template.ViewAccount":"View Account.","header.Title.FormsProcesses":"Forms Processed","label.ListItem.New":"New","modal.confirmation.button.yes":"Yes","menu.wi.name.timeline":"History","action.UploadMessage.AttentionNotRequired":"${0}","menu.wi.Name.MyDefaults.AvailableFields":"Available Fields","helpText.roster.HelpWithThisList.Normal":"Items are normally displayed in the list without special formatting.","message.roster.TooMany":"The configured maximum of ${0} item(s) has been exceeded. You will need to delete ${1} item(s) before continuing.","menu.Name.Agencyportal":"agencyportal","menu.Description.Settings":"Settings","action.FileAttachments.View":"View ${0}   -   ${1}","modal.confirmation.button.no":"No","action.UploadMessage.MismatchSelectListRequired":"There was not a perfect match between what was uploaded from your agency  management system (${0}) and the options in the list. Please make another selection.","header.ProblemWithRequest":"Oops! There Was a Problem Processing Your Request...","action.Ok":"Ok","action.UploadMessage.Default.icon":"fa-ban","action.AddNew":"Add New","label.Account.ShowingAllWorkItems":"Showing All Work Items","message.GoHome":"Go Home","label.Footer.UnderwritingGuidelines":"Underwriting guidelines","message.ReadOnly":"This screen is read-only and cannot be updated.","action.ClickToMakeCopyTitle":"Click to make a copy of this item","action.UploadMessage.InvalidDataUploaded.icon":"fa-ban","timepicker.pm":"PM","label.Footer.ExploreOurPortfolio":"Explore Our Portfolio","action.UploadMessage.FormatMaskInvalid.tooltip":"There Was a Problem Uploading this Field.","message.Turnstile.message.submittedSuccesfulNoAccount":"Your forms have been submitted successfully","legend.FileAttachments.Attachments":"Attachments","label.Footer.RightsReserved":"SECURA Insurance, All rights reserved","label.Footer.GetInTouch":"Get in touch with us","label.Footer.AgencyAgreements":"Agency Agreements","action.Edit":"Edit","action.ConvertToApplication":"Convert to Application","action.UploadMessage.MismatchSelectListRequired.tooltip":"There Was a Problem Uploading this Field.","menu.Description.Toolkit":"Toolkit","header.Title.SearchForAccount":"Search for an Account","action.Help":"Help","action.UploadMessage.OriginalValueTooLong":"The value of this field does not conform to the field format and requires correction. The original value was ${0}.","message.Transaction.CreatedItems":"We have created the following work items from your forms","action.Cancel":"Cancel","header.Footer.Service":"Service","action.AddFromAccount":"Add From Account","menu.wi.title.ReferenceNum.Short":"${0}","prompt.Template.SelectLOB":"Please select at least one Line of Business.","label.Footer.Email":"email@agencyport.com","action.Confirm.ExitTitle":"There are unsaved changes on this page.","action.Assign":"Assign","message.Turnstile.message.submittedSuccesfulNoAccountWithError":"Your forms have been submitted. Some LOBs have failed please review below.","message.Template.ErrorOccuredDuringUpload":"An error has occurred during upload. Please try again later.","menu.wi.Name.MyDefaults.Help":"Help","action.UploadMessage.CorrectedFormatMask.icon":"fa-check-circle-o","label.PolicyUpload.FileName":"File Name","action.ToggleExtendedError":"Toggle Extended Technical Error Information","header.Footer.Contact":"Contact","action.ClickHereToAddAccountEntity":"Choose Entities from account","header.Footer.Important":"Important","alert.heading.error":"Error","message.ApplicationNavigationError":"Application navigation error - use the brower's back button to return.","action.UploadMessage.AttentionNotRequired.icon":"fa-ban","header.WorkList.Status":"Status","action.UploadMessage.MismatchSelectListOptional.icon":"fa-ban","label.Footer.OurServices":"Our Services","label.Queue.Status":"Status","label.Transaction.LOB":"LOB","action.UploadMessage.FormatMaskInvalid.icon":"fa-ban","message.roster.ForceView":"There are items in the list that must be edited before continuing.","action.ClickHereToAddTitle.AccessKey.Gecko.Mac":"[ctrl-a]","action.Open.Account":"Open Account","label.Footer.Resources":"Resources","header.WorkList.TransactionType":"Transaction Type","menu.wi.Name.Corrections.Help":"Help","label.GetStartedWithUpload":"Get started with a new upload:","action.ClickHereToAddTitle.AccessKey.Opera":"[shift-esc a]","action.Copy":"Copy","label.Queue":"Queue","message.roster.TooFew":"At least ${0} item(s) are required before continuing.","action.UploadMessage.MismatchSelectListOptional":"There was not a perfect match between what was uploaded from your agency  management system (${0}) and the options in the list. Please make another selection.","menu.wi.Name.Corrections":"Corrections","message.ApplicationNavigationErrorHeader":"Oops!","menu.Name.Toolkit":"Toolkit","action.UploadMessage.RevertMessage.tooltip":"There Was a Problem Uploading this Field.","action.Confirm.ExitQuestion":"Leave Anyway?","menu.wi.Name.MyDefaults.ApplyToThisSubmission":"Apply to this Submission","action.UploadMessage.Corrected":"The value of this field has been automatically corrected since it was uploaded. The original value was ${0}. ","action.OtherActions":"Other Actions","action.UploadMessage.InvalidDataUploaded.tooltip":"There Was a Problem Uploading this Field.","action.Save":"Save","helpText.roster.HelpWithThisList.WasDeleted":"Items that have been deleted appear in this format. ${0}Click the 'recover' link beside them to put them back.${1}","header.WorkList.Complete":"Complete","menu.Description.My_Work":"My Work","menu.Name.Home":"Home","label.FileDetails.File":"File","action.CorrectError":"Click edit to correct the error with this item.","action.UploadMessage.FormatMaskInvalid":"The value of this field does not conform to the field format and requires correction. The original value was ${0}.","message.Convert.JustConverted.QQWasConverted.1":"Convert to Full Application","action.Convert.Confirm.QQWillBeConvertedTitle":"Are you sure you want to convert this quick quote?.","message.Convert.JustConverted.QQWasConverted.2":"The conversion was successful. Additional fields required to complete the application have been added to the screens."}
+ap.core_prompts=core_prompts;</script>
+
+
+<!-- END tags/page/ap_rb_loader.tag-->
+
+
+<div class="home-page">
+	<section class="get-started">
+		<div class="container">
+			<h3 class="header">Get Started</h3>
+			<div class="row lines-of-business animated fadeIn">
+			
+				
+				<div class="col-xs-12 col-sm-6 col-lg-2">
+					<a href="FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=autob&FIRST_TIME=true&METHOD=Display&rnd=0.11511271667887457&CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f">
+						<div class="line-of-business commercial-auto">
+							<div class="hover-color"></div>		
+							<div class="caption">
+								<h4>Commercial Auto</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			
+				
+				<div class="col-xs-12 col-sm-6 col-lg-2">
+					<a href="FrontServlet?PAGE_NAME=generalInfoCPP&TRANSACTION_NAME=cpp&FIRST_TIME=true&METHOD=Display&rnd=0.7950181738673596&CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f">
+						<div class="line-of-business commercial-package">
+							<div class="hover-color"></div>		
+							<div class="caption">
+								<h4>Commercial Package</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			
+				
+				<div class="col-xs-12 col-sm-6 col-lg-2">
+					<a href="FrontServlet?PAGE_NAME=generalInfo&TRANSACTION_NAME=workersComp&FIRST_TIME=true&METHOD=Display&rnd=0.18041767422383292&CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f">
+						<div class="line-of-business workers-comp">
+							<div class="hover-color"></div>		
+							<div class="caption">
+								<h4>Workers' Comp</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section>
+</div>
+
+
+
+<div class="container" ng-app="ap.worklist">
+	
+
+<!--  angular -->
+	
+
+
+
+
+
+
+
+
+
+<section ng-cloak id="worklist_search_section" class="worklist-section" data-ng-controller="ap.worklist.worklistViewCtrl as listCtrl">
+	<div id="lb_workitem_locked" class="lightbox_panel" style="display: none">
+		<div id="readOnlyMessage">
+			<p>This pending upload is currently locked by another user. Please try again later.</p>
+		</div>
+	</div>
+	
+	<!-- Search options -->
+	<div id="search_filter" class="search-filter" ng-if="listCtrl.workListModel.metaData.index != undefined">
+		<div class="row">
+			<div id="messages" class="col-xs-12">
+				<div id="error_msg" class="alert alert-error" style="display:none"></div>
+				<div id="success_msg" class="alert alert-success" style="display:none"></div>
+				<div id="info_msg" class="alert alert-info" style="display:none"></div>		
+			</div>
+		</div>
+
+		<div class="row filter-row">
+			<div id="filter" class="col-md-10 col-sm-10 col-xs-8 input-append animated fadeIn filter-controls">
+			
+				<div type="button" class="filter-counter hidden-xs" id="num-workitems">
+					{{listCtrl.workListModel.pagination.total}}
+					<span ng-if="listCtrl.workListModel.metaData.index == 'worklist'">Work Item(s)</span>
+					<span ng-if="listCtrl.workListModel.metaData.index == 'account'">Account(s)</span>
+				</div>
+				
+				<div class="repeater" data-ng-repeat="filter in listCtrl.workListModel.metaData.filters">
+				
+					<div class="btn-group" dropdown is-open="filter.status.isopen">
+						<button class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+							{{filter.title}} 
+							<b class="caret"></b>
+						</button>
+						<ul class="dropdown-menu filter-selector filter-{{filter.name | lowercase}}" id="filter_{{filter.name | lowercase}}" role="menu">
+							<li class="{{filter.name | lowercase}}-{{option.value}}" data-ng-repeat="option in filter.filterOptions">
+								<a id="filter_{{filter.name | lowercase}}_{{option.value}}" ng-href="" ng-click="listCtrl.selectFilter(option)">
+								<span class="swatch"></span><i class="fa {{filter.type | lowercase}}-icon"></i>{{option.title}}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="btn-group sort-by" dropdown is-open="sortByStatus.isopen">
+					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+						{{listCtrl.workListModel.metaData.sortInfo.title}} 
+						<b class="caret"></b>
+					</button>	
+					<ul class="dropdown-menu" role="menu">
+						<li class="{{sortOption.relatedFieldId}}" data-ng-repeat="sortOption in listCtrl.workListModel.metaData.sortInfo.sortOptions">
+							<a ng-href="" data-ng-click="listCtrl.selectSortOption(sortOption)">
+								{{sortOption.title}}
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- More Options/Advanced Search -->
+				<div id="worklist_advanced_search_div" 
+					class="btn-group dropdown advanced-search-div" dropdown is-open="listCtrl.advancedDropDown.isopen" ng-if="listCtrl.workListModel.metaData.queryInfo.pages.length > 0" >
+					<button class="btn btn-default dropdown-toggle advanced-search" type="button" 
+						id="dropdown-advanced" dropdown-toggle ng-disabled="disabled">
+						{{listCtrl.workListModel.metaData.queryInfo.title}}
+						<b class="caret"></b>
+					</button>
+					<div class="dropdown-menu" role="menu" aria-labelledby="dropdown-advanced" ng-click="$event.stopPropagation()">
+						<div id="advancedDropDown" class="advanced dropdown-advanced">
+						   <section ng-repeat="section in listCtrl.workListModel.metaData.queryInfo.pages[0].sections">
+							   <div class="error-message">
+									<p id="workitem_error_msg_advanced_search" ng-show="listCtrl.invalidAdvSearch">Please select operator</p>
+								</div>
+								<div class="form-group" ng-repeat="field in section.fields | filter: '!operator'">
+									<label class="control-label" for="{{field.name}}_label">
+										<span>
+											<span class="requiredField" ng-if="field.required">*</span>
+										</span> 
+										<span>{{field.label}}:</span>
+									</label>
+									<div class="form-group effective-date-form">
+										<input ng-if="field.type =='text'" type="text" class="form-control" autocomplete="off" id="{{field.name}}" ng-model="field.value" ng-required="field.required" ng-minLength="field.minLength" ng-maxLength="field.maxLength" size="{{field.size}}">
+							
+										<select class="form-control" ng-if="field.type =='selectlist'" ng-model="field.selectedOption">
+											<option value="">Select {{field.label}}</option>
+											<option value="{{opt.value}}" ng-selected="opt.value == field.defaultValue" ng-repeat="opt in field.options">{{opt.displayText}}</option> 
+										</select>
+										
+										
+										<div class="effective-date form-group" ng-if="field.type=='date'" ng-repeat="operatorField in section.fields | filter: 'operator'">
+											<div class="form-group date-operator" ng-if="operatorField.type == 'selectlist'">
+ 												<select class="form-control"  ng-init="field.selectedOperator = operatorField.defaultValue" ng-model="field.selectedOperator" ng-options="opt.value as opt.displayText for opt in operatorField.options" >
+													<option value="">Select {{operatorField.label}}</option>
+												</select>
+ 											</div>
+											<div class="form-group start-date">
+												<span class="has-addon">
+													<div class="input-group date ap-calendar">
+														<input type="text" class="form-control" datepicker-popup="MM-dd-yyyy" ng-model="field.startDate" is-open="listCtrl.startDtOpened" close-text="Close"
+															placeholder="MM-dd-yyyy" ng-required="field.required" />
+														<span class="input-group-addon" ng-click="listCtrl.open('startDtOpened', $event)">
+															<i class="fa"></i>
+														</span>
+													</div>
+												</span>
+											</div>
+											<div class="input-group between-dates" ng-if="field.selectedOperator == 'BETWEEN'">
+												<span class="has-addon">
+													<div class="input-group date ap-calendar">
+														<input type="text" class="form-control" datepicker-popup="MM-dd-yyyy" ng-model="field.endDate" is-open="listCtrl.endDtOpened" close-text="Close" 
+															placeholder="MM-dd-yyyy" ng-required="field.required" />
+														<span class="input-group-addon" ng-click="listCtrl.open('endDtOpened',$event)">
+															<i class="fa"></i>
+														</span>
+													</div>
+												</span>
+											</div>
+										</div><!-- End effective-date form-inline -->
+									</div><!-- End effective-date form -->
+								</div>
+							</section>
+							
+							<div class="form-group button-row">
+								<button ng-click="listCtrl.advanceSearchClicked()" class="btn btn-primary button-right" id="searchBtn" name="searchBtn" type="button">Search</button>								
+							</div>
+							<div name="searchForm">
+								<div class="form-group save-filter-as" ng-if="listCtrl.workListModel.metaData.isSaveable">
+									<label for="savedFilterName">Save Filter As:</label>
+									<div class="form-inline">
+										<input type="text" class="form-control" name="savedSearchName" ng-required="true" ng-model="listCtrl.savedSearchName">
+										<button ng-click="listCtrl.saveSearchClicked()" class="btn btn-primary" id="searchBtn" name="searchBtn" type="button">Save</button>
+										<div class="error-message" ng-show="listCtrl.saveError">Please enter a name.</div>
+									</div>
+								</div>									
+							</div>
+						</div>
+					</div>
+				</div>	
+				<!-- End More options -->
+				
+				<!-- Saved Searches -->
+				<div class="btn-group saved-filter" dropdown  ng-if="listCtrl.workListModel.metaData.isSaveable">
+					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle id="saved_filter_dropdown">
+						My Filters 
+						<b class="caret"></b>
+					</button>
+					<ul class="dropdown-menu saved-filter" id="saved-filter-entries" ng-if="listCtrl.workListModel.metaData.savedSearchInfo.savedSearches.length > 0">
+					
+						<li ng-repeat="search in listCtrl.workListModel.metaData.savedSearchInfo.savedSearches">
+							<a ng-click="listCtrl.retriveSavedSearch(search)" class="filter-entry">{{search.name}}</a>
+							<span class="pull-right delete">
+								<a  ng-click="listCtrl.deleteSavedSearch(search)" title="Delete">
+									 <i class="fa"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<!-- End Saved Searches -->
+			</div>
+	
+			<div id="switch" class="hidden-xs col-md-2 animated fadeIn">
+				<div id="switch-options" class="switch-options btn-group pull-right">
+					<a id="{{listview.type}}-view" ng-href="#/{{listview.type}}" ng-click="listCtrl.switchView(listview)" ng-class="{active: listview.selected}" class="{{listview.type | lowercase}}-view btn btn-default" ng-repeat="listview in listCtrl.workListModel.metaData.listViews">
+						<i class="fa"></i>
+					</a>
+				</div>    			
+			</div>
+		</div>
+		
+		<div class="row active-filters-display" id="active_filters_display">
+			<div class="filter-button reset">
+				<a ng-href="" id="reset-filter-button" data-ng-click="listCtrl.clearFilters();" name="reset-filter-button">Clear All</a>
+			</div>
+			
+			<div id="filterbadge_{{filterOption.value}}" class="filter-button" data-ng-repeat="filterOption in listCtrl.getSelectedFilters()">
+				<button class="close filter-close" data-ng-click="listCtrl.clearSelected(filterOption)"><i class="fa"></i></button>{{filterOption.title}}
+			</div>
+
+			<div id="filterbadge_{{advSearchField.relatedFieldId}}" class="filter-button" ng-if="advSearchField.operands[0] != '*'"
+				data-ng-repeat="advSearchField in listCtrl.workListModel.metaData.queryInfo.queryFields | filter: {selected: true, interactive: true, isSaveable: true}">
+				<button class="close filter-close" data-ng-click="listCtrl.clearSelected(advSearchField)"><i class="fa"></i></button>
+					<span>{{advSearchField.title}}: </span>
+					<span ng-if="advSearchField.operands.length == 1">{{advSearchField.operands[0]}}</span>
+					<span ng-if="advSearchField.operands.length == 2">{{advSearchField.operands[0]}} - {{advSearchField.operands[1]}}</span>					
+			</div>
+			
+			<div id="filterbadge_sort" class="filter-button">
+				<span>Sort By:</span>		
+				<span data-ng-repeat="sortOption in listCtrl.getSelectedSorts()">{{sortOption.title}}</span>
+			</div>
+			
+			<span data-ng-show="listCtrl.getSelectedFilters().length == 0" ng-if="listCtrl.workListModel.metaData.index == 'worklist'" 
+				class="filter-button showing-all">
+				Showing All Work Items
+			</span>
+			<span data-ng-show="listCtrl.getSelectedFilters().length == 0" ng-if="listCtrl.workListModel.metaData.index == 'account'" 
+				class="filter-button showing-all">
+				Showing All Accounts
+			</span>
+		</div>
+		
+		<div class="row search-bar">
+			<div class="search-field" id="search">
+
+				<div class="col-sm-4">
+					<select class="form-control" id="search-context" ng-if="listCtrl.workListModel.metaData.index == 'worklist'"
+						data-ng-change="listCtrl.setSearchContext()" data-ng-model="listCtrl.searchContext">
+						<option value="entity_name">Name</option>
+						<option value="agency_name">Agency Name</option>
+						<option value="underwriter_name">Underwriter</option>
+					</select>
+				</div>
+
+				<div class="col-sm-8" id="search">
+
+ 					<input id="search-box" type="text"  ng-if="listCtrl.workListModel.metaData.index == 'worklist'"
+						data-ng-change="listCtrl.fetchWorkItems()" data-ng-model="listCtrl.searchValue" data-ng-repeat="queryField in listCtrl.workListModel.metaData.queryInfo.queryFields | filter: 'entity_name'"  
+						class="form-control" autocomplete="off" placeholder="Enter search text (3 character minimum)" />	
+				
+					<input id="search-box" type="text" ng-if="listCtrl.workListModel.metaData.index == 'account'" 
+						data-ng-change="listCtrl.fetchWorkItems()" data-ng-model="listCtrl.searchValue" data-ng-repeat="queryField in listCtrl.workListModel.metaData.queryInfo.queryFields | filter: 'entity_name'"  
+						class="form-control" autocomplete="off" placeholder="Search for an account by name (3 character minimum)" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!-- Search options -->
+</section>
+
+<!-- Directive to display error messages for worklist -->
+<div messages></div>
+
+<!-- content for cards/tiles. This div will have content from cardView.jsp/tabularView.jsp-->
+<div data-ng-view></div>
+
+<!--  angular -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+	<div class="container">	
+		<div class="footer-main row">
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-about">
+				<a href=https://www.secura.net/terms-conditions.html target="_blank">
+				Terms of Use</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-important">
+				<a href=https://www.secura.net/privacy-policy.html target="_blank">
+				Privacy Policy</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-service">
+				<a href=https://agentlink.secura.net/AgenctLink/Home/ContactUs target="_blank">
+				Contact Us</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3 ap-contact">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a id="menu-entry-resources" title="Resources" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa"></i><span>Resources <b class="caret"></b></span></a>
+						<ul class="dropdown-menu">
+							<li><a id="menu-entry-online-store" href=https://securainsurance.four51ordercloud.com/Store/catalog target="_blank">Online Store</a></li>
+							<li><a id="menu-entry-comml-resources" href=https://agentlink.secura.net/clum/index.html target="_blank">Commercial Lines Resources</a></li>
+						</ul>
+					</li>					
+				</ul>
+			</div>
+		</div> <!-- /footer-main row -->
+		
+		<div class="footer-credit">
+			<p>
+				&copy; SECURA Insurance, All rights reserved
+			</p>
+		</div> <!-- /footer-credit -->	
+
+	</div> <!-- /footer container -->
+</footer> 
+	
+		</div>
+		<!-- Idle Timer -->
+		
+			
+
+
+
+
+
+
+
+<div class="modal fade" id="lb_idle_message" data-backdrop="static" role="dialog"  data-keyboard="false" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title">Are you still there?</h2></div>
+			<div class="modal-body">
+				<p>Your session will expire in <span id="timer">60</span>&nbsp;seconds.&nbsp;
+				Click Continue to return to your quote now.</p>
+				<div lass="button-row">
+				   <input name="continueButton" class="btn btn-primary continue" type="button" value="Continue"
+							onclick="ap.timer.continueWork();" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+		var ap = ap || {};
+
+		var idleTimeout =60;
+		var idleCountdownStart =1;
+		var timeout = (idleTimeout - idleCountdownStart) * 60 * 1000;
+
+		ap.timer = new ap.Timer({
+			id : 'timer',
+			countDownStart : idleCountdownStart
+		});
+
+		$.idleTimer(timeout);
+
+		$(document).bind("idle.idleTimer", function() {
+			ap.timer.start();
+		});
+	
+</script>
+
+		
+
+		
+		<script src="/AgencyPortal/assets/js/agencyportal-body.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+
+var conditionalIPDTR = new ConditionalIPDTR()
+
+/**
+ * Conditional custom client-side IPDTR to only make AJAX call when needed
+ * Function wraps Javascript for safety against name clashes, etc
+ * @returns
+ */
+function ConditionalIPDTR() {
+
+	// save any existing onInitialize function for calling from override
+	var OldPageOnInitialize = page.onInitialize; 
+	
+	// set new onInitialize to our override function
+	page.onInitialize = thisPageInit;
+	
+	// Custom fields, checked by shouldCallIPDTR
+	var customFields = [];
+	
+	/**
+	 * Custom page init to hook up conditional IPDTR onChangedField events
+	 */
+	function thisPageInit() {
+		
+		
+		customFields = getCustomFieldsForIPDTR();
+	
+		// Register onChange event handlers for all non-auto hotfields on the page
+		for (var fieldIndex=0; fieldIndex<customFields.length; fieldIndex++) {
+			
+			var fieldId = customFields[fieldIndex];
+			
+			registerFieldChangeEvent(fieldId, onChangedField);
+		}
+		
+		conditionalIPDTR.locationZipChange();
+		
+		// Call any pre-existing init function originally referenced before we injected our function
+		if (typeof OldPageOnInitialize == "function") {
+			OldPageOnInitialize ();
+		}
+	}
+	
+	/**
+	 * Determines whether or nor we should register the field for a special conditional change event
+	 */
+	function shouldRegisterSpecialFieldChange(field) {
+		return field.isHot && !field.autoInvokeAJAX
+	}
+	
+	/**
+	 * Register our special conditional change event for a field
+	 */
+	function registerFieldChangeEvent(fieldId, functionRef) {   
+	    var field = page.getField(fieldId);
+	    if (field == null)
+	    	return;
+	    var elements = field.getElements();
+	    for (var ix in elements) {
+	        var element = elements[ix];
+	        if (element) {
+	        	element.addEventListener('change',functionRef,false);
+	        }
+	    }
+	}
+	
+	/**
+	 * Special conditional onChangedField function
+	 * We can check before calling IPDTR AJAX to see if it's needed
+	 */
+	function onChangedField() {
+	    var field = page.getField(this.id);
+	    if ((field !== null) && shouldCallIPDTR(field)) {
+	    	field.makeIntraPageDTRRequest();
+	    }
+	}
+	
+	/**
+	 * Returns whether or not to call IPDTR based on the field passed in and
+	 * the state of other relevant fields 
+	 */
+	function shouldCallIPDTR(field) {
+		if(page.getField('NoSpecificLocation') && (page.getField('NoSpecificLocation').getValue() == '1')){
+		    return false;
+		}
+		// check to see if all required fields have values
+		for (var i=0; i<customFields.length; i++) {
+		    var field = page.getField(customFields[i]);
+		    if(field.getUniqueId()!='LocationAddressAddressValidationFlag'){
+			    var isRequired = (field.$requiredIndicator[0].innerText == "*");
+			    if ((field !== null) && isRequired &&  field.getValue() =='') {
+					return false;
+				}
+		   }
+		}
+		
+		// all required fields on page have data, so IPDTR should be called
+		return true;
+	}
+	
+	function getCustomFieldsForIPDTR() {
+		var customFields = [];
+		
+		var fields = getAllPageFields();
+		for (var i=0; i<fields.length; i++) {
+			if (shouldRegisterSpecialFieldChange(fields[i])) {
+				customFields.push(fields[i].getUniqueId());
+			}
+		}
+		return customFields;
+	}
+	
+	/**
+	 * Gets all the fields on the page
+	 */
+	function getAllPageFields() {
+		
+		var pageFields = [];
+		
+		var fieldsets = page.fieldsets;
+		for (var fieldsetIndex=0; fieldsetIndex<fieldsets.length; fieldsetIndex++) {
+			var fields = fieldsets[fieldsetIndex].fields;
+				pageFields.push.apply(pageFields, fields);
+		}
+		return pageFields;
+	}
+	/**
+	 * function to bind zipcode change event
+	 */
+	this.locationZipChange = function() {
+		
+	    $("#LocationAddressZip").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	var field = page.getField(this.id);
+	    	    if ((field !== null) && shouldCallIPDTR(field)) {
+	    	    	field.makeIntraPageDTRRequest();
+	    	    }
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+}

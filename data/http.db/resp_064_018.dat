@@ -1,0 +1,142 @@
+var show_vehicle_details = new Show_vehicle_details();
+
+/**
+ * Shows results from a MultiResults table helper in the multi-results lightbox
+ * Overrides & extends page.onPaint to bring up lightbox if AJAX-populated JSON field has data
+ */
+function Show_vehicle_details() {
+	
+	var oldOnPaint = ap.page.onPaint;
+	ap.page.onPaint = showTable;
+	
+	/**
+	 * Show the multi-results table in the lightbox
+	 */
+	function showTable() {
+		
+		// call pre-existing onPaint function if any
+		if (typeof oldOnPaint === 'function') {
+			oldOnPaint();
+		}
+		
+		if(ap.page.getField('lookupModel')!=null && !ap.page.getField('lookupModel').isExcluded()){
+			var lookUpModelField = 'lookupModel';
+			registerModelChangeEvent(lookUpModelField,onchangeModelField);
+		}
+		
+		
+		if(ap.page.getField('pdCostNew')!=null && !ap.page.getField('pdCostNew').isExcluded()){
+			
+			if(page.getField('NewVinServiceCallInd').getValue()=='NewVin'){
+				$('#pdCostNew').val(ap.page.getField('pdCostNewOverride').getValue());
+				page.getField('NewVinServiceCallInd').setValue('OldVin');
+			}
+			
+			
+		}
+		// if we have JSON results in field, display dialog
+		var json = ap.page.getField('MultiResultVINJSON').getValue();
+		if (json != '') {
+			page.getField('MultiResultVINJSON').setValue('');
+			page.getField('NewVinServiceCallInd').setValue('NewVin');
+			var data = $.parseJSON(json);
+			if(data.ServiceMessage=='VALIDVIN') {
+				
+				ap.page.getField('vehicleModelNum').setValue(data.vehicleModelNum);
+				ap.page.getField('vehicleDescription').setValue(data.vehicleDescription);
+				
+				if(ap.page.getField('pdCostNew')!=null && !ap.page.getField('pdCostNew').isExcluded()){
+					ap.page.getField('pdCostNew').setValue(data.PdcOriginalCostNew);
+				}
+				
+				ap.page.getField('engineType').setValue(data.engineType);
+				ap.page.getField('pdCostNewOverride').setValue(data.PdcOriginalCostNew);
+				ap.page.getField('grossVehicleCombinedWeight').setValue(data.grossVehicleWeight);
+				ap.page.getField('GrossVehicleCombinedWeightOverRideValue').setValue(data.grossVehicleWeight);
+				setGrossVehicleWeight(data.grossVehicleWeight);
+				
+				
+				ap.page.getField('vinValidated').setValue('No');
+				ap.page.getField('VehicleLookup').exclude();	
+			}else if(data.ServiceMessage=='INVALIDVIN' || data.ServiceMessage=='NODATA' ||  data.ServiceMessage=='LookUPSERVICEDOWN'){
+				ap.page.getField('VehicleLookup').include(true);
+				ap.page.getField('vinValidated').setValue('No');
+				ap.page.getField('VinValidatedMessageFlag').setValue(data.ServiceMessage);
+				
+			}else{
+				multi_result.initialize(data);
+				multi_result.showDialog();
+				}
+			}
+			
+		 
+		}
+	
+}
+
+/**
+ * Define lightbox exit button functionality
+ */
+function exitSearchDialog() {
+	multi_result.hideDialog();	
+}
+
+/**
+ * Define lightbox save button functionality
+ */
+function saveVehicleDetailsData(dataArray) {
+	dataArray.forEach(function (entry) {
+	    console.log(entry);
+	    var field = page.getField(entry.uniqueId);
+	    if(entry.value!=null && entry.value!=' '){
+	    	 //field.setValue(entry.value)
+	    	 if(entry.uniqueId=='grossVehicleCombinedWeight'){
+	    		 field.setValue(entry.value);
+	    		 ap.page.getField('GrossVehicleCombinedWeightOverRideValue').setValue(entry.value);
+	    		 setGrossVehicleWeight(entry.value);
+	    	 }
+	    	 if(entry.uniqueId=='pdCostNewOverride') {
+	    		 	field.setValue(entry.value);
+					if(ap.page.getField('pdCostNew')!=null && !ap.page.getField('pdCostNew').isExcluded()){
+		    		 	ap.page.getField('pdCostNew').setValue(entry.value);
+					}
+				}
+	    }
+	   
+	});
+	ap.page.getField('vinValidated').setValue('No');
+	ap.page.getField('VehicleLookup').exclude();	
+	multi_result.hideDialog();
+	
+}
+
+
+/**
+ * Register our special conditional change event for a field
+ */
+function registerModelChangeEvent(fieldId, functionRef) {   
+    var field = page.getField(fieldId);
+    if (field == null)
+    	return;
+    var elements = field.getElements();
+    for (var ix in elements) {
+        var element = elements[ix];
+        if (element) {
+        	element.addEventListener('change',functionRef,false);
+        	
+        }
+    }
+}
+
+/**
+ * Makes IPDTR call on change of Model.
+ */
+function onchangeModelField(){
+	
+	ap.page.getField('lookupModel').makeIntraPageDTRRequest();
+	
+}
+
+
+
+

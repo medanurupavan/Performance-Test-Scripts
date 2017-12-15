@@ -1,0 +1,11 @@
+[t35]
+FileName1=t35_worklistAdvancedSearch.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/products/transactions/worklist/pages/worklistAdvancedSearch?CSRF_TOKEN=f073b05727b70c6e047a1c092678bf3598085201a0d7bdf6002723a8560af5f5
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_34.xml
+RequestHeaderFile=t35_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t35_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

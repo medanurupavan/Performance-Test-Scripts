@@ -1,0 +1,13 @@
+[t21]
+SnapshotXmlFile=snapshot_18.xml
+ContentType=text/html
+StepName=Url: custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0
+Total=1
+FileName1=t20.html
+RequestHeaderFile=t21_RequestHeader.txt
+ResponseHeaderFile=t21_ResponseHeader.txt
+RawStepEndTime=1513346971779
+RawStepName=custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0
+RequestBodyFile=t21_RequestBody.txt
+RawStepStartTime=1513346971745
+URL1=https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/worklist-addnewcard.tpl.jsp

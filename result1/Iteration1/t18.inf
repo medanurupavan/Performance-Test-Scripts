@@ -1,0 +1,13 @@
+[t18]
+SnapshotXmlFile=snapshot_15.xml
+ContentType=DummyContentType
+StepName=Url: NewWorkItemLink_2
+Total=1
+FileName1=t18.UNK
+RequestHeaderFile=t18_RequestHeader.txt
+ResponseHeaderFile=t18_ResponseHeader.txt
+RawStepEndTime=1513346971533
+RawStepName=NewWorkItemLink_2
+RequestBodyFile=t18_RequestBody.txt
+RawStepStartTime=1513346971485
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/NewWorkItemLink?CSRF_TOKEN=fcad00aff614d69c0d4c2c4a4ad011638c25cbd76036c704b0b0d451dfa06d4e&listId=WorkItemsView&worklistType=workitems

@@ -1,0 +1,13 @@
+[t10]
+SnapshotXmlFile=snapshot_8.xml
+ContentType=DummyContentType
+StepName=Submit Data: FileUploadServlet
+Total=1
+FileName1=t10.UNK
+RequestHeaderFile=t10_RequestHeader.txt
+ResponseHeaderFile=t10_ResponseHeader.txt
+RawStepEndTime=1513346970856
+RawStepName=FileUploadServlet
+RequestBodyFile=t10_RequestBody.txt
+RawStepStartTime=1513346970810
+URL1=https://qa-agentlink.secura.net/AgencyPortal/FileUploadServlet

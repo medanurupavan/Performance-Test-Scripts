@@ -1,0 +1,683 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-none-match",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "if-modified-since",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "cache-control",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": false,
+      "type": "text/javascript"
+    },
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/x-icon"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/vnd.microsoft.icon"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/svg+xml"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/jpeg"
+    },
+    {
+      "IsNonResource": false,
+      "type": "font/otf"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/vnd.ms-fontobject"
+    },
+    {
+      "IsNonResource": true,
+      "type": "application/json"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "MaxUsedConnections": 12,
+    "RecordedBrowser": "Internet Explorer",
+    "RecordingDate": "Dec-14-2017",
+    "RecordingDuration": 154704,
+    "RecordingTimeStamp": 1513235041,
+    "TotalBytesReceived": 3169972,
+    "TotalBytesSent": 67364,
+    "TotalRequests": 62
+  },
+  "HostInfo": [
+    {
+      "DomainName": "secura.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.31.65.17",
+          "IncludeInScript": true,
+          "Name": "qa-agentlink.secura.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/x-icon",
+              "DownloadTime": 32,
+              "EventId": 15663,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/ico/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 15645,
+              "HttpStatus": 200,
+              "Size": 2697,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/worklist-card.tpl.jsp"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 78,
+              "EventId": 15629,
+              "HttpStatus": 200,
+              "Size": 7706,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=138327dc33d33668ac4460cb2048a531e92abf7f56357c3fe4b21021cde5ecf8&saved_search_id="
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 32,
+              "EventId": 15611,
+              "HttpStatus": 200,
+              "Size": 338,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/products/optionlistids/custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0?transaction_id=worklist&field_id=operator&page_id=worklistAdvancedSearch&CSRF_TOKEN=d61a9a2e55e5d556dfb1d8e507f289cf1390cb9b6cbb84d25b5c51f342f8bb3d"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 63,
+              "EventId": 15598,
+              "HttpStatus": 200,
+              "Size": 1222,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/worklist-addnewcard.tpl.jsp"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 46,
+              "EventId": 15596,
+              "HttpStatus": 200,
+              "Size": 6496,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&saved_search_id=-1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 15592,
+              "HttpStatus": 200,
+              "Size": 908,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/NewWorkItemLink?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 62,
+              "EventId": 15580,
+              "HttpStatus": 200,
+              "Size": 316,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/LOB?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 47,
+              "EventId": 15563,
+              "HttpStatus": 200,
+              "Size": 393,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/TRANSACTION_TYPE?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 47,
+              "EventId": 15549,
+              "HttpStatus": 200,
+              "Size": 311,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/ACCOUNT_TYPE?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 47,
+              "EventId": 15533,
+              "HttpStatus": 200,
+              "Size": 905,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/NewWorkItemLink?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 47,
+              "EventId": 15527,
+              "HttpStatus": 200,
+              "Size": 1920,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/products/transactions/worklist/pages/worklistAdvancedSearch?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 15525,
+              "HttpStatus": 200,
+              "Size": 1140,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/STATUS?CSRF_TOKEN=9b97b07ac4b7a2e774e7d1032770e0394259c603c93f2ae7d311f38da0245bf9&listId=WorkItemsView&worklistType=workitems"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 15506,
+              "HttpStatus": 200,
+              "Size": 75,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/FileUploadServlet"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 63,
+              "EventId": 15483,
+              "HttpStatus": 200,
+              "Size": 2768,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/cardView.jsp"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 62,
+              "EventId": 15481,
+              "HttpStatus": 200,
+              "Size": 9830,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=0e17b5d714bc83dccc3df28f2ce8fde1fb4e59cf5e3eb2557860215c7cb91b5f&saved_search_id=-1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 15477,
+              "HttpStatus": 200,
+              "Size": 308,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/shared/partials/messages.tpl.jsp"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 31,
+              "EventId": 15450,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/secura/WorkersComp-TileImage.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 15,
+              "EventId": 15432,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/img/commercial-package.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 32,
+              "EventId": 15425,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/secura/colorbar.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 32,
+              "EventId": 15423,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/secura/CommercialAuto-TileImage.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 15420,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/secura/orangebar.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 15418,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/secura/logo.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 31,
+              "EventId": 15416,
+              "HttpStatus": 200,
+              "Size": 70807,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/fonts/font-awesome//fontawesome-webfont.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 15,
+              "EventId": 15412,
+              "HttpStatus": 200,
+              "Size": 19681,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/fonts/proxima-nova/ProximaNova-Reg-webfont.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 15106,
+              "HttpStatus": 200,
+              "Size": 1595638,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/js/agencyportal.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 15104,
+              "HttpStatus": 200,
+              "Size": 101404,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/js/agencyportal-body.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 15101,
+              "HttpStatus": 200,
+              "Size": 432404,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/assets/themes/agencyportal/agencyportal.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 297,
+              "EventId": 15090,
+              "HttpStatus": 200,
+              "Size": 71967,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 15088,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgencyPortal/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 32,
+              "EventId": 14885,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-9.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 14843,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-7.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 32,
+              "EventId": 14763,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-8.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 14746,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/fonts/fontawesome-webfont.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 32,
+              "EventId": 14729,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/fonts/glyphicons-halflings-regular.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 14712,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/fonts/Gotham/Gotham-Black.otf"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 47,
+              "EventId": 14572,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-17.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 16,
+              "EventId": 14567,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/AgentLink-Feature-5.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 14551,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/css?v=UChQHgrcNv3c_wuTPbaOMDgGCRXEEy7F_zBGBL5ZW001"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 14524,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-12.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 31,
+              "EventId": 14508,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/Public/SA-1601-AgentLink-login-banner.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 47,
+              "EventId": 14495,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-18.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 31,
+              "EventId": 14488,
+              "HttpStatus": 200,
+              "Size": 94836,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/private/datatables?v=GXkYl-sRNgD497WKFcOj8YOSQlMV09Nv4bClwNg0npY1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 31,
+              "EventId": 14480,
+              "HttpStatus": 200,
+              "Size": 258,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/private/noty?v=3DqIP-A25-mvnqLmMcFZKsonsv2SneONuFbakkvgy6A1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 32,
+              "EventId": 14469,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/images/Agentlink-Banner-15.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 14466,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/public/bootstrap?v=CRaFrw66bpgAsXBhrB4BXT-koL-mpyzdqLtgC8lz-r81"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 14463,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/public/jqueryval?v=DARwcSHqXxypP3ZYTsiAh5vYjKF48z7EpBEmBOqXCzc1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 14461,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/public/jquery?v=NzISlWu3OBD0gcV-PDZOmFsrbCpemFvXNsDQl4-fP141"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 47,
+              "EventId": 14446,
+              "HttpStatus": 200,
+              "Size": 4197,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/datatablescss?v=hvHCiFEPOg0NuhuGdbndpZd43lAqO_tjJ0eRuo8Yzz81"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 406,
+              "EventId": 14440,
+              "HttpStatus": 200,
+              "Size": 31959,
+              "URL": "https://qa-agentlink.secura.net/AgentLink"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/vnd.microsoft.icon",
+              "DownloadTime": 16,
+              "EventId": 14436,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 14434,
+              "HttpStatus": 200,
+              "Size": 137,
+              "URL": "https://qa-agentlink.secura.net/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 14409,
+              "HttpStatus": 200,
+              "Size": 5769,
+              "URL": "https://qa-agentlink.secura.net/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 16,
+              "EventId": 14338,
+              "HttpStatus": 200,
+              "Size": 20127,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/fonts/glyphicons-halflings-regular.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 31,
+              "EventId": 14265,
+              "HttpStatus": 200,
+              "Size": 68875,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/fonts/fontawesome-webfont.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 62,
+              "EventId": 14198,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/Content/public/SA-1601-AgentLink-login-banner.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 47,
+              "EventId": 14196,
+              "HttpStatus": 200,
+              "Size": 98414,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/public/jquery?v=NzISlWu3OBD0gcV-PDZOmFsrbCpemFvXNsDQl4-fP141"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 31,
+              "EventId": 14191,
+              "HttpStatus": 200,
+              "Size": 26786,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/public/jqueryval?v=DARwcSHqXxypP3ZYTsiAh5vYjKF48z7EpBEmBOqXCzc1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/otf",
+              "DownloadTime": 31,
+              "EventId": 14188,
+              "HttpStatus": 200,
+              "Size": 88924,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/fonts/Gotham/Gotham-Black.otf"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 15,
+              "EventId": 14186,
+              "HttpStatus": 200,
+              "Size": 151381,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/bundles/public/bootstrap?v=CRaFrw66bpgAsXBhrB4BXT-koL-mpyzdqLtgC8lz-r81"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 32,
+              "EventId": 14134,
+              "HttpStatus": 200,
+              "Size": 243306,
+              "URL": "https://qa-agentlink.secura.net/AgentLink/cssbundles/Content/public/css?v=UChQHgrcNv3c_wuTPbaOMDgGCRXEEy7F_zBGBL5ZW001"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 14131,
+              "HttpStatus": 200,
+              "Size": 5769,
+              "URL": "https://qa-agentlink.secura.net/"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-SHA",
+          "SSLVersion": "TLS1.1"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 6
+}

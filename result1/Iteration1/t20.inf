@@ -1,0 +1,13 @@
+[t20]
+SnapshotXmlFile=snapshot_17.xml
+ContentType=text/html
+StepName=Url: worklist-addnewcard.tpl.jsp
+Total=1
+FileName1=t20.html
+RequestHeaderFile=t20_RequestHeader.txt
+ResponseHeaderFile=t20_ResponseHeader.txt
+RawStepEndTime=1513346971722
+RawStepName=worklist-addnewcard.tpl.jsp
+RequestBodyFile=t20_RequestBody.txt
+RawStepStartTime=1513346971647
+URL1=https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/worklist-addnewcard.tpl.jsp

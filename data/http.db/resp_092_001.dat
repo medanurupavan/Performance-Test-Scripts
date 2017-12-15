@@ -1,0 +1,158 @@
+var show_vin_result = new Show_vin_result();
+
+/**
+ * Shows results from a MultiResults table helper in the multi-results lightbox
+ * Overrides & extends page.onPaint to bring up lightbox if AJAX-populated JSON field has data
+ */
+function Show_vin_result() {
+	
+	var oldOnPaint = ap.page.onPaint;
+	ap.page.onPaint = showTable;
+	
+	/**
+	 * Show the multi-results table in the lightbox
+	 */
+	function showTable() {
+		
+		// call pre-existing onPaint function if any
+		if (typeof oldOnPaint === 'function') {
+			oldOnPaint();
+		}
+		
+		if(ap.page.getField('pdCostNew')!=null && !ap.page.getField('pdCostNew').isExcluded()){
+			
+			if(page.getField('NewVinServiceCallInd').getValue()=='NewVin'){
+				$('#pdCostNew').val(ap.page.getField('pdCostNewOverride').getValue());
+				page.getField('NewVinServiceCallInd').setValue('OldVin');
+			}
+			
+			
+		}
+		controlVehicleLookUp();	
+		// if we have JSON results in field, display dialog
+		var json = ap.page.getField('VinMultiResultJSON').getValue();
+		$('#VinValidationHelperMessage').text('');
+		$('#VinValidationHelperMessage').removeClass('alert alert-info');
+		 if (json != '') {
+			//ap.page.getField('VehicleLookup').setValue('0');// so that the fields on the screen are displayed correctly.
+			page.getField('VinMultiResultJSON').setValue('');
+			page.getField('NewVinServiceCallInd').setValue('NewVin');
+			var data = $.parseJSON(json);
+			if(data.ServiceMessage=='VALIDVIN') {
+				ap.page.getField('year').setValue(data.year);
+				ap.page.getField('make').setValue(data.make);
+				ap.page.getField('model').setValue(data.model);
+				ap.page.getField('vehicleModelNum').setValue(data.vehicleModelNum);
+				ap.page.getField('vehicleDescription').setValue(data.vehicleDescription);
+				
+				if(ap.page.getField('pdCostNew')!=null && !ap.page.getField('pdCostNew').isExcluded()){
+					ap.page.getField('pdCostNew').setValue(data.PdcOriginalCostNew);
+				}
+				
+				ap.page.getField('engineType').setValue(data.engineType);
+				ap.page.getField('pdCostNewOverride').setValue(data.PdcOriginalCostNew);
+				ap.page.getField('grossVehicleCombinedWeight').setValue(data.grossVehicleWeight);
+				ap.page.getField('GrossVehicleCombinedWeightOverRideValue').setValue(data.grossVehicleWeight);
+				setGrossVehicleWeight(data.grossVehicleWeight);
+				
+				ap.page.getField('year').setReadOnly(true);
+				ap.page.getField('make').setReadOnly(true);
+				ap.page.getField('model').setReadOnly(true);
+				ap.page.getField('vinValidated').setValue('Yes');
+				ap.page.getField('VinValidatedMessageFlag').setValue('VALIDVIN');
+				
+				ap.page.getField('VehicleLookup').exclude();
+				
+			}else if(data.ServiceMessage=='INVALIDVIN' || data.ServiceMessage=='NODATA' ||  data.ServiceMessage=='SERVICEDOWN'){
+				
+				ap.page.getField('VehicleLookup').include(true);
+				ap.page.getField('vinValidated').setValue('No');
+				ap.page.getField('VinValidatedMessageFlag').setValue(data.ServiceMessage);
+				
+			}else{
+				multi_result.initialize(data);
+				multi_result.showDialog();
+				}
+			}
+			
+		 
+		}
+	
+}
+
+/**
+ * Define lightbox exit button functionality
+ */
+function exitSearchDialog() {
+	multi_result.hideDialog();	
+}
+
+/**
+ * Define lightbox save button functionality
+ */
+function saveSearchData(dataArray) {
+
+	// iterate over each array entry, setting the field to the value provided
+	dataArray.forEach(function (entry) {
+	    console.log(entry);
+	    var field = page.getField(entry.uniqueId);
+	    if(entry.value!=null && entry.value!=' '){
+	    	
+	    	 field.setValue(entry.value)
+	    	
+	    	 if(entry.uniqueId=='grossVehicleCombinedWeight'){
+	    		 ap.page.getField('GrossVehicleCombinedWeightOverRideValue').setValue(entry.value);
+	    		 setGrossVehicleWeight(entry.value);
+	    	 }
+	    	 if(entry.uniqueId=='pdCostNewOverride'){
+	    		 if(ap.page.getField('pdCostNew')!=null && !ap.page.getField('pdCostNew').isExcluded()){
+						ap.page.getField('pdCostNew').setValue(entry.value);
+					}
+	    	 }
+	    }
+	   
+	});
+	ap.page.getField('year').setReadOnly(true);
+	ap.page.getField('make').setReadOnly(true);
+	ap.page.getField('model').setReadOnly(true);
+	ap.page.getField('vinValidated').setValue('Yes');
+	ap.page.getField('VinValidatedMessageFlag').setValue('VALIDVIN');
+	ap.page.getField('VehicleLookup').exclude();
+	multi_result.hideDialog();
+	
+}
+/**
+ * used to set the vehicle size based on vehicle weight returned from service.
+ * @param vehWeight
+ * @returns
+ */
+function setGrossVehicleWeight(vehWeight){
+	if(ap.page.getField('vehicleSize')!=null && !ap.page.getField('vehicleSize').isExcluded()){
+		var weightValue='TRUCKLGHTR';
+		if(vehWeight==''){
+			weightValue = '';
+		}else if(vehWeight<10001){
+			weightValue='TRUCKLGHTR';
+		}else if (vehWeight<20001){
+			weightValue='TRUCKMEDTR';
+		}else if (vehWeight<45001){
+			weightValue='TRUCKHVYTR';
+		}else{
+			weightValue='TRUCKXHVTR';
+		}
+		ap.page.getField('vehicleSize').setValue(weightValue);
+	}
+	
+}
+
+function controlVehicleLookUp(){
+	if(ap.page.getField('vinValidated')!=null && ap.page.getField('vinValidated').getValue()=='Yes'){
+		ap.page.getField('VehicleLookup').setValue("0");
+		ap.page.getField('VehicleLookup').exclude();
+		
+	}else{
+		ap.page.getField('VehicleLookup').include(true);
+	}
+}
+
+

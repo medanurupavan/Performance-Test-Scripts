@@ -1,0 +1,1 @@
+$(function(){Noty.Init()});var Noty=new function(){this.Init=function(){var n=$("#noty-message").text().trim();n!=""&&$(".noty-container").removeClass("hidden");$(".dismiss-notification").on("click",function(){$(".noty-container").addClass("hidden fade")})}}

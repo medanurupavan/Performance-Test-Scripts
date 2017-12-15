@@ -1,0 +1,21 @@
+HTTP/1.1 200 
+Date: Fri, 15 Dec 2017 12:20:01 GMT
+Set-Cookie: AL_Session=e02ca006-b47c-4db0-9978-ba82c3b371e3;Max-Age=1800;path=/;domain=qa-agentlink.secura.net;httponly;secure
+Pragma: No-cache
+Cache-Control: no-cache,max-age=0,must-revalidate,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Content-Type-Options: nosniff
+X-Frame-Options: ALLOW-FROM https://secura.net
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: default-src 'none';;object-src 'self';;style-src 'self' 'unsafe-inline';;img-src 'self';;form-action 'self';;media-src 'self';;font-src 'self';;connect-src 'self';;plugin-types application/pdf application/x-shockwave-flash;;reflected-xss block;;script-src 'self' 'unsafe-inline' 'unsafe-eval';;frame-src 'self' https://*.secura.net;;frame-ancestors 'self' https://*.secura.net
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 1222
+Cache-Control: no-cache
+Cache-Control: no-cache
+Set-Cookie: AL_Session=e02ca006-b47c-4db0-9978-ba82c3b371e3;Max-Age=1800;path=/;domain=qa-agentlink.secura.net;httponly;secure
+Keep-Alive: timeout=5, max=91
+Connection: Keep-Alive
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0;expires=Fri, 15-Dec-2017 14:20:01 GMT;path=/;secure;httponly
+

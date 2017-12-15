@@ -1,0 +1,498 @@
+1328
+var fieldset, field, interestLevel, newFormRow;
+fieldset = page.getFieldset("vehicleInformation");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Vehicle Detail");
+field = fieldset.getField("CommlAutoLineBusiness_CommlRateState_id");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CommlAutoLineBusiness_CommlRateState_CommlVeh_id");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("VinMultiResultJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("NewVinServiceCallInd");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("vinValidated");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	field.setDefaultValue("N&#47;A");
+	field.setValue("N&#47;A");
+}
+field = fieldset.getField("VinValidatedMessageFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CommlAutoLineBusiness_CommlRateState_CommlVeh_HotGaragedLocationRef");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Garaging Location");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("HotVehicleType");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Vehicle Type");
+	field.updateHelpBubbleText("HotVehicleType_fieldHelperBalloon", "fieldHelperBalloon", "Select Special Type for the following: Funeral Director Hearse, Mobile or Farm Equipment, Antique Autos, Motorhomes or Campers, Golf Carts, Snowmobiles or Motorcycles.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("HotSpecialVehicleType");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Special Type");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("N16");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("Please enter a VIN if available to prefill vehicle information.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("vinNumber");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("VIN");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 17)', "This field can't exceed 17 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_alphanumeric(this.getValue())', "This field must be alphanumeric", 'AlphanumericValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(17);
+}
+field = fieldset.getField("VehicleLookup");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Vehicle Lookup");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("year");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterest
+cd8
+Level(4);
+	field.initFormatmask(false,{MaximumFractionDigits:0,GroupingSize:0,PositivePrefix:'',DecimalSeparator:'.',GroupingSeparator:','},"####"); 
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Year");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_maxLength(this.getValue(), 4)', "This field can't exceed 4 characters in length", 'MaxLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_numeric(this.getValue())', "This field must be numeric", 'NumericValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_minLength(this.getValue(), 4)', "This field must be at least 4 characters in length", 'MinLengthValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_minValue(this.getValue(), 1900)', "This field must be a number greater than or equal to 1900", 'MinValueValidator'));
+			field.resetValidationState();
+
+	field.setMaxLength(4);
+}
+field = fieldset.getField("make");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Make");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("model");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(4);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Model");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("MultiResultVINJSON");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+newFormRow = "<div class=\"form-group \">\r\n	<label class=\"col-sm-12 col-sm-3 control-label\" for=\"MotorcycleEngineSize\" id=\"MotorcycleEngineSize_label\">\r\n		<span id=\"MotorcycleEngineSize_requiredIndicator\"><span class=\"requiredField\">*</span></span>\r\n		<span id=\"MotorcycleEngineSize_labelText\" >Motorcycle Engine Size</span>\r\n	</label>\r\n	<div class=\"col-xs-12 col-sm-9\">\r\n	<span >\r\n		<input type=\"text\" class=\"form-control\"  name=\"MotorcycleEngineSize\" autocomplete=\"off\" id=\"MotorcycleEngineSize\"   value=\"\"   />\r\n		<span id=\"MotorcycleEngineSize_fieldHelpers\">\r\n			<span id=\"MotorcycleEngineSize_fieldHelperBalloon\" class=\"tooltip-balloon \" data-placement=\"right\" data-toggle
+2000
+=\"popover\" data-html=\"true\" data-content=\"Enter engine size in cubic centimeters\"><i class=\"fa fa-2 balloon\"></i></span>\r\n		</span>\r\n	</span>\r\n	</div>\r\n</div>\r\n";
+field = new ap.Field(ap.page.form, "MotorcycleEngineSize","MotorcycleEngineSize", fieldset, 2, "text", false, false, false, newFormRow, 16);
+if (field != null) { 
+field.removeValidations();
+	field.setDefaultValue("");
+	field.setValue("");
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Motorcycle Engine Size");
+	field.updateHelpBubbleText("MotorcycleEngineSize_fieldHelperBalloon", "fieldHelperBalloon", "Enter engine size in cubic centimeters", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^[0-9]*$/+', false)', "This field must be numeric", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_numeric(this.getValue())', "This field must be numeric", 'NumericValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("grossVehicleCombinedWeight");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Gross Vehicle&#47;Combined Weight");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^[0-9]*$/+', false)', "This field must be numeric", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_numeric(this.getValue())', "This field must be numeric", 'NumericValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.verifyGrossVehicleWeight(this.getValue())', "GVW/GCW cannot be less than the manufacturer's minimum specified weight of ", 'VehicleWeightValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("GrossVehicleCombinedWeightOverRideValue");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("N34");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.setValue("Please indicate below if this vehicle is registered in a state other than the garaging location.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("HotRegisteredState");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Registered State");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("vehicleModelNum");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("vehicleDescription");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("engineType");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+fieldset = page.getFieldset("privatePassengerInformation");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("truckTractorTrailerInformation");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("publicVehicleInformation");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Public Vehicle Information");
+field = fieldset.getField("HotRadiusUse");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Radius Use");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("seatCapacityPV");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	if (field.fieldFormatMask) {field.fieldFormatMask.unbind(); field.fieldFormatMask=null;}
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Seat Capacity");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_pattern(this.getValue(), '+/^[0-9]*$/+', false)', "This field must be numeric", 'PatternValidator'));
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_numeric(this.getValue())', "This field must be numeric", 'NumericValidator'));
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("specVehicleInformation");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(1);
+fieldset = page.getFieldset("vehicleUsageInformation");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Vehicle Usage Information");
+field = fieldset.getField("SnowPlowing");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Used in Snowplowing");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("VehicleHiredAuto");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Is this vehicle Hired Auto ?");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+field = fieldset.getField("GeneralLiabPol");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Vehicle insured on a general liability policy");
+			field.removeValidations();
+			field.resetValidationState();
+
+}
+fieldset = page.getFieldset("coverages");
+interestLevel = fieldset.getInterestLevel();
+interestLevel.setInterestLevel(2);
+fieldset.setLegend("Coverages");
+field = fieldset.getField("VehPropertyDamageLiablityDeductible");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.removeRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Property Damage Liability Deductible");
+	field.updateHelpBubbleText("VehPropertyDamageLiablityDeductible_fieldHelperBalloon", "fieldHelperBalloon", "A Property Damage Liability deductible may be applied specifically to this vehicle.", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.verifyPDCoverageDeductible(this.getValue())', "Vehicle Property Damage Coverage cannot be less than Policy Property Damage Coverage  ", 'VehPDDeductibleValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("VehPDLiablityDedDefaultFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.
+1337
+getField("ComprehensiveDeductible");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+	field.addRequiredIndicator();
+	field.setReadOnly(false);
+	field.setLabelText("Comprehensive Coverage");
+	field.updateHelpBubbleText("ComprehensiveDeductible_fieldHelperBalloon", "fieldHelperBalloon", "This coverage is for damage to the specified vehicle from incidents other than collision including: fire, theft, windstorm, vandalism, flood, falling objects or hitting and animal", "200");
+			field.removeValidations();
+			field.addValidation(new ap.Validation(field, 'validationLibrary.validation_required(this.getValue())', "This field is required", 'RequiredValidator'));
+			field.resetValidationState();
+
+}
+field = fieldset.getField("CompType");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("FullGlassCoverage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(1);
+}
+field = fieldset.getField("FullGlassCoverageDefaultFlag");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("CollisionDeductible");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(1);
+}
+field = fieldset.getField("pdCostNewOverride");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(2);
+}
+field = fieldset.getField("AutoWrapTip");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(1);
+	field.setValue("If the Business Auto WRAP endorsement is selected: <br > <br > Auto Loan or Lease Gap coverage is included for covered private passenger autos and pickups/vans up to 10,000 lbs gross vehicle weight with physical damage coverage.   Please select Auto Loan or Lease Gap below to add the coverage without the Business Auto WRAP or for vehicles types not included in the Business Auto WRAP. <br><br >Rental Reimbursement of $50 per day (up to 30 days) is provided for covered autos with physical damage coverage.  Please select Rental Reimbursement below if additional limits are needed or to add coverage without the Business Auto WRAP.");
+	field.setStyleClass('alert alert-info');
+}
+field = fieldset.getField("AutoLoanLeaseGapCoverage");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(1);
+}
+field = fieldset.getField("rentalReimbursement");
+if (field != null) { 
+field.removeValidations();
+	interestLevel = field.getInterestLevel();
+	interestLevel.setInterestLevel(1);
+}
+validationLibrary.validation_required = function validation_required(value) {
+	return value.length > 0;
+
+}
+
+validationLibrary.validation_alphanumeric = function validation_alphanumeric(value) {
+	if (value.length == 0) return true;
+	if (value.search(/\W/) > -1) return false;
+	return true;
+
+}
+
+validationLibrary.validation_minLength = function validation_minLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length >= parm;
+
+}
+
+validationLibrary.validation_minValue = function validation_minValue(value, parm) {
+	if (value.length == 0) return true;
+	if (value.indexOf(' ') > -1) return false;
+	if (value.search(/\d/) == -1) return false;
+	var testNumber = new Number(value);
+	if (isNaN(testNumber)) return false;
+	return value >= parm;
+
+}
+
+validationLibrary.validation_pattern = function validation_pattern(value, parm, negationOn) {
+	if (value.length == 0) return true;
+	var foundPattern = value.search(parm) > -1;
+	return (foundPattern ^ negationOn);
+
+}
+
+validationLibrary.verifyPDCoverageDeductible = function verifyPDCoverageDeductible(value) {
+	if (value.length == 0) return true;
+	return true;
+
+}
+
+validationLibrary.validation_numeric = function validation_numeric(value) {
+	if (value.length == 0) return true;
+	if (value.indexOf(' ') > -1) return false;
+	if (value.search(/\d/) == -1) return false;
+	var testNumber = new Number(value);
+	if (isNaN(testNumber)) return false;
+	return true;
+
+}
+
+validationLibrary.validation_maxLength = function validation_maxLength(value, parm) {
+	if (value.length == 0) return true;
+	return value.length <= parm;
+
+}
+
+validationLibrary.verifyGrossVehicleWeight = function verifyGrossVehicleWeight(value) {
+	if (value.length == 0) return true;
+	return true;
+
+}
+
+page.paint();
+if(page.form) {page.form.setupHotFields();}
+ap.ajaxMessageMap.clear();
+ap.ajaxMessageMap.removeAlerts();
+var message;
+ap.ajaxMessageMap.render();
+
+0
+

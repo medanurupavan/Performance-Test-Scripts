@@ -1,0 +1,68 @@
+[
+    {
+        "stepId": "STEP1",
+        "stepName": "Url: qa-agentlink.secura.net",
+        "infFile": "t1.inf",
+        "time": 1513346966540
+    },
+    {
+        "stepId": "STEP2",
+        "stepName": "Url: favicon.ico",
+        "infFile": "t2.inf",
+        "time": 1513346966857
+    },
+    {
+        "stepId": "STEP3",
+        "stepName": "Submit Data: qa-agentlink.secura.net_2",
+        "infFile": "t3.inf",
+        "time": 1513346968500
+    },
+    {
+        "stepId": "STEP4",
+        "stepName": "Url: Agency Portal",
+        "infFile": "t5.inf",
+        "time": 1513346970474
+    },
+    {
+        "stepId": "STEP5",
+        "stepName": "Url: messages.tpl.jsp",
+        "infFile": "t6.inf",
+        "time": 1513346970599
+    },
+    {
+        "stepId": "STEP6",
+        "stepName": "Url: cardView.jsp",
+        "infFile": "t9.inf",
+        "time": 1513346970794
+    },
+    {
+        "stepId": "STEP7",
+        "stepName": "Custom Request: WorkItemsView_2",
+        "infFile": "t19.inf",
+        "time": 1513346971645
+    },
+    {
+        "stepId": "STEP8",
+        "stepName": "Url: worklist-addnewcard.tpl.jsp",
+        "infFile": "t20.inf",
+        "time": 1513346971743
+    },
+    {
+        "stepId": "STEP9",
+        "stepName": "Url: custom%3Acom.agencyport.api.pojo.OperatorsListBuilder%3AdataType%3DDATE%3A5.0.0.0",
+        "infFile": "t21.inf",
+        "time": 1513346971801
+    },
+    {
+        "stepId": "STEP10",
+        "stepName": "Custom Request: WorkItemsView_3",
+        "infFile": "t22.inf",
+        "time": 1513346972313
+    },
+    {
+        "stepId": "STEP11",
+        "stepName": "Url: worklist-card.tpl.jsp",
+        "infFile": "t23.inf",
+        "time": 1513346972606
+    }
+]

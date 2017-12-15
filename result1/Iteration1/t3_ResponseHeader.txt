@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Date: Fri, 15 Dec 2017 14:10:22 GMT
+Set-Cookie: AL_Session=8803cb32-9de7-4b86-bac5-4b08ee80ffb6;Max-Age=1800;path=/;domain=qa-agentlink.secura.net;httponly;secure
+Last-Modified: Mon, 25 Apr 2016 21:02:32 GMT
+ETag: "89-531557ec50cfd"
+Accept-Ranges: bytes
+Content-Length: 137
+Cache-Control: no-cache
+Cache-Control: no-cache
+Set-Cookie: AL_Session=8803cb32-9de7-4b86-bac5-4b08ee80ffb6;Max-Age=1800;path=/;domain=qa-agentlink.secura.net;httponly;secure
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Keep-Alive: timeout=5, max=98
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NSC_rb-bhfoumjol.tfdvsb.ofu-iuuqt=ffffffffaf17581d45525d5f4f58455e445a4a4229a0;expires=Fri, 15-Dec-2017 16:10:22 GMT;path=/;secure;httponly
+

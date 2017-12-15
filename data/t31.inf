@@ -1,0 +1,11 @@
+[t31]
+FileName1=t31.htm
+URL1=https://qa-agentlink.secura.net/AgencyPortal/DisplayWorkInProgress?WorkListType=WorkItemsView
+Total=1
+RequestHeaderFile=t31_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t31_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_30.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

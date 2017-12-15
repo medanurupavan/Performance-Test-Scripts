@@ -1,0 +1,13 @@
+[t22]
+SnapshotXmlFile=snapshot_19.xml
+ContentType=DummyContentType
+StepName=Custom Request: WorkItemsView_3
+Total=1
+FileName1=t22.UNK
+RequestHeaderFile=t22_RequestHeader.txt
+ResponseHeaderFile=t22_ResponseHeader.txt
+RawStepEndTime=1513346972260
+RawStepName=WorkItemsView_3
+RequestBodyFile=t22_RequestBody.txt
+RawStepStartTime=1513346971804
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/worklists/workitems/views/WorkItemsView?CSRF_TOKEN=138327dc33d33668ac4460cb2048a531e92abf7f56357c3fe4b21021cde5ecf8&saved_search_id=

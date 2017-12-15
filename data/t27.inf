@@ -1,0 +1,9 @@
+[t27]
+SnapshotXmlFile=snapshot_26.xml
+FileName1=t27.htm
+URL1=https://qa-agentlink.secura.net/AgentLink
+Total=1
+RequestHeaderFile=t27_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t27_ResponseHeader.txt
+ContentType=text/html

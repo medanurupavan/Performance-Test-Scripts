@@ -1,0 +1,11 @@
+[t22]
+FileName1=t22.htm
+URL1=https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/worklist-card.tpl.jsp
+Total=1
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t22_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_21.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,1 @@
+{"response":{"status":0,"message":null,"results":{"codeList":{"link":{"rel":"self","href":"/api/lookups/basic/ACCOUNT_TYPE","parameters":null},"name":"ACCOUNT_TYPE","title":"ACCOUNT_TYPE Code list","codes":[{"title":"Commercial","value":"C"},{"title":"Personal","value":"P"},{"title":"Unknown","value":"U"}]}}}}

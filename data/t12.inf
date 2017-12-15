@@ -1,0 +1,11 @@
+[t12]
+FileName1=t12_STATUS.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/STATUS?CSRF_TOKEN=f3fda176f4fe457d760da7145ed108a64bb350e8531d61b06ce650ec690fb1d1&listId=WorkItemsView&worklistType=workitems
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_11.xml
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t12_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

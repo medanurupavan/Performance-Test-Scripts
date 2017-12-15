@@ -1,0 +1,249 @@
+
+var genInfoconditionalIPDTR = new GenInfoconditionalIPDTR()
+
+/**
+ * Conditional custom client-side IPDTR to only make AJAX call when needed
+ * Function wraps Javascript for safety against name clashes, etc
+ * @returns
+ */
+function GenInfoconditionalIPDTR() {
+
+	// save any existing onInitialize function for calling from override
+	var OldPageOnInitialize = page.onInitialize; 
+	
+	// set new onInitialize to our override function
+	page.onInitialize = thisPageInit;
+	
+	// Custom fields, checked by shouldCallIPDTR
+	var customFields = [];
+	
+	
+	/**
+	 * Custom page init to hook up conditional IPDTR onChangedField events
+	 */
+	function thisPageInit() {
+		
+		
+		customFields = getCustomFieldsForIPDTR();
+		
+		
+		//alert('=='+acJson);
+		// Register onChange event handlers for all non-auto hotfields on the page
+		for (var fieldIndex=0; fieldIndex<customFields.length; fieldIndex++) {
+			
+			var fieldId = customFields[fieldIndex];
+			
+			registerFieldChangeEvent(fieldId, onChangedGenInfoField);
+		}
+		
+		// Call any pre-existing init function originally referenced before we injected our function
+		if (typeof OldPageOnInitialize == "function") {
+			OldPageOnInitialize ();
+		}
+		
+	}
+	
+	/**
+	 * Determines whether or nor we should register the field for a special conditional change event
+	 */
+	function shouldRegisterSpecialFieldChange(field) {
+		return field.isHot && !field.autoInvokeAJAX
+	}
+	
+	/**
+	 * Register our special conditional change event for a field
+	 */
+	function registerFieldChangeEvent(fieldId, functionRef) {   
+	    var field = page.getField(fieldId);
+	    if (field == null)
+	    	return;
+	    var elements = field.getElements();
+	    for (var ix in elements) {
+	        var element = elements[ix];
+	        if (element) {
+	        	
+	        	element.addEventListener('change',functionRef,false);
+	        	
+	        }
+	    }
+	}
+
+	
+	/**
+	 * Special conditional onChangeOfMailingAddressFields function
+	 * We can check before calling IPDTR AJAX to see if it's needed
+	 */
+	function onChangeOfMailingAddressFields(id) {
+		var field = page.getField(id);
+	    if ((field !== null) && genInfoshouldCallIPDTR(field)) {
+	    	field.makeIntraPageDTRRequest();
+	    }
+	}
+	
+	function onChangedGenInfoField() {
+		
+		var countryField="ApplicantMailingCountry";
+		var countryFiledObj = page.getField(countryField);
+	    var countryFiledValue = countryFiledObj.getValue();
+	    /*check Canada is selected on General Information screen in Applicant section.*/
+	    if(countryFiledValue!="CA"){
+	    	onChangeOfMailingAddressFields(this.id);
+	    }
+	}
+	
+	/**
+	 * Returns whether or not to call IPDTR based on the field passed in and
+	 * the state of other relevant fields 
+	 */
+	function genInfoshouldCallIPDTR(field) {
+		
+		// check to see if all required fields have values
+		for (var i=0; i<customFields.length; i++) {
+		    var field = page.getField(customFields[i]);
+		    var isRequired = (field.$requiredIndicator[0].innerText == "*");
+			    if ((field !== null) && isRequired &&  field.getValue() =='') {
+					return false;
+				}
+			    if(field!=null && field.getUniqueId()=='ApplicantMailingZip_US' && field.getValue() !='' && field.getValue().length<5 ){
+			    	return false;
+			    }
+		}
+		
+		// all required fields on page have data, so IPDTR should be called
+		return true;
+	}
+	
+	function getCustomFieldsForIPDTR() {
+        var customFields = [];
+        
+        customFields.push('ApplicantMailingAddress1');
+        customFields.push('ApplicantMailingAddress2');
+        customFields.push('ApplicantMailingCity');
+        customFields.push('ApplicantMailingState');
+        customFields.push('ApplicantMailingZip_US');
+        customFields.push('EffectiveDate');
+        return customFields;
+	}
+
+	
+	/**
+	 * Gets all the fields on the page
+	 */
+	function getAllPageFields() {
+		
+		var pageFields = [];
+		
+		var fieldsets = page.fieldsets;
+		for (var fieldsetIndex=0; fieldsetIndex<fieldsets.length; fieldsetIndex++) {
+			var fields = fieldsets[fieldsetIndex].fields;
+				pageFields.push.apply(pageFields, fields);
+		}
+		return pageFields;
+	}
+	
+
+	/**
+	 * function to bind zipcode change event
+	 */
+	this.genInfoshouldCallIPDTR = function() {
+		
+	    $("#ApplicantMailingZip_US").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        }	
+	         if(page.getField('ApplicantMailingCountry').getValue()!='CA'){
+	        	 onChangeOfMailingAddressFields(this.id);
+	         }
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.effectiveDateIPDTR = function() {
+		$("#EffectiveDate").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	var expField=page.getField(this.id);
+	        	expField.makeIntraPageDTRRequest();
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.applicantNameChange = function() {
+		$("#ApplicantName").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        	}
+	        	
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.agencyNameChange = function() {
+		$("#AgencyName").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        	}
+	        	
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.applicantMailingAdd1Change = function() {
+		$("#ApplicantMailingAddress1").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        	}
+	        	
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.applicantMailingAdd2Change = function() {
+		$("#ApplicantMailingAddress2").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        	}
+	        	
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.applicantMailingCityChange = function() {
+		$("#ApplicantMailingCity").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        	}
+	        	
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+	this.applicantMailingStateChange = function() {
+		$("#ApplicantMailingState").bind("change", function() {
+	        if ($(this).val() != jQuery.data(this, "lastvalue")) {
+	        	if(ap.page.isFirstView==false){
+	        		ap.page.getField('SPClearnceInputChangeFlag').setValue('Y');
+	        	}
+	        	
+	        }
+	        jQuery.data(this, "lastvalue", $(this).val());
+	    });
+
+	}
+
+	
+
+}
+

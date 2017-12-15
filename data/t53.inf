@@ -1,0 +1,11 @@
+[t53]
+FileName1=t53.htm
+URL1=https://qa-agentlink.secura.net/AgencyPortal/worklist/partials/cardView.jsp
+Total=1
+RequestHeaderFile=t53_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t53_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_52.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

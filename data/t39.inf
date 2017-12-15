@@ -1,0 +1,11 @@
+[t39]
+FileName1=t39_TRANSACTION_TYPE.html
+URL1=https://qa-agentlink.secura.net/AgencyPortal/api/lookups/basic/TRANSACTION_TYPE?CSRF_TOKEN=f073b05727b70c6e047a1c092678bf3598085201a0d7bdf6002723a8560af5f5&listId=WorkItemsView&worklistType=workitems
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_38.xml
+RequestHeaderFile=t39_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t39_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
